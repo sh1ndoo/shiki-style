@@ -880,8 +880,8 @@
   .b-db_entry-variant-list_item,
   .c-history .entry,
   .b-quote {
-    border-top: none !important;
     border-style: solid !important;
+    border-color: transparent !important;
   }
 
   /* --- Spoilers, Comments, Loaders (macOS Card Style) --- */
