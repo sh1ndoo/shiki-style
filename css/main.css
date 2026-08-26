@@ -1525,9 +1525,17 @@
   html body .b-anime_status_tag + .b-anime_status_tag,
   html body .b-news_wall-topic .status-line .tags .b-anime_status_tag:not(:last-child),
   html body .b-news_wall-topic .status-line .tags .b-anime_status_tag,
+  html body .b-topic > .inner .prebody .b-anime_status_tag,
+  html body .b-topic > .inner footer .b-anime_status_tag,
+  html body .b-topic .prebody .b-anime_status_tag,
+  html body .b-topic footer .b-anime_status_tag,
   .b-anime_status_tag + .b-anime_status_tag,
   .b-news_wall-topic .status-line .tags .b-anime_status_tag:not(:last-child),
-  .b-news_wall-topic .status-line .tags .b-anime_status_tag {
+  .b-news_wall-topic .status-line .tags .b-anime_status_tag,
+  .b-topic > .inner .prebody .b-anime_status_tag,
+  .b-topic > .inner footer .b-anime_status_tag,
+  .b-topic .prebody .b-anime_status_tag,
+  .b-topic footer .b-anime_status_tag {
     margin-left: 0 !important;
     margin-right: 0 !important;
     margin: 0 !important;
