@@ -1167,6 +1167,7 @@
   html body .b-topic .poster img,
   html body .b-topic .attachment,
   html body .b-topic .attachment img,
+  html body .b-topic .attachments,
   html body .b-topic .attachments img,
   html body .b-topic .b-image,
   html body .b-topic .b-image img,
@@ -1201,6 +1202,24 @@
   html body .b-news .b-shiki_image,
   html body .b-news .b-shiki_image img,
   html body .b-news .body img,
+  html body .b-news_wall-topic,
+  html body .b-news_wall-topic img,
+  html body .b-news_wall-topic .image,
+  html body .b-news_wall-topic .cover,
+  html body .b-news_wall-topic .poster,
+  html body .b-news_wall-topic .image-decor,
+  html body .b-news_wall-topic .image-cutter,
+  html body .b-animes-news .entry,
+  html body .b-animes-news .entry img,
+  html body .b-animes-news .image,
+  html body .b-animes-news .image img,
+  html body .b-animes-news .cover,
+  html body .b-animes-news .cover img,
+  html body .b-topics .b-topic img,
+  html body .b-topics .b-topic .image,
+  html body .b-topics .b-topic .cover,
+  html body .b-topics .b-topic .image-decor,
+  html body .b-topics .b-topic .image-cutter,
   html body .b-hot_topics .image,
   html body .b-hot_topics .image img,
   html body .b-hot_topics-v2 .image,
@@ -1244,6 +1263,8 @@
   .image-cutter img {
     border-radius: 8px !important;
     overflow: hidden !important;
+    -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
+    clip-path: inset(0 round 8px) !important;
   }
 
   html body .avatar img,
