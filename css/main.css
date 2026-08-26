@@ -1557,52 +1557,127 @@
     color: #c4afd4 !important;
   }
 
-  /* --- Section / Category Tags (Reviews, Collections, Articles, etc.) --- */
-  /* Рецензии / Отзывы (Soft Green) */
-  html body .b-tag.review,
-  html body .b-tag.critique,
-  html body a.b-tag[href*="/reviews"],
-  html body a.b-tag[href*="/critiques"],
-  html body a.tag-link[href*="/reviews"],
-  html body a.tag-link[href*="/critiques"],
-  html body .b-anime_status_tag.review,
-  html body .b-tag.review span,
-  .b-tag.review,
-  .b-tag.critique,
-  .b-anime_status_tag.review {
-    background-color: rgba(46, 160, 67, 0.15) !important;
-    border: 1px solid rgba(46, 160, 67, 0.6) !important;
-    color: #7ee787 !important;
-  }
+  /* --- Section / Category Specific Tag Colors --- */
 
-  /* Коллекции (Soft Gold/Amber) */
+  /* 1. Коллекции (Светло-зеленый) */
   html body .b-tag.collection,
   html body .b-tag.collections,
   html body a.b-tag[href*="/collections"],
   html body a.tag-link[href*="/collections"],
+  html body a.b-tag[href*="collection"],
+  html body a.tag-link[href*="collection"],
   html body .b-anime_status_tag.collection,
   html body .b-tag.collection span,
   .b-tag.collection,
   .b-tag.collections,
   .b-anime_status_tag.collection {
-    background-color: rgba(245, 158, 11, 0.15) !important;
-    border: 1px solid rgba(245, 158, 11, 0.6) !important;
-    color: #fbbf24 !important;
+    background-color: rgba(74, 222, 128, 0.15) !important;
+    border: 1px solid rgba(74, 222, 128, 0.6) !important;
+    color: #86efac !important;
   }
 
-  /* Статьи (Soft Blue) */
+  /* 2. Спойлеры (Бордовый) */
+  html body .b-tag.spoiler,
+  html body .b-tag.spoilers,
+  html body .b-tag.is-spoiler,
+  html body a.b-tag[href*="/spoilers"],
+  html body a.tag-link[href*="/spoilers"],
+  html body a.b-tag[href*="spoiler"],
+  html body a.tag-link[href*="spoiler"],
+  html body .b-tag.spoiler span,
+  html body .b-tag.spoilers span,
+  .b-tag.spoiler,
+  .b-tag.spoilers,
+  .b-tag.is-spoiler {
+    background-color: rgba(159, 18, 57, 0.2) !important;
+    border: 1px solid rgba(225, 29, 72, 0.65) !important;
+    color: #fda4af !important;
+  }
+
+  /* 3. Статья (Бордовый) */
   html body .b-tag.article,
   html body .b-tag.articles,
   html body a.b-tag[href*="/articles"],
   html body a.tag-link[href*="/articles"],
+  html body a.b-tag[href*="article"],
+  html body a.tag-link[href*="article"],
   html body .b-anime_status_tag.article,
   html body .b-tag.article span,
   .b-tag.article,
   .b-tag.articles,
   .b-anime_status_tag.article {
-    background-color: rgba(30, 144, 255, 0.15) !important;
-    border: 1px solid rgba(30, 144, 255, 0.6) !important;
-    color: #79c0ff !important;
+    background-color: rgba(159, 18, 57, 0.2) !important;
+    border: 1px solid rgba(225, 29, 72, 0.65) !important;
+    color: #fda4af !important;
+  }
+
+  /* 4. Рецензия / Критика (Розовый) */
+  html body .b-tag.critique,
+  html body .b-tag.critiques,
+  html body a.b-tag[href*="/critiques"],
+  html body a.tag-link[href*="/critiques"],
+  html body a.b-tag[href*="critique"],
+  html body a.tag-link[href*="critique"],
+  html body .b-anime_status_tag.critique,
+  html body .b-tag.critique span,
+  .b-tag.critique,
+  .b-tag.critiques,
+  .b-anime_status_tag.critique {
+    background-color: rgba(244, 114, 182, 0.15) !important;
+    border: 1px solid rgba(244, 114, 182, 0.6) !important;
+    color: #f472b6 !important;
+  }
+
+  /* 5. Отрицательный (Светло-красный) */
+  html body .b-tag.negative,
+  html body .b-tag.bad,
+  html body .b-tag.disagree,
+  html body a.b-tag[href*="negative"],
+  html body a.tag-link[href*="negative"],
+  html body .b-anime_status_tag.negative,
+  html body .b-tag.negative span,
+  .b-tag.negative,
+  .b-tag.bad,
+  .b-anime_status_tag.negative {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    border: 1px solid rgba(239, 68, 68, 0.6) !important;
+    color: #fca5a5 !important;
+  }
+
+  /* 6. Отзыв (Светло-серый) */
+  html body .b-tag.review,
+  html body .b-tag.reviews,
+  html body .b-tag.opinion,
+  html body .b-tag.feedback,
+  html body a.b-tag[href*="/reviews"],
+  html body a.tag-link[href*="/reviews"],
+  html body a.b-tag[href*="opinion"],
+  html body a.tag-link[href*="opinion"],
+  html body .b-anime_status_tag.review,
+  html body .b-tag.review span,
+  .b-tag.review,
+  .b-tag.reviews,
+  .b-tag.opinion,
+  .b-anime_status_tag.review {
+    background-color: rgba(226, 232, 240, 0.12) !important;
+    border: 1px solid rgba(226, 232, 240, 0.5) !important;
+    color: #e2e8f0 !important;
+  }
+
+  /* 7. Обсуждение аниме (Серый) */
+  html body .b-tag.anime_discussion,
+  html body .b-tag.anime-discussion,
+  html body .b-tag.anime_topic,
+  html body a.b-tag[href*="anime_discussion"],
+  html body a.tag-link[href*="anime_discussion"],
+  html body a.b-tag[href*="animes/"],
+  html body a.tag-link[href*="animes/"],
+  html body .b-tag.anime_discussion span,
+  .b-tag.anime_discussion,
+  .b-tag.anime-discussion {
+    background-color: rgba(148, 163, 184, 0.12) !important;
+    border: 1px solid rgba(148, 163, 184, 0.5) !important;
+    color: #94a3b8 !important;
   }
 
   html body .b-anime_status_tag:hover,
