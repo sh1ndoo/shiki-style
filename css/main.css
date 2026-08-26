@@ -1351,16 +1351,53 @@
     font-weight: 500 !important;
   }
 
+  /* --- Anime Status Tags (Soft Colors) --- */
   html body .b-anime_status_tag,
-  html body .b-anime_status_tag.ongoing,
-  html body .b-anime_status_tag.released,
-  html body .b-anime_status_tag.episode {
-    background-color: rgba(152, 132, 165, 0.2) !important;
-    border: 1px solid rgba(152, 132, 165, 0.35) !important;
+  .b-anime_status_tag {
     border-radius: 4px !important;
-    color: #ffffff !important;
     padding: 1px 6px !important;
     display: inline-block !important;
+    font-size: 11px !important;
+    line-height: 16px !important;
+    text-shadow: none !important;
+    font-weight: 500 !important;
+  }
+
+  /* Релиз (Soft Green) */
+  html body .b-anime_status_tag.released,
+  html body .status-time .b-anime_status_tag.released,
+  .b-anime_status_tag.released {
+    background-color: rgba(46, 160, 67, 0.2) !important;
+    border: 1px solid rgba(46, 160, 67, 0.45) !important;
+    color: #7ee787 !important;
+  }
+
+  /* Анонс (Soft Red) */
+  html body .b-anime_status_tag.anons,
+  html body .status-time .b-anime_status_tag.anons,
+  .b-anime_status_tag.anons {
+    background-color: rgba(230, 57, 70, 0.2) !important;
+    border: 1px solid rgba(230, 57, 70, 0.45) !important;
+    color: #ff7b72 !important;
+  }
+
+  /* Онгоинг (Soft Blue) */
+  html body .b-anime_status_tag.ongoing,
+  html body .status-time .b-anime_status_tag.ongoing,
+  .b-anime_status_tag.ongoing {
+    background-color: rgba(30, 144, 255, 0.2) !important;
+    border: 1px solid rgba(30, 144, 255, 0.45) !important;
+    color: #79c0ff !important;
+  }
+
+  /* Эпизод / Студия / Другие статусы (Soft Lilac) */
+  html body .b-anime_status_tag.episode,
+  html body .b-anime_status_tag.studio,
+  .b-anime_status_tag.episode,
+  .b-anime_status_tag.studio {
+    background-color: rgba(152, 132, 165, 0.2) !important;
+    border: 1px solid rgba(152, 132, 165, 0.35) !important;
+    color: #ffffff !important;
   }
 
   html body .b-rate .text-score .score-value,
