@@ -458,8 +458,10 @@
     padding: 8px !important;
     overflow-y: auto !important;
     max-height: calc(100vh - 144px) !important;
+  html body .l-top_menu-v2 .submenu a,
+  .l-top_menu-v2 .submenu a {
+    border-radius: 8px !important;
   }
-
 
   html body .l-top_menu-v2 .submenu > .legend,
   .l-top_menu-v2 .submenu > .legend {
