@@ -1162,11 +1162,16 @@
   }
 
   /* --- Related Entries & Franchise Posters (Unrestricted Width + Rounded 8px) --- */
+  html body .b-db_entry-variant-list_item,
+  .b-db_entry-variant-list_item {
+    border-top: none !important;
+    border: none !important;
+  }
+
   html body .b-db_entry .c-image,
   html body .b-db_entry .c-image img,
   html body .b-db_entry > .c-image,
   html body .b-db_entry > .c-image img,
-  html body .b-db_entry-variant-list_item,
   html body .b-db_entry-variant-list_item .c-image,
   html body .b-db_entry-variant-list_item .c-image img,
   html body .b-db_entry-variant-list_item img,
