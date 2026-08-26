@@ -353,7 +353,9 @@
 
   /* --- Search Results Dropdown (macOS Glass) --- */
   html body .l-top_menu-v2 .global-search .search-results,
-  .l-top_menu-v2 .global-search .search-results {
+  html body .search-results,
+  .l-top_menu-v2 .global-search .search-results,
+  .search-results {
     background-color: rgba(28, 28, 32, 0.96) !important;
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
@@ -361,6 +363,83 @@
     border-radius: 12px !important;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
     overflow: hidden !important;
+    color: #e4e4e9 !important;
+  }
+
+  html body .search-results .inner,
+  html body .search-results .inner > div,
+  html body .search-results div,
+  html body .search-results span {
+    color: #e4e4e9 !important;
+    text-shadow: none !important;
+  }
+
+  /* Search mode tabs (Аниме / Манга / Ранобэ / Персонаж / Человек) */
+  html body .search-results .search-mode,
+  .search-results .search-mode {
+    color: #a1a1aa !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 120ms ease !important;
+    border-radius: 6px !important;
+    margin: 2px !important;
+    display: inline-block !important;
+    text-shadow: none !important;
+  }
+
+  html body .search-results .search-mode:hover,
+  .search-results .search-mode:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  html body .search-results .search-mode.active,
+  .search-results .search-mode.active {
+    color: #ffffff !important;
+    background-color: rgba(152, 132, 165, 0.35) !important;
+    border-color: rgba(152, 132, 165, 0.5) !important;
+    font-weight: 500 !important;
+  }
+
+  /* Search result entries and links */
+  html body .search-results a,
+  html body .search-results a:link,
+  html body .search-results a:visited,
+  html body .search-results .name,
+  .search-results a,
+  .search-results .name {
+    color: #ffffff !important;
+    text-shadow: none !important;
+    text-decoration: none !important;
+  }
+
+  html body .search-results .misc,
+  html body .search-results .info,
+  html body .search-results .nothing_found,
+  .search-results .misc,
+  .search-results .info {
+    color: #a1a1aa !important;
+    text-shadow: none !important;
+  }
+
+  html body .search-results .b-ajax,
+  html body .search-results .entry,
+  .search-results .b-ajax,
+  .search-results .entry {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding: 6px 10px !important;
+    transition: background 120ms ease !important;
+  }
+
+  html body .search-results .b-ajax:hover,
+  html body .search-results .entry:hover,
+  .search-results .b-ajax:hover,
+  .search-results .entry:hover {
+    background-color: rgba(152, 132, 165, 0.2) !important;
   }
 
   /* --- Dropdown Menus & Popups (macOS Rounded Glass Style) --- */
@@ -368,10 +447,8 @@
   html body .dropdown-menu,
   html body .b-dialog,
   html body .b-dialog > .inner,
-  html body .tooltip-inner,
   .l-top_menu-v2 .submenu,
-  .dropdown-menu,
-  .tooltip-inner {
+  .dropdown-menu {
     background-color: rgba(28, 28, 32, 0.95) !important;
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
@@ -648,25 +725,64 @@
     color: #ffffff !important;
   }
 
-  /* --- Tooltips (Tipsy, Anime-Tooltip, Badges) - No Glow, Clean macOS Glass --- */
-  .tipsy,
-  .tipsy-inner,
-  html body .tipsy-inner,
+  /* --- Tooltips & Popovers (Genre descriptions, Tipsy, Anime Tooltips) --- */
+  html body .tooltip,
   html body .tooltip-inner,
+  html body .tooltip-details,
+  html body .tipsy,
+  html body .tipsy-inner,
   html body .anime-tooltip,
+  .tooltip,
   .tooltip-inner,
+  .tipsy-inner,
   .anime-tooltip {
-    background-color: rgba(24, 24, 28, 0.96) !important;
-    backdrop-filter: blur(20px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    overflow-x: hidden !important;
+    max-width: 420px !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .tooltip .dropshadow-top,
+  html body .tooltip .dropshadow-top-right,
+  html body .tooltip .dropshadow-right,
+  html body .tooltip .dropshadow-bottom-right,
+  html body .tooltip .dropshadow-bottom,
+  html body .tooltip .dropshadow-bottom-left,
+  html body .tooltip .dropshadow-left,
+  html body .tooltip .dropshadow-top-left,
+  html body .tooltip [class*="dropshadow"] {
+    display: none !important;
+  }
+
+  html body .tooltip-inner,
+  .tooltip-inner,
+  .tipsy-inner,
+  .anime-tooltip {
+    background-color: rgba(26, 26, 30, 0.96) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    border-radius: 8px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
-    color: #ffffff !important;
-    text-shadow: none !important;
-    font-weight: 400 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6) !important;
+    color: #e4e4e9 !important;
+    padding: 10px 14px !important;
     font-size: 12px !important;
-    padding: 5px 10px !important;
+    line-height: 1.5 !important;
+    overflow-x: hidden !important;
+  }
+
+  html body .tooltip-details,
+  html body .tooltip-details .comment-block,
+  html body .tooltip-details .body,
+  html body .tooltip-details .b-text_with_paragraphs,
+  .tooltip-details,
+  .tooltip-details .body {
+    color: #e4e4e9 !important;
+    overflow-x: hidden !important;
+    text-shadow: none !important;
+    word-wrap: break-word !important;
   }
 
   .tipsy-arrow,
@@ -674,7 +790,7 @@
   .tipsy-arrow-s,
   .tipsy-arrow-e,
   .tipsy-arrow-w {
-    border-color: rgba(24, 24, 28, 0.96) !important;
+    border-color: rgba(26, 26, 30, 0.96) !important;
   }
 
   html body .tipsy *,
