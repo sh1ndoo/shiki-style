@@ -1330,7 +1330,7 @@
   .c-about,
   .b-entry-info,
   .b-entry-info .line .value {
-    color: #e4e4e9 !important;
+    color: #e4e4e9;
     text-shadow: none !important;
   }
 
