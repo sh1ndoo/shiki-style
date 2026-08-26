@@ -1276,6 +1276,41 @@
     clip-path: inset(0 round 8px) !important;
   }
 
+  /* --- Related Entries & Franchise Posters (Unrestricted Width + Rounded 8px) --- */
+  html body .b-db_entry .c-image,
+  html body .b-db_entry .c-image img,
+  html body .b-db_entry > .c-image,
+  html body .b-db_entry > .c-image img,
+  html body .b-db_entry-variant-list_item,
+  html body .b-db_entry-variant-list_item .c-image,
+  html body .b-db_entry-variant-list_item .c-image img,
+  html body .b-db_entry-variant-list_item img,
+  html body .c-related .c-image,
+  html body .c-related .c-image img,
+  html body .cc-related .c-image,
+  html body .cc-related .c-image img,
+  html body .c-franchise .c-image,
+  html body .c-franchise .c-image img,
+  html body .cc-franchises .c-image,
+  html body .cc-franchises .c-image img,
+  html body img[alt="Продолжение"],
+  html body img[alt="Предыстория"],
+  html body img[alt="Адаптация"],
+  html body img[alt="Спин-офф"],
+  html body img[alt="Ремейк"],
+  html body img[alt="Вбоквел"],
+  html body img[alt="Альтернативная версия"],
+  html body img[alt="Другое"],
+  html body img[src*="mini_alt"],
+  html body img[src*="mini-"],
+  html body img[src*="mini_2x"] {
+    max-width: none !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
+    clip-path: inset(0 round 8px) !important;
+  }
+
   html body .avatar img,
   html body .b-club .logo,
   html body .b-comment > .inner header img,
