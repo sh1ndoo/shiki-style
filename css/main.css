@@ -1487,7 +1487,10 @@
   html body .b-news_wall-topic .status-line time,
   html body .b-news_wall-topic .status-line .date,
   .status-line time,
-  .status-line .date {
+  .status-line .date,
+  .b-news_wall-topic .status-line time {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
     margin-right: 6px !important;
     display: inline-flex !important;
     align-items: center !important;
