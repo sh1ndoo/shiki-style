@@ -1577,6 +1577,9 @@
   }
 
   /* 2. Спойлеры (Бордовый) */
+  html body .b-anime_status_tag.spoilers,
+  html body .b-anime_status_tag.spoiler,
+  html body .b-anime_status_tag[data-text*="спойлер"],
   html body .b-tag.spoiler,
   html body .b-tag.spoilers,
   html body .b-tag.is-spoiler,
@@ -1586,6 +1589,10 @@
   html body a.tag-link[href*="spoiler"],
   html body .b-tag.spoiler span,
   html body .b-tag.spoilers span,
+  html body .b-anime_status_tag.spoilers:after,
+  html body .b-anime_status_tag.spoilers:before,
+  .b-anime_status_tag.spoilers,
+  .b-anime_status_tag.spoiler,
   .b-tag.spoiler,
   .b-tag.spoilers,
   .b-tag.is-spoiler {
@@ -1619,6 +1626,8 @@
   html body a.b-tag[href*="critique"],
   html body a.tag-link[href*="critique"],
   html body .b-anime_status_tag.critique,
+  html body .b-anime_status_tag.review-review,
+  html body .b-anime_status_tag[data-text*="рецензи"],
   html body .b-tag.critique span,
   .b-tag.critique,
   .b-tag.critiques,
@@ -1629,16 +1638,21 @@
   }
 
   /* 5. Отрицательный (Светло-красный) */
+  html body .b-anime_status_tag.review-negative,
+  html body .b-anime_status_tag.negative,
+  html body .b-anime_status_tag[data-text*="отрицательн"],
   html body .b-tag.negative,
   html body .b-tag.bad,
   html body .b-tag.disagree,
   html body a.b-tag[href*="negative"],
   html body a.tag-link[href*="negative"],
-  html body .b-anime_status_tag.negative,
   html body .b-tag.negative span,
+  html body .b-anime_status_tag.review-negative:after,
+  html body .b-anime_status_tag.review-negative:before,
+  .b-anime_status_tag.review-negative,
+  .b-anime_status_tag.negative,
   .b-tag.negative,
-  .b-tag.bad,
-  .b-anime_status_tag.negative {
+  .b-tag.bad {
     background-color: rgba(239, 68, 68, 0.15) !important;
     border: 1px solid rgba(239, 68, 68, 0.6) !important;
     color: #fca5a5 !important;
@@ -1654,6 +1668,8 @@
   html body a.b-tag[href*="opinion"],
   html body a.tag-link[href*="opinion"],
   html body .b-anime_status_tag.review,
+  html body .b-anime_status_tag.review-opinion,
+  html body .b-anime_status_tag[data-text*="отзыв"],
   html body .b-tag.review span,
   .b-tag.review,
   .b-tag.reviews,
