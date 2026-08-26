@@ -464,11 +464,13 @@
   .l-top_menu-v2 .submenu a {
     color: #e4e4e9 !important;
     border-radius: 8px !important;
+    transition: background-color 150ms ease, color 150ms ease !important;
   }
 
   html body .l-top_menu-v2 .submenu a:hover,
   .l-top_menu-v2 .submenu a:hover {
     color: #ffffff !important;
+    background-color: rgba(152, 132, 165, 0.25) !important;
   }
 
   html body .l-top_menu-v2 .submenu > .legend,
