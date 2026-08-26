@@ -1250,7 +1250,6 @@
   .image-cutter img {
     border-radius: 8px !important;
     overflow: hidden !important;
-    -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
     clip-path: inset(0 round 8px) !important;
   }
 
@@ -1290,7 +1289,6 @@
     max-width: none !important;
     border-radius: 8px !important;
     overflow: hidden !important;
-    -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
     clip-path: inset(0 round 8px) !important;
   }
 
@@ -1684,7 +1682,6 @@
     max-width: none !important;
     border-radius: 8px !important;
     overflow: hidden !important;
-    -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
     clip-path: inset(0 round 8px) !important;
   }
 
