@@ -1036,44 +1036,63 @@
   html body .b-entry-info .line-container,
   html body .b-entry-info .line,
   html body .b-entry-info .value,
+  html body .b-entry-info .line .value,
+  html body .b-entry-info .line-container .value,
   html body .c-about .value,
+  html body .c-about .line .value,
   html body .c-about span,
   html body .c-about div,
+  html body .line .value,
+  html body .line-container .line .value,
   .c-about,
-  .b-entry-info {
+  .b-entry-info,
+  .b-entry-info .line .value {
     color: #e4e4e9 !important;
     text-shadow: none !important;
   }
 
   html body .b-entry-info .key,
+  html body .b-entry-info .line .key,
+  html body .b-entry-info .line-container .key,
   html body .c-about .key,
+  html body .c-about .line .key,
   html body .c-info-left .key,
   html body .c-info-right .key,
   html body .line .key,
+  html body .line-container .key,
   html body .additional-links .key,
-  .b-entry-info .key {
+  .b-entry-info .key,
+  .b-entry-info .line .key {
     color: #a1a1aa !important;
     text-shadow: none !important;
     font-weight: 400 !important;
   }
 
   html body .b-entry-info a,
-  html body .c-about a,
+  html body .b-entry-info .line a,
   html body .b-entry-info .value a,
+  html body .b-entry-info .line .value a,
+  html body .c-about a,
+  html body .c-about .line .value a,
   html body .additional-links a,
   html body .b-tag,
   html body .b-tag span,
   html body .b-tag .genre-ru,
   html body .b-tag .genre-en,
   html body a.b-tag,
+  html body a.b-tag span,
   html body .local-time,
   .b-tag,
-  .b-tag span {
+  .b-tag span,
+  .b-entry-info .line .value a {
     color: #c4afd4 !important;
     text-shadow: none !important;
   }
 
   html body .b-entry-info a:hover,
+  html body .b-entry-info .line a:hover,
+  html body .b-entry-info .value a:hover,
+  html body .b-entry-info .line .value a:hover,
   html body .c-about a:hover,
   html body .additional-links a:hover,
   html body .b-tag:hover,
