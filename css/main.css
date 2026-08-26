@@ -1120,6 +1120,18 @@
     border-radius: 0 8px 0 2px !important;
   }
 
+  /* --- Catalog Entry Misc Text (Lilac) --- */
+  html body .b-catalog_entry .cover .misc span,
+  html body .b-catalog_entry .cover .misc,
+  html body .b-catalog_entry .misc,
+  html body .b-catalog_entry .misc span,
+  .b-catalog_entry .cover .misc span,
+  .b-catalog_entry .cover .misc,
+  .b-catalog_entry .misc span {
+    color: #c4afd4 !important;
+    text-shadow: none !important;
+  }
+
   /* --- Catalog Entries, News, Topics, Updates & Photo Attachments (Rounded 8px) --- */
   html body .b-catalog_entry .cover,
   html body .b-catalog_entry .cover .image-decor,
