@@ -460,23 +460,6 @@
     max-height: calc(100vh - 144px) !important;
   }
 
-  html body .l-top_menu-v2 .submenu a,
-  .l-top_menu-v2 .submenu a {
-    color: #e4e4e9 !important;
-    border-radius: 8px !important;
-    padding: 6px 12px !important;
-    margin: 2px 0 !important;
-    font-weight: 400 !important;
-    transition: background 150ms ease, color 150ms ease !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  html body .l-top_menu-v2 .submenu a:hover,
-  .l-top_menu-v2 .submenu a:hover {
-    color: #ffffff !important;
-    background-color: rgba(152, 132, 165, 0.3) !important;
-  }
 
   html body .l-top_menu-v2 .submenu > .legend,
   .l-top_menu-v2 .submenu > .legend {
