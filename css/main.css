@@ -449,7 +449,7 @@
   html body .b-dialog > .inner,
   .l-top_menu-v2 .submenu,
   .dropdown-menu {
-    background-color: rgba(28, 28, 32, 0.95) !important;
+    background-color: rgba(22, 22, 26, 0.86) !important;
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -609,7 +609,9 @@
   /* --- Tooltips & Popovers (Genre hover, User hover, Details) --- */
   html body .tooltip-inner,
   .tooltip-inner {
-    background-color: rgba(26, 26, 30, 0.96) !important;
+    background-color: rgba(22, 22, 26, 0.88) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-radius: 10px !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
@@ -635,7 +637,9 @@
   .tipsy,
   .tipsy-inner,
   .anime-tooltip {
-    background-color: rgba(26, 26, 30, 0.96) !important;
+    background-color: rgba(22, 22, 26, 0.88) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-radius: 8px !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
