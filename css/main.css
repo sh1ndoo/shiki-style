@@ -257,7 +257,7 @@
     text-shadow: none !important;
   }
 
-  /* --- Top Navigation Menu Bar --- */
+  /* --- Top Navigation Menu (Neutral Dark Glass) --- */
   html body .l-top_menu-v2,
   .l-top_menu-v2 {
     background-color: rgba(20, 20, 23, 0.9) !important;
@@ -265,110 +265,43 @@
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
-    height: 48px !important;
   }
 
-  /* --- Header Dropdown Triggers (Properly Centered in 48px Header) --- */
+  /* --- Top Menu Dropdown Triggers (Thinner Font, Transparent Background, Clean) --- */
+  html body .l-top_menu-v2 .menu-dropdown .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown .submenu-triangle span,
+  html body .l-top_menu-v2 .menu-dropdown .nickname,
   html body .l-top_menu-v2 .menu-dropdown > span,
-  html body .l-top_menu-v2 .menu-dropdown.main > span,
-  html body .l-top_menu-v2 .menu-dropdown.profile > span,
-  html body .l-top_menu-v2 .submenu-triangle,
-  html body .l-top_menu-v2 .menu-dropdown.main .submenu-triangle,
-  html body .l-top_menu-v2 .menu-dropdown.profile .submenu-triangle,
-  html body .l-top_menu-v2 .menu-dropdown.profile a.submenu-triangle,
-  html body .l-top_menu-v2 .menu-dropdown.profile > span > a {
-    height: 30px !important;
-    min-height: 30px !important;
-    max-height: 30px !important;
-    line-height: 30px !important;
-    margin-top: 9px !important;
-    margin-bottom: 9px !important;
-    padding: 0 10px !important;
-    box-sizing: border-box !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-radius: 8px !important;
+  html body .l-top_menu-v2 .menu-dropdown a,
+  .l-top_menu-v2 .menu-dropdown .submenu-triangle,
+  .l-top_menu-v2 .menu-dropdown .nickname {
+    font-weight: 400 !important;
+    font-size: 13px !important;
+    letter-spacing: normal !important;
+    color: #e4e4e9 !important;
+    text-shadow: none !important;
     background: transparent !important;
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    transition: background 120ms ease, color 120ms ease !important;
   }
 
-  html body .l-top_menu-v2 .menu-dropdown:hover > span,
-  html body .l-top_menu-v2 .menu-dropdown.main:hover .submenu-triangle,
-  html body .l-top_menu-v2 .menu-dropdown.profile:hover > span,
-  html body .l-top_menu-v2 .menu-dropdown.profile:hover a.submenu-triangle,
-  html body .l-top_menu-v2 .submenu-triangle:hover {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-  }
-
-  html body .l-top_menu-v2 .menu-dropdown.profile img,
-  .l-top_menu-v2 .menu-dropdown.profile img {
-    width: 22px !important;
-    height: 22px !important;
-    max-width: 22px !important;
-    max-height: 22px !important;
-    border-radius: 50% !important;
-    margin: 0 6px 0 0 !important;
-    padding: 0 !important;
-    display: inline-block !important;
-    vertical-align: middle !important;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
-  }
-
-  html body .l-top_menu-v2 .menu-dropdown.profile .nickname,
-  html body .l-top_menu-v2 .menu-dropdown.main span,
-  .l-top_menu-v2 .menu-dropdown.profile .nickname {
-    font-weight: 400 !important;
-    font-size: 13px !important;
-    color: #e4e4e9 !important;
-    line-height: 30px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-shadow: none !important;
-    display: inline-block !important;
-    vertical-align: middle !important;
-  }
-
-  html body .l-top_menu-v2 .menu-dropdown:hover .submenu-triangle span,
+  html body .l-top_menu-v2 .menu-dropdown:hover .submenu-triangle,
   html body .l-top_menu-v2 .menu-dropdown:hover .nickname {
     color: #ffffff !important;
   }
 
-  /* --- Top Menu Icons (Centered Vertically) --- */
-  html body .l-top_menu-v2 .menu-icon.forum,
-  html body .l-top_menu-v2 .menu-icon.mail,
-  html body .l-top_menu-v2 .menu-icon.contest,
-  html body .l-top_menu-v2 .menu-icon.search,
-  html body .l-top_menu-v2 .menu-icon.sign_in,
-  .l-top_menu-v2 .menu-icon {
-    height: 30px !important;
-    width: 30px !important;
-    min-height: 30px !important;
-    max-height: 30px !important;
-    margin-top: 9px !important;
-    margin-bottom: 9px !important;
-    border-radius: 8px !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    transition: all 150ms ease !important;
-  }
-
+  /* --- Top Menu Modern Vector Icons --- */
   html body .l-top_menu-v2 .menu-icon.forum {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") center center / 18px no-repeat !important;
     opacity: 0.85;
+    transition: all 150ms ease !important;
   }
 
   html body .l-top_menu-v2 .menu-icon.mail {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='3'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E") center center / 18px no-repeat !important;
     opacity: 0.85;
+    transition: all 150ms ease !important;
   }
 
   html body .l-top_menu-v2 .menu-icon.forum:hover,
@@ -377,16 +310,10 @@
   html body .l-top_menu-v2 .menu-icon.sign_in:hover {
     opacity: 1 !important;
     background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
   }
 
-  /* --- Top Menu Search Input (Centered Vertically) --- */
-  html body .l-top_menu-v2 .global-search .field,
-  .l-top_menu-v2 .global-search .field {
-    margin-top: 9px !important;
-    margin-bottom: 9px !important;
-    display: inline-block !important;
-  }
-
+  /* --- Top Menu Search Input --- */
   html body .l-top_menu-v2 .global-search .field input,
   .l-top_menu-v2 .global-search .field input {
     background-color: rgba(255, 255, 255, 0.08) !important;
@@ -433,7 +360,6 @@
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-radius: 12px !important;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
-    top: 48px !important;
     overflow: hidden !important;
   }
 
