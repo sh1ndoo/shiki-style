@@ -1455,7 +1455,7 @@
     font-weight: 500 !important;
   }
 
-  /* --- Anime Status Tags (Soft Colors) --- */
+  /* --- Anime Status Tags (Original Soft Accents & Bright Borders) --- */
   html body .b-anime_status_tag,
   .b-anime_status_tag {
     background-color: rgba(152, 132, 165, 0.12) !important;
@@ -1463,55 +1463,93 @@
     border-radius: 4px !important;
     color: #ffffff !important;
     padding: 1px 6px !important;
-    display: inline-block !important;
+    display: inline-flex !important;
+    align-items: center !important;
     font-size: 11px !important;
     line-height: 16px !important;
     text-shadow: none !important;
     font-weight: 500 !important;
   }
 
-  /* Релиз (Soft Green) */
+  /* Релиз / Вышло / Просмотрено (Soft Green + Bright Border) */
   html body .b-anime_status_tag.released,
+  html body .b-anime_status_tag.completed,
   html body .status-time .b-anime_status_tag.released,
-  .b-anime_status_tag.released {
+  html body .db-update .b-anime_status_tag.released,
+  .b-anime_status_tag.released,
+  .b-anime_status_tag.completed {
     background-color: rgba(46, 160, 67, 0.15) !important;
-    border: 1px solid rgba(46, 160, 67, 0.55) !important;
+    border: 1px solid rgba(46, 160, 67, 0.6) !important;
     color: #7ee787 !important;
   }
 
-  /* Анонс (Soft Red) */
+  /* Анонс / Брошено (Soft Red + Bright Border) */
   html body .b-anime_status_tag.anons,
+  html body .b-anime_status_tag.dropped,
   html body .status-time .b-anime_status_tag.anons,
-  .b-anime_status_tag.anons {
+  html body .db-update .b-anime_status_tag.anons,
+  .b-anime_status_tag.anons,
+  .b-anime_status_tag.dropped {
     background-color: rgba(230, 57, 70, 0.15) !important;
-    border: 1px solid rgba(230, 57, 70, 0.55) !important;
+    border: 1px solid rgba(230, 57, 70, 0.6) !important;
     color: #ff7b72 !important;
   }
 
-  /* Онгоинг (Soft Blue) */
+  /* Онгоинг / Смотрю (Soft Blue + Bright Border) */
   html body .b-anime_status_tag.ongoing,
+  html body .b-anime_status_tag.watching,
   html body .status-time .b-anime_status_tag.ongoing,
-  .b-anime_status_tag.ongoing {
+  html body .db-update .b-anime_status_tag.ongoing,
+  .b-anime_status_tag.ongoing,
+  .b-anime_status_tag.watching {
     background-color: rgba(30, 144, 255, 0.15) !important;
-    border: 1px solid rgba(30, 144, 255, 0.55) !important;
+    border: 1px solid rgba(30, 144, 255, 0.6) !important;
     color: #79c0ff !important;
   }
 
-  /* Эпизод / Студия / Другие статусы (Soft Lilac) */
+  /* Эпизод / Серии (Soft Amber/Orange + Bright Border) */
   html body .b-anime_status_tag.episode,
+  html body .status-time .b-anime_status_tag.episode,
+  html body .db-update .b-anime_status_tag.episode,
+  .b-anime_status_tag.episode {
+    background-color: rgba(245, 158, 11, 0.15) !important;
+    border: 1px solid rgba(245, 158, 11, 0.6) !important;
+    color: #fbbf24 !important;
+  }
+
+  /* В планах (Soft Teal/Cyan + Bright Border) */
+  html body .b-anime_status_tag.planned,
+  html body .status-time .b-anime_status_tag.planned,
+  .b-anime_status_tag.planned {
+    background-color: rgba(6, 182, 212, 0.15) !important;
+    border: 1px solid rgba(6, 182, 212, 0.6) !important;
+    color: #67e8f9 !important;
+  }
+
+  /* Отложено / Приостановлено (Soft Yellow + Bright Border) */
+  html body .b-anime_status_tag.on_hold,
+  html body .b-anime_status_tag.paused,
+  html body .status-time .b-anime_status_tag.on_hold,
+  .b-anime_status_tag.on_hold,
+  .b-anime_status_tag.paused {
+    background-color: rgba(234, 179, 8, 0.15) !important;
+    border: 1px solid rgba(234, 179, 8, 0.6) !important;
+    color: #fde047 !important;
+  }
+
+  /* Студия / Жанры / Другие теги (Soft Lilac + Bright Border) */
   html body .b-anime_status_tag.studio,
-  .b-anime_status_tag.episode,
+  html body .status-time .b-anime_status_tag.studio,
+  html body .db-update .b-anime_status_tag.studio,
   .b-anime_status_tag.studio {
-    background-color: rgba(152, 132, 165, 0.12) !important;
-    border: 1px solid rgba(152, 132, 165, 0.55) !important;
-    color: #ffffff !important;
+    background-color: rgba(152, 132, 165, 0.15) !important;
+    border: 1px solid rgba(152, 132, 165, 0.6) !important;
+    color: #c4afd4 !important;
   }
 
   html body .b-anime_status_tag:hover,
   .b-anime_status_tag:hover {
-    background-color: rgba(152, 132, 165, 0.28) !important;
-    border-color: #c4afd4 !important;
-    color: #ffffff !important;
+    filter: brightness(1.2) !important;
   }
 
   html body .b-rate .text-score .score-value,
@@ -1685,17 +1723,13 @@
   }
 
   html body .db-update .tags .b-anime_status_tag,
-  html body .db-update .tags .b-anime_status_tag.studio,
   html body .db-update .tags .b-tag,
   html body .db-update .tags .b-tag.genre,
   html body .db-update .tags div,
   html body .db-update .tags span.b-tag,
   .db-update .tags .b-anime_status_tag,
   .db-update .tags .b-tag {
-    background-color: rgba(152, 132, 165, 0.12) !important;
-    border: 1px solid rgba(152, 132, 165, 0.5) !important;
     border-radius: 4px !important;
-    color: #ffffff !important;
     padding: 1px 6px !important;
     margin: 0 !important;
     display: inline-flex !important;
@@ -1706,6 +1740,13 @@
     font-weight: 400 !important;
   }
 
+  html body .db-update .tags .b-tag,
+  html body .db-update .tags .b-tag.genre {
+    background-color: rgba(152, 132, 165, 0.12) !important;
+    border: 1px solid rgba(152, 132, 165, 0.5) !important;
+    color: #ffffff !important;
+  }
+
   html body .db-update .tags .b-tag span,
   html body .db-update .tags .b-tag .genre-ru,
   html body .db-update .tags .b-tag .genre-en {
@@ -1713,7 +1754,6 @@
     text-shadow: none !important;
   }
 
-  html body .db-update .tags .b-anime_status_tag:hover,
   html body .db-update .tags .b-tag:hover {
     background-color: rgba(152, 132, 165, 0.28) !important;
     border-color: #c4afd4 !important;
