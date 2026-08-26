@@ -1559,6 +1559,21 @@
 
   /* --- Section / Category Specific Tag Colors --- */
 
+  /* Global Reset for Tag Pseudo-elements and Spans (Prevent Double Border) */
+  html body .b-anime_status_tag:before,
+  html body .b-anime_status_tag:after,
+  html body .b-tag:before,
+  html body .b-tag:after,
+  .b-anime_status_tag:before,
+  .b-anime_status_tag:after,
+  .b-tag:before,
+  .b-tag:after {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
   /* 1. Коллекции (Светло-зеленый) */
   html body .b-tag.collection,
   html body .b-tag.collections,
@@ -1567,12 +1582,17 @@
   html body a.b-tag[href*="collection"],
   html body a.tag-link[href*="collection"],
   html body .b-anime_status_tag.collection,
-  html body .b-tag.collection span,
   .b-tag.collection,
   .b-tag.collections,
   .b-anime_status_tag.collection {
     background-color: rgba(74, 222, 128, 0.15) !important;
     border: 1px solid rgba(74, 222, 128, 0.6) !important;
+    color: #86efac !important;
+  }
+
+  html body .b-tag.collection span,
+  html body .b-anime_status_tag.collection:after,
+  html body .b-anime_status_tag.collection:before {
     color: #86efac !important;
   }
 
@@ -1587,10 +1607,6 @@
   html body a.tag-link[href*="/spoilers"],
   html body a.b-tag[href*="spoiler"],
   html body a.tag-link[href*="spoiler"],
-  html body .b-tag.spoiler span,
-  html body .b-tag.spoilers span,
-  html body .b-anime_status_tag.spoilers:after,
-  html body .b-anime_status_tag.spoilers:before,
   .b-anime_status_tag.spoilers,
   .b-anime_status_tag.spoiler,
   .b-tag.spoiler,
@@ -1598,6 +1614,15 @@
   .b-tag.is-spoiler {
     background-color: rgba(159, 18, 57, 0.2) !important;
     border: 1px solid rgba(225, 29, 72, 0.65) !important;
+    color: #fda4af !important;
+  }
+
+  html body .b-tag.spoiler span,
+  html body .b-tag.spoilers span,
+  html body .b-anime_status_tag.spoilers:after,
+  html body .b-anime_status_tag.spoilers:before,
+  html body .b-anime_status_tag[data-text*="спойлер"]:after,
+  html body .b-anime_status_tag[data-text*="спойлер"]:before {
     color: #fda4af !important;
   }
 
@@ -1609,12 +1634,17 @@
   html body a.b-tag[href*="article"],
   html body a.tag-link[href*="article"],
   html body .b-anime_status_tag.article,
-  html body .b-tag.article span,
   .b-tag.article,
   .b-tag.articles,
   .b-anime_status_tag.article {
     background-color: rgba(159, 18, 57, 0.2) !important;
     border: 1px solid rgba(225, 29, 72, 0.65) !important;
+    color: #fda4af !important;
+  }
+
+  html body .b-tag.article span,
+  html body .b-anime_status_tag.article:after,
+  html body .b-anime_status_tag.article:before {
     color: #fda4af !important;
   }
 
@@ -1628,12 +1658,19 @@
   html body .b-anime_status_tag.critique,
   html body .b-anime_status_tag.review-review,
   html body .b-anime_status_tag[data-text*="рецензи"],
-  html body .b-tag.critique span,
   .b-tag.critique,
   .b-tag.critiques,
   .b-anime_status_tag.critique {
     background-color: rgba(244, 114, 182, 0.15) !important;
     border: 1px solid rgba(244, 114, 182, 0.6) !important;
+    color: #f472b6 !important;
+  }
+
+  html body .b-tag.critique span,
+  html body .b-anime_status_tag.critique:after,
+  html body .b-anime_status_tag.critique:before,
+  html body .b-anime_status_tag[data-text*="рецензи"]:after,
+  html body .b-anime_status_tag[data-text*="рецензи"]:before {
     color: #f472b6 !important;
   }
 
@@ -1646,15 +1683,20 @@
   html body .b-tag.disagree,
   html body a.b-tag[href*="negative"],
   html body a.tag-link[href*="negative"],
-  html body .b-tag.negative span,
-  html body .b-anime_status_tag.review-negative:after,
-  html body .b-anime_status_tag.review-negative:before,
   .b-anime_status_tag.review-negative,
   .b-anime_status_tag.negative,
   .b-tag.negative,
   .b-tag.bad {
     background-color: rgba(239, 68, 68, 0.15) !important;
     border: 1px solid rgba(239, 68, 68, 0.6) !important;
+    color: #fca5a5 !important;
+  }
+
+  html body .b-tag.negative span,
+  html body .b-anime_status_tag.review-negative:after,
+  html body .b-anime_status_tag.review-negative:before,
+  html body .b-anime_status_tag[data-text*="отрицательн"]:after,
+  html body .b-anime_status_tag[data-text*="отрицательн"]:before {
     color: #fca5a5 !important;
   }
 
@@ -1670,13 +1712,20 @@
   html body .b-anime_status_tag.review,
   html body .b-anime_status_tag.review-opinion,
   html body .b-anime_status_tag[data-text*="отзыв"],
-  html body .b-tag.review span,
   .b-tag.review,
   .b-tag.reviews,
   .b-tag.opinion,
   .b-anime_status_tag.review {
     background-color: rgba(226, 232, 240, 0.12) !important;
     border: 1px solid rgba(226, 232, 240, 0.5) !important;
+    color: #e2e8f0 !important;
+  }
+
+  html body .b-tag.review span,
+  html body .b-anime_status_tag.review:after,
+  html body .b-anime_status_tag.review:before,
+  html body .b-anime_status_tag[data-text*="отзыв"]:after,
+  html body .b-anime_status_tag[data-text*="отзыв"]:before {
     color: #e2e8f0 !important;
   }
 
