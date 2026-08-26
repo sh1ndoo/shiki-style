@@ -259,7 +259,7 @@
     text-shadow: none !important;
   }
 
-  /* --- Top Navigation Menu (Neutral Dark Glass) --- */
+  /* --- Top Navigation Menu Bar --- */
   html body .l-top_menu-v2,
   .l-top_menu-v2 {
     background-color: rgba(20, 20, 23, 0.9) !important;
@@ -267,14 +267,49 @@
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
-  /* --- Top Menu Dropdown Triggers (Thinner Font & Clean Styling) --- */
+  /* --- Header Buttons & Dropdown Triggers: Match Search Height (30px), Transparent Minimalist --- */
+  html body .l-top_menu-v2 .menu-dropdown,
+  html body .l-top_menu-v2 .menu-dropdown.main,
+  html body .l-top_menu-v2 .menu-dropdown.profile,
+  html body .l-top_menu-v2 .menu-dropdown > span,
+  html body .l-top_menu-v2 .menu-dropdown.profile > span,
+  html body .l-top_menu-v2 .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown.main .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown.profile a.submenu-triangle,
+  .l-top_menu-v2 .submenu-triangle,
+  .l-top_menu-v2 .menu-dropdown > span {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    line-height: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    padding: 0 8px !important;
+    margin: 0 2px !important;
+    transition: background 150ms ease, color 150ms ease !important;
+  }
+
+  html body .l-top_menu-v2 .menu-dropdown:hover > span,
+  html body .l-top_menu-v2 .menu-dropdown.main:hover .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown.profile:hover a.submenu-triangle,
+  html body .l-top_menu-v2 .submenu-triangle:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
   html body .l-top_menu-v2 .menu-dropdown .submenu-triangle,
   html body .l-top_menu-v2 .menu-dropdown .submenu-triangle span,
   html body .l-top_menu-v2 .menu-dropdown .nickname,
-  html body .l-top_menu-v2 .menu-dropdown > span,
-  html body .l-top_menu-v2 .menu-dropdown a,
   .l-top_menu-v2 .menu-dropdown .submenu-triangle,
   .l-top_menu-v2 .menu-dropdown .nickname {
     font-weight: 400 !important;
@@ -282,33 +317,63 @@
     letter-spacing: normal !important;
     color: #e4e4e9 !important;
     text-shadow: none !important;
+    line-height: 30px !important;
   }
 
-  html body .l-top_menu-v2 .menu-dropdown:hover .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown:hover .submenu-triangle span,
   html body .l-top_menu-v2 .menu-dropdown:hover .nickname {
     color: #ffffff !important;
   }
 
-  /* --- Top Menu Modern Vector Icons --- */
-  html body .l-top_menu-v2 .menu-icon.forum {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") center center / 19px no-repeat !important;
-    opacity: 0.85;
+  html body .l-top_menu-v2 .menu-dropdown.profile img {
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 50% !important;
+    margin-right: 6px !important;
+    vertical-align: middle !important;
+  }
+
+  /* --- Top Menu Icons (Height 30px to Match Search Input) --- */
+  html body .l-top_menu-v2 .menu-icon.forum,
+  html body .l-top_menu-v2 .menu-icon.mail,
+  html body .l-top_menu-v2 .menu-icon.contest,
+  html body .l-top_menu-v2 .menu-icon.search,
+  html body .l-top_menu-v2 .menu-icon.sign_in,
+  .l-top_menu-v2 .menu-icon {
+    height: 30px !important;
+    width: 30px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    border-radius: 8px !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 2px !important;
     transition: all 150ms ease !important;
+  }
+
+  html body .l-top_menu-v2 .menu-icon.forum {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") center center / 18px no-repeat !important;
+    opacity: 0.85;
   }
 
   html body .l-top_menu-v2 .menu-icon.mail {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='3'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E") center center / 19px no-repeat !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='3'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E") center center / 18px no-repeat !important;
     opacity: 0.85;
-    transition: all 150ms ease !important;
   }
 
   html body .l-top_menu-v2 .menu-icon.forum:hover,
-  html body .l-top_menu-v2 .menu-icon.mail:hover {
+  html body .l-top_menu-v2 .menu-icon.mail:hover,
+  html body .l-top_menu-v2 .menu-icon.contest:hover,
+  html body .l-top_menu-v2 .menu-icon.sign_in:hover {
     opacity: 1 !important;
     background-color: rgba(255, 255, 255, 0.08) !important;
   }
 
-  /* --- Top Menu Search Input (Fix Layout & Padding) --- */
+  /* --- Top Menu Search Input (Height 30px) --- */
   html body .l-top_menu-v2 .global-search .field input,
   .l-top_menu-v2 .global-search .field input {
     background-color: rgba(255, 255, 255, 0.08) !important;
@@ -367,7 +432,6 @@
   html body .tooltip-inner,
   html body .b-options-floated,
   .l-top_menu-v2 .submenu,
-  .l-top_menu-v2 .submenu-triangle,
   .dropdown-menu,
   .tooltip-inner {
     background-color: rgba(28, 28, 32, 0.95) !important;
@@ -421,18 +485,6 @@
     color: #ffffff !important;
     border-radius: 10px !important;
     font-weight: 500 !important;
-  }
-
-  html body .l-top_menu-v2 .menu-icon.contest:hover,
-  html body .l-top_menu-v2 .menu-icon.forum:hover,
-  html body .l-top_menu-v2 .menu-icon.mail:hover,
-  html body .l-top_menu-v2 .menu-icon.sign_in:hover,
-  .l-top_menu-v2 .menu-icon.contest:hover,
-  .l-top_menu-v2 .menu-icon.forum:hover,
-  .l-top_menu-v2 .menu-icon.mail:hover,
-  .l-top_menu-v2 .menu-icon.sign_in:hover {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border-radius: 8px !important;
   }
 
   /* --- Modern Submenu Vector Icons --- */
