@@ -1922,6 +1922,29 @@
     color: #e2e8f0 !important;
   }
 
+  /* 7. Новость (Оранжевый) */
+  html body .b-anime_status_tag.news,
+  html body .b-anime_status_tag[data-text*="новост"],
+  html body .b-tag.news,
+  html body a.b-tag[href*="/news"],
+  html body a.tag-link[href*="/news"],
+  html body a.b-tag[href*="news"],
+  html body a.tag-link[href*="news"],
+  .b-anime_status_tag.news,
+  .b-tag.news {
+    background-color: rgba(245, 158, 11, 0.15) !important;
+    border: 1px solid rgba(245, 158, 11, 0.6) !important;
+    color: #fbbf24 !important;
+  }
+
+  html body .b-tag.news span,
+  html body .b-anime_status_tag.news:after,
+  html body .b-anime_status_tag.news:before,
+  html body .b-anime_status_tag[data-text*="новост"]:after,
+  html body .b-anime_status_tag[data-text*="новост"]:before {
+    color: #fbbf24 !important;
+  }
+
 
   html body .b-anime_status_tag:hover,
   .b-anime_status_tag:hover {
