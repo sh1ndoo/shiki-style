@@ -1,50 +1,57 @@
 @media all {
   /* ============================================================
-     SHIKI-STYLE: High-Priority Dark Theme with Accent rgb(152, 132, 165)
+     SHIKI-STYLE: Modern macOS-inspired Dark Theme
+     Accent Color: rgb(152, 132, 165) / #9884a5
      Author: sh1ndoo (github.com/sh1ndoo/shiki-style)
      ============================================================ */
 
-  /* --- Global CSS Variables Override --- */
+  /* --- Global CSS Variables Override (Neutral Dark macOS Style) --- */
   :root, html, body, .l-page, #profiles_show {
-    --color-text: #ede6f2 !important;
+    --color-text: #e4e4e9 !important;
     --color-text-primary: #ffffff !important;
     --color-text-secondary: #c4afd4 !important;
-    --color-text-hint: #bfaecf !important;
-    --color-text-disabled: #7a6e84 !important;
+    --color-text-hint: #98989f !important;
+    --color-text-disabled: #636366 !important;
     --color-link: #c4afd4 !important;
     --color-link-hover: #ffffff !important;
     --color-link-active: #ffffff !important;
     --color-primary: #9884a5 !important;
     --color-accent: #9884a5 !important;
-    --color-background: #120e18 !important;
-    --color-surface: #1a1424 !important;
-    --color-surface-hover: #261d34 !important;
-    --color-border: #4a3a5e !important;
+    --color-background: #121214 !important;
+    --color-surface: #1c1c1e !important;
+    --color-surface-hover: #2c2c2e !important;
+    --color-border: rgba(255, 255, 255, 0.08) !important;
     --headline-color: #ffffff !important;
     --headline-border-color: #9884a5 !important;
-    --headline-background: #241c30 !important;
+    --headline-background: #232326 !important;
     --link-color: #c4afd4 !important;
     --link-hover-color: #ffffff !important;
-    --background-color: #120e18 !important;
+    --background-color: #121214 !important;
   }
 
-  /* --- Base Background & Body --- */
+  /* --- Base Background & Typography --- */
   html body,
   body {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
     background: url(https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/flowers-bg.gif) 0 0 / cover fixed !important;
     background-attachment: fixed !important;
-    color: #ede6f2 !important;
+    color: #e4e4e9 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
   }
 
-  /* --- Page Wrapper (High Opacity, No RGB animation) --- */
+  /* --- Main Page Container (macOS Neutral Dark Glass) --- */
   html body .l-page,
   html body #profiles_show .l-page,
   #profiles_show .l-page,
   .l-page {
-    background-color: rgba(18, 14, 24, 0.96) !important;
-    box-shadow: 0 0 16px 4px rgba(152, 132, 165, 0.4) !important;
-    color: #ede6f2 !important;
+    background-color: rgba(20, 20, 23, 0.94) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+    border-radius: 18px !important;
+    color: #e4e4e9 !important;
     animation: none !important;
     -webkit-animation: none !important;
   }
@@ -52,10 +59,10 @@
   html body #profiles_show .l-page,
   #profiles_show .l-page {
     margin-top: 65px !important;
-    border-radius: 15px !important;
+    border-radius: 18px !important;
   }
 
-  /* --- Universal Text Overrides across All Blocks --- */
+  /* --- Universal Text Overrides --- */
   html body,
   html body .l-page,
   html body .p-profiles,
@@ -83,10 +90,11 @@
   html body td,
   html body th,
   html body label {
-    color: #ede6f2;
+    color: #e4e4e9;
+    text-shadow: none !important;
   }
 
-  /* --- Header & Notice (High-Priority Overrides) --- */
+  /* --- Header & Profile Title (No Glow, Clean Text) --- */
   html body header.head,
   html body header.head .title,
   html body header.head .name-ru,
@@ -95,8 +103,12 @@
   html body .profile-head header.head,
   html body .profile-head header.head .title,
   html body .profile-head header.head .name-ru,
-  html body .profile-head header.head .name-en {
+  html body .profile-head header.head .name-en,
+  html body .p-profiles .profile-head .c-brief header h1,
+  .p-profiles .profile-head .c-brief header h1 {
     color: #ffffff !important;
+    text-shadow: none !important;
+    font-weight: 600 !important;
   }
 
   html body header.head .notice,
@@ -110,27 +122,23 @@
   html body .hint,
   html body .key,
   html body .b-achievement .c-about .hint {
-    color: #c4afd4 !important;
+    color: #a1a1aa !important;
+    text-shadow: none !important;
   }
 
   html body header.head a,
   html body .profile-head header.head a {
     color: #c4afd4 !important;
+    text-shadow: none !important;
   }
 
   html body header.head a:hover,
   html body .profile-head header.head a:hover {
     color: #ffffff !important;
+    text-shadow: none !important;
   }
 
-  html body .p-profiles .profile-head .c-brief header h1,
-  .p-profiles .profile-head .c-brief header h1 {
-    color: #ffffff !important;
-    text-shadow: 0 0 8px #9884a5 !important;
-    pointer-events: none !important;
-  }
-
-  /* --- Headings & Section Bars --- */
+  /* --- Headlines & Content Blocks (macOS Card Style) --- */
   html body h1,
   html body h2,
   html body h3,
@@ -144,16 +152,19 @@
   h1, h2, h3, h4, h5, h6,
   .headline, .midheadline, .subheadline, .title {
     color: #ffffff !important;
+    text-shadow: none !important;
+    font-weight: 600 !important;
   }
 
   html body .headline,
   html body .midheadline,
   html body .subheadline,
   .headline, .midheadline, .subheadline {
-    background-color: rgba(36, 28, 48, 0.96) !important;
-    border: 1px solid #4a3a5e !important;
-    border-radius: 10px !important;
-    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.35) !important;
+    background-color: rgba(32, 32, 36, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+    padding: 8px 12px !important;
   }
 
   html body .headline > a,
@@ -161,6 +172,7 @@
   html body .subheadline > a,
   .headline > a, .midheadline > a, .subheadline > a {
     color: #ffffff !important;
+    text-shadow: none !important;
   }
 
   html body .headline > a:before,
@@ -168,6 +180,7 @@
   html body .subheadline > a:before,
   .headline > a:before, .midheadline > a:before, .subheadline > a:before {
     color: #c4afd4 !important;
+    text-shadow: none !important;
   }
 
   html body h2.headline.blue.m10,
@@ -181,7 +194,7 @@
     color: #ffffff !important;
   }
 
-  /* --- Links (Replace All Blue with Accent #c4afd4 / #9884a5) --- */
+  /* --- Links (Accent #c4afd4, No Glow) --- */
   html body a,
   html body a:link,
   html body a:visited,
@@ -212,6 +225,7 @@
   .l-footer a {
     color: #c4afd4 !important;
     text-decoration: none !important;
+    text-shadow: none !important;
   }
 
   html body a:hover,
@@ -229,51 +243,79 @@
   a:hover, .b-link:hover {
     color: #ffffff !important;
     text-decoration: none !important;
+    text-shadow: none !important;
   }
 
-  /* --- Top Navigation Menu --- */
+  /* --- Top Navigation Menu (Neutral Dark Glass) --- */
   html body .l-top_menu-v2,
+  .l-top_menu-v2 {
+    background-color: rgba(20, 20, 23, 0.9) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  /* --- Dropdown Menus & Popups (macOS Rounded Glass Style) --- */
   html body .l-top_menu-v2 .submenu,
   html body .l-top_menu-v2 .submenu-triangle,
-  .l-top_menu-v2,
+  html body .dropdown-menu,
+  html body .b-dialog,
+  html body .b-dialog > .inner,
+  html body .tooltip-inner,
+  html body .b-options-floated,
+  html body .b-add_to_list .popup,
   .l-top_menu-v2 .submenu,
-  .l-top_menu-v2 .submenu-triangle {
-    background-color: rgba(18, 14, 24, 0.98) !important;
+  .l-top_menu-v2 .submenu-triangle,
+  .dropdown-menu,
+  .tooltip-inner {
+    background-color: rgba(28, 28, 32, 0.95) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
   }
 
   html body .l-top_menu-v2 .submenu,
   .l-top_menu-v2 .submenu {
-    border: 1px solid #3d3050 !important;
-    border-radius: 0 0 10px 10px !important;
+    padding: 8px !important;
     overflow-y: auto !important;
     max-height: calc(100vh - 144px) !important;
   }
 
   html body .l-top_menu-v2 .submenu a,
   .l-top_menu-v2 .submenu a {
-    color: #ede6f2 !important;
+    color: #e4e4e9 !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    margin: 2px 0 !important;
+    transition: background 150ms ease, color 150ms ease !important;
   }
 
   html body .l-top_menu-v2 .submenu a:hover,
   .l-top_menu-v2 .submenu a:hover {
     color: #ffffff !important;
-    background-color: #352848 !important;
+    background-color: rgba(152, 132, 165, 0.3) !important;
   }
 
   html body .l-top_menu-v2 .submenu > .legend,
   .l-top_menu-v2 .submenu > .legend {
-    border: solid #4a3a5e !important;
-    border-width: 1px 0 !important;
-    border-radius: 15px !important;
-    margin-bottom: 4px !important;
-    background-color: rgba(45, 35, 60, 0.7) !important;
-    color: #ede6f2 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    margin-bottom: 6px !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: #a1a1aa !important;
+    font-size: 11px !important;
+    padding: 4px 10px !important;
   }
 
   html body .l-top_menu-v2 .menu-icon.mail:after,
   .l-top_menu-v2 .menu-icon.mail:after {
-    background-color: #2a2038 !important;
-    color: #c4afd4 !important;
+    background-color: #9884a5 !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
   }
 
   html body .l-top_menu-v2 .menu-icon.contest:hover,
@@ -284,24 +326,11 @@
   .l-top_menu-v2 .menu-icon.forum:hover,
   .l-top_menu-v2 .menu-icon.mail:hover,
   .l-top_menu-v2 .menu-icon.sign_in:hover {
-    background-color: rgba(152, 132, 165, 0.22) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
   }
 
-  html body .l-top_menu-v2 .menu-icon.contest:focus,
-  html body .l-top_menu-v2 .menu-icon.forum:focus,
-  html body .l-top_menu-v2 .menu-icon.mail:focus,
-  html body .l-top_menu-v2 .menu-icon.sign_in:focus {
-    background-color: rgba(152, 132, 165, 0.28) !important;
-  }
-
-  html body .l-top_menu-v2 .menu-icon.contest:active,
-  html body .l-top_menu-v2 .menu-icon.forum:active,
-  html body .l-top_menu-v2 .menu-icon.mail:active,
-  html body .l-top_menu-v2 .menu-icon.sign_in:active {
-    background-color: rgba(152, 132, 165, 0.35) !important;
-  }
-
-  /* --- Inputs & Search Bars --- */
+  /* --- Inputs & Spotlight Search (macOS Style) --- */
   html body .l-top_menu-v2 .global-search input,
   html body .b-collection_search .field input,
   html body .b-shiki_editor .body .editor textarea,
@@ -313,9 +342,13 @@
   .b-collection_search .field input,
   .b-shiki_editor .body .editor textarea,
   input[type="text"], input[type="search"], textarea, select {
-    background-color: #1e182a !important;
-    border: 1px solid #4a3a5e !important;
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 10px !important;
     color: #ffffff !important;
+    padding: 6px 12px !important;
+    transition: all 150ms ease !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2) !important;
   }
 
   html body .l-top_menu-v2 .global-search input:focus,
@@ -327,10 +360,11 @@
   .l-top_menu-v2 .global-search input:focus,
   .b-collection_search .field input:focus,
   .b-shiki_editor .body .editor textarea:focus {
-    background-color: #271f36 !important;
+    background-color: rgba(255, 255, 255, 0.11) !important;
     border-color: #9884a5 !important;
     color: #ffffff !important;
     outline: none !important;
+    box-shadow: 0 0 0 3px rgba(152, 132, 165, 0.3) !important;
   }
 
   html body .b-collection_search .field,
@@ -342,11 +376,11 @@
 
   html body .b-collection_search .field input,
   .b-collection_search .field input {
-    border-radius: 10px !important;
+    border-radius: 12px !important;
     width: 850px !important;
   }
 
-  /* --- Spoilers, Comments, Loaders --- */
+  /* --- Spoilers, Comments, Loaders (macOS Card Style) --- */
   html body .b-comments .comments-hider,
   html body .collapsed,
   html body .collapsed + .spoiler .hide-expanded,
@@ -357,11 +391,12 @@
   .collapsed + .spoiler .hide-expanded,
   .comments-expander,
   .comments-loader {
-    background-color: rgba(45, 35, 60, 0.98) !important;
-    border-radius: 10px !important;
-    border: 1px solid #4a3a5e !important;
-    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.25) !important;
-    color: #ede6f2 !important;
+    background-color: rgba(34, 34, 38, 0.85) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    color: #e4e4e9 !important;
+    transition: all 150ms ease !important;
   }
 
   html body .b-comments .comments-hider:hover,
@@ -371,24 +406,27 @@
   html body .comments-loader:hover,
   .b-comments .comments-hider:hover,
   .collapsed:hover {
-    background-color: rgba(60, 48, 78, 0.98) !important;
-    border-color: #9884a5 !important;
+    background-color: rgba(45, 45, 50, 0.95) !important;
+    border-color: rgba(152, 132, 165, 0.5) !important;
     color: #ffffff !important;
-    box-shadow: 0 0 9px -2px rgba(0, 0, 0, 0.5) inset !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   }
 
-  /* --- Buttons --- */
+  /* --- Buttons (macOS Native Style) --- */
   html body .b-button,
   html body .b-form input[type=submit],
   html body button,
   .b-button,
   .b-form input[type=submit],
   button {
-    border-radius: 5px !important;
-    background-color: #382c48 !important;
+    border-radius: 9px !important;
+    background: rgba(255, 255, 255, 0.09) !important;
     color: #ffffff !important;
-    border: 1px solid #5a4670 !important;
-    transition: background-color 150ms, border-color 150ms !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    font-weight: 500 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) !important;
+    transition: all 150ms ease !important;
+    padding: 6px 14px !important;
   }
 
   html body .b-button:hover,
@@ -397,18 +435,17 @@
   .b-button:hover,
   .b-form input[type=submit]:hover,
   button:hover {
-    background-color: #9884a5 !important;
+    background: #9884a5 !important;
     color: #ffffff !important;
-    border-color: #c4afd4 !important;
+    border-color: #9884a5 !important;
+    box-shadow: 0 2px 8px rgba(152, 132, 165, 0.4) !important;
   }
 
   html body .b-button:focus,
   html body .b-form input[type=submit]:focus,
   html body button:focus {
     outline: 0 !important;
-    background-color: #9884a5 !important;
-    color: #ffffff !important;
-    box-shadow: inset 0 0 6px 1px rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 0 0 3px rgba(152, 132, 165, 0.35) !important;
   }
 
   /* --- History Block (No Close/Hide Overlay) --- */
@@ -437,15 +474,15 @@
 
   html body .p-profiles .profile-head .c-history .entry:hover,
   .p-profiles .profile-head .c-history .entry:hover {
-    background-color: rgba(152, 132, 165, 0.22) !important;
-    border-radius: 8px !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
   }
 
   html body .p-profiles .profile-head .c-history .entry:hover .name-ru:before {
     color: #ffffff !important;
   }
 
-  /* --- Stats Bars & Activity --- */
+  /* --- Stats Bars & Activity (Clean Flat Design) --- */
   html body .b-stats_bar,
   html body .b-stats_bar .stat_names,
   html body .b-stats_bar .stat_values,
@@ -453,20 +490,21 @@
   html body .b-stats_bar .compatibility a,
   .b-stats_bar .stat_names,
   .b-stats_bar .stat_values {
-    color: #ede6f2 !important;
+    color: #a1a1aa !important;
   }
 
   html body .b-stats_bar .bar,
   html body .p-profiles-show .achievements .cc-achievements .b-achievement,
   .b-stats_bar .bar,
   .p-profiles-show .achievements .cc-achievements .b-achievement {
-    border-radius: 3px !important;
+    border-radius: 6px !important;
   }
 
   html body .b-stats_bar.lifetime .bar .first,
   .b-stats_bar.lifetime .bar .first {
     background: #9884a5 !important;
-    background: linear-gradient(to right, #9884a5 0%, #755e82 100%) !important;
+    background: linear-gradient(to right, #9884a5 0%, #7d688a 100%) !important;
+    border-radius: 6px !important;
   }
 
   html body .p-profiles-show .lifetime .bar,
@@ -479,7 +517,7 @@
     width: 10px !important;
     height: 10px !important;
     background-color: #9884a5 !important;
-    border: 1px solid #5a4670 !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     border-radius: 50% !important;
     position: absolute !important;
     top: -1px !important;
@@ -501,34 +539,35 @@
     vertical-align: top !important;
     font-size: 13px !important;
     color: #ffffff !important;
+    font-weight: 600 !important;
   }
 
   html body .activity .bar.simple .bar {
-    border-radius: 7px 7px 0 0 !important;
+    border-radius: 4px 4px 0 0 !important;
   }
 
   html body .bar-container .bar.min {
-    border-radius: 2px 6px 6px 2px !important;
+    border-radius: 4px !important;
   }
 
   html body .b-stats_bar a.title,
   .b-stats_bar a.title {
     margin-left: 289px !important;
     margin-bottom: 2px !important;
-    padding: 5px !important;
-    border-radius: 5px !important;
-    transition: 150ms !important;
+    padding: 4px 8px !important;
+    border-radius: 6px !important;
+    transition: all 150ms ease !important;
   }
 
   html body .b-stats_bar a.title:hover,
   .b-stats_bar a.title:hover {
-    background-color: rgba(152, 132, 165, 0.22) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
     color: #ffffff !important;
   }
 
   html body .b-stats_bar a.title:focus,
   .b-stats_bar a.title:focus {
-    box-shadow: inset 0 0 6px 3px rgba(152, 132, 165, 0.35) !important;
+    box-shadow: 0 0 0 2px rgba(152, 132, 165, 0.3) !important;
   }
 
   /* --- Badges, Avatars & Images --- */
@@ -541,29 +580,30 @@
   html body .b-user16 img,
   html body .l-top_menu-v2 .menu-dropdown.profile > span img {
     border-radius: 50% !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35) !important;
   }
 
   html body .b-catalog_entry .cover,
   html body .b-catalog_entry .cover .image-decor,
   html body .image-decor img,
   html body .p-profiles .profile-head .c-history .entry img {
-    border-radius: 8px !important;
+    border-radius: 10px !important;
   }
 
   html body #profiles_show .achievements .cc-franchises .b-badge,
   #profiles_show .achievements .cc-franchises .b-badge {
-    border-radius: 5px !important;
-    border: 1px solid #3d3050 !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
   html body .b-badge img {
-    border-radius: 5px !important;
+    border-radius: 8px !important;
   }
 
   html body .p-profiles-show .achievements .cc-franchises .b-badge:before,
   .p-profiles-show .achievements .cc-franchises .b-badge:before {
-    background-color: rgba(0, 0, 0, 0.7) !important;
-    border-radius: 0 5px 0 1px !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    border-radius: 0 8px 0 2px !important;
   }
 
   html body #profiles_show .b-catalog_entry .cover:hover,
@@ -572,36 +612,38 @@
   html body .b-user.avatar img:hover,
   html body .b-user.avatar_fixed_margin img:hover,
   html body .b-user.named_avatar img:hover {
-    box-shadow: 0 0 6px 2px rgba(152, 132, 165, 0.6) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+    transform: translateY(-2px) !important;
+    transition: all 150ms ease !important;
   }
 
   /* --- Add to List & Tooltips --- */
   html body span.other-names,
   span.other-names {
-    background-color: #2a2038 !important;
-    border: 1px solid #9884a5 !important;
-    border-radius: 10px !important;
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
     margin-top: 3px !important;
-    color: #ede6f2 !important;
+    color: #e4e4e9 !important;
   }
 
   html body span.other-names:hover,
   span.other-names:hover {
-    background-color: #382c48 !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
   }
 
   html body .tooltip-inner,
   .tooltip-inner {
-    background-color: #1e182a !important;
-    color: #ede6f2 !important;
-    border: 1px solid #4a3a5e !important;
+    border-radius: 10px !important;
+    padding: 6px 10px !important;
+    color: #e4e4e9 !important;
   }
 
   html body .tooltip-inner .close,
   .tooltip-inner .close {
-    background-color: #2e243c !important;
-    border-radius: 5px !important;
-    color: #ede6f2 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 6px !important;
+    color: #e4e4e9 !important;
   }
 
   html body .b-add_to_list .option,
@@ -609,7 +651,7 @@
   .b-add_to_list .option,
   .b-add_to_list .trigger {
     padding: 0 0 0 5px !important;
-    color: #ede6f2 !important;
+    color: #e4e4e9 !important;
   }
 
   html body .b-add_to_list .trigger-arrow {
@@ -618,7 +660,7 @@
 
   html body .b-add_to_list .option:hover,
   html body .b-add_to_list .trigger-arrow:hover {
-    background-color: #382c48 !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
   }
 
   html body .profile-actions .fav-remove {
@@ -626,7 +668,7 @@
   }
 
   html body .p-profiles .profile-head .c-brief .avatar .profile-actions {
-    border-radius: 5px !important;
+    border-radius: 8px !important;
     background: rgba(0, 0, 0, 0.4) !important;
   }
 
@@ -634,100 +676,102 @@
   html body .b-tag[href$="/9-Ecchi"],
   html body .b-tag[href$="/r_plus"],
   html body .b-tooltipped[original-title*="R+"] {
-    border-bottom-color: #7a3a68 !important;
+    border-bottom-color: rgba(152, 132, 165, 0.6) !important;
     text-shadow: none !important;
-    color: #ede6f2 !important;
+    color: #e4e4e9 !important;
   }
 
   html body .b-tag[href$="/9-Ecchi"]:hover,
   html body .b-tag[href$="/r_plus"]:hover {
-    background-color: #4a2440 !important;
+    background-color: rgba(152, 132, 165, 0.2) !important;
   }
 
   html body .b-tag[href$="/12-Hentai"],
   html body .b-tag[href$="/rx"],
   html body .b-tooltipped[original-title*=Rx] {
-    border-bottom-color: #9a284e !important;
+    border-bottom-color: rgba(210, 80, 110, 0.6) !important;
     text-shadow: none !important;
-    color: #ede6f2 !important;
+    color: #e4e4e9 !important;
   }
 
   html body .b-tag[href$="/12-Hentai"]:hover,
   html body .b-tag[href$="/rx"]:hover {
-    background-color: #551c32 !important;
+    background-color: rgba(210, 80, 110, 0.2) !important;
   }
 
   /* --- Editor & Offtopic Marker --- */
   html body .b-offtopic_marker.off:before {
-    color: #7a6e84 !important;
-    border-color: #4a3a5e !important;
+    color: #636366 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
     background-color: transparent !important;
   }
 
   html body .b-offtopic_marker.off:hover:before {
     color: #c4afd4 !important;
-    border-color: #ede6f2 !important;
-    background-color: #2a2038 !important;
+    border-color: #e4e4e9 !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
   }
 
   html body .b-offtopic_marker:before {
     color: #c4afd4 !important;
     border-color: #9884a5 !important;
-    background-color: #1e182a !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
   }
 
   html body .b-offtopic_marker:hover:before {
-    background-color: #352848 !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
   }
 
   html body .b-offtopic_marker:active:before {
-    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.3) inset !important;
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.25) inset !important;
   }
 
-  html body aside.buttons .editor-controls .b-tooltipped {
-    border: 1px solid #4a3a5e !important;
-    border-radius: 5px !important;
-    background-color: rgba(45, 35, 60, 0.7) !important;
-    color: #ede6f2 !important;
-    transition: 105ms !important;
+  aside.buttons .editor-controls .b-tooltipped {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: #e4e4e9 !important;
+    transition: all 120ms ease !important;
   }
 
-  html body aside.buttons .editor-controls .b-tooltipped:hover {
+  aside.buttons .editor-controls .b-tooltipped:hover {
     color: #ffffff !important;
     border-color: #9884a5 !important;
-    background-color: rgba(152, 132, 165, 0.25) !important;
+    background-color: rgba(152, 132, 165, 0.2) !important;
   }
 
   /* --- Tables & Lists --- */
   html body .b-table tr.border {
-    border-color: #4a3a5e !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
   }
 
   html body .b-table td,
   html body .b-table th {
-    color: #ede6f2 !important;
+    color: #e4e4e9 !important;
   }
 
   html body .b-block_list li:hover,
   html body .p-contests .match-day .match-link:hover {
-    background-color: rgba(152, 132, 165, 0.18) !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border-radius: 8px !important;
   }
 
   html body .b-block_list li.selected,
   html body .p-contests .match-day .match-link.active {
-    background-color: rgba(152, 132, 165, 0.3) !important;
+    background-color: rgba(152, 132, 165, 0.25) !important;
+    border-radius: 8px !important;
   }
 
   html body .p-user_rates-index .list-lines .selectable:hover {
-    background-color: rgba(152, 132, 165, 0.22) !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
   }
 
   html body .p-userlist_comparer .comparer table .selectable:hover {
-    background-color: rgba(55, 42, 70, 0.85) !important;
-    transform: scale(1.02) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    transform: scale(1.01) !important;
   }
 
-  /* --- Custom Scrollbars --- */
+  /* --- macOS Style Scrollbars --- */
   ::-webkit-scrollbar-button {
     background-repeat: no-repeat !important;
     width: 5px !important;
@@ -741,11 +785,11 @@
   ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px !important;
     border-radius: 10px !important;
-    background-color: #9884a5 !important;
+    background-color: rgba(255, 255, 255, 0.18) !important;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #c4afd4 !important;
+    background-color: rgba(152, 132, 165, 0.6) !important;
   }
 
   ::-webkit-scrollbar {
@@ -753,12 +797,12 @@
   }
 
   ::selection {
-    background-color: rgba(152, 132, 165, 0.45) !important;
+    background-color: rgba(152, 132, 165, 0.4) !important;
     color: #ffffff !important;
   }
 
   ::-moz-selection {
-    background-color: rgba(152, 132, 165, 0.45) !important;
+    background-color: rgba(152, 132, 165, 0.4) !important;
     color: #ffffff !important;
   }
 
@@ -783,7 +827,7 @@
   html body .l-footer:before,
   .l-footer:before {
     content: "shiki-style" !important;
-    color: #bfaecf !important;
+    color: #a1a1aa !important;
     font-size: 11px !important;
     float: left !important;
   }
