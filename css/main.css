@@ -1506,6 +1506,43 @@
     padding: 0 !important;
   }
 
+  /* --- Unified Tags in Dashboard Anime Updates (.db-update .tags) --- */
+  html body .db-update .tags .b-anime_status_tag,
+  html body .db-update .tags .b-anime_status_tag.studio,
+  html body .db-update .tags .b-tag,
+  html body .db-update .tags .b-tag.genre,
+  html body .db-update .tags div,
+  html body .db-update .tags span.b-tag,
+  .db-update .tags .b-anime_status_tag,
+  .db-update .tags .b-tag {
+    background-color: rgba(152, 132, 165, 0.2) !important;
+    border: 1px solid rgba(152, 132, 165, 0.35) !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    padding: 1px 6px !important;
+    margin: 1px 2px !important;
+    display: inline-block !important;
+    font-size: 11px !important;
+    line-height: 16px !important;
+    text-shadow: none !important;
+    vertical-align: middle !important;
+    font-weight: 400 !important;
+  }
+
+  html body .db-update .tags .b-tag span,
+  html body .db-update .tags .b-tag .genre-ru,
+  html body .db-update .tags .b-tag .genre-en {
+    color: #ffffff !important;
+    text-shadow: none !important;
+  }
+
+  html body .db-update .tags .b-anime_status_tag:hover,
+  html body .db-update .tags .b-tag:hover {
+    background-color: rgba(152, 132, 165, 0.35) !important;
+    border-color: #9884a5 !important;
+    color: #ffffff !important;
+  }
+
   html body .b-user_rate-history img,
   html body .b-user_rate-history picture img,
   html body .b-user_rate-history picture,
