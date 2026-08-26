@@ -932,6 +932,82 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   }
 
+  /* --- Spoiler Blocks (.b-spoiler_block) & Inline Spoilers --- */
+  html body .b-spoiler_block,
+  .b-spoiler_block {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    margin: 8px 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    color: #e4e4e9 !important;
+    transition: border-color 150ms ease !important;
+  }
+
+  html body .b-spoiler_block > span,
+  html body .b-spoiler_block > header,
+  .b-spoiler_block > span {
+    display: block !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: #c4afd4 !important;
+    padding: 6px 12px !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    border: none !important;
+    border-bottom: 1px solid transparent !important;
+    transition: all 120ms ease !important;
+    user-select: none !important;
+  }
+
+  html body .b-spoiler_block > span:hover,
+  .b-spoiler_block > span:hover {
+    background-color: rgba(152, 132, 165, 0.2) !important;
+    color: #ffffff !important;
+  }
+
+  html body .b-spoiler_block.is-opened,
+  .b-spoiler_block.is-opened {
+    border-color: rgba(152, 132, 165, 0.4) !important;
+  }
+
+  html body .b-spoiler_block.is-opened > span,
+  .b-spoiler_block.is-opened > span {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+  }
+
+  html body .b-spoiler_block > div,
+  .b-spoiler_block > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    padding: 10px 12px !important;
+    color: #e4e4e9 !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Inline Spoilers (.b-spoiler_inline) */
+  html body .b-spoiler_inline,
+  .b-spoiler_inline {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: transparent !important;
+    border-radius: 4px !important;
+    padding: 1px 4px !important;
+    cursor: pointer !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .b-spoiler_inline.is-opened,
+  html body .b-spoiler_inline:hover,
+  .b-spoiler_inline.is-opened,
+  .b-spoiler_inline:hover {
+    background-color: rgba(152, 132, 165, 0.25) !important;
+    color: #ffffff !important;
+  }
+
   /* --- Buttons (macOS Native Style) --- */
   html body .b-button,
   html body .b-form input[type=submit],
