@@ -861,6 +861,29 @@
     width: 850px !important;
   }
 
+  /* --- Remove Default Dashed Borders on Comments & Items --- */
+  html body .b-comment,
+  html body .b-comments .comments-hider,
+  html body .b-message,
+  html body .b-topic,
+  html body .b-reply,
+  html body .b-dialog,
+  html body .b-db_entry-variant-list_item,
+  html body .c-history .entry,
+  html body .b-quote,
+  .b-comment,
+  .b-comments .comments-hider,
+  .b-message,
+  .b-topic,
+  .b-reply,
+  .b-dialog,
+  .b-db_entry-variant-list_item,
+  .c-history .entry,
+  .b-quote {
+    border-top: none !important;
+    border-style: solid !important;
+  }
+
   /* --- Spoilers, Comments, Loaders (macOS Card Style) --- */
   html body .b-comments .comments-hider,
   html body .collapsed,
