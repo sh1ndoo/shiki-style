@@ -519,12 +519,18 @@
   html body .dropdown-menu,
   html body .b-dialog,
   html body .b-dialog > .inner,
+  html body .search-results,
+  html body .l-top_menu-v2 .global-search .search-results,
   .l-top_menu-v2 .submenu,
   .l-top_menu-v2 .menu-dropdown .submenu,
-  .dropdown-menu {
-    background-color: rgba(20, 20, 24, 0.72) !important;
-    backdrop-filter: blur(28px) saturate(190%) !important;
-    -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  .dropdown-menu,
+  .search-results {
+    background-color: rgba(18, 18, 22, 0.65) !important;
+    background: rgba(18, 18, 22, 0.65) !important;
+    backdrop-filter: blur(30px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
+    transform: translateZ(0) !important;
+    will-change: backdrop-filter !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-radius: 14px !important;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
@@ -1008,7 +1014,7 @@
     color: #ffffff !important;
   }
 
-  /* --- Text Height Shortener & Dark Fading Shade --- */
+  /* --- Hide Text Height Shortener Shade --- */
   html body .b-height_shortener .shade,
   html body .b-height_shortener .b-shade,
   html body .shade,
@@ -1017,10 +1023,11 @@
   .b-height_shortener .b-shade,
   .shade,
   .b-shade {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 23, 0)), to(rgb(20, 20, 23))) !important;
-    background-image: -webkit-linear-gradient(top, rgba(20, 20, 23, 0), rgb(20, 20, 23)) !important;
-    background-image: linear-gradient(to bottom, rgba(20, 20, 23, 0), rgb(20, 20, 23)) !important;
-    background: linear-gradient(to bottom, rgba(20, 20, 23, 0), rgb(20, 20, 23)) !important;
+    display: none !important;
+    background: none !important;
+    background-image: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
 
   /* --- Buttons (macOS Native Style) --- */
