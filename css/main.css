@@ -1465,7 +1465,45 @@
     font-weight: 500 !important;
   }
 
-  /* --- Reset Tag Margins (Remove Default Margins) --- */
+  /* --- Reset Tag Margins & Spacing (Date & Tags) --- */
+  html body .status-line,
+  html body .b-news_wall-topic .status-line,
+  html body .b-topic .status-line,
+  html body .b-news .status-line,
+  html body .status-time,
+  .status-line,
+  .b-news_wall-topic .status-line,
+  .b-topic .status-line,
+  .b-news .status-line,
+  .status-time {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  html body .status-line time,
+  html body .status-line .date,
+  html body .status-line .time,
+  html body .b-news_wall-topic .status-line time,
+  html body .b-news_wall-topic .status-line .date,
+  .status-line time,
+  .status-line .date {
+    margin-right: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  html body .status-line .tags,
+  html body .b-news_wall-topic .status-line .tags,
+  .status-line .tags,
+  .b-news_wall-topic .status-line .tags {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    margin: 0 !important;
+  }
+
   html body .b-anime_status_tag + .b-anime_status_tag,
   html body .b-news_wall-topic .status-line .tags .b-anime_status_tag:not(:last-child),
   html body .b-news_wall-topic .status-line .tags .b-anime_status_tag,
