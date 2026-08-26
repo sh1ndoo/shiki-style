@@ -725,24 +725,14 @@
     color: #ffffff !important;
   }
 
-  /* --- Tooltips & Popovers (Genre descriptions, Tipsy, Anime Tooltips) --- */
+  /* --- Tooltips & Popovers (Genre hover, User hover, Details) --- */
   html body .tooltip-inner,
-  .tooltip-inner,
-  .tipsy-inner,
-  .anime-tooltip {
+  .tooltip-inner {
     background-color: rgba(26, 26, 30, 0.96) !important;
-    backdrop-filter: blur(24px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
     color: #e4e4e9 !important;
-    padding: 10px 14px !important;
-    font-size: 12px !important;
-    line-height: 1.5 !important;
-    min-width: 240px !important;
-    max-width: 380px !important;
-    box-sizing: border-box !important;
   }
 
   html body .tooltip-details,
@@ -752,20 +742,24 @@
   .tooltip-details,
   .tooltip-details .body {
     color: #e4e4e9 !important;
-    overflow-x: hidden !important;
     text-shadow: none !important;
     word-wrap: break-word !important;
     word-break: break-word !important;
     overflow-wrap: break-word !important;
-    white-space: normal !important;
   }
 
-  html body .tooltip [class*="dropshadow"],
-  .tooltip [class*="dropshadow"] {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    opacity: 0 !important;
+  html body .tipsy,
+  html body .tipsy-inner,
+  html body .anime-tooltip,
+  .tipsy,
+  .tipsy-inner,
+  .anime-tooltip {
+    background-color: rgba(26, 26, 30, 0.96) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+    color: #e4e4e9 !important;
+    padding: 6px 10px !important;
   }
 
   .tipsy-arrow,
@@ -783,6 +777,86 @@
   .tooltip-inner * {
     text-shadow: none !important;
     box-shadow: none !important;
+  }
+
+  /* --- Catalog Filters & Multi-Select Dropdowns (.c-ms, .c-filters) --- */
+  html body .c-filters,
+  html body .c-ms-field,
+  html body .c-ms-title {
+    color: #e4e4e9 !important;
+  }
+
+  html body .c-ms-control,
+  .c-ms-control {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+    color: #e4e4e9 !important;
+    transition: all 150ms ease !important;
+  }
+
+  html body .c-ms-control:hover,
+  html body .c-ms-control:focus {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: #9884a5 !important;
+  }
+
+  html body .c-ms-dropdown,
+  .c-ms-dropdown {
+    background-color: rgba(26, 26, 30, 0.98) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6) !important;
+    color: #e4e4e9 !important;
+    overflow: hidden !important;
+    z-index: 100 !important;
+  }
+
+  html body .c-ms-search,
+  .c-ms-search {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+    margin: 4px !important;
+    width: calc(100% - 8px) !important;
+  }
+
+  html body .c-ms-option,
+  .c-ms-option {
+    color: #e4e4e9 !important;
+    padding: 6px 10px !important;
+    transition: background 120ms ease !important;
+    cursor: pointer !important;
+  }
+
+  html body .c-ms-option:hover,
+  .c-ms-option:hover {
+    background-color: rgba(152, 132, 165, 0.25) !important;
+    color: #ffffff !important;
+  }
+
+  html body .c-ms-option.selected,
+  .c-ms-option.selected {
+    background-color: rgba(152, 132, 165, 0.35) !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+  }
+
+  html body .c-score-preset,
+  .c-score-preset {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+    color: #c4afd4 !important;
+  }
+
+  html body .c-score-preset:hover,
+  .c-score-preset:hover {
+    background-color: rgba(152, 132, 165, 0.25) !important;
+    color: #ffffff !important;
   }
 
   /* --- Page Inputs & Collection Search --- */
