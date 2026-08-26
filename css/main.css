@@ -1284,6 +1284,147 @@
     border-bottom: 1px dotted rgba(255, 255, 255, 0.3) !important;
   }
 
+  /* --- User Dashboard Widget (.f-user, .my-list, .b-user_rate-history) --- */
+  html body .f-user,
+  html body .my-list,
+  .f-user,
+  .my-list {
+    color: #e4e4e9 !important;
+  }
+
+  html body .my-list .label,
+  .my-list .label {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+    text-shadow: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 8px !important;
+  }
+
+  html body .my-list .label > span,
+  .my-list .label > span {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+  }
+
+  html body .my-list .label .misc-links a,
+  .my-list .label .misc-links a {
+    color: #c4afd4 !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    text-shadow: none !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .my-list .label .misc-links a:hover,
+  .my-list .label .misc-links a:hover {
+    color: #ffffff !important;
+    background-color: rgba(152, 132, 165, 0.25) !important;
+  }
+
+  /* Dashboard History Card */
+  html body .b-user_rate-history,
+  .b-user_rate-history {
+    background-color: rgba(28, 28, 32, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    padding: 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    transition: all 150ms ease !important;
+    display: flex !important;
+    text-decoration: none !important;
+  }
+
+  html body .b-user_rate-history:hover,
+  .b-user_rate-history:hover {
+    background-color: rgba(38, 38, 44, 0.95) !important;
+    border-color: rgba(152, 132, 165, 0.4) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+    transform: translateY(-1px) !important;
+  }
+
+  html body .b-user_rate-history img,
+  html body .b-user_rate-history picture img,
+  .b-user_rate-history img {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  html body .b-user_rate-history .content,
+  .b-user_rate-history .content {
+    color: #e4e4e9 !important;
+  }
+
+  html body .b-user_rate-history .title,
+  html body .b-user_rate-history .title .name-ru,
+  .b-user_rate-history .title,
+  .b-user_rate-history .title .name-ru {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+  }
+
+  html body .b-user_rate-history .title .name-en,
+  .b-user_rate-history .title .name-en {
+    color: #a1a1aa !important;
+    font-weight: 400 !important;
+    text-shadow: none !important;
+  }
+
+  /* Progress Bar */
+  html body .b-user_rate-history .progress,
+  .b-user_rate-history .progress {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 4px !important;
+    height: 4px !important;
+    overflow: hidden !important;
+  }
+
+  html body .b-user_rate-history .progress .completed,
+  html body .b-user_rate-history .progress .watching,
+  .b-user_rate-history .progress .completed,
+  .b-user_rate-history .progress .watching {
+    background: #9884a5 !important;
+    background: linear-gradient(to right, #9884a5 0%, #c4afd4 100%) !important;
+    border-radius: 4px !important;
+  }
+
+  /* Status and Counter */
+  html body .b-user_rate-history .status-counter,
+  .b-user_rate-history .status-counter {
+    color: #a1a1aa !important;
+    font-size: 12px !important;
+  }
+
+  html body .b-user_rate-history .status-counter .status,
+  .b-user_rate-history .status-counter .status {
+    color: #c4afd4 !important;
+    font-weight: 500 !important;
+  }
+
+  html body .b-user_rate-history .status-counter .counter,
+  .b-user_rate-history .status-counter .counter {
+    color: #e4e4e9 !important;
+  }
+
+  html body .b-user_rate-history .status-counter .counter span,
+  .b-user_rate-history .status-counter .counter span {
+    color: #a1a1aa !important;
+  }
+
+  /* Score and Time */
+  html body .b-user_rate-history .score-time time,
+  .b-user_rate-history .score-time time {
+    color: #a1a1aa !important;
+    font-size: 11px !important;
+  }
+
   /* --- Specific Tags --- */
   html body .b-tag[href$="/9-Ecchi"],
   html body .b-tag[href$="/r_plus"],
