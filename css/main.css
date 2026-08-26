@@ -43,6 +43,8 @@
 
   /* --- Main Page Container (macOS Neutral Dark Glass) --- */
   html body .l-page,
+  html body [role="main"].l-page,
+  html body .l-page[role="main"],
   html body #profiles_show .l-page,
   #profiles_show .l-page,
   .l-page {
@@ -55,12 +57,8 @@
     color: #e4e4e9 !important;
     animation: none !important;
     -webkit-animation: none !important;
-  }
-
-  html body #profiles_show .l-page,
-  #profiles_show .l-page {
-    margin-top: 65px !important;
-    border-radius: 18px !important;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
   }
 
   /* --- Universal Text Overrides --- */
