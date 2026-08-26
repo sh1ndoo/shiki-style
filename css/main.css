@@ -1008,6 +1008,21 @@
     color: #ffffff !important;
   }
 
+  /* --- Text Height Shortener & Dark Fading Shade --- */
+  html body .b-height_shortener .shade,
+  html body .b-height_shortener .b-shade,
+  html body .shade,
+  html body .b-shade,
+  .b-height_shortener .shade,
+  .b-height_shortener .b-shade,
+  .shade,
+  .b-shade {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 23, 0)), to(rgb(20, 20, 23))) !important;
+    background-image: -webkit-linear-gradient(top, rgba(20, 20, 23, 0), rgb(20, 20, 23)) !important;
+    background-image: linear-gradient(to bottom, rgba(20, 20, 23, 0), rgb(20, 20, 23)) !important;
+    background: linear-gradient(to bottom, rgba(20, 20, 23, 0), rgb(20, 20, 23)) !important;
+  }
+
   /* --- Buttons (macOS Native Style) --- */
   html body .b-button,
   html body .b-form input[type=submit],
