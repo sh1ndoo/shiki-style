@@ -57,7 +57,7 @@
     color: #e4e4e9 !important;
     animation: none !important;
     -webkit-animation: none !important;
-    margin-top: calc(48px + 1em) !important;
+    margin-top: 1em !important;
     margin-bottom: 1em !important;
   }
 
@@ -1028,7 +1028,128 @@
     color: #c4afd4 !important;
   }
 
-  /* --- Tags --- */
+  /* --- Anime & Manga Info Block (.c-about, .b-entry-info) --- */
+  html body .c-about,
+  html body .c-info-left,
+  html body .c-info-right,
+  html body .b-entry-info,
+  html body .b-entry-info .line-container,
+  html body .b-entry-info .line,
+  html body .b-entry-info .value,
+  html body .c-about .value,
+  html body .c-about span,
+  html body .c-about div,
+  .c-about,
+  .b-entry-info {
+    color: #e4e4e9 !important;
+    text-shadow: none !important;
+  }
+
+  html body .b-entry-info .key,
+  html body .c-about .key,
+  html body .c-info-left .key,
+  html body .c-info-right .key,
+  html body .line .key,
+  html body .additional-links .key,
+  .b-entry-info .key {
+    color: #a1a1aa !important;
+    text-shadow: none !important;
+    font-weight: 400 !important;
+  }
+
+  html body .b-entry-info a,
+  html body .c-about a,
+  html body .b-entry-info .value a,
+  html body .additional-links a,
+  html body .b-tag,
+  html body .b-tag span,
+  html body .b-tag .genre-ru,
+  html body .b-tag .genre-en,
+  html body a.b-tag,
+  html body .local-time,
+  .b-tag,
+  .b-tag span {
+    color: #c4afd4 !important;
+    text-shadow: none !important;
+  }
+
+  html body .b-entry-info a:hover,
+  html body .c-about a:hover,
+  html body .additional-links a:hover,
+  html body .b-tag:hover,
+  html body .b-tag:hover span,
+  html body .b-tag:hover .genre-ru,
+  html body .b-tag:hover .genre-en,
+  html body a.b-tag:hover,
+  .b-tag:hover {
+    color: #ffffff !important;
+    text-shadow: none !important;
+  }
+
+  html body .b-tag,
+  html body a.b-tag,
+  html body .additional-links a {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+    padding: 2px 7px !important;
+    margin: 2px !important;
+    display: inline-block !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .b-tag:hover,
+  html body a.b-tag:hover,
+  html body .additional-links a:hover {
+    background-color: rgba(152, 132, 165, 0.25) !important;
+    border-color: #9884a5 !important;
+    color: #ffffff !important;
+  }
+
+  html body .b-anime_status_tag,
+  html body .b-anime_status_tag.ongoing,
+  html body .b-anime_status_tag.released,
+  html body .b-anime_status_tag.episode {
+    background-color: rgba(152, 132, 165, 0.2) !important;
+    border: 1px solid rgba(152, 132, 165, 0.35) !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    padding: 1px 6px !important;
+    display: inline-block !important;
+  }
+
+  html body .b-rate .text-score .score-value,
+  html body .scores .score-value {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+  }
+
+  html body .b-rate .text-score .score-notice,
+  html body .scores .score-notice {
+    color: #a1a1aa !important;
+    text-shadow: none !important;
+  }
+
+  html body .b-mal_score {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+    color: #a1a1aa !important;
+    padding: 2px 8px !important;
+  }
+
+  html body .b-mal_score span {
+    color: #c4afd4 !important;
+    font-weight: 500 !important;
+  }
+
+  html body .b-tooltipped.dotted {
+    color: #e4e4e9 !important;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.3) !important;
+  }
+
+  /* --- Specific Tags --- */
   html body .b-tag[href$="/9-Ecchi"],
   html body .b-tag[href$="/r_plus"],
   html body .b-tooltipped[original-title*="R+"] {
