@@ -366,6 +366,14 @@
     color: #e4e4e9 !important;
   }
 
+  html body .l-top_menu-v2 .global-search .search-results::before,
+  html body .l-top_menu-v2 .global-search .search-results:before,
+  .l-top_menu-v2 .global-search .search-results::before,
+  .l-top_menu-v2 .global-search .search-results:before {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(21, 21, 21)) !important;
+    top: 0px !important;
+  }
+
   html body .search-results .inner,
   html body .search-results .inner > div,
   html body .search-results div,
