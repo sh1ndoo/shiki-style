@@ -1548,6 +1548,24 @@
   }
 
   /* --- Unified Tags in Dashboard Anime Updates (.db-update .tags) --- */
+  html body .db-update .status-time,
+  .db-update .status-time {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin: 2px 0 4px 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .db-update .tags,
+  .db-update .tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   html body .db-update .tags .b-anime_status_tag,
   html body .db-update .tags .b-anime_status_tag.studio,
   html body .db-update .tags .b-tag,
@@ -1561,12 +1579,12 @@
     border-radius: 4px !important;
     color: #ffffff !important;
     padding: 1px 6px !important;
-    margin: 1px 2px !important;
-    display: inline-block !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
     font-size: 11px !important;
     line-height: 16px !important;
     text-shadow: none !important;
-    vertical-align: middle !important;
     font-weight: 400 !important;
   }
 
