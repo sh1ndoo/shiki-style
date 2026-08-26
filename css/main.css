@@ -32,12 +32,13 @@
   /* --- Base Background & Typography --- */
   html body,
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
     background: url(https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/flowers-bg.gif) 0 0 / cover fixed !important;
     background-attachment: fixed !important;
     color: #e4e4e9 !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
+    font-weight: 400 !important;
   }
 
   /* --- Main Page Container (macOS Neutral Dark Glass) --- */
@@ -94,7 +95,7 @@
     text-shadow: none !important;
   }
 
-  /* --- Header & Profile Title (No Glow, Clean Text) --- */
+  /* --- Header & Profile Title (Sleek, Moderate Font Weight) --- */
   html body header.head,
   html body header.head .title,
   html body header.head .name-ru,
@@ -108,7 +109,13 @@
   .p-profiles .profile-head .c-brief header h1 {
     color: #ffffff !important;
     text-shadow: none !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief header h1,
+  .p-profiles .profile-head .c-brief header h1 {
+    font-size: 20px !important;
   }
 
   html body header.head .notice,
@@ -124,6 +131,7 @@
   html body .b-achievement .c-about .hint {
     color: #a1a1aa !important;
     text-shadow: none !important;
+    font-weight: 400 !important;
   }
 
   html body header.head a,
@@ -138,7 +146,7 @@
     text-shadow: none !important;
   }
 
-  /* --- Headlines & Content Blocks (macOS Card Style) --- */
+  /* --- Headlines & Section Bars (Clean & Light Font Weight) --- */
   html body h1,
   html body h2,
   html body h3,
@@ -153,7 +161,8 @@
   .headline, .midheadline, .subheadline, .title {
     color: #ffffff !important;
     text-shadow: none !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
   }
 
   html body .headline,
@@ -162,9 +171,10 @@
   .headline, .midheadline, .subheadline {
     background-color: rgba(32, 32, 36, 0.85) !important;
     border: 1px solid rgba(255, 255, 255, 0.07) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
-    padding: 8px 12px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
   }
 
   html body .headline > a,
@@ -173,6 +183,7 @@
   .headline > a, .midheadline > a, .subheadline > a {
     color: #ffffff !important;
     text-shadow: none !important;
+    font-weight: 500 !important;
   }
 
   html body .headline > a:before,
@@ -189,8 +200,9 @@
   h2.headline.blue.m10,
   h2.subheadline.orange.m10,
   h2.subheadline.green.m10 {
-    font-size: 15px !important;
-    border-left: 4px solid #9884a5 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-left: 3px solid #9884a5 !important;
     color: #ffffff !important;
   }
 
@@ -226,6 +238,7 @@
     color: #c4afd4 !important;
     text-decoration: none !important;
     text-shadow: none !important;
+    font-weight: 400 !important;
   }
 
   html body a:hover,
@@ -254,6 +267,43 @@
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  /* --- Top Menu Search Input (Fix Layout & Padding) --- */
+  html body .l-top_menu-v2 .global-search .field input,
+  .l-top_menu-v2 .global-search .field input {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    height: 30px !important;
+    line-height: normal !important;
+    box-sizing: border-box !important;
+    padding: 0 28px 0 10px !important;
+    transition: all 150ms ease !important;
+  }
+
+  html body .l-top_menu-v2 .global-search .field input:focus,
+  .l-top_menu-v2 .global-search .field input:focus {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: #9884a5 !important;
+    color: #ffffff !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(152, 132, 165, 0.35) !important;
+  }
+
+  /* --- Search Results Dropdown (macOS Glass) --- */
+  html body .l-top_menu-v2 .global-search .search-results,
+  .l-top_menu-v2 .global-search .search-results {
+    background-color: rgba(28, 28, 32, 0.96) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+    overflow: hidden !important;
   }
 
   /* --- Dropdown Menus & Popups (macOS Rounded Glass Style) --- */
@@ -290,6 +340,7 @@
     border-radius: 8px !important;
     padding: 6px 12px !important;
     margin: 2px 0 !important;
+    font-weight: 400 !important;
     transition: background 150ms ease, color 150ms ease !important;
   }
 
@@ -307,6 +358,7 @@
     background-color: rgba(255, 255, 255, 0.06) !important;
     color: #a1a1aa !important;
     font-size: 11px !important;
+    font-weight: 500 !important;
     padding: 4px 10px !important;
   }
 
@@ -315,7 +367,7 @@
     background-color: #9884a5 !important;
     color: #ffffff !important;
     border-radius: 10px !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
   }
 
   html body .l-top_menu-v2 .menu-icon.contest:hover,
@@ -330,15 +382,13 @@
     border-radius: 8px !important;
   }
 
-  /* --- Inputs & Spotlight Search (macOS Style) --- */
-  html body .l-top_menu-v2 .global-search input,
+  /* --- Page Inputs & Collection Search --- */
   html body .b-collection_search .field input,
   html body .b-shiki_editor .body .editor textarea,
   html body input[type="text"],
   html body input[type="search"],
   html body textarea,
   html body select,
-  .l-top_menu-v2 .global-search input,
   .b-collection_search .field input,
   .b-shiki_editor .body .editor textarea,
   input[type="text"], input[type="search"], textarea, select {
@@ -347,17 +397,16 @@
     border-radius: 10px !important;
     color: #ffffff !important;
     padding: 6px 12px !important;
+    font-weight: 400 !important;
     transition: all 150ms ease !important;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2) !important;
   }
 
-  html body .l-top_menu-v2 .global-search input:focus,
   html body .b-collection_search .field input:focus,
   html body .b-shiki_editor .body .editor textarea:focus,
   html body input[type="text"]:focus,
   html body input[type="search"]:focus,
   html body textarea:focus,
-  .l-top_menu-v2 .global-search input:focus,
   .b-collection_search .field input:focus,
   .b-shiki_editor .body .editor textarea:focus {
     background-color: rgba(255, 255, 255, 0.11) !important;
@@ -376,7 +425,7 @@
 
   html body .b-collection_search .field input,
   .b-collection_search .field input {
-    border-radius: 12px !important;
+    border-radius: 10px !important;
     width: 850px !important;
   }
 
@@ -392,10 +441,11 @@
   .comments-expander,
   .comments-loader {
     background-color: rgba(34, 34, 38, 0.85) !important;
-    border-radius: 12px !important;
+    border-radius: 10px !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
     color: #e4e4e9 !important;
+    font-weight: 400 !important;
     transition: all 150ms ease !important;
   }
 
@@ -419,14 +469,14 @@
   .b-button,
   .b-form input[type=submit],
   button {
-    border-radius: 9px !important;
+    border-radius: 8px !important;
     background: rgba(255, 255, 255, 0.09) !important;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.14) !important;
     font-weight: 500 !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) !important;
     transition: all 150ms ease !important;
-    padding: 6px 14px !important;
+    padding: 5px 12px !important;
   }
 
   html body .b-button:hover,
@@ -475,7 +525,7 @@
   html body .p-profiles .profile-head .c-history .entry:hover,
   .p-profiles .profile-head .c-history .entry:hover {
     background-color: rgba(255, 255, 255, 0.06) !important;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
   }
 
   html body .p-profiles .profile-head .c-history .entry:hover .name-ru:before {
@@ -491,6 +541,7 @@
   .b-stats_bar .stat_names,
   .b-stats_bar .stat_values {
     color: #a1a1aa !important;
+    font-weight: 400 !important;
   }
 
   html body .b-stats_bar .bar,
@@ -539,7 +590,7 @@
     vertical-align: top !important;
     font-size: 13px !important;
     color: #ffffff !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
   }
 
   html body .activity .bar.simple .bar {
@@ -556,6 +607,7 @@
     margin-bottom: 2px !important;
     padding: 4px 8px !important;
     border-radius: 6px !important;
+    font-weight: 400 !important;
     transition: all 150ms ease !important;
   }
 
@@ -570,7 +622,64 @@
     box-shadow: 0 0 0 2px rgba(152, 132, 165, 0.3) !important;
   }
 
-  /* --- Badges, Avatars & Images --- */
+  /* --- Achievements, Authors, Franchises & Badges (Rounded Corners) --- */
+  html body .cc-achievements .b-achievement,
+  html body .cc-achievements .b-achievement .c-image,
+  html body .cc-achievements .b-achievement .c-image .inner,
+  html body .cc-achievements .b-achievement .c-image img,
+  html body .cc-achievements .b-achievement .border,
+  html body .cc-authors .b-achievement,
+  html body .cc-authors .b-achievement .c-image,
+  html body .cc-authors .b-achievement .c-image .inner,
+  html body .cc-authors .b-achievement .c-image img,
+  html body .cc-authors .b-achievement .border,
+  html body .b-achievement.is-badge,
+  html body .b-achievement.is-badge .c-image,
+  html body .b-achievement.is-badge .c-image .inner,
+  html body .b-achievement.is-badge .c-image img,
+  html body .b-achievement.is-badge .border,
+  .b-achievement .c-image,
+  .b-achievement .c-image .inner,
+  .b-achievement .c-image img,
+  .b-achievement .border {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+
+  html body .cc-franchises .b-badge,
+  html body .cc-franchises .b-badge img,
+  html body #profiles_show .achievements .cc-franchises .b-badge,
+  html body .b-badge,
+  html body .b-badge img,
+  #profiles_show .achievements .cc-franchises .b-badge,
+  .b-badge,
+  .b-badge img {
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    overflow: hidden !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-franchises .b-badge:before,
+  .p-profiles-show .achievements .cc-franchises .b-badge:before {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    border-radius: 0 8px 0 2px !important;
+  }
+
+  /* --- Catalog Entries & Favourites (Rounded Covers) --- */
+  html body .b-catalog_entry .cover,
+  html body .b-catalog_entry .cover .image-decor,
+  html body .b-catalog_entry .cover .image-cutter,
+  html body .b-catalog_entry .cover .image-cutter img,
+  html body .image-decor img,
+  html body .p-profiles .profile-head .c-history .entry img,
+  .b-catalog_entry .cover,
+  .b-catalog_entry .cover .image-decor,
+  .image-cutter,
+  .image-cutter img {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+
   html body .avatar img,
   html body .b-club .logo,
   html body .b-comment > .inner header img,
@@ -583,35 +692,14 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35) !important;
   }
 
-  html body .b-catalog_entry .cover,
-  html body .b-catalog_entry .cover .image-decor,
-  html body .image-decor img,
-  html body .p-profiles .profile-head .c-history .entry img {
-    border-radius: 10px !important;
-  }
-
-  html body #profiles_show .achievements .cc-franchises .b-badge,
-  #profiles_show .achievements .cc-franchises .b-badge {
-    border-radius: 8px !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  }
-
-  html body .b-badge img {
-    border-radius: 8px !important;
-  }
-
-  html body .p-profiles-show .achievements .cc-franchises .b-badge:before,
-  .p-profiles-show .achievements .cc-franchises .b-badge:before {
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    border-radius: 0 8px 0 2px !important;
-  }
-
   html body #profiles_show .b-catalog_entry .cover:hover,
   html body .b-badge img:hover,
   html body .b-club .logo:hover,
   html body .b-user.avatar img:hover,
   html body .b-user.avatar_fixed_margin img:hover,
-  html body .b-user.named_avatar img:hover {
+  html body .b-user.named_avatar img:hover,
+  html body .cc-achievements .b-achievement:hover,
+  html body .cc-authors .b-achievement:hover {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
     transform: translateY(-2px) !important;
     transition: all 150ms ease !important;
@@ -748,6 +836,7 @@
   html body .b-table td,
   html body .b-table th {
     color: #e4e4e9 !important;
+    font-weight: 400 !important;
   }
 
   html body .b-block_list li:hover,
