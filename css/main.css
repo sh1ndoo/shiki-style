@@ -1680,21 +1680,6 @@
     color: #e2e8f0 !important;
   }
 
-  /* 7. Обсуждение аниме (Серый) */
-  html body .b-tag.anime_discussion,
-  html body .b-tag.anime-discussion,
-  html body .b-tag.anime_topic,
-  html body a.b-tag[href*="anime_discussion"],
-  html body a.tag-link[href*="anime_discussion"],
-  html body a.b-tag[href*="animes/"],
-  html body a.tag-link[href*="animes/"],
-  html body .b-tag.anime_discussion span,
-  .b-tag.anime_discussion,
-  .b-tag.anime-discussion {
-    background-color: rgba(148, 163, 184, 0.12) !important;
-    border: 1px solid rgba(148, 163, 184, 0.5) !important;
-    color: #94a3b8 !important;
-  }
 
   html body .b-anime_status_tag:hover,
   .b-anime_status_tag:hover {
