@@ -362,33 +362,37 @@
 
   /* --- Search Marker & Clear Modern Icons --- */
   html body .l-top_menu-v2 .global-search .search-marker,
+  html body .global-search .search-marker,
   html body .search-marker,
   .l-top_menu-v2 .global-search .search-marker,
   .search-marker {
     position: absolute !important;
-    left: 9px !important;
+    left: 8px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    color: #a1a1aa !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    pointer-events: none !important;
-    z-index: 3 !important;
-    line-height: 1 !important;
+    width: 15px !important;
+    height: 15px !important;
+    display: block !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E") !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
     opacity: 0.85 !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+    color: transparent !important;
+    font-size: 0 !important;
     border: none !important;
-    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  html body .l-top_menu-v2 .global-search .search-marker:before,
   html body .search-marker:before,
-  .l-top_menu-v2 .global-search .search-marker:before,
-  .search-marker:before {
-    color: #a1a1aa !important;
-    display: inline-block !important;
-    font-size: 13px !important;
-    line-height: 1 !important;
+  html body .search-marker:after,
+  .search-marker:before,
+  .search-marker:after {
+    display: none !important;
+    content: none !important;
   }
 
   html body .l-top_menu-v2 .global-search .clear,
@@ -1431,7 +1435,10 @@
   /* --- Anime Status Tags (Soft Colors) --- */
   html body .b-anime_status_tag,
   .b-anime_status_tag {
+    background-color: rgba(152, 132, 165, 0.12) !important;
+    border: 1px solid rgba(152, 132, 165, 0.55) !important;
     border-radius: 4px !important;
+    color: #ffffff !important;
     padding: 1px 6px !important;
     display: inline-block !important;
     font-size: 11px !important;
@@ -1473,7 +1480,14 @@
   .b-anime_status_tag.episode,
   .b-anime_status_tag.studio {
     background-color: rgba(152, 132, 165, 0.12) !important;
-    border: 1px solid rgba(152, 132, 165, 0.5) !important;
+    border: 1px solid rgba(152, 132, 165, 0.55) !important;
+    color: #ffffff !important;
+  }
+
+  html body .b-anime_status_tag:hover,
+  .b-anime_status_tag:hover {
+    background-color: rgba(152, 132, 165, 0.28) !important;
+    border-color: #c4afd4 !important;
     color: #ffffff !important;
   }
 
