@@ -1517,12 +1517,21 @@
 
   /* --- User Dashboard Widget (.f-user, .my-list, .b-user_rate-history) --- */
   html body .f-user,
-  html body .my-list,
-  html body .f-user .my-list,
-  .f-user,
-  .my-list {
+  .f-user {
     background-color: transparent !important;
     color: #e4e4e9 !important;
+    border: none !important;
+  }
+
+  html body .my-list,
+  html body .f-user .my-list,
+  .my-list {
+    background-color: rgba(255, 255, 255, 0.045) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 12px !important;
+    color: #e4e4e9 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
   }
 
   html body .my-list .label,
@@ -1534,8 +1543,8 @@
     letter-spacing: -0.01em !important;
     text-shadow: none !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-    padding-bottom: 6px !important;
-    margin-bottom: 8px !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 10px !important;
   }
 
   html body .my-list .label span,
@@ -1573,11 +1582,11 @@
   html body .my-list a.b-user_rate-history,
   html body .my-list .b-user_rate-history,
   .b-user_rate-history {
-    background-color: rgba(28, 28, 32, 0.85) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 12px !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
     padding: 8px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
     transition: all 150ms ease !important;
     display: flex !important;
     text-decoration: none !important;
@@ -1589,11 +1598,35 @@
   html body .my-list a.b-user_rate-history:hover,
   html body .my-list .b-user_rate-history:hover,
   .b-user_rate-history:hover {
-    background-color: rgba(38, 38, 44, 0.95) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
     border-color: rgba(152, 132, 165, 0.5) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
     transform: translateY(-1px) !important;
     text-decoration: none !important;
+  }
+
+  /* --- Dashboard DB Updates Poster Width & Tags Margin Fix --- */
+  html body.p-dashboards-show .v2 .db-update .poster img,
+  html body .p-dashboards-show .v2 .db-update .poster img,
+  html body .p-dashboards-show .db-update .poster img,
+  html body .db-update .poster img,
+  .p-dashboards-show .v2 .db-update .poster img,
+  .db-update .poster img {
+    width: auto !important;
+    max-width: none !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
+    clip-path: inset(0 round 8px) !important;
+  }
+
+  html body.p-dashboards-show .v2 .fc-user-sections .tags,
+  html body .p-dashboards-show .v2 .fc-user-sections .tags,
+  html body .p-dashboards-show .fc-user-sections .tags,
+  html body .fc-user-sections .tags,
+  .p-dashboards-show .v2 .fc-user-sections .tags {
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   html body .b-user_rate-history img,
