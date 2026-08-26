@@ -57,7 +57,7 @@
     color: #e4e4e9 !important;
     animation: none !important;
     -webkit-animation: none !important;
-    margin-top: 1em !important;
+    margin-top: calc(48px + 1em) !important;
     margin-bottom: 1em !important;
   }
 
@@ -267,7 +267,7 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
   }
 
-  /* --- Top Menu Dropdown Triggers (Thinner Font, Transparent Background, Clean) --- */
+  /* --- Top Menu Dropdown Triggers --- */
   html body .l-top_menu-v2 .menu-dropdown .submenu-triangle,
   html body .l-top_menu-v2 .menu-dropdown .submenu-triangle span,
   html body .l-top_menu-v2 .menu-dropdown .nickname,
@@ -369,7 +369,6 @@
   html body .b-dialog,
   html body .b-dialog > .inner,
   html body .tooltip-inner,
-  html body .b-options-floated,
   .l-top_menu-v2 .submenu,
   .dropdown-menu,
   .tooltip-inner {
@@ -379,11 +378,6 @@
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-radius: 14px !important;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
-  }
-
-  html body .l-top_menu-v2 .submenu,
-  .l-top_menu-v2 .submenu {
-    top: 48px !important;
     padding: 8px !important;
     overflow-y: auto !important;
     max-height: calc(100vh - 144px) !important;
@@ -571,23 +565,21 @@
   }
 
   html body .p-profiles .profile-head .c-brief .avatar .profile-actions .ban {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c4afd4' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1.17 1.17 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.8 17 5 19 5a1 1 0 0 1 1 1z'/%3E%3C/svg%3E") center center / 15px no-repeat !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c4afd4' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.8 17 5 19 5a1 1 0 0 1 1 1z'/%3E%3C/svg%3E") center center / 15px no-repeat !important;
   }
 
-  /* --- User Rate / Add to List Component (No Green, macOS Dark Style) --- */
+  /* --- User Rate / Add to List Component (Clean & Collapsible) --- */
   html body .b-add_to_list,
   html body .b-user_rate,
   html body .b-add_to_list .trigger,
   html body .b-add_to_list .edit-trigger,
   html body .b-add_to_list .status-name,
   html body .b-add_to_list .text,
-  html body .b-add_to_list .expanded-options,
   html body .b-add_to_list .option,
   .b-add_to_list,
   .b-user_rate {
     color: #e4e4e9 !important;
     text-shadow: none !important;
-    font-weight: 400 !important;
   }
 
   html body .b-add_to_list .trigger,
@@ -599,7 +591,7 @@
   html body .b-user_rate .trigger {
     background: rgba(255, 255, 255, 0.08) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important;
     color: #e4e4e9 !important;
     box-shadow: none !important;
     transition: all 120ms ease !important;
@@ -627,19 +619,6 @@
     border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 
-  html body .b-add_to_list .expanded-options,
-  html body .b-add_to_list .popup,
-  .b-add_to_list .expanded-options {
-    background-color: rgba(28, 28, 32, 0.96) !important;
-    backdrop-filter: blur(24px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
-    padding: 4px !important;
-    overflow: hidden !important;
-  }
-
   html body .b-add_to_list .option,
   html body .b-add_to_list.completed .option,
   html body .b-add_to_list.watching .option,
@@ -647,10 +626,9 @@
   html body .b-add_to_list.on_hold .option,
   html body .b-add_to_list.dropped .option,
   .b-add_to_list .option {
-    background: transparent !important;
-    border-radius: 6px !important;
+    background: rgba(28, 28, 32, 0.95) !important;
+    border-radius: 4px !important;
     color: #e4e4e9 !important;
-    padding: 5px 8px !important;
     transition: all 120ms ease !important;
   }
 
@@ -661,12 +639,12 @@
   html body .b-add_to_list.on_hold .option:hover,
   html body .b-add_to_list.dropped .option:hover,
   .b-add_to_list .option:hover {
-    background-color: rgba(152, 132, 165, 0.3) !important;
+    background-color: rgba(152, 132, 165, 0.35) !important;
     color: #ffffff !important;
   }
 
   html body .b-add_to_list .option.remove-trigger:hover {
-    background-color: rgba(220, 60, 80, 0.3) !important;
+    background-color: rgba(220, 60, 80, 0.35) !important;
     color: #ffffff !important;
   }
 
@@ -1205,7 +1183,6 @@
 
   ::-moz-selection {
     background-color: rgba(152, 132, 165, 0.4) !important;
-    color: #ffffff !important;
   }
 
   /* --- Footer & Hidden Elements --- */
