@@ -1463,12 +1463,15 @@
   /* --- User Dashboard Widget (.f-user, .my-list, .b-user_rate-history) --- */
   html body .f-user,
   html body .my-list,
+  html body .f-user .my-list,
   .f-user,
   .my-list {
+    background-color: transparent !important;
     color: #e4e4e9 !important;
   }
 
   html body .my-list .label,
+  html body .f-user .label,
   .my-list .label {
     color: #ffffff !important;
     font-size: 14px !important;
@@ -1480,13 +1483,16 @@
     margin-bottom: 8px !important;
   }
 
+  html body .my-list .label span,
   html body .my-list .label > span,
-  .my-list .label > span {
+  .my-list .label span {
     color: #ffffff !important;
     font-weight: 500 !important;
+    text-shadow: none !important;
   }
 
   html body .my-list .label .misc-links a,
+  html body .my-list .misc-links a,
   .my-list .label .misc-links a {
     color: #c4afd4 !important;
     font-weight: 400 !important;
@@ -1495,37 +1501,49 @@
     padding: 2px 6px !important;
     border-radius: 4px !important;
     transition: all 120ms ease !important;
+    text-decoration: none !important;
   }
 
   html body .my-list .label .misc-links a:hover,
+  html body .my-list .misc-links a:hover,
   .my-list .label .misc-links a:hover {
     color: #ffffff !important;
     background-color: rgba(152, 132, 165, 0.25) !important;
+    text-decoration: none !important;
   }
 
   /* Dashboard History Card */
+  html body a.b-user_rate-history,
   html body .b-user_rate-history,
+  html body .my-list a.b-user_rate-history,
+  html body .my-list .b-user_rate-history,
   .b-user_rate-history {
     background-color: rgba(28, 28, 32, 0.85) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 12px !important;
     padding: 8px !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
     transition: all 150ms ease !important;
     display: flex !important;
     text-decoration: none !important;
+    color: #e4e4e9 !important;
   }
 
+  html body a.b-user_rate-history:hover,
   html body .b-user_rate-history:hover,
+  html body .my-list a.b-user_rate-history:hover,
+  html body .my-list .b-user_rate-history:hover,
   .b-user_rate-history:hover {
     background-color: rgba(38, 38, 44, 0.95) !important;
-    border-color: rgba(152, 132, 165, 0.4) !important;
+    border-color: rgba(152, 132, 165, 0.5) !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
     transform: translateY(-1px) !important;
+    text-decoration: none !important;
   }
 
   html body .b-user_rate-history img,
   html body .b-user_rate-history picture img,
+  html body .b-user_rate-history picture,
   .b-user_rate-history img {
     border-radius: 8px !important;
     overflow: hidden !important;
@@ -1535,10 +1553,12 @@
   html body .b-user_rate-history .content,
   .b-user_rate-history .content {
     color: #e4e4e9 !important;
+    flex: 1 !important;
   }
 
   html body .b-user_rate-history .title,
   html body .b-user_rate-history .title .name-ru,
+  html body .b-user_rate-history .name-ru,
   .b-user_rate-history .title,
   .b-user_rate-history .title .name-ru {
     color: #ffffff !important;
@@ -1547,6 +1567,7 @@
   }
 
   html body .b-user_rate-history .title .name-en,
+  html body .b-user_rate-history .name-en,
   .b-user_rate-history .title .name-en {
     color: #a1a1aa !important;
     font-weight: 400 !important;
@@ -1555,50 +1576,69 @@
 
   /* Progress Bar */
   html body .b-user_rate-history .progress,
+  html body .my-list .progress,
   .b-user_rate-history .progress {
-    background-color: rgba(255, 255, 255, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     border-radius: 4px !important;
     height: 4px !important;
     overflow: hidden !important;
+    margin: 6px 0 !important;
   }
 
   html body .b-user_rate-history .progress .completed,
   html body .b-user_rate-history .progress .watching,
+  html body .my-list .progress .completed,
+  html body .my-list .progress .watching,
   .b-user_rate-history .progress .completed,
   .b-user_rate-history .progress .watching {
     background: #9884a5 !important;
     background: linear-gradient(to right, #9884a5 0%, #c4afd4 100%) !important;
     border-radius: 4px !important;
+    height: 100% !important;
   }
 
   /* Status and Counter */
   html body .b-user_rate-history .status-counter,
+  html body .b-user_rate-history .status,
   .b-user_rate-history .status-counter {
     color: #a1a1aa !important;
     font-size: 12px !important;
   }
 
   html body .b-user_rate-history .status-counter .status,
+  html body .b-user_rate-history .status,
   .b-user_rate-history .status-counter .status {
     color: #c4afd4 !important;
     font-weight: 500 !important;
+    text-shadow: none !important;
   }
 
   html body .b-user_rate-history .status-counter .counter,
+  html body .b-user_rate-history .counter,
   .b-user_rate-history .status-counter .counter {
     color: #e4e4e9 !important;
+    text-shadow: none !important;
   }
 
   html body .b-user_rate-history .status-counter .counter span,
+  html body .b-user_rate-history .counter span,
   .b-user_rate-history .status-counter .counter span {
     color: #a1a1aa !important;
+    text-shadow: none !important;
   }
 
   /* Score and Time */
+  html body .b-user_rate-history time,
   html body .b-user_rate-history .score-time time,
   .b-user_rate-history .score-time time {
     color: #a1a1aa !important;
     font-size: 11px !important;
+    text-shadow: none !important;
+  }
+
+  html body .my-list *,
+  html body .b-user_rate-history * {
+    text-shadow: none !important;
   }
 
   /* --- Specific Tags --- */
