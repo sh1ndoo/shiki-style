@@ -1399,22 +1399,42 @@
 
   html body .b-tag,
   html body a.b-tag,
+  html body .tags .tag-link,
+  html body a.tag-link,
+  html body .tags a,
   html body .additional-links a {
     background-color: rgba(255, 255, 255, 0.06) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 6px !important;
-    padding: 2px 7px !important;
+    padding: 3px 8px !important;
     margin: 2px !important;
     display: inline-block !important;
     transition: all 120ms ease !important;
+    color: #c4afd4 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
   }
 
   html body .b-tag:hover,
   html body a.b-tag:hover,
+  html body .tags .tag-link:hover,
+  html body a.tag-link:hover,
+  html body .tags a:hover,
   html body .additional-links a:hover {
     background-color: rgba(152, 132, 165, 0.25) !important;
     border-color: #9884a5 !important;
     color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
+  html body .tags .tag-link.active,
+  html body .tags .tag-link.selected,
+  html body a.tag-link.active,
+  html body a.tag-link.selected {
+    background-color: rgba(152, 132, 165, 0.35) !important;
+    border-color: #9884a5 !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
   }
 
   html body .b-anime_status_tag,
