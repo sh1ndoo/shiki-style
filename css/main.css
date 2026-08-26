@@ -1945,6 +1945,41 @@
     color: #fbbf24 !important;
   }
 
+  /* --- New Marker Badge (.b-new_marker) --- */
+  html body .b-new_marker,
+  .b-new_marker {
+    display: inline-flex !important;
+    align-items: center !important;
+    background-color: rgba(152, 132, 165, 0.18) !important;
+    border: 1px solid rgba(152, 132, 165, 0.65) !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    padding: 1px 5px !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    text-shadow: none !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  html body .b-new_marker.active,
+  .b-new_marker.active {
+    background-color: rgba(152, 132, 165, 0.25) !important;
+    border-color: #c4afd4 !important;
+    color: #ffffff !important;
+  }
+
+  html body .b-new_marker:before,
+  html body .b-new_marker:after,
+  .b-new_marker:before,
+  .b-new_marker:after {
+    border: none !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+  }
+
 
   html body .b-anime_status_tag:hover,
   .b-anime_status_tag:hover {
