@@ -1544,7 +1544,7 @@
   html body .fc-user-sections .tags,
   .p-dashboards-show .v2 .fc-user-sections .tags {
     margin: 0 !important;
-    padding: 0 !important;
+    padding-left: 3px !important;
   }
 
   /* --- Unified Tags in Dashboard Anime Updates (.db-update .tags) --- */
@@ -1557,13 +1557,15 @@
     padding: 0 !important;
   }
 
+  html body .tags,
   html body .db-update .tags,
+  .tags,
   .db-update .tags {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 4px !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding-left: 3px !important;
   }
 
   html body .db-update .tags .b-anime_status_tag,
