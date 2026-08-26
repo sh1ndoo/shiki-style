@@ -269,6 +269,26 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
   }
 
+  /* --- Top Menu Dropdown Triggers (Thinner Font & Clean Styling) --- */
+  html body .l-top_menu-v2 .menu-dropdown .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown .submenu-triangle span,
+  html body .l-top_menu-v2 .menu-dropdown .nickname,
+  html body .l-top_menu-v2 .menu-dropdown > span,
+  html body .l-top_menu-v2 .menu-dropdown a,
+  .l-top_menu-v2 .menu-dropdown .submenu-triangle,
+  .l-top_menu-v2 .menu-dropdown .nickname {
+    font-weight: 400 !important;
+    font-size: 13px !important;
+    letter-spacing: normal !important;
+    color: #e4e4e9 !important;
+    text-shadow: none !important;
+  }
+
+  html body .l-top_menu-v2 .menu-dropdown:hover .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown:hover .nickname {
+    color: #ffffff !important;
+  }
+
   /* --- Top Menu Search Input (Fix Layout & Padding) --- */
   html body .l-top_menu-v2 .global-search .field input,
   .l-top_menu-v2 .global-search .field input {
@@ -314,7 +334,6 @@
   html body .b-dialog > .inner,
   html body .tooltip-inner,
   html body .b-options-floated,
-  html body .b-add_to_list .popup,
   .l-top_menu-v2 .submenu,
   .l-top_menu-v2 .submenu-triangle,
   .dropdown-menu,
@@ -380,6 +399,140 @@
   .l-top_menu-v2 .menu-icon.sign_in:hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
     border-radius: 8px !important;
+  }
+
+  /* --- User Rate / Add to List Component (No Green, macOS Dark Style) --- */
+  html body .b-add_to_list,
+  html body .b-user_rate,
+  html body .b-add_to_list .trigger,
+  html body .b-add_to_list .edit-trigger,
+  html body .b-add_to_list .status-name,
+  html body .b-add_to_list .text,
+  html body .b-add_to_list .expanded-options,
+  html body .b-add_to_list .option,
+  .b-add_to_list,
+  .b-user_rate {
+    color: #e4e4e9 !important;
+    text-shadow: none !important;
+    font-weight: 400 !important;
+  }
+
+  html body .b-add_to_list .trigger,
+  html body .b-add_to_list.completed .trigger,
+  html body .b-add_to_list.watching .trigger,
+  html body .b-add_to_list.planned .trigger,
+  html body .b-add_to_list.on_hold .trigger,
+  html body .b-add_to_list.dropped .trigger,
+  html body .b-user_rate .trigger {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+    color: #e4e4e9 !important;
+    box-shadow: none !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .b-add_to_list .trigger:hover,
+  html body .b-add_to_list.completed .trigger:hover,
+  html body .b-add_to_list.watching .trigger:hover,
+  html body .b-add_to_list.planned .trigger:hover,
+  html body .b-add_to_list.on_hold .trigger:hover,
+  html body .b-add_to_list.dropped .trigger:hover,
+  html body .b-user_rate .trigger:hover {
+    background: rgba(152, 132, 165, 0.25) !important;
+    border-color: #9884a5 !important;
+    color: #ffffff !important;
+  }
+
+  html body .b-add_to_list .trigger .trigger-arrow,
+  html body .b-add_to_list.completed .trigger-arrow,
+  html body .b-add_to_list.watching .trigger-arrow,
+  html body .b-add_to_list.planned .trigger-arrow,
+  html body .b-add_to_list.on_hold .trigger-arrow,
+  html body .b-add_to_list.dropped .trigger-arrow {
+    background: transparent !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  html body .b-add_to_list .expanded-options,
+  html body .b-add_to_list .popup,
+  .b-add_to_list .expanded-options {
+    background-color: rgba(28, 28, 32, 0.96) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+    padding: 4px !important;
+    overflow: hidden !important;
+  }
+
+  html body .b-add_to_list .option,
+  html body .b-add_to_list.completed .option,
+  html body .b-add_to_list.watching .option,
+  html body .b-add_to_list.planned .option,
+  html body .b-add_to_list.on_hold .option,
+  html body .b-add_to_list.dropped .option,
+  .b-add_to_list .option {
+    background: transparent !important;
+    border-radius: 6px !important;
+    color: #e4e4e9 !important;
+    padding: 5px 8px !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .b-add_to_list .option:hover,
+  html body .b-add_to_list.completed .option:hover,
+  html body .b-add_to_list.watching .option:hover,
+  html body .b-add_to_list.planned .option:hover,
+  html body .b-add_to_list.on_hold .option:hover,
+  html body .b-add_to_list.dropped .option:hover,
+  .b-add_to_list .option:hover {
+    background-color: rgba(152, 132, 165, 0.3) !important;
+    color: #ffffff !important;
+  }
+
+  html body .b-add_to_list .option.remove-trigger:hover {
+    background-color: rgba(220, 60, 80, 0.3) !important;
+    color: #ffffff !important;
+  }
+
+  /* --- Tooltips (Tipsy, Anime-Tooltip, Badges) - No Glow, Clean macOS Glass --- */
+  .tipsy,
+  .tipsy-inner,
+  html body .tipsy-inner,
+  html body .tooltip-inner,
+  html body .anime-tooltip,
+  .tooltip-inner,
+  .anime-tooltip {
+    background-color: rgba(24, 24, 28, 0.96) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+    color: #ffffff !important;
+    text-shadow: none !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    padding: 5px 10px !important;
+  }
+
+  .tipsy-arrow,
+  .tipsy-arrow-n,
+  .tipsy-arrow-s,
+  .tipsy-arrow-e,
+  .tipsy-arrow-w {
+    border-color: rgba(24, 24, 28, 0.96) !important;
+  }
+
+  html body .tipsy *,
+  html body .tooltip-inner *,
+  html body .anime-tooltip *,
+  .tipsy *,
+  .tooltip-inner * {
+    text-shadow: none !important;
+    box-shadow: none !important;
   }
 
   /* --- Page Inputs & Collection Search --- */
@@ -705,7 +858,7 @@
     transition: all 150ms ease !important;
   }
 
-  /* --- Add to List & Tooltips --- */
+  /* --- Other Names & Secondary Badges --- */
   html body span.other-names,
   span.other-names {
     background-color: rgba(255, 255, 255, 0.07) !important;
@@ -718,37 +871,6 @@
   html body span.other-names:hover,
   span.other-names:hover {
     background-color: rgba(255, 255, 255, 0.12) !important;
-  }
-
-  html body .tooltip-inner,
-  .tooltip-inner {
-    border-radius: 10px !important;
-    padding: 6px 10px !important;
-    color: #e4e4e9 !important;
-  }
-
-  html body .tooltip-inner .close,
-  .tooltip-inner .close {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 6px !important;
-    color: #e4e4e9 !important;
-  }
-
-  html body .b-add_to_list .option,
-  html body .b-add_to_list .trigger,
-  .b-add_to_list .option,
-  .b-add_to_list .trigger {
-    padding: 0 0 0 5px !important;
-    color: #e4e4e9 !important;
-  }
-
-  html body .b-add_to_list .trigger-arrow {
-    padding: 0 5px !important;
-  }
-
-  html body .b-add_to_list .option:hover,
-  html body .b-add_to_list .trigger-arrow:hover {
-    background-color: rgba(255, 255, 255, 0.08) !important;
   }
 
   html body .profile-actions .fav-remove {
