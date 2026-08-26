@@ -1631,6 +1631,26 @@
     margin: 0 !important;
   }
 
+  /* --- Hidden & Ignored Tags / Elements --- */
+  html body .b-anime_status_tag.hidden,
+  html body .b-anime_status_tag.is-hidden,
+  html body .b-anime_status_tag.ignored.hidden,
+  html body .b-anime_status_tag[hidden],
+  html body .b-tag.hidden,
+  html body .b-tag.is-hidden,
+  html body .b-tag[hidden],
+  html body .hidden,
+  html body [hidden],
+  html body .is-hidden,
+  .b-anime_status_tag.hidden,
+  .b-anime_status_tag.ignored.hidden,
+  .b-anime_status_tag[hidden],
+  .hidden,
+  [hidden],
+  .is-hidden {
+    display: none !important;
+  }
+
   /* --- Anime Status Tags (Original Soft Accents & Bright Borders) --- */
   html body .b-anime_status_tag,
   .b-anime_status_tag {
@@ -1645,6 +1665,13 @@
     line-height: 16px !important;
     text-shadow: none !important;
     font-weight: 500 !important;
+  }
+
+  html body .b-anime_status_tag.hidden,
+  html body .b-anime_status_tag.ignored.hidden,
+  .b-anime_status_tag.hidden,
+  .b-anime_status_tag.ignored.hidden {
+    display: none !important;
   }
 
   /* Релиз / Вышло / Просмотрено (Soft Green + Bright Border) */
