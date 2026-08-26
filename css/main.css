@@ -272,65 +272,78 @@
     align-items: center !important;
   }
 
-  /* --- Header Buttons & Dropdown Triggers: Match Search Height (30px), Transparent Minimalist --- */
+  /* --- Header Dropdown Triggers (Exact 30px Height Matching Search Bar, Transparent) --- */
   html body .l-top_menu-v2 .menu-dropdown,
   html body .l-top_menu-v2 .menu-dropdown.main,
   html body .l-top_menu-v2 .menu-dropdown.profile,
   html body .l-top_menu-v2 .menu-dropdown > span,
+  html body .l-top_menu-v2 .menu-dropdown.main > span,
   html body .l-top_menu-v2 .menu-dropdown.profile > span,
   html body .l-top_menu-v2 .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown .submenu-triangle,
   html body .l-top_menu-v2 .menu-dropdown.main .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown.profile .submenu-triangle,
   html body .l-top_menu-v2 .menu-dropdown.profile a.submenu-triangle,
-  .l-top_menu-v2 .submenu-triangle,
-  .l-top_menu-v2 .menu-dropdown > span {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+  html body .l-top_menu-v2 .menu-dropdown.profile > span > a,
+  .l-top_menu-v2 .menu-dropdown,
+  .l-top_menu-v2 .menu-dropdown > span,
+  .l-top_menu-v2 .menu-dropdown .submenu-triangle,
+  .l-top_menu-v2 .submenu-triangle {
     height: 30px !important;
     min-height: 30px !important;
     max-height: 30px !important;
     line-height: 30px !important;
+    padding: 0 10px !important;
+    margin: auto 2px !important;
+    box-sizing: border-box !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     border-radius: 8px !important;
-    padding: 0 8px !important;
-    margin: 0 2px !important;
-    transition: background 150ms ease, color 150ms ease !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: background 120ms ease, color 120ms ease !important;
   }
 
   html body .l-top_menu-v2 .menu-dropdown:hover > span,
   html body .l-top_menu-v2 .menu-dropdown.main:hover .submenu-triangle,
+  html body .l-top_menu-v2 .menu-dropdown.profile:hover > span,
   html body .l-top_menu-v2 .menu-dropdown.profile:hover a.submenu-triangle,
   html body .l-top_menu-v2 .submenu-triangle:hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
   }
 
-  html body .l-top_menu-v2 .menu-dropdown .submenu-triangle,
-  html body .l-top_menu-v2 .menu-dropdown .submenu-triangle span,
-  html body .l-top_menu-v2 .menu-dropdown .nickname,
-  .l-top_menu-v2 .menu-dropdown .submenu-triangle,
-  .l-top_menu-v2 .menu-dropdown .nickname {
+  html body .l-top_menu-v2 .menu-dropdown.profile img,
+  .l-top_menu-v2 .menu-dropdown.profile img {
+    width: 22px !important;
+    height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+    border-radius: 50% !important;
+    margin: 0 6px 0 0 !important;
+    padding: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  html body .l-top_menu-v2 .menu-dropdown.profile .nickname,
+  html body .l-top_menu-v2 .menu-dropdown.main span,
+  .l-top_menu-v2 .menu-dropdown.profile .nickname {
     font-weight: 400 !important;
     font-size: 13px !important;
-    letter-spacing: normal !important;
     color: #e4e4e9 !important;
-    text-shadow: none !important;
     line-height: 30px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-shadow: none !important;
   }
 
   html body .l-top_menu-v2 .menu-dropdown:hover .submenu-triangle span,
   html body .l-top_menu-v2 .menu-dropdown:hover .nickname {
     color: #ffffff !important;
-  }
-
-  html body .l-top_menu-v2 .menu-dropdown.profile img {
-    width: 22px !important;
-    height: 22px !important;
-    border-radius: 50% !important;
-    margin-right: 6px !important;
-    vertical-align: middle !important;
   }
 
   /* --- Top Menu Icons (Height 30px to Match Search Input) --- */
@@ -351,7 +364,7 @@
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 0 2px !important;
+    margin: auto 2px !important;
     transition: all 150ms ease !important;
   }
 
