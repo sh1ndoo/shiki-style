@@ -1328,14 +1328,14 @@
   html body a.tag-link,
   html body .tags a,
   html body .additional-links a {
-    background-color: rgba(255, 255, 255, 0.06) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background-color: rgba(152, 132, 165, 0.12) !important;
+    border: 1px solid rgba(152, 132, 165, 0.45) !important;
     border-radius: 6px !important;
     padding: 3px 8px !important;
     margin: 2px !important;
     display: inline-block !important;
     transition: all 120ms ease !important;
-    color: #c4afd4 !important;
+    color: #ffffff !important;
     text-decoration: none !important;
     text-shadow: none !important;
   }
@@ -1346,8 +1346,8 @@
   html body a.tag-link:hover,
   html body .tags a:hover,
   html body .additional-links a:hover {
-    background-color: rgba(152, 132, 165, 0.25) !important;
-    border-color: #9884a5 !important;
+    background-color: rgba(152, 132, 165, 0.28) !important;
+    border-color: #c4afd4 !important;
     color: #ffffff !important;
     text-decoration: none !important;
   }
@@ -1357,7 +1357,7 @@
   html body a.tag-link.active,
   html body a.tag-link.selected {
     background-color: rgba(152, 132, 165, 0.35) !important;
-    border-color: #9884a5 !important;
+    border-color: #c4afd4 !important;
     color: #ffffff !important;
     font-weight: 500 !important;
   }
@@ -1378,8 +1378,8 @@
   html body .b-anime_status_tag.released,
   html body .status-time .b-anime_status_tag.released,
   .b-anime_status_tag.released {
-    background-color: rgba(46, 160, 67, 0.2) !important;
-    border: 1px solid rgba(46, 160, 67, 0.45) !important;
+    background-color: rgba(46, 160, 67, 0.15) !important;
+    border: 1px solid rgba(46, 160, 67, 0.55) !important;
     color: #7ee787 !important;
   }
 
@@ -1387,8 +1387,8 @@
   html body .b-anime_status_tag.anons,
   html body .status-time .b-anime_status_tag.anons,
   .b-anime_status_tag.anons {
-    background-color: rgba(230, 57, 70, 0.2) !important;
-    border: 1px solid rgba(230, 57, 70, 0.45) !important;
+    background-color: rgba(230, 57, 70, 0.15) !important;
+    border: 1px solid rgba(230, 57, 70, 0.55) !important;
     color: #ff7b72 !important;
   }
 
@@ -1396,8 +1396,8 @@
   html body .b-anime_status_tag.ongoing,
   html body .status-time .b-anime_status_tag.ongoing,
   .b-anime_status_tag.ongoing {
-    background-color: rgba(30, 144, 255, 0.2) !important;
-    border: 1px solid rgba(30, 144, 255, 0.45) !important;
+    background-color: rgba(30, 144, 255, 0.15) !important;
+    border: 1px solid rgba(30, 144, 255, 0.55) !important;
     color: #79c0ff !important;
   }
 
@@ -1406,8 +1406,8 @@
   html body .b-anime_status_tag.studio,
   .b-anime_status_tag.episode,
   .b-anime_status_tag.studio {
-    background-color: rgba(152, 132, 165, 0.2) !important;
-    border: 1px solid rgba(152, 132, 165, 0.35) !important;
+    background-color: rgba(152, 132, 165, 0.12) !important;
+    border: 1px solid rgba(152, 132, 165, 0.5) !important;
     color: #ffffff !important;
   }
 
@@ -1585,8 +1585,8 @@
   html body .db-update .tags span.b-tag,
   .db-update .tags .b-anime_status_tag,
   .db-update .tags .b-tag {
-    background-color: rgba(152, 132, 165, 0.2) !important;
-    border: 1px solid rgba(152, 132, 165, 0.35) !important;
+    background-color: rgba(152, 132, 165, 0.12) !important;
+    border: 1px solid rgba(152, 132, 165, 0.5) !important;
     border-radius: 4px !important;
     color: #ffffff !important;
     padding: 1px 6px !important;
@@ -1608,8 +1608,8 @@
 
   html body .db-update .tags .b-anime_status_tag:hover,
   html body .db-update .tags .b-tag:hover {
-    background-color: rgba(152, 132, 165, 0.35) !important;
-    border-color: #9884a5 !important;
+    background-color: rgba(152, 132, 165, 0.28) !important;
+    border-color: #c4afd4 !important;
     color: #ffffff !important;
   }
 
