@@ -418,9 +418,9 @@
   html body .search-results,
   .l-top_menu-v2 .global-search .search-results,
   .search-results {
-    background-color: rgba(28, 28, 32, 0.96) !important;
-    backdrop-filter: blur(24px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    background-color: rgba(20, 20, 24, 0.75) !important;
+    backdrop-filter: blur(28px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-radius: 12px !important;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
@@ -514,14 +514,17 @@
 
   /* --- Dropdown Menus & Popups (macOS Rounded Glass Style) --- */
   html body .l-top_menu-v2 .submenu,
+  html body .l-top_menu-v2 .menu-dropdown .submenu,
+  html body .l-top_menu-v2 .dropdown-menu,
   html body .dropdown-menu,
   html body .b-dialog,
   html body .b-dialog > .inner,
   .l-top_menu-v2 .submenu,
+  .l-top_menu-v2 .menu-dropdown .submenu,
   .dropdown-menu {
-    background-color: rgba(22, 22, 26, 0.86) !important;
-    backdrop-filter: blur(24px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    background-color: rgba(20, 20, 24, 0.72) !important;
+    backdrop-filter: blur(28px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-radius: 14px !important;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
