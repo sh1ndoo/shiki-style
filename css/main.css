@@ -2220,6 +2220,127 @@
     color: #fbbf24 !important;
   }
 
+  /* --- Review Navigation Bar (.navigation-container, .navigation-node) --- */
+  html body .navigation-container,
+  .navigation-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    padding: 5px !important;
+    margin: 12px 0 16px 0 !important;
+  }
+
+  html body .navigation-container .navigation-node,
+  html body .navigation-node,
+  .navigation-node {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 6px 12px !important;
+    border-radius: 7px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #a1a1aa !important;
+    text-decoration: none !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    transition: all 120ms ease !important;
+    cursor: pointer !important;
+  }
+
+  html body .navigation-node:hover,
+  .navigation-node:hover {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
+  html body .navigation-node .label,
+  .navigation-node .label {
+    display: inline-flex !important;
+    align-items: center !important;
+    color: inherit !important;
+  }
+
+  html body .navigation-node .label span,
+  .navigation-node .label span {
+    color: inherit !important;
+  }
+
+  html body .navigation-node .count,
+  .navigation-node .count {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
+    line-height: 14px !important;
+    font-weight: 600 !important;
+    padding: 1px 6px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #a1a1aa !important;
+    transition: all 120ms ease !important;
+  }
+
+  /* Active States */
+  html body .navigation-node.is-active,
+  .navigation-node.is-active {
+    background-color: rgba(152, 132, 165, 0.22) !important;
+    border-color: rgba(152, 132, 165, 0.5) !important;
+    color: #ffffff !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  html body .navigation-node.is-active .count,
+  .navigation-node.is-active .count {
+    background: rgba(152, 132, 165, 0.4) !important;
+    color: #ffffff !important;
+  }
+
+  /* Specific review sentiment colors when active */
+  html body .navigation-node.navigation-node-positive.is-active,
+  .navigation-node.navigation-node-positive.is-active {
+    background-color: rgba(46, 160, 67, 0.2) !important;
+    border-color: rgba(46, 160, 67, 0.6) !important;
+    color: #7ee787 !important;
+  }
+
+  html body .navigation-node.navigation-node-positive.is-active .count,
+  .navigation-node.navigation-node-positive.is-active .count {
+    background: rgba(46, 160, 67, 0.35) !important;
+    color: #7ee787 !important;
+  }
+
+  html body .navigation-node.navigation-node-neutral.is-active,
+  .navigation-node.navigation-node-neutral.is-active {
+    background-color: rgba(226, 232, 240, 0.15) !important;
+    border-color: rgba(226, 232, 240, 0.5) !important;
+    color: #e2e8f0 !important;
+  }
+
+  html body .navigation-node.navigation-node-neutral.is-active .count,
+  .navigation-node.navigation-node-neutral.is-active .count {
+    background: rgba(226, 232, 240, 0.25) !important;
+    color: #e2e8f0 !important;
+  }
+
+  html body .navigation-node.navigation-node-negative.is-active,
+  .navigation-node.navigation-node-negative.is-active {
+    background-color: rgba(239, 68, 68, 0.2) !important;
+    border-color: rgba(239, 68, 68, 0.6) !important;
+    color: #fca5a5 !important;
+  }
+
+  html body .navigation-node.navigation-node-negative.is-active .count,
+  .navigation-node.navigation-node-negative.is-active .count {
+    background: rgba(239, 68, 68, 0.35) !important;
+    color: #fca5a5 !important;
+  }
+
   /* --- New Marker Badge (.b-new_marker) --- */
   html body .b-new_marker,
   html body p.b-new_marker,
