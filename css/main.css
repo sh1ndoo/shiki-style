@@ -2324,7 +2324,7 @@
     font-weight: 400 !important;
     font-size: 12px !important;
     text-shadow: none !important;
-    padding: 2px 6px !important;
+    padding: 0 !important;
     border-radius: 4px !important;
     transition: all 120ms ease !important;
     text-decoration: none !important;
