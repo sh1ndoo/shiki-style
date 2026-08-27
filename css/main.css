@@ -669,6 +669,17 @@
     border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 
+  /* Remove Border on .expanded-options */
+  html body .expanded-options,
+  html body .b-add_to_list .expanded-options,
+  html body .b-user_rate .expanded-options,
+  .expanded-options,
+  .b-add_to_list .expanded-options {
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+
   html body .b-add_to_list .option,
   html body .b-add_to_list.completed .option,
   html body .b-add_to_list.watching .option,
