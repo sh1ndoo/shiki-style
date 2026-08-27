@@ -2399,6 +2399,104 @@
     color: #e2e8f0 !important;
   }
 
+  /* --- Review Footer Voting (.b-footer_vote) --- */
+  html body .b-footer_vote,
+  .b-footer_vote {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    margin: 12px 0 8px 0 !important;
+    font-size: 12px !important;
+    color: #a1a1aa !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  html body .b-footer_vote .star,
+  .b-footer_vote .star {
+    display: inline-flex !important;
+    align-items: center !important;
+    color: #fbbf24 !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+  }
+
+  html body .b-footer_vote .star:before,
+  .b-footer_vote .star:before {
+    content: "★" !important;
+    color: #fbbf24 !important;
+  }
+
+  html body .b-footer_vote .notice,
+  .b-footer_vote .notice {
+    color: #e4e4e9 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  html body .b-footer_vote .vote-group,
+  .b-footer_vote .vote-group {
+    display: inline-flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+  }
+
+  html body .b-footer_vote .vote,
+  .b-footer_vote .vote {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 3px 10px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    color: #e4e4e9 !important;
+    transition: all 120ms ease !important;
+    user-select: none !important;
+    background: transparent !important;
+  }
+
+  html body .b-footer_vote .vote.yes:hover,
+  html body .b-footer_vote .vote.yes.active,
+  html body .b-footer_vote .vote.yes.voted,
+  .b-footer_vote .vote.yes:hover,
+  .b-footer_vote .vote.yes.active,
+  .b-footer_vote .vote.yes.voted {
+    background-color: rgba(46, 160, 67, 0.25) !important;
+    color: #7ee787 !important;
+  }
+
+  html body .b-footer_vote .vote.no:hover,
+  html body .b-footer_vote .vote.no.active,
+  html body .b-footer_vote .vote.no.voted,
+  .b-footer_vote .vote.no:hover,
+  .b-footer_vote .vote.no.active,
+  .b-footer_vote .vote.no.voted {
+    background-color: rgba(239, 68, 68, 0.25) !important;
+    color: #fca5a5 !important;
+  }
+
+  html body .b-footer_vote .vote span,
+  .b-footer_vote .vote span {
+    color: inherit !important;
+  }
+
+  html body .b-footer_vote .separator,
+  .b-footer_vote .separator {
+    width: 1px !important;
+    height: 14px !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    margin: 0 !important;
+  }
+
   /* --- New Marker Badge (.b-new_marker) --- */
   html body .b-new_marker,
   html body p.b-new_marker,
