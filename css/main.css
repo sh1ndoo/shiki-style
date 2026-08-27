@@ -184,6 +184,22 @@
     font-weight: 500 !important;
   }
 
+  /* Reset padding on list navigation links */
+  html body a[href*="/list/anime"],
+  html body a[href*="/list/manga"],
+  html body a[href*="/list/ranobe"],
+  html body a[href*="/list/"],
+  html body .subheadline a[href*="/list/"],
+  html body .headline a[href*="/list/"],
+  .subheadline a[href*="/list/"],
+  .headline a[href*="/list/"],
+  a[href*="/list/anime"],
+  a[href*="/list/manga"],
+  a[href*="/list/ranobe"],
+  a[href*="/list/"] {
+    padding: 0 !important;
+  }
+
   html body .headline > a:before,
   html body .midheadline > a:before,
   html body .subheadline > a:before,
@@ -2147,17 +2163,22 @@
     text-decoration: none !important;
   }
 
-  /* Dashboard History Card */
+  /* Dashboard History Card - Clean Native Layout */
   html body a.b-user_rate-history,
   html body .b-user_rate-history,
   html body .my-list a.b-user_rate-history,
   html body .my-list .b-user_rate-history,
   .b-user_rate-history {
-    background-color: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 10px !important;
-    padding: 8px !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
     transition: all 150ms ease !important;
     display: flex !important;
     text-decoration: none !important;
@@ -2169,10 +2190,12 @@
   html body .my-list a.b-user_rate-history:hover,
   html body .my-list .b-user_rate-history:hover,
   .b-user_rate-history:hover {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border-color: rgba(152, 132, 165, 0.5) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
-    transform: translateY(-1px) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
     text-decoration: none !important;
   }
 
