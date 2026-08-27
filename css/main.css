@@ -1046,10 +1046,10 @@
   /* --- Buttons (macOS Native Style) --- */
   html body .b-button,
   html body .b-form input[type=submit],
-  html body button,
+  html body button:not(.mfp-close),
   .b-button,
   .b-form input[type=submit],
-  button {
+  button:not(.mfp-close) {
     border-radius: 8px !important;
     background: rgba(255, 255, 255, 0.09) !important;
     color: #ffffff !important;
@@ -1062,14 +1062,57 @@
 
   html body .b-button:hover,
   html body .b-form input[type=submit]:hover,
-  html body button:hover,
+  html body button:not(.mfp-close):hover,
   .b-button:hover,
   .b-form input[type=submit]:hover,
-  button:hover {
+  button:not(.mfp-close):hover {
     background: #9884a5 !important;
     color: #ffffff !important;
     border-color: #9884a5 !important;
     box-shadow: 0 2px 8px rgba(152, 132, 165, 0.4) !important;
+  }
+
+  /* --- Lightbox Modal Close Button (.mfp-close) --- */
+  html body .mfp-close,
+  html body button.mfp-close,
+  html body .mfp-image-holder .mfp-close,
+  html body .mfp-iframe-holder .mfp-close,
+  .mfp-close,
+  button.mfp-close {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    max-width: 36px !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    background: rgba(20, 20, 24, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    font-size: 22px !important;
+    font-weight: 300 !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    cursor: pointer !important;
+    transition: all 120ms ease !important;
+    z-index: 1050 !important;
+  }
+
+  html body .mfp-close:hover,
+  html body button.mfp-close:hover,
+  .mfp-close:hover,
+  button.mfp-close:hover {
+    background: rgba(152, 132, 165, 0.6) !important;
+    border-color: #c4afd4 !important;
+    color: #ffffff !important;
+    transform: scale(1.08) !important;
   }
 
   html body .b-button:focus,
@@ -1543,6 +1586,49 @@
   .b-entry-info .line .value {
     color: #e4e4e9;
     text-shadow: none !important;
+  }
+
+  html body .line-container,
+  html body .b-entry-info .line-container,
+  html body .c-about .line-container,
+  html body .b-entry-info .line,
+  html body .c-about .line,
+  .line-container,
+  .b-entry-info .line-container {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  html body .line-container .key,
+  html body .line-container a,
+  html body .line-container .value,
+  .line-container .key,
+  .line-container a,
+  .line-container .value {
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: normal !important;
+    margin: 0 !important;
+  }
+
+  /* --- Chart & Profile Statistics Labels (.x_label, .y_label) --- */
+  html body .x_label,
+  html body .x-label,
+  html body .y_label,
+  html body .y-label,
+  html body .graph .x_label,
+  html body .graph .y_label,
+  html body .bar-chart .x_label,
+  .x_label,
+  .x-label,
+  .y_label,
+  .y-label {
+    color: #ffffff !important;
+    text-shadow: none !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
   }
 
   html body .b-entry-info .key,
