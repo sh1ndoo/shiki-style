@@ -1557,6 +1557,19 @@
     border: none !important;
   }
 
+  html body .b-db_entry-variant-list_item > .info .line .value > a,
+  html body .b-db_entry-variant-list_item > .info .line .value > div,
+  html body .b-db_entry-variant-list_item > .info .line .value > span,
+  html body .b-db_entry-variant-list_item .info .line .value > a,
+  html body .b-db_entry-variant-list_item .info .line .value > div,
+  html body .b-db_entry-variant-list_item .info .line .value > span,
+  .b-db_entry-variant-list_item > .info .line .value > a,
+  .b-db_entry-variant-list_item > .info .line .value > div,
+  .b-db_entry-variant-list_item > .info .line .value > span {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
   html body .b-db_entry .c-image,
   html body .b-db_entry .c-image img,
   html body .b-db_entry > .c-image,
