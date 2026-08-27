@@ -1758,17 +1758,36 @@
     text-shadow: none !important;
   }
 
+  /* --- Large Tags & Genre Links (.tag-link, .anime-tag, .tags a) --- */
+  html body .tag-link,
+  html body a.tag-link,
+  html body .tags .tag-link,
+  html body .tags a,
+  html body .anime-tag,
+  html body a.anime-tag,
+  html body .additional-links a,
+  .tag-link,
+  a.tag-link,
+  .tags .tag-link,
+  .tags a,
+  .anime-tag {
+    background-color: rgba(152, 132, 165, 0.12) !important;
+    border: 1px solid rgba(152, 132, 165, 0.45) !important;
+    border-radius: 6px !important;
+    padding: 3px 8px !important;
+    margin: 2px !important;
+    display: inline-block !important;
+    transition: all 120ms ease !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+  }
+
+  /* --- Compact Inline Chips (.b-tag) matching .b-anime_status_tag --- */
   html body .b-tag,
   html body a.b-tag,
-  html body .tags .tag-link,
-  html body a.tag-link,
-  html body .tags a,
-  html body .additional-links a,
   .b-tag,
-  a.b-tag,
-  .tags .tag-link,
-  a.tag-link,
-  .tags a {
+  a.b-tag {
     background-color: rgba(152, 132, 165, 0.12) !important;
     border: 1px solid rgba(152, 132, 165, 0.45) !important;
     border-radius: 4px !important;
