@@ -3116,3 +3116,466 @@
     float: left !important;
   }
 }
+
+/* ============================================================
+   RESPONSIVE & MOBILE ADAPTATIONS (SHIKI-STYLE)
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. TABLETS & SMALL LAPTOPS (<= 1024px)
+   ------------------------------------------------------------ */
+@media screen and (max-width: 1024px) {
+  html body .l-page,
+  html body [role="main"].l-page,
+  html body .l-page[role="main"],
+  html body #profiles_show .l-page,
+  #profiles_show .l-page,
+  .l-page {
+    max-width: 100% !important;
+    border-radius: 12px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  html body .l-top_menu-v2 .global-search,
+  .l-top_menu-v2 .global-search {
+    max-width: 240px !important;
+  }
+
+  html body .l-top_menu-v2 .submenu,
+  .l-top_menu-v2 .submenu {
+    max-width: 90vw !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   2. MOBILE PHONES & TABLETS IN PORTRAIT (<= 768px)
+   ------------------------------------------------------------ */
+@media screen and (max-width: 768px) {
+  /* --- Viewport & Anti-drift --- */
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -webkit-tap-highlight-color: rgba(152, 132, 165, 0.25) !important;
+  }
+
+  /* --- Edge-to-Edge Page Container --- */
+  html body .l-page,
+  html body [role="main"].l-page,
+  html body .l-page[role="main"],
+  html body #profiles_show .l-page,
+  #profiles_show .l-page,
+  .l-page {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    padding: 10px 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* --- Sticky Mobile Header & Navigation --- */
+  html body .l-top_menu-v2,
+  .l-top_menu-v2 {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    height: 46px !important;
+    border-radius: 0 !important;
+  }
+
+  /* Prevent iOS Safari auto-zoom on input focus */
+  html body .l-top_menu-v2 .global-search .field input,
+  html body .l-top_menu-v2 .global-search input,
+  .l-top_menu-v2 .global-search .field input,
+  .l-top_menu-v2 .global-search input {
+    font-size: 16px !important;
+  }
+
+  /* Mobile Dropdown Menu (Glass Floating Sheet) */
+  html body .l-top_menu-v2 .submenu,
+  html body .l-top_menu-v2 .menu-dropdown .submenu,
+  html body .l-top_menu-v2 .dropdown-menu,
+  html body .dropdown-menu,
+  .l-top_menu-v2 .submenu,
+  .l-top_menu-v2 .menu-dropdown .submenu,
+  .dropdown-menu {
+    position: fixed !important;
+    top: 48px !important;
+    left: 8px !important;
+    right: 8px !important;
+    width: auto !important;
+    max-width: calc(100vw - 16px) !important;
+    max-height: calc(100vh - 60px) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  html body .l-top_menu-v2 .submenu a,
+  .l-top_menu-v2 .submenu a {
+    min-height: 42px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 6px !important;
+  }
+
+  html body .search-results,
+  html body .l-top_menu-v2 .global-search .search-results,
+  .search-results {
+    position: fixed !important;
+    top: 48px !important;
+    left: 8px !important;
+    right: 8px !important;
+    width: auto !important;
+    max-width: calc(100vw - 16px) !important;
+    max-height: calc(100vh - 65px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* --- Profiles on Mobile --- */
+  html body .profile-head,
+  .profile-head {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief,
+  .profile-head .c-brief {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief .avatar,
+  .profile-head .c-brief .avatar {
+    margin: 0 auto 10px auto !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief .avatar .profile-actions,
+  .profile-head .c-brief .avatar .profile-actions {
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief .avatar .profile-actions a,
+  .profile-head .c-brief .avatar .profile-actions a {
+    min-width: 38px !important;
+    min-height: 38px !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+  }
+
+  html body .p-profiles .profile-head .c-history,
+  .profile-head .c-history {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 6px !important;
+  }
+
+  html body .b-stats_bar,
+  html body .b-stats_bar .bar,
+  html body .activity,
+  html body .graph,
+  html body .bar-chart,
+  .b-stats_bar,
+  .activity,
+  .graph,
+  .bar-chart {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* --- Anime & Manga Show Pages on Mobile --- */
+  html body .p-animes-show .c-info-left,
+  html body .p-animes-show .c-info-right,
+  html body .p-mangas-show .c-info-left,
+  html body .p-mangas-show .c-info-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  html body .p-animes-show .c-poster img,
+  html body .p-mangas-show .c-poster img,
+  html body .c-poster,
+  html body .c-poster img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 14px auto !important;
+    border-radius: 10px !important;
+  }
+
+  /* Ratings & Scores Responsive Wrap */
+  html body .scores,
+  .scores {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  html body .b-rate,
+  .b-rate {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  html body .b-mal_score,
+  .b-mal_score {
+    margin: 0 !important;
+  }
+
+  /* Touch-friendly Add to List Buttons */
+  html body .b-add_to_list,
+  html body .b-user_rate,
+  html body .watch-online,
+  .b-add_to_list,
+  .b-user_rate,
+  .watch-online {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 8px 0 !important;
+  }
+
+  html body .b-add_to_list .trigger,
+  html body .b-user_rate .trigger,
+  .b-add_to_list .trigger {
+    min-height: 42px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .expanded-options .option,
+  .expanded-options .option {
+    min-height: 38px !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Key-value information rows */
+  html body .line-container,
+  html body .b-entry-info .line,
+  .line-container {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  /* --- Reviews & Review Filters on Mobile --- */
+  html body .b-reviews_navigation .navigation-container,
+  html body .navigation-container,
+  .b-reviews_navigation .navigation-container,
+  .navigation-container {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 4px !important;
+    margin: 10px 0 !important;
+  }
+
+  html body .navigation-node,
+  .navigation-node {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    min-height: 32px !important;
+  }
+
+  html body .b-footer_vote,
+  .b-footer_vote {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: space-between !important;
+    margin: 10px 0 !important;
+  }
+
+  html body .b-footer_vote .vote,
+  .b-footer_vote .vote {
+    padding: 6px 12px !important;
+    min-height: 32px !important;
+    font-size: 12px !important;
+  }
+
+  /* --- Topics, News & Comments on Mobile --- */
+  html body .status-line,
+  html body .b-news_wall-topic .status-line,
+  html body .b-topic .status-line,
+  .status-line {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  html body .b-comment,
+  .b-comment {
+    padding: 10px 0 !important;
+    gap: 10px !important;
+  }
+
+  html body .b-comment .avatar,
+  html body .b-comments .avatar,
+  .b-comment .avatar {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .b-comment .inner,
+  html body .b-comments .inner,
+  .b-comment .inner {
+    width: calc(100% - 48px) !important;
+    max-width: calc(100% - 48px) !important;
+  }
+
+  html body .b-spoiler_block,
+  html body .b-quote,
+  html body pre,
+  html body code,
+  .b-spoiler_block,
+  .b-quote {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  html body .b-text_with_paragraphs img,
+  html body .b-comments img,
+  html body .b-comment img,
+  html body .b-video,
+  html body iframe {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+
+  /* --- Catalog Grid on Mobile --- */
+  html body .cc-entries,
+  .cc-entries {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  html body .b-catalog_entry,
+  .b-catalog_entry {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html body .b-catalog_entry .cover,
+  .b-catalog_entry .cover {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* --- Dialogs & Lightbox on Mobile --- */
+  html body .b-dialog,
+  .b-dialog {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 94vw !important;
+    max-width: 480px !important;
+    max-height: 90vh !important;
+    margin: 0 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 14px !important;
+  }
+
+  html body .mfp-close,
+  html body button.mfp-close,
+  .mfp-close {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    top: 12px !important;
+    right: 12px !important;
+    font-size: 24px !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   3. COMPACT MOBILE SCREENS & SMALL SMARTPHONES (<= 480px)
+   ------------------------------------------------------------ */
+@media screen and (max-width: 480px) {
+  /* Catalog: 2 columns on small screens */
+  html body .cc-entries,
+  .cc-entries {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  /* Voting Footer: Vertical stacked layout */
+  html body .b-footer_vote,
+  .b-footer_vote {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  html body .b-footer_vote .vote-group,
+  .b-footer_vote .vote-group {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  html body .b-footer_vote .vote,
+  .b-footer_vote .vote {
+    flex: 1 !important;
+  }
+
+  /* Profile Header Typography */
+  html body .profile-head header.head .title,
+  html body .p-profiles .profile-head .c-brief header h1 {
+    font-size: 18px !important;
+    word-break: break-word !important;
+  }
+
+  /* Full-width Form Actions */
+  html body .b-button,
+  html body button:not(.mfp-close):not(.close),
+  html body .b-form input[type=submit],
+  .b-button {
+    min-height: 42px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
