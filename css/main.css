@@ -1983,6 +1983,7 @@
     background-color: rgba(30, 144, 255, 0.15) !important;
     border: 1px solid rgba(30, 144, 255, 0.6) !important;
     color: #79c0ff !important;
+    margin-left: 2px !important;
   }
 
   /* Эпизод / Серии (Soft Amber/Orange + Bright Border) */
