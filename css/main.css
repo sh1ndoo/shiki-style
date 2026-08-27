@@ -2341,6 +2341,64 @@
     color: #fca5a5 !important;
   }
 
+  /* --- Review Opinions (.opinion, .opinion.positive, .opinion.neutral, .opinion.negative) --- */
+  html body .opinion,
+  .opinion {
+    display: inline-flex !important;
+    align-items: center !important;
+    border-radius: 4px !important;
+    padding: 1px 6px !important;
+    font-size: 11px !important;
+    line-height: 16px !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .opinion:before,
+  html body .opinion:after,
+  .opinion:before,
+  .opinion:after {
+    border: none !important;
+    background: transparent !important;
+    color: inherit !important;
+    text-shadow: none !important;
+  }
+
+  /* Positive Opinion (Green) */
+  html body .opinion.positive,
+  html body .opinion[data-opinion="positive"],
+  html body .opinion[data-text*="положительн"],
+  .opinion.positive,
+  .opinion[data-opinion="positive"] {
+    background-color: rgba(46, 160, 67, 0.15) !important;
+    border: 1px solid rgba(46, 160, 67, 0.6) !important;
+    color: #7ee787 !important;
+  }
+
+  /* Negative Opinion (Light Red) */
+  html body .opinion.negative,
+  html body .opinion[data-opinion="negative"],
+  html body .opinion[data-text*="отрицательн"],
+  .opinion.negative,
+  .opinion[data-opinion="negative"] {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    border: 1px solid rgba(239, 68, 68, 0.6) !important;
+    color: #fca5a5 !important;
+  }
+
+  /* Neutral Opinion (Light Gray) */
+  html body .opinion.neutral,
+  html body .opinion[data-opinion="neutral"],
+  html body .opinion[data-text*="нейтральн"],
+  .opinion.neutral,
+  .opinion[data-opinion="neutral"] {
+    background-color: rgba(226, 232, 240, 0.12) !important;
+    border: 1px solid rgba(226, 232, 240, 0.5) !important;
+    color: #e2e8f0 !important;
+  }
+
   /* --- New Marker Badge (.b-new_marker) --- */
   html body .b-new_marker,
   html body p.b-new_marker,
