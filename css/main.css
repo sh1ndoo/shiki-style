@@ -1180,6 +1180,48 @@
     margin-left: 2px !important;
   }
 
+  /* --- Close Buttons & Cross Icons (.close) --- */
+  html body .close,
+  html body .b-dialog .close,
+  html body .b-flash .close,
+  html body .b-feedback .close,
+  .close,
+  .b-dialog .close,
+  .b-flash .close,
+  .b-feedback .close {
+    color: #a1a1aa !important;
+    opacity: 0.8 !important;
+    cursor: pointer !important;
+    transition: all 120ms ease !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+  }
+
+  html body .close:hover,
+  html body .b-dialog .close:hover,
+  html body .b-flash .close:hover,
+  html body .b-feedback .close:hover,
+  .close:hover,
+  .b-dialog .close:hover,
+  .b-flash .close:hover,
+  .b-feedback .close:hover {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    background-color: rgba(152, 132, 165, 0.25) !important;
+  }
+
+  html body .close:before,
+  html body .close:after,
+  .close:before,
+  .close:after {
+    color: inherit !important;
+    text-shadow: none !important;
+  }
+
   /* --- History Block (No Close/Hide Overlay) --- */
   html body .p-profiles .profile-head .c-history.x3 > div:nth-child(2),
   .p-profiles .profile-head .c-history.x3 > div:nth-child(2) {
