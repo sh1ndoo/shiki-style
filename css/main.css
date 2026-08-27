@@ -683,26 +683,39 @@
   }
 
   html body .b-add_to_list .option,
+  html body .b-add_to_list .option.add-trigger,
   html body .b-add_to_list.completed .option,
   html body .b-add_to_list.watching .option,
   html body .b-add_to_list.planned .option,
   html body .b-add_to_list.on_hold .option,
   html body .b-add_to_list.dropped .option,
-  .b-add_to_list .option {
+  html body .option.add-trigger,
+  html body .option[data-status],
+  .b-add_to_list .option,
+  .option.add-trigger {
     background: rgba(28, 28, 32, 0.95) !important;
+    border: 1px solid #9884a5 !important;
+    border-color: #9884a5 !important;
+    border-left-width: 1px !important;
+    border-width: 1px !important;
     border-radius: 4px !important;
     color: #e4e4e9 !important;
     transition: all 120ms ease !important;
   }
 
   html body .b-add_to_list .option:hover,
+  html body .b-add_to_list .option.add-trigger:hover,
   html body .b-add_to_list.completed .option:hover,
   html body .b-add_to_list.watching .option:hover,
   html body .b-add_to_list.planned .option:hover,
   html body .b-add_to_list.on_hold .option:hover,
   html body .b-add_to_list.dropped .option:hover,
-  .b-add_to_list .option:hover {
+  html body .option.add-trigger:hover,
+  html body .option[data-status]:hover,
+  .b-add_to_list .option:hover,
+  .option.add-trigger:hover {
     background-color: rgba(152, 132, 165, 0.35) !important;
+    border-color: #c4afd4 !important;
     color: #ffffff !important;
   }
 
