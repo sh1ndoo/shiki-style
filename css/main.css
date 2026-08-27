@@ -2181,17 +2181,54 @@
     text-shadow: none !important;
   }
 
-  html body .b-mal_score {
-    background-color: rgba(255, 255, 255, 0.06) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 6px !important;
-    color: #a1a1aa !important;
-    padding: 2px 8px !important;
+  /* --- Scores Container & MAL Score Badge --- */
+  html body .scores,
+  .scores {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
   }
 
-  html body .b-mal_score span {
-    color: #c4afd4 !important;
+  html body .b-mal_score,
+  .b-mal_score {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    color: #a1a1aa !important;
+    padding: 6px 10px !important;
+    font-size: 13px !important;
     font-weight: 500 !important;
+    line-height: 1.2 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .b-mal_score:hover,
+  .b-mal_score:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(152, 132, 165, 0.4) !important;
+  }
+
+  html body .b-mal_score span,
+  .b-mal_score span {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+
+  html body .b-mal_score span::before,
+  .b-mal_score span::before {
+    content: "★" !important;
+    color: #f59e0b !important;
+    font-size: 15px !important;
+    line-height: 1 !important;
+    text-shadow: 0 0 8px rgba(245, 158, 11, 0.5) !important;
   }
 
   html body .b-tooltipped.dotted {
