@@ -1063,6 +1063,54 @@
     box-shadow: 0 0 0 3px rgba(152, 132, 165, 0.35) !important;
   }
 
+  /* --- Link Buttons (.b-link_button) --- */
+  html body .b-link_button,
+  html body .b-link_button.dark,
+  .b-link_button,
+  .b-link_button.dark {
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+    transition: all 120ms ease !important;
+    padding: 5px 12px !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  html body .b-link_button.mini,
+  .b-link_button.mini {
+    padding: 3px 8px !important;
+    font-size: 11px !important;
+    border-radius: 6px !important;
+  }
+
+  html body .b-link_button:hover,
+  html body .b-link_button.dark:hover,
+  .b-link_button:hover,
+  .b-link_button.dark:hover {
+    background: #9884a5 !important;
+    color: #ffffff !important;
+    border-color: #9884a5 !important;
+    box-shadow: 0 2px 8px rgba(152, 132, 165, 0.4) !important;
+    text-decoration: none !important;
+  }
+
+  html body .b-link_button span,
+  html body .b-link_button:after,
+  html body .b-link_button:before,
+  .b-link_button span,
+  .b-link_button:after,
+  .b-link_button:before {
+    color: inherit !important;
+  }
+
   /* --- History Block (No Close/Hide Overlay) --- */
   html body .p-profiles .profile-head .c-history.x3 > div:nth-child(2),
   .p-profiles .profile-head .c-history.x3 > div:nth-child(2) {
@@ -1491,6 +1539,11 @@
   html body .line .key,
   html body .line-container .key,
   html body .additional-links .key,
+  html body .total-rates,
+  html body .b-entry-info .total-rates,
+  html body .c-about .total-rates,
+  html body .c-info-right .total-rates,
+  .total-rates,
   .b-entry-info .key,
   .b-entry-info .line .key {
     color: #a1a1aa !important;
@@ -1951,23 +2004,32 @@
 
   /* --- New Marker Badge (.b-new_marker) --- */
   html body .b-new_marker,
+  html body p.b-new_marker,
+  html body div.b-new_marker,
+  html body span.b-new_marker,
+  p.b-new_marker,
   .b-new_marker {
     display: inline-flex !important;
     align-items: center !important;
+    justify-content: center !important;
     background-color: rgba(152, 132, 165, 0.18) !important;
     border: 1px solid rgba(152, 132, 165, 0.65) !important;
     border-radius: 4px !important;
     color: #ffffff !important;
     padding: 1px 5px !important;
+    margin: 0 !important;
     font-size: 10px !important;
     line-height: 14px !important;
     font-weight: 600 !important;
     letter-spacing: 0.3px !important;
     text-shadow: none !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
+    vertical-align: middle !important;
   }
 
   html body .b-new_marker.active,
+  html body p.b-new_marker.active,
+  p.b-new_marker.active,
   .b-new_marker.active {
     background-color: rgba(152, 132, 165, 0.25) !important;
     border-color: #c4afd4 !important;
@@ -1976,12 +2038,15 @@
 
   html body .b-new_marker:before,
   html body .b-new_marker:after,
+  p.b-new_marker:before,
+  p.b-new_marker:after,
   .b-new_marker:before,
   .b-new_marker:after {
     border: none !important;
     background: transparent !important;
     color: #ffffff !important;
     box-shadow: none !important;
+    content: attr(data-text) !important;
   }
 
 
