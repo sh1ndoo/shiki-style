@@ -2222,12 +2222,18 @@
   }
 
   /* --- Review Navigation Bar (.navigation-container, .navigation-node) --- */
+  html body .b-reviews_navigation .navigation-container,
   html body .navigation-container,
+  .b-reviews_navigation .navigation-container,
   .navigation-container {
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
     flex-wrap: wrap !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    line-height: normal !important;
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 10px !important;
