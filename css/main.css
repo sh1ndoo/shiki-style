@@ -1189,10 +1189,12 @@
   .b-dialog .close,
   .b-flash .close,
   .b-feedback .close {
-    color: #a1a1aa !important;
-    opacity: 0.8 !important;
+    color: #52525b !important;
+    opacity: 0.5 !important;
+    background: transparent !important;
+    background-color: transparent !important;
     cursor: pointer !important;
-    transition: all 120ms ease !important;
+    transition: all 150ms ease !important;
     border-radius: 6px !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -1220,6 +1222,7 @@
   .close:after {
     color: inherit !important;
     text-shadow: none !important;
+    transition: color 150ms ease !important;
   }
 
   /* --- History Block (No Close/Hide Overlay) --- */
