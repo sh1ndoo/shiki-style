@@ -1436,17 +1436,13 @@
   }
 
   /* --- Catalog Entries, News, Topics, Updates & Photo Attachments (Rounded 8px) --- */
-  html body .b-catalog_entry .cover,
   html body .b-catalog_entry .cover .image-decor,
   html body .b-catalog_entry .cover .image-cutter,
   html body .b-catalog_entry .cover picture,
   html body .b-catalog_entry .cover picture img,
   html body .b-catalog_entry .cover img,
   html body .b-catalog_entry img,
-  html body .c-column.b-catalog_entry .cover,
   html body .c-column.b-catalog_entry img,
-  html body .cc-entries .b-catalog_entry,
-  html body .cc-entries .b-catalog_entry .cover,
   html body .cc-entries .b-catalog_entry img,
   html body .image-decor,
   html body .image-decor img,
@@ -1559,7 +1555,6 @@
   html body .b-shiki_swiper [data-dynamic="swiper"],
   .b-shiki_swiper,
   .b-shiki_swiper img,
-  .b-catalog_entry .cover,
   .b-catalog_entry .cover .image-decor,
   .image-cutter,
   .image-cutter img {
@@ -3426,25 +3421,148 @@
     border-radius: 8px !important;
   }
 
-  /* --- Catalog Grid on Mobile --- */
+  /* --- Catalog Grid on Mobile (scoped to .cc-entries) --- */
   html body .cc-entries,
   .cc-entries {
     display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
     gap: 10px !important;
   }
 
-  html body .b-catalog_entry,
-  .b-catalog_entry {
+  html body .cc-entries .b-catalog_entry,
+  .cc-entries .b-catalog_entry {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
   }
 
+  /* Catalog entry card elements (cover, title, misc) */
   html body .b-catalog_entry .cover,
   .b-catalog_entry .cover {
+    display: block !important;
+    overflow: visible !important;
+    clip-path: none !important;
+    text-decoration: none !important;
+  }
+
+  html body .b-catalog_entry .cover .image-decor,
+  .b-catalog_entry .cover .image-decor {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    clip-path: inset(0 round 8px) !important;
+  }
+
+  html body .b-catalog_entry .title,
+  .b-catalog_entry .title {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-size: 11.5px !important;
+    line-height: 1.3 !important;
+    color: #e4e4e9 !important;
+    margin-top: 5px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  html body .b-catalog_entry .title .name-ru,
+  html body .b-catalog_entry .title .name-en,
+  .b-catalog_entry .title .name-ru,
+  .b-catalog_entry .title .name-en {
+    color: #e4e4e9 !important;
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+  }
+
+  html body .b-catalog_entry .cover:hover .title,
+  html body .b-catalog_entry .cover:hover .title .name-ru,
+  html body .b-catalog_entry .cover:hover .title .name-en {
+    color: #ffffff !important;
+  }
+
+  html body .b-catalog_entry .misc,
+  html body .b-catalog_entry .misc .studio,
+  .b-catalog_entry .misc,
+  .b-catalog_entry .misc .studio {
+    font-size: 10px !important;
+    color: #a1a1aa !important;
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    margin-top: 2px !important;
+  }
+
+  /* --- Swiper Carousels & Sliders on Mobile --- */
+  html body .b-shiki_swiper,
+  html body .swiper-container,
+  .b-shiki_swiper,
+  .swiper-container {
+    overflow: hidden !important;
     width: 100% !important;
-    height: auto !important;
+    position: relative !important;
+  }
+
+  html body .b-shiki_swiper .inner,
+  html body .swiper-wrapper,
+  .b-shiki_swiper .inner,
+  .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+  }
+
+  html body [class*="swiper"] .b-catalog_entry,
+  html body .b-catalog_entry[class*="swiper"],
+  html body .b-shiki_swiper .b-catalog_entry,
+  html body .swiper-container .b-catalog_entry,
+  html body .swiper-slide.b-catalog_entry,
+  html body .swiper-slide .b-catalog_entry,
+  .b-catalog_entry[class*="swiper"],
+  .swiper-slide.b-catalog_entry {
+    width: 120px !important;
+    min-width: 120px !important;
+    max-width: 120px !important;
+    flex: 0 0 120px !important;
+    margin-right: 8px !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html body [class*="swiper"] .b-catalog_entry .cover,
+  html body .b-catalog_entry[class*="swiper"] .cover,
+  html body .swiper-slide.b-catalog_entry .cover,
+  .b-catalog_entry[class*="swiper"] .cover {
+    width: 120px !important;
+    max-width: 120px !important;
+  }
+
+  html body [class*="swiper"] .b-catalog_entry .cover .image-decor,
+  html body .b-catalog_entry[class*="swiper"] .cover .image-decor,
+  html body .b-shiki_swiper .b-catalog_entry .cover .image-decor,
+  html body .swiper-slide.b-catalog_entry .cover .image-decor,
+  html body .swiper-slide .b-catalog_entry .cover .image-decor,
+  .b-catalog_entry[class*="swiper"] .cover .image-decor {
+    width: 120px !important;
+    height: 165px !important;
+    max-height: 165px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+
+  html body [class*="swiper"] .b-catalog_entry .cover img,
+  html body .b-catalog_entry[class*="swiper"] .cover img,
+  html body .b-shiki_swiper .b-catalog_entry .cover img,
+  html body .swiper-slide.b-catalog_entry .cover img,
+  html body .swiper-slide .b-catalog_entry .cover img,
+  .b-catalog_entry[class*="swiper"] .cover img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
   }
 
   /* --- Lightbox on Mobile --- */
@@ -3470,6 +3588,41 @@
   .cc-entries {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 8px !important;
+  }
+
+  /* Swiper: compact cards on small mobile */
+  html body [class*="swiper"] .b-catalog_entry,
+  html body .b-catalog_entry[class*="swiper"],
+  html body .b-shiki_swiper .b-catalog_entry,
+  html body .swiper-container .b-catalog_entry,
+  html body .swiper-slide.b-catalog_entry,
+  html body .swiper-slide .b-catalog_entry,
+  .b-catalog_entry[class*="swiper"],
+  .swiper-slide.b-catalog_entry {
+    width: 110px !important;
+    min-width: 110px !important;
+    max-width: 110px !important;
+    flex: 0 0 110px !important;
+    margin-right: 6px !important;
+  }
+
+  html body [class*="swiper"] .b-catalog_entry .cover,
+  html body .b-catalog_entry[class*="swiper"] .cover,
+  html body .swiper-slide.b-catalog_entry .cover,
+  .b-catalog_entry[class*="swiper"] .cover {
+    width: 110px !important;
+    max-width: 110px !important;
+  }
+
+  html body [class*="swiper"] .b-catalog_entry .cover .image-decor,
+  html body .b-catalog_entry[class*="swiper"] .cover .image-decor,
+  html body .b-shiki_swiper .b-catalog_entry .cover .image-decor,
+  html body .swiper-slide.b-catalog_entry .cover .image-decor,
+  html body .swiper-slide .b-catalog_entry .cover .image-decor,
+  .b-catalog_entry[class*="swiper"] .cover .image-decor {
+    width: 110px !important;
+    height: 152px !important;
+    max-height: 152px !important;
   }
 
   /* Voting Footer: Vertical stacked layout */
