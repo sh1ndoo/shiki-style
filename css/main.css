@@ -3150,11 +3150,6 @@
   .l-top_menu-v2 .global-search {
     max-width: 240px !important;
   }
-
-  html body .l-top_menu-v2 .submenu,
-  .l-top_menu-v2 .submenu {
-    max-width: 90vw !important;
-  }
 }
 
 /* ------------------------------------------------------------
@@ -3190,69 +3185,12 @@
     box-sizing: border-box !important;
   }
 
-  /* --- Sticky Mobile Header & Navigation --- */
-  html body .l-top_menu-v2,
-  .l-top_menu-v2 {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 1000 !important;
-    height: 46px !important;
-    border-radius: 0 !important;
-  }
-
   /* Prevent iOS Safari auto-zoom on input focus */
   html body .l-top_menu-v2 .global-search .field input,
   html body .l-top_menu-v2 .global-search input,
   .l-top_menu-v2 .global-search .field input,
   .l-top_menu-v2 .global-search input {
     font-size: 16px !important;
-  }
-
-  /* Mobile Dropdown Menu (Glass Floating Sheet) */
-  html body .l-top_menu-v2 .submenu,
-  html body .l-top_menu-v2 .menu-dropdown .submenu,
-  html body .l-top_menu-v2 .dropdown-menu,
-  html body .dropdown-menu,
-  .l-top_menu-v2 .submenu,
-  .l-top_menu-v2 .menu-dropdown .submenu,
-  .dropdown-menu {
-    position: fixed !important;
-    top: 48px !important;
-    left: 8px !important;
-    right: 8px !important;
-    width: auto !important;
-    max-width: calc(100vw - 16px) !important;
-    max-height: calc(100vh - 60px) !important;
-    border-radius: 14px !important;
-    padding: 8px !important;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7) !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  html body .l-top_menu-v2 .submenu a,
-  .l-top_menu-v2 .submenu a {
-    min-height: 42px !important;
-    display: flex !important;
-    align-items: center !important;
-    padding: 8px 12px !important;
-    font-size: 14px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
-    border-radius: 6px !important;
-  }
-
-  html body .search-results,
-  html body .l-top_menu-v2 .global-search .search-results,
-  .search-results {
-    position: fixed !important;
-    top: 48px !important;
-    left: 8px !important;
-    right: 8px !important;
-    width: auto !important;
-    max-width: calc(100vw - 16px) !important;
-    max-height: calc(100vh - 65px) !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
   }
 
   /* --- Profiles on Mobile --- */
@@ -3509,21 +3447,7 @@
     height: auto !important;
   }
 
-  /* --- Dialogs & Lightbox on Mobile --- */
-  html body .b-dialog,
-  .b-dialog {
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 94vw !important;
-    max-width: 480px !important;
-    max-height: 90vh !important;
-    margin: 0 !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    border-radius: 14px !important;
-  }
+  /* --- Lightbox on Mobile --- */
 
   html body .mfp-close,
   html body button.mfp-close,
