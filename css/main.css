@@ -402,9 +402,10 @@
     left: 8px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    width: 15px !important;
-    height: 15px !important;
+    width: 14px !important;
+    height: 14px !important;
     display: block !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='10.5' cy='10.5' r='7.5'/%3E%3Cline x1='21' y1='21' x2='15.8' y2='15.8'/%3E%3C/svg%3E") !important;
     background-position: center center !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -416,6 +417,14 @@
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
+    transition: opacity 150ms ease, background-image 150ms ease !important;
+  }
+
+  html body .l-top_menu-v2.is-search-focus .global-search .search-marker,
+  html body .global-search:focus-within .search-marker,
+  .l-top_menu-v2.is-search-focus .global-search .search-marker {
+    opacity: 1 !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c4afd4' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='10.5' cy='10.5' r='7.5'/%3E%3Cline x1='21' y1='21' x2='15.8' y2='15.8'/%3E%3C/svg%3E") !important;
   }
 
   html body .search-marker:before,
