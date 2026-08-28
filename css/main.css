@@ -1257,6 +1257,91 @@
     transition: color 150ms ease !important;
   }
 
+  /* --- Toast Notifications (.toastify) macOS Dark Glass --- */
+  html body .toastify,
+  .toastify {
+    background: rgba(24, 24, 28, 0.88) !important;
+    background-color: rgba(24, 24, 28, 0.88) !important;
+    background-image: none !important;
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.06), 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 450 !important;
+    line-height: 1.4 !important;
+    padding: 10px 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    max-width: min(calc(100vw - 28px), 440px) !important;
+    box-sizing: border-box !important;
+    z-index: 99999 !important;
+  }
+
+  /* Status variants */
+  html body .toastify.notice,
+  html body .toastify.info,
+  .toastify.notice,
+  .toastify.info {
+    border-left: 4px solid #9884a5 !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 16px rgba(152, 132, 165, 0.25) !important;
+  }
+
+  html body .toastify.success,
+  .toastify.success {
+    border-left: 4px solid #34c759 !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 16px rgba(52, 199, 89, 0.25) !important;
+  }
+
+  html body .toastify.error,
+  html body .toastify.danger,
+  .toastify.error,
+  .toastify.danger {
+    border-left: 4px solid #ff453a !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 69, 58, 0.25) !important;
+  }
+
+  html body .toastify.warning,
+  .toastify.warning {
+    border-left: 4px solid #ff9f0a !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 159, 10, 0.25) !important;
+  }
+
+  /* Close button */
+  html body .toastify .toast-close,
+  .toastify .toast-close {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: none !important;
+    color: #a1a1aa !important;
+    border-radius: 50% !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+    transition: all 150ms ease !important;
+    opacity: 0.8 !important;
+  }
+
+  html body .toastify .toast-close:hover,
+  .toastify .toast-close:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+  }
+
   /* --- History Block (No Close/Hide Overlay) --- */
   html body .p-profiles .profile-head .c-history.x3 > div:nth-child(2),
   .p-profiles .profile-head .c-history.x3 > div:nth-child(2) {
