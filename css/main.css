@@ -399,37 +399,46 @@
   .l-top_menu-v2 .global-search .search-marker,
   .search-marker {
     position: absolute !important;
-    left: 8px !important;
+    left: 0 !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    width: 14px !important;
-    height: 14px !important;
-    display: block !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='10.5' cy='10.5' r='7.5'/%3E%3Cline x1='21' y1='21' x2='15.8' y2='15.8'/%3E%3C/svg%3E") !important;
-    background-position: center center !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
+    width: 32px !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: none !important;
+    background-image: none !important;
     opacity: 0.85 !important;
     pointer-events: none !important;
     z-index: 10 !important;
-    color: transparent !important;
-    font-size: 0 !important;
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    transition: opacity 150ms ease, background-image 150ms ease !important;
-  }
-
-  html body .l-top_menu-v2.is-search-focus .global-search .search-marker,
-  html body .global-search:focus-within .search-marker,
-  .l-top_menu-v2.is-search-focus .global-search .search-marker {
-    opacity: 1 !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c4afd4' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='10.5' cy='10.5' r='7.5'/%3E%3Cline x1='21' y1='21' x2='15.8' y2='15.8'/%3E%3C/svg%3E") !important;
+    transition: opacity 150ms ease !important;
   }
 
   html body .search-marker:before,
+  .search-marker:before {
+    display: inline-block !important;
+    content: "s" !important;
+    font-family: shikimori !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    color: #a1a1aa !important;
+    text-shadow: none !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body .l-top_menu-v2.is-search-focus .global-search .search-marker:before,
+  html body .global-search:focus-within .search-marker:before,
+  .l-top_menu-v2.is-search-focus .global-search .search-marker:before {
+    color: #c4afd4 !important;
+  }
+
   html body .search-marker:after,
-  .search-marker:before,
   .search-marker:after {
     display: none !important;
     content: none !important;
@@ -804,16 +813,33 @@
   /* --- Dark Tooltip Arrows (.tooltip-arrow) --- */
   html body .tooltip-arrow,
   .tooltip-arrow {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='26' viewBox='0 0 22 26'%3E%3Cpath d='M22,0 L0,13 L22,26 Z' fill='%2316161a'/%3E%3Cpath d='M22,0 L0,13 L22,26' fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1.2'/%3E%3C/svg%3E") !important;
-    background-size: 22px 26px !important;
-    background-repeat: no-repeat !important;
+    background: none !important;
+    background-image: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 7px solid transparent !important;
+    border-bottom: 7px solid transparent !important;
+    border-right: 8px solid #16161a !important;
+    border-left: none !important;
+    top: 44px !important;
+    right: 100% !important;
+    filter: drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.12)) !important;
   }
 
   html body .tooltip-left .tooltip-arrow,
   .tooltip-left .tooltip-arrow {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='26' viewBox='0 0 22 26'%3E%3Cpath d='M0,0 L22,13 L0,26 Z' fill='%2316161a'/%3E%3Cpath d='M0,0 L22,13 L0,26' fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1.2'/%3E%3C/svg%3E") !important;
-    background-size: 22px 26px !important;
-    background-repeat: no-repeat !important;
+    background: none !important;
+    background-image: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 7px solid transparent !important;
+    border-bottom: 7px solid transparent !important;
+    border-left: 8px solid #16161a !important;
+    border-right: none !important;
+    top: 44px !important;
+    left: 100% !important;
+    right: auto !important;
+    filter: drop-shadow(1px 0 0 rgba(255, 255, 255, 0.12)) !important;
   }
 
   html body .tipsy *,
@@ -4122,7 +4148,7 @@
   .mobile-slider-prev.bright {
     left: 4px !important;
     right: auto !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlNGU0ZTkiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5bGluZSBwb2ludHM9IjE1IDE4IDkgMTIgMTUgNiI+PC9wb2x5bGluZT48L3N2Zz4=") !important;
   }
 
   html body .mobile-slider-next,
@@ -4131,7 +4157,7 @@
   .mobile-slider-next.bright {
     right: 4px !important;
     left: auto !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlNGU0ZTkiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5bGluZSBwb2ludHM9IjkgMTggMTUgMTIgOSA2Ij48L3BvbHlsaW5lPjwvc3ZnPg==") !important;
   }
 
   html body .mobile-slider-prev:hover,
@@ -4153,14 +4179,14 @@
   html body .mobile-slider-prev.bright:hover,
   .mobile-slider-prev:hover,
   .mobile-slider-prev.bright:hover {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5bGluZSBwb2ludHM9IjE1IDE4IDkgMTIgMTUgNiI+PC9wb2x5bGluZT48L3N2Zz4=") !important;
   }
 
   html body .mobile-slider-next:hover,
   html body .mobile-slider-next.bright:hover,
   .mobile-slider-next:hover,
   .mobile-slider-next.bright:hover {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5bGluZSBwb2ludHM9IjkgMTggMTUgMTIgOSA2Ij48L3BvbHlsaW5lPjwvc3ZnPg==") !important;
   }
 
   html body .mobile-slider-prev:active,
