@@ -2125,6 +2125,31 @@
     margin: 0 !important;
   }
 
+  /* --- Remove Dashed Border in Sidebar Entries (.p-topics .l-menu) --- */
+  html body.p-topics .l-menu .calendar .entry,
+  html body.p-topics .l-menu .critiques .entry,
+  html body.p-topics .l-menu .clubs .entry,
+  html body.p-topics .l-menu .sticky-topics .topic,
+  html body.p-topics .l-menu .contests .contest,
+  html body .p-topics .l-menu .calendar .entry,
+  html body .p-topics .l-menu .critiques .entry,
+  html body .p-topics .l-menu .clubs .entry,
+  html body .p-topics .l-menu .sticky-topics .topic,
+  html body .p-topics .l-menu .contests .contest,
+  .p-topics .l-menu .calendar .entry,
+  .p-topics .l-menu .critiques .entry,
+  .p-topics .l-menu .clubs .entry,
+  .p-topics .l-menu .sticky-topics .topic,
+  .p-topics .l-menu .contests .contest,
+  html body .l-menu .calendar .entry,
+  html body .l-menu .critiques .entry,
+  html body .l-menu .clubs .entry,
+  .l-menu .calendar .entry,
+  .l-menu .critiques .entry,
+  .l-menu .clubs .entry {
+    border-top: none !important;
+  }
+
   /* --- Hidden & Ignored Tags / Elements --- */
   html body .b-anime_status_tag.hidden,
   html body .b-anime_status_tag.is-hidden,
