@@ -3004,21 +3004,21 @@
   /* --- Hot Topics of the Day (.b-hot_topics-v2) --- */
   html body .b-hot_topics-v2,
   .b-hot_topics-v2 {
-    height: auto !important;
+    height: 38px !important;
     min-height: 38px !important;
-    max-height: none !important;
-    overflow: visible !important;
+    max-height: 38px !important;
+    overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 6px 8px !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
     background: rgba(22, 22, 26, 0.65) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 12px !important;
-    padding: 8px 12px !important;
-    margin: 0 0 16px 0 !important;
+    border-radius: 10px !important;
+    padding: 4px 8px !important;
+    margin: 0 0 14px 0 !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -3027,16 +3027,16 @@
   .b-hot_topics-v2 .subject {
     display: inline-flex !important;
     align-items: center !important;
-    font-size: 11px !important;
+    font-size: 10.5px !important;
     font-weight: 700 !important;
     color: #ffffff !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.6px !important;
-    padding: 4px 8px !important;
-    border-radius: 6px !important;
-    background: rgba(152, 132, 165, 0.2) !important;
-    border: 1px solid rgba(152, 132, 165, 0.35) !important;
-    margin: 0 4px 0 0 !important;
+    letter-spacing: 0.5px !important;
+    padding: 3px 6px !important;
+    border-radius: 5px !important;
+    background: rgba(152, 132, 165, 0.22) !important;
+    border: 1px solid rgba(152, 132, 165, 0.4) !important;
+    margin: 0 2px 0 0 !important;
     flex-shrink: 0 !important;
     white-space: nowrap !important;
     line-height: normal !important;
@@ -3046,24 +3046,27 @@
   .b-hot_topics-v2 .b-link {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 6px !important;
-    padding: 3px 8px 3px 4px !important;
+    gap: 5px !important;
+    padding: 2px 6px 2px 3px !important;
     border-radius: 6px !important;
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: #e4e4e9 !important;
     text-decoration: none !important;
-    transition: all 150ms ease !important;
-    flex: 0 1 auto !important;
-    max-width: 240px !important;
+    transition: all 120ms ease !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: 28px !important;
     width: auto !important;
     margin: 0 !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   html body .b-hot_topics-v2 .b-link:hover,
   .b-hot_topics-v2 .b-link:hover {
-    background: rgba(152, 132, 165, 0.2) !important;
+    background: rgba(152, 132, 165, 0.22) !important;
     border-color: rgba(152, 132, 165, 0.5) !important;
     color: #ffffff !important;
     text-decoration: none !important;
@@ -3073,10 +3076,10 @@
 
   html body .b-hot_topics-v2 .b-link .poster,
   .b-hot_topics-v2 .b-link .poster {
-    width: 18px !important;
-    height: 24px !important;
-    min-width: 18px !important;
-    min-height: 24px !important;
+    width: 16px !important;
+    height: 22px !important;
+    min-width: 16px !important;
+    min-height: 22px !important;
     border-radius: 3px !important;
     background-size: cover !important;
     background-position: center !important;
@@ -3084,21 +3087,22 @@
     flex-shrink: 0 !important;
     display: block !important;
     margin: 0 !important;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
   }
 
   html body .b-hot_topics-v2 .b-link > span:not(.poster),
   .b-hot_topics-v2 .b-link > span:not(.poster) {
-    display: inline-flex !important;
-    align-items: center !important;
+    display: inline-block !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
-    font-size: 12px !important;
+    font-size: 11.5px !important;
     font-weight: 500 !important;
     color: #e4e4e9 !important;
-    line-height: 1.3 !important;
-    max-width: 200px !important;
+    line-height: 1.2 !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: 100% !important;
   }
 
   html body .b-hot_topics-v2 .b-link .name-ru,
