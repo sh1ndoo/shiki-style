@@ -2902,7 +2902,6 @@
   html body.p-dashboards-show .v2 .create-topic,
   html body .p-dashboards-show .v2 .create-topic,
   .p-dashboards-show .v2 .create-topic {
-    margin-top: 0 !important;
     margin-right: 0.2em !important;
   }
 
