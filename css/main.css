@@ -3156,6 +3156,37 @@
     font-size: 11px !important;
     float: left !important;
   }
+
+  /* --- Hide Sponsored Banners & Yandex Ads --- */
+  html body .spns_yd_240x400,
+  html body .b-spns-yd_240x400,
+  html body [class*="spns_yd"],
+  html body [class*="b-spns-yd"],
+  html body #yd_240x400,
+  html body [id*="yd_240x400"],
+  html body .spns_yd_240x400 .close-ad,
+  .spns_yd_240x400,
+  .b-spns-yd_240x400,
+  [class*="spns_yd"],
+  [class*="b-spns-yd"],
+  #yd_240x400,
+  [id*="yd_240x400"],
+  .spns_yd_240x400 .close-ad {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    max-height: 0 !important;
+    max-width: 0 !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+  }
 }
 
 /* ============================================================
