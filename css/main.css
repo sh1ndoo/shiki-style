@@ -1260,8 +1260,9 @@
   /* --- Toast Notifications (.toastify) macOS Dark Glass --- */
   html body .toastify,
   .toastify {
-    background: rgba(24, 24, 28, 0.88) !important;
-    background-color: rgba(24, 24, 28, 0.88) !important;
+    position: relative !important;
+    background: rgba(24, 24, 28, 0.9) !important;
+    background-color: rgba(24, 24, 28, 0.9) !important;
     background-image: none !important;
     backdrop-filter: blur(24px) saturate(190%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
@@ -1272,11 +1273,10 @@
     font-size: 13px !important;
     font-weight: 450 !important;
     line-height: 1.4 !important;
-    padding: 10px 14px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    max-width: min(calc(100vw - 28px), 440px) !important;
+    padding: 12px 42px 12px 18px !important;
+    display: inline-block !important;
+    min-height: 44px !important;
+    max-width: min(calc(100vw - 28px), 520px) !important;
     box-sizing: border-box !important;
     z-index: 99999 !important;
   }
@@ -1310,36 +1310,40 @@
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 159, 10, 0.25) !important;
   }
 
-  /* Close button */
+  /* Compact close button with safe positioning */
   html body .toastify .toast-close,
   .toastify .toast-close {
-    background: rgba(255, 255, 255, 0.08) !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 12px !important;
+    transform: translateY(-50%) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
     border: none !important;
     color: #a1a1aa !important;
     border-radius: 50% !important;
-    width: 20px !important;
-    height: 20px !important;
-    min-width: 20px !important;
-    min-height: 20px !important;
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 11px !important;
+    font-size: 9.5px !important;
     line-height: 1 !important;
     cursor: pointer !important;
     padding: 0 !important;
-    margin-left: auto !important;
+    margin: 0 !important;
     flex-shrink: 0 !important;
     transition: all 150ms ease !important;
-    opacity: 0.8 !important;
+    opacity: 0.85 !important;
   }
 
   html body .toastify .toast-close:hover,
   .toastify .toast-close:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.22) !important;
     color: #ffffff !important;
     opacity: 1 !important;
-    transform: scale(1.1) !important;
+    transform: translateY(-50%) scale(1.15) !important;
   }
 
   /* --- History Block (No Close/Hide Overlay) --- */
