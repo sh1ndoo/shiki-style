@@ -2187,6 +2187,11 @@
   html body .b-anime_status_tag.spoilers,
   html body .b-anime_status_tag.spoiler,
   html body .b-anime_status_tag[data-text*="спойлер"],
+  html body .b-topic .b-anime_status_tag.spoilers,
+  html body .b-topic .b-anime_status_tag[data-text*="спойлер"],
+  html body .b-topic .prebody .b-anime_status_tag.spoilers,
+  html body .b-topic > .inner .prebody .b-anime_status_tag.spoilers,
+  html body .b-news_wall-topic .status-line .tags .b-anime_status_tag.spoilers,
   html body .b-tag.spoiler,
   html body .b-tag.spoilers,
   html body .b-tag.is-spoiler,
@@ -2202,6 +2207,7 @@
     background-color: rgba(159, 18, 57, 0.2) !important;
     border: 1px solid rgba(225, 29, 72, 0.65) !important;
     color: #fda4af !important;
+    margin-right: 5px !important;
   }
 
   html body .b-tag.spoiler span,
