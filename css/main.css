@@ -3579,26 +3579,45 @@
   .mobile-slider-next,
   .mobile-slider-prev.bright,
   .mobile-slider-next.bright {
+    position: absolute !important;
+    top: 82px !important;
+    transform: translateY(-50%) !important;
     display: flex !important;
-    background: rgba(24, 24, 28, 0.85) !important;
     background-color: rgba(24, 24, 28, 0.85) !important;
-    background-image: none !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 16px 16px !important;
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
-    color: #e4e4e9 !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
     border-radius: 50% !important;
     width: 36px !important;
     height: 36px !important;
     min-width: 36px !important;
     min-height: 36px !important;
-    align-items: center !important;
-    justify-content: center !important;
     cursor: pointer !important;
-    transition: all 180ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: background-color 150ms ease, border-color 150ms ease, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) !important;
     z-index: 10 !important;
-    opacity: 0.92 !important;
+    opacity: 0.95 !important;
+  }
+
+  html body .mobile-slider-prev,
+  html body .mobile-slider-prev.bright,
+  .mobile-slider-prev,
+  .mobile-slider-prev.bright {
+    left: 4px !important;
+    right: auto !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  }
+
+  html body .mobile-slider-next,
+  html body .mobile-slider-next.bright,
+  .mobile-slider-next,
+  .mobile-slider-next.bright {
+    right: 4px !important;
+    left: auto !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e4e4e9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
   }
 
   html body .mobile-slider-prev:hover,
@@ -3609,13 +3628,25 @@
   .mobile-slider-next:hover,
   .mobile-slider-prev.bright:hover,
   .mobile-slider-next.bright:hover {
-    background: rgba(152, 132, 165, 0.35) !important;
-    background-color: rgba(152, 132, 165, 0.35) !important;
-    border-color: rgba(152, 132, 165, 0.65) !important;
+    background-color: rgba(152, 132, 165, 0.4) !important;
+    border-color: rgba(152, 132, 165, 0.7) !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 12px rgba(152, 132, 165, 0.3) !important;
-    color: #ffffff !important;
     opacity: 1 !important;
-    transform: scale(1.06) !important;
+    transform: translateY(-50%) scale(1.06) !important;
+  }
+
+  html body .mobile-slider-prev:hover,
+  html body .mobile-slider-prev.bright:hover,
+  .mobile-slider-prev:hover,
+  .mobile-slider-prev.bright:hover {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  }
+
+  html body .mobile-slider-next:hover,
+  html body .mobile-slider-next.bright:hover,
+  .mobile-slider-next:hover,
+  .mobile-slider-next.bright:hover {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
   }
 
   html body .mobile-slider-prev:active,
@@ -3623,58 +3654,28 @@
   html body .mobile-slider-prev.bright:active,
   html body .mobile-slider-next.bright:active,
   .mobile-slider-prev:active,
-  .mobile-slider-next:active {
-    transform: scale(0.92) !important;
-    background: rgba(152, 132, 165, 0.5) !important;
-    background-color: rgba(152, 132, 165, 0.5) !important;
+  .mobile-slider-next:active,
+  .mobile-slider-prev.bright:active,
+  .mobile-slider-next.bright:active {
+    transform: translateY(-50%) scale(0.92) !important;
+    background-color: rgba(152, 132, 165, 0.55) !important;
   }
 
-  /* Chevron icon next (pointing right >) */
-  html body .mobile-slider-next::before,
-  html body .mobile-slider-next:before,
-  .mobile-slider-next::before,
-  .mobile-slider-next:before {
-    content: "" !important;
-    display: block !important;
-    width: 8px !important;
-    height: 8px !important;
-    border-top: 2px solid #e4e4e9 !important;
-    border-right: 2px solid #e4e4e9 !important;
-    transform: rotate(45deg) !important;
-    margin-right: 2px !important;
-    transition: border-color 150ms ease !important;
-  }
-
-  /* Chevron icon prev (pointing left <) */
+  /* Disable pseudo elements to ensure only our clean SVG renders */
   html body .mobile-slider-prev::before,
   html body .mobile-slider-prev:before,
-  .mobile-slider-prev::before,
-  .mobile-slider-prev:before {
-    content: "" !important;
-    display: block !important;
-    width: 8px !important;
-    height: 8px !important;
-    border-top: 2px solid #e4e4e9 !important;
-    border-left: 2px solid #e4e4e9 !important;
-    transform: rotate(-45deg) !important;
-    margin-left: 2px !important;
-    transition: border-color 150ms ease !important;
-  }
-
-  html body .mobile-slider-next:hover::before,
-  html body .mobile-slider-next:hover:before,
-  html body .mobile-slider-prev:hover::before,
-  html body .mobile-slider-prev:hover:before {
-    border-color: #ffffff !important;
-  }
-
-  html body .mobile-slider-next::after,
-  html body .mobile-slider-next:after,
+  html body .mobile-slider-next::before,
+  html body .mobile-slider-next:before,
   html body .mobile-slider-prev::after,
   html body .mobile-slider-prev:after,
-  .mobile-slider-next::after,
-  .mobile-slider-prev::after {
+  html body .mobile-slider-next::after,
+  html body .mobile-slider-next:after,
+  .mobile-slider-prev::before,
+  .mobile-slider-next::before,
+  .mobile-slider-prev::after,
+  .mobile-slider-next::after {
     display: none !important;
+    content: none !important;
   }
 
   /* --- Section Tags & Headlines on Mobile (.f-sections) --- */
@@ -3830,6 +3831,16 @@
     width: 110px !important;
     height: 152px !important;
     max-height: 152px !important;
+  }
+
+  /* Center mobile slider arrows on compact 152px posters */
+  html body .mobile-slider-prev,
+  html body .mobile-slider-next,
+  html body .mobile-slider-prev.bright,
+  html body .mobile-slider-next.bright,
+  .mobile-slider-prev,
+  .mobile-slider-next {
+    top: 76px !important;
   }
 
   /* Voting Footer: Vertical stacked layout */
