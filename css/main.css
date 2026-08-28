@@ -27,6 +27,7 @@
     --link-color: #c4afd4 !important;
     --link-hover-color: #ffffff !important;
     --background-color: #121214 !important;
+    --text-color: #e4e4e9 !important;
   }
 
   /* --- Base Background & Typography --- */
@@ -2251,6 +2252,37 @@
   html body .b-anime_status_tag[data-text*="новост"]:after,
   html body .b-anime_status_tag[data-text*="новост"]:before {
     color: #fbbf24 !important;
+  }
+
+  /* --- Top Navigation Tabs (.b-top_tabs) --- */
+  html body .b-top_tabs,
+  .b-top_tabs {
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  html body .b-top_tabs > *,
+  html body .b-top_tabs a,
+  .b-top_tabs > *,
+  .b-top_tabs a {
+    color: #a1a1aa !important;
+    transition: color 150ms ease, border-color 150ms ease !important;
+  }
+
+  html body .b-top_tabs > *:hover,
+  html body .b-top_tabs a:hover,
+  .b-top_tabs > *:hover,
+  .b-top_tabs a:hover {
+    color: #ffffff !important;
+  }
+
+  html body .b-top_tabs .selected,
+  html body .b-top_tabs .selected a,
+  html body .b-top_tabs .selected > *,
+  .b-top_tabs .selected,
+  .b-top_tabs .selected a {
+    font-weight: bold !important;
+    color: #ffffff !important;
+    border-bottom: 2px solid #9884a5 !important;
   }
 
   /* --- Review Navigation Bar (.navigation-container, .navigation-node) --- */
