@@ -1994,6 +1994,103 @@
     color: #ffffff !important;
   }
 
+  /* --- Collection / Critique / Review Status Line (.b-status-line) --- */
+  html body .b-status-line,
+  .b-status-line {
+    color: #a1a1aa !important;
+    font-size: 12px !important;
+  }
+
+  html body .b-status-line .section,
+  .b-status-line .section {
+    color: #a1a1aa !important;
+  }
+
+  html body .b-status-line time,
+  html body .b-status-line .section.created_at time,
+  html body .b-status-line .section.changed_at time,
+  .b-status-line time {
+    color: #a1a1aa !important;
+  }
+
+  html body .b-status-line .comments,
+  html body .b-status-line .collection-size,
+  .b-status-line .comments,
+  .b-status-line .collection-size {
+    color: #a1a1aa !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body .b-status-line .comments:before,
+  html body .b-status-line .collection-size:before,
+  .b-status-line .comments:before,
+  .b-status-line .collection-size:before {
+    color: #a1a1aa !important;
+    opacity: 0.85 !important;
+  }
+
+  html body .b-status-line .comments:hover,
+  .b-status-line .comments:hover {
+    color: #ffffff !important;
+  }
+
+  html body .b-status-line .comments:hover:before,
+  .b-status-line .comments:hover:before {
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  /* Critique Votes */
+  html body .b-status-line .critique-votes_count,
+  html body .b-status-line .b-critique_votes,
+  .b-status-line .critique-votes_count,
+  .b-status-line .b-critique_votes {
+    color: #a1a1aa !important;
+  }
+
+  html body .b-status-line .b-critique_votes:before,
+  .b-status-line .b-critique_votes:before {
+    color: #a1a1aa !important;
+  }
+
+  html body .b-status-line .votes-for,
+  .b-status-line .votes-for {
+    color: #4ade80 !important;
+    font-weight: 500 !important;
+  }
+
+  html body .b-status-line .votes-against,
+  .b-status-line .votes-against {
+    color: #f87171 !important;
+    font-weight: 500 !important;
+  }
+
+  html body .b-status-line .b-critique_votes > span:not(.votes-for):not(.votes-against):not(.user-vote),
+  .b-status-line .b-critique_votes > span:not(.votes-for):not(.votes-against):not(.user-vote) {
+    color: #71717a !important;
+  }
+
+  html body .b-status-line .user-vote .voted-for,
+  .b-status-line .user-vote .voted-for {
+    color: #4ade80 !important;
+  }
+
+  html body .b-status-line .user-vote .voted-against,
+  .b-status-line .user-vote .voted-against {
+    color: #f87171 !important;
+  }
+
+  html body .b-status-line a,
+  .b-status-line a {
+    color: #c4afd4 !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body .b-status-line a:hover,
+  .b-status-line a:hover {
+    color: #ffffff !important;
+  }
+
   html body .status-line .tags,
   html body .b-news_wall-topic .status-line .tags,
   .status-line .tags,
