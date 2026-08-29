@@ -3223,6 +3223,33 @@
     text-shadow: none !important;
   }
 
+  /* --- Rating Stars (.b-rate .stars) --- */
+  html body .b-rate .stars.score,
+  html body .b-user_rate-history .stars-container .score,
+  .b-rate .stars.score,
+  .b-user_rate-history .stars-container .score {
+    color: #c4afd4 !important;
+    text-shadow: 0 0 10px rgba(196, 175, 212, 0.45) !important;
+  }
+
+  html body .b-rate .stars.hover,
+  .b-rate .stars.hover {
+    color: #e4d5f0 !important;
+    text-shadow: 0 0 14px rgba(228, 213, 240, 0.6) !important;
+  }
+
+  html body .b-rate .stars.score.hovered,
+  .b-rate .stars.score.hovered {
+    color: rgba(196, 175, 212, 0.5) !important;
+  }
+
+  html body .b-rate .stars.background,
+  html body .b-user_rate-history .stars-container .background,
+  .b-rate .stars.background,
+  .b-user_rate-history .stars-container .background {
+    color: rgba(255, 255, 255, 0.15) !important;
+  }
+
   /* --- Scores Container & MAL Score Badge --- */
   html body .scores,
   .scores {
