@@ -1063,17 +1063,52 @@
     box-shadow: 0 2px 8px rgba(152, 132, 165, 0.4) !important;
   }
 
+  /* --- Collection Search Bar (.b-collection_search) --- */
+  html body .b-collection_search,
+  .b-collection_search {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   html body .b-collection_search .field,
   .b-collection_search .field {
-    display: flex !important;
-    justify-content: center !important;
-    margin: 15px 0 !important;
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+    margin: 10px 0 16px 0 !important;
+    box-sizing: border-box !important;
   }
 
   html body .b-collection_search .field input,
   .b-collection_search .field input {
-    border-radius: 10px !important;
-    width: 850px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 34px !important;
+    line-height: 32px !important;
+    padding: 0 34px 0 12px !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    font-size: 13px !important;
+  }
+
+  html body .b-collection_search .field .clear,
+  .b-collection_search .field .clear {
+    color: #a1a1aa !important;
+  }
+
+  html body .b-collection_search .field .clear:hover,
+  .b-collection_search .field .clear:hover {
+    color: #c4afd4 !important;
+  }
+
+  html body .b-collection_search .field .clear:before,
+  .b-collection_search .field .clear:before {
+    height: 34px !important;
+    line-height: 34px !important;
+    width: 34px !important;
+    font-size: 16px !important;
+    right: 0 !important;
+    top: 0 !important;
   }
 
   /* ==========================================================================
