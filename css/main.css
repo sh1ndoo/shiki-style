@@ -1027,6 +1027,42 @@
     box-shadow: none !important;
   }
 
+  /* --- File Inputs (input[type="file"]) --- */
+  html body input[type="file"],
+  html body .b-input input[type="file"],
+  input[type="file"] {
+    color: #a1a1aa !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+  }
+
+  html body input[type="file"]::file-selector-button,
+  html body input[type="file"]::-webkit-file-upload-button,
+  input[type="file"]::file-selector-button,
+  input[type="file"]::-webkit-file-upload-button {
+    background: rgba(255, 255, 255, 0.09) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 8px !important;
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    margin-right: 12px !important;
+    transition: all 150ms ease !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  html body input[type="file"]::file-selector-button:hover,
+  html body input[type="file"]::-webkit-file-upload-button:hover,
+  input[type="file"]::file-selector-button:hover,
+  input[type="file"]::-webkit-file-upload-button:hover {
+    background: #9884a5 !important;
+    border-color: #9884a5 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(152, 132, 165, 0.4) !important;
+  }
+
   html body .b-collection_search .field,
   .b-collection_search .field {
     display: flex !important;
