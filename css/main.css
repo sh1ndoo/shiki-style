@@ -5394,8 +5394,12 @@
     border-radius: 8px !important;
   }
 
-  html body .p-user_rates-index .list-groups .summary.lines.library {
-    border-top-color: rgba(255, 255, 255, 0.1) !important;
+  html body .p-user_rates-index .list-groups .summary.lines.library,
+  html body .summary.lines.library,
+  .p-user_rates-index .list-groups .summary.lines.library,
+  .summary.lines.library {
+    border-top: none !important;
+    border-top-color: transparent !important;
   }
 
   /* --- Hide Back to Top Button (.b-to-top) --- */
