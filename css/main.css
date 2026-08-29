@@ -479,10 +479,24 @@
 
   html body .l-top_menu-v2 .global-search .search-results::before,
   html body .l-top_menu-v2 .global-search .search-results:before,
+  html body .l-top_menu-v2 .global-search .search-results::after,
+  html body .l-top_menu-v2 .global-search .search-results:after,
+  html body .search-results::before,
+  html body .search-results:before,
+  html body .search-results::after,
+  html body .search-results:after,
   .l-top_menu-v2 .global-search .search-results::before,
-  .l-top_menu-v2 .global-search .search-results:before {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(21, 21, 21)) !important;
-    top: 0px !important;
+  .l-top_menu-v2 .global-search .search-results:before,
+  .l-top_menu-v2 .global-search .search-results::after,
+  .l-top_menu-v2 .global-search .search-results:after,
+  .search-results::before,
+  .search-results:before,
+  .search-results::after,
+  .search-results:after {
+    background: transparent !important;
+    background-image: none !important;
+    display: none !important;
+    opacity: 0 !important;
   }
 
   html body .search-results .inner,
