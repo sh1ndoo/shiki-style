@@ -5538,7 +5538,7 @@
     html body .b-message.aside-expanded > .inner > aside.buttons,
     html body .b-dialog.aside-expanded > .inner > aside.buttons,
     html body aside.buttons {
-      margin-right: 36px !important;
+      margin-right: 8px !important;
     }
   }
 
@@ -6430,13 +6430,6 @@
     border-radius: 8px !important;
   }
 
-  html body .b-comment .inner,
-  html body .b-comments .inner,
-  .b-comment .inner {
-    width: calc(100% - 48px) !important;
-    max-width: calc(100% - 48px) !important;
-  }
-
   html body .b-spoiler_block,
   html body .b-quote,
   html body pre,
@@ -6958,5 +6951,525 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+}
+
+/* ============================================================
+   MOBILE PROFILE ADAPTATIONS — SHIKI-STYLE
+   Applies only to mobile/tablet (max-width: 768px).
+   PC layout is untouched.
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* ----------------------------------------------------------
+     1. PROFILE HEAD — переключаем в вертикальную колонку
+     ---------------------------------------------------------- */
+
+  /* Убираем горизонтальное переполнение на всём l-page */
+  html body .l-page {
+    overflow-x: hidden !important;
+  }
+
+  /* Основной контейнер шапки профиля */
+  html body .p-profiles .profile-head,
+  html body .profile-head {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* c-brief: аватар + имя — строка */
+  html body .p-profiles .profile-head .c-brief,
+  html body .profile-head .c-brief {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 12px 0 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Аватар: фиксированный размер */
+  html body .p-profiles .profile-head .c-brief .avatar,
+  html body .profile-head .c-brief .avatar {
+    flex: 0 0 auto !important;
+    width: 72px !important;
+    min-width: 72px !important;
+    margin: 0 !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief .avatar img,
+  html body .profile-head .c-brief .avatar img {
+    width: 72px !important;
+    height: 72px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+  }
+
+  /* Кнопки действий под аватаром */
+  html body .p-profiles .profile-head .c-brief .avatar .profile-actions {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 4px !important;
+    margin-top: 6px !important;
+    padding: 3px !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief .avatar .profile-actions a {
+    min-width: 30px !important;
+    min-height: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0 !important;
+    font-size: 12px !important;
+  }
+
+  /* Правая часть brief: заголовок */
+  html body .p-profiles .profile-head .c-brief header,
+  html body .profile-head .c-brief header {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    text-align: left !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief header h1,
+  html body .profile-head .c-brief header h1 {
+    font-size: 18px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 0 0 4px 0 !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief header .notice,
+  html body .p-profiles .profile-head .c-brief header .misc,
+  html body .p-profiles .profile-head .c-brief header .subnotice {
+    font-size: 12px !important;
+    display: block !important;
+    margin: 2px 0 !important;
+  }
+
+  /* ----------------------------------------------------------
+     2. c-info: левая и правая колонки — в колонку
+     ---------------------------------------------------------- */
+
+  html body .p-profiles .profile-head .c-info,
+  html body .profile-head .c-info {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .p-profiles .profile-head .c-info .c-info-left,
+  html body .p-profiles .profile-head .c-info .c-info-right,
+  html body .profile-head .c-info .c-info-left,
+  html body .profile-head .c-info .c-info-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 0 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* c-about */
+  html body .p-profiles .profile-head .c-about,
+  html body .profile-head .c-about {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* c-additionals */
+  html body .c-additionals,
+  html body .p-profiles .profile-head .c-info .c-additionals {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .c-additionals div,
+  html body .p-profiles .profile-head .c-info .c-additionals div {
+    flex-wrap: wrap !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* ----------------------------------------------------------
+     3. c-history — горизонтальный скролл
+     ---------------------------------------------------------- */
+
+  html body .p-profiles .profile-head .c-history,
+  html body .profile-head .c-history {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    box-sizing: border-box !important;
+    padding-bottom: 4px !important;
+  }
+
+  html body .p-profiles .profile-head .c-history::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  html body .p-profiles .profile-head .c-history.x3 {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+  }
+
+  html body .p-profiles .profile-head .c-history.x3 > div {
+    flex: 0 0 auto !important;
+    min-width: 100px !important;
+  }
+
+  /* ----------------------------------------------------------
+     4. c-lists-info — wrap
+     ---------------------------------------------------------- */
+
+  html body .p-profiles .profile-head .c-lists-info,
+  html body .profile-head .c-lists-info,
+  html body .c-lists-info {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .c-lists-info .subheadline,
+  html body .p-profiles .profile-head .c-lists-info .subheadline {
+    width: 100% !important;
+  }
+
+  /* ----------------------------------------------------------
+     5. .b-stats_bar: убираем жёсткий margin-left для ссылки
+     ---------------------------------------------------------- */
+
+  html body .b-stats_bar a.title,
+  .b-stats_bar a.title {
+    margin-left: 0 !important;
+    display: inline-block !important;
+  }
+
+  html body .b-stats_bar .bar.horizontal,
+  html body #rates_scores_stats {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  html body .b-stats_bar .stat_names,
+  html body .b-stats_bar .stat_values,
+  html body .b-stats_bar .compatibility {
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* ----------------------------------------------------------
+     6. .b-top_tabs — горизонтальный скролл
+     ---------------------------------------------------------- */
+
+  html body .b-top_tabs,
+  html body .profile-content .b-top_tabs {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 2px !important;
+  }
+
+  html body .b-top_tabs::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  html body .b-top_tabs > *,
+  html body .b-top_tabs a {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+  }
+
+  /* ----------------------------------------------------------
+     7. .profile-content — полная ширина, без float
+     ---------------------------------------------------------- */
+
+  html body .p-profiles-show .profile-content,
+  html body .profile-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* ----------------------------------------------------------
+     8. .subheadline-buttons — убираем absolute на мобиле
+     ---------------------------------------------------------- */
+
+  html body .subheadline-buttons,
+  .subheadline-buttons {
+    position: static !important;
+    margin-top: 4px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    right: auto !important;
+  }
+
+  html body .subheadline-buttons:has(.b-list_switchers),
+  html body .subheadline-buttons:has(.switcher),
+  html body .p-user_rates-index .subheadline-buttons {
+    position: static !important;
+    margin-top: 4px !important;
+    right: auto !important;
+  }
+
+  /* ----------------------------------------------------------
+     9. Достижения (cc-achievements) — адаптивная сетка
+     ---------------------------------------------------------- */
+
+  html body .cc-achievements {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .cc-achievements .b-achievement {
+    flex: 0 0 auto !important;
+    max-width: calc(50% - 4px) !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .cc-franchises {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  html body .cc-franchises .b-badge {
+    flex: 0 0 auto !important;
+    width: 60px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .cc-franchises .b-badge img {
+    width: 60px !important;
+    height: auto !important;
+  }
+
+  /* ----------------------------------------------------------
+     10. Lifetime bar
+     ---------------------------------------------------------- */
+
+  html body .b-stats_bar.lifetime,
+  html body .p-profiles-show .lifetime {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+
+  html body .lifetime .title {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  html body .lifetime .times {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  html body .p-profiles-show .lifetime .times .time {
+    flex: 0 0 auto !important;
+    font-size: 10px !important;
+  }
+
+  /* ----------------------------------------------------------
+     11. Activity graph — горизонтальный скролл
+     ---------------------------------------------------------- */
+
+  html body .p-profiles-show .profile-content .activity,
+  html body .activity {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ----------------------------------------------------------
+     12. .my-list — полная ширина
+     ---------------------------------------------------------- */
+
+  html body .my-list,
+  html body .f-user .my-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 10px !important;
+  }
+
+  /* ----------------------------------------------------------
+     13. Таблицы — горизонтальный скролл
+     ---------------------------------------------------------- */
+
+  html body .b-table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ----------------------------------------------------------
+     14. Кнопки — удобные для касания
+     ---------------------------------------------------------- */
+
+  html body .p-profiles .b-button,
+  html body .profile-head .b-button,
+  html body .profile-content .b-button {
+    min-height: 38px !important;
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* ----------------------------------------------------------
+     15. Изображения — не вылезать за экран
+     ---------------------------------------------------------- */
+
+  html body .profile-content img,
+  html body .c-about img,
+  html body .b-text_with_paragraphs img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+
+  /* ----------------------------------------------------------
+     16. Headline/subheadline — корректная ширина
+     ---------------------------------------------------------- */
+
+  html body .headline,
+  html body .midheadline,
+  html body .subheadline {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* ----------------------------------------------------------
+     17. Редактор — полная ширина, без iOS-зума
+     ---------------------------------------------------------- */
+
+  html body .b-shiki_editor,
+  html body .b-shiki_editor-v2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .b-shiki_editor .body .editor textarea,
+  html body .b-shiki_editor-v2 .body .editor textarea {
+    width: 100% !important;
+    min-height: 120px !important;
+    font-size: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ----------------------------------------------------------
+     18. Комментарии — нормальный wrap
+     ---------------------------------------------------------- */
+
+  html body .b-comment > .inner,
+  html body .b-dialog > .inner,
+  html body .b-message > .inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/* ============================================================
+   МАЛЕНЬКИЕ ЭКРАНЫ (<= 480px) — дополнительная компактность
+   ============================================================ */
+
+@media screen and (max-width: 480px) {
+
+  /* Аватар чуть меньше */
+  html body .p-profiles .profile-head .c-brief .avatar,
+  html body .profile-head .c-brief .avatar {
+    width: 60px !important;
+    min-width: 60px !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief .avatar img,
+  html body .profile-head .c-brief .avatar img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief header h1 {
+    font-size: 16px !important;
+  }
+
+  /* Достижения — одна колонка */
+  html body .cc-achievements .b-achievement {
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* Бейджи франшиз — компактнее */
+  html body .cc-franchises .b-badge {
+    width: 50px !important;
+  }
+
+  html body .cc-franchises .b-badge img {
+    width: 50px !important;
+  }
+
+  /* Статистика — мельче текст */
+  html body .b-stats_bar .stat_names,
+  html body .b-stats_bar .stat_values {
+    font-size: 11px !important;
+  }
+
+  /* Вкладки — компактнее */
+  html body .b-top_tabs > *,
+  html body .b-top_tabs a {
+    padding: 7px 9px !important;
+    font-size: 12px !important;
   }
 }
