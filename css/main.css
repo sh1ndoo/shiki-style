@@ -2030,6 +2030,24 @@
     color: rgba(255, 255, 255, 0.3) !important;
   }
 
+  /* --- Profile Nickname Aliases Icon (h1.aliases:after) --- */
+  html body .p-profiles .profile-head .c-brief header h1.aliases:after,
+  html body h1.aliases:after,
+  html body .aliases:after,
+  h1.aliases:after,
+  .aliases:after {
+    color: #a1a1aa !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body .p-profiles .profile-head .c-brief header h1.aliases:hover:after,
+  html body h1.aliases:hover:after,
+  html body .aliases:hover:after,
+  h1.aliases:hover:after,
+  .aliases:hover:after {
+    color: #c4afd4 !important;
+  }
+
   /* --- Stats Bars & Activity (Clean Flat Design) --- */
   html body .b-stats_bar,
   html body .b-stats_bar .stat_names,
