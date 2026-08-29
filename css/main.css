@@ -2474,6 +2474,26 @@
     color: #d8c8e8 !important;
   }
 
+  /* --- Floated Options (Напрямую / Хронология / Франшиза) --- */
+  html body .b-options-floated,
+  .b-options-floated {
+    margin-top: 16px !important;
+  }
+
+  @media screen and (max-width: 1023px) {
+    html body .b-options-floated,
+    .b-options-floated {
+      margin-top: 13px !important;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    html body .b-options-floated.mobile-phone,
+    .b-options-floated.mobile-phone {
+      margin-top: 5px !important;
+    }
+  }
+
   /* --- Remove Dashed Border in Sidebar Entries (.p-topics .l-menu) --- */
   html body.p-topics .l-menu .calendar .entry,
   html body.p-topics .l-menu .critiques .entry,
