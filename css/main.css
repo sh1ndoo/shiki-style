@@ -5111,18 +5111,6 @@
     box-shadow: 0 0 12px rgba(196, 175, 212, 0.35) !important;
   }
 
-  /* Unloaded image containers & placeholders - Replace bright/white blanks with dark glass */
-  html body .image-decor,
-  html body .image-cutter,
-  html body .c-image,
-  html body .b-catalog_entry .cover,
-  html body .b-catalog_entry .cover .image-decor,
-  html body .b-catalog_entry .cover .image-cutter,
-  html body .b-catalog_entry.planned .image-decor:before,
-  html body .ad-placeholder,
-  html body .b-contest_match .current-match .match-members .match-member.placeholder:after {
-    background-color: rgba(22, 22, 26, 0.6) !important;
-  }
 
   html body .p-animes-show .resources-loader.b-ajax,
   html body .p-mangas-show .resources-loader.b-ajax,
