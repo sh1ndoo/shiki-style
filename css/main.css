@@ -1334,6 +1334,25 @@
     border-color: transparent !important;
   }
 
+  /* --- Comment & Message Header Normal Text (.name-date .normal) --- */
+  html body .name-date a.name .normal,
+  html body .name-date .normal,
+  html body .b-comment .normal,
+  html body .b-topic .normal,
+  html body .b-dialog .normal,
+  html body .b-message .normal,
+  html body span.normal,
+  .name-date a.name .normal,
+  .name-date .normal,
+  span.normal {
+    color: #a1a1aa !important;
+  }
+
+  html body .name-date a.name:hover .normal,
+  .name-date a.name:hover .normal {
+    color: #e4e4e9 !important;
+  }
+
   /* --- Quotes (Transparent Background + Lilac Border) --- */
   html body .b-quote,
   html body blockquote,
