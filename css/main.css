@@ -3380,6 +3380,76 @@
     border-bottom: 1px dotted rgba(255, 255, 255, 0.3) !important;
   }
 
+  /* --- Watch Online Banner (.b-watch_banner) --- */
+  html body .b-watch_banner,
+  .b-watch_banner {
+    background: linear-gradient(135deg, rgba(152, 132, 165, 0.28) 0%, rgba(90, 65, 105, 0.22) 50%, rgba(26, 24, 32, 0.85) 100%) !important;
+    backdrop-filter: blur(20px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+    border: 1px solid rgba(196, 175, 212, 0.3) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(152, 132, 165, 0.12) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+  }
+
+  html body .b-watch_banner:hover,
+  .b-watch_banner:hover {
+    transform: translateY(-2px) !important;
+    background: linear-gradient(135deg, rgba(175, 150, 190, 0.38) 0%, rgba(115, 85, 135, 0.3) 50%, rgba(32, 28, 40, 0.9) 100%) !important;
+    border-color: rgba(196, 175, 212, 0.6) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55), 0 0 26px rgba(196, 175, 212, 0.3) !important;
+    filter: none !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+  }
+
+  html body .b-watch_banner:active,
+  .b-watch_banner:active {
+    transform: translateY(0) scale(0.99) !important;
+  }
+
+  html body .b-watch_banner__icon,
+  .b-watch_banner__icon {
+    background: linear-gradient(135deg, #c4afd4 0%, #9884a5 100%) !important;
+    box-shadow: 0 4px 14px rgba(152, 132, 165, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+    border-radius: 50% !important;
+  }
+
+  html body .b-watch_banner__icon .play,
+  .b-watch_banner__icon .play {
+    border-color: transparent transparent transparent #16151d !important;
+  }
+
+  html body .b-watch_banner__title,
+  .b-watch_banner__title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.25px !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  html body .b-watch_banner__subtitle,
+  .b-watch_banner__subtitle {
+    color: #c4afd4 !important;
+    opacity: 0.95 !important;
+    font-weight: 500 !important;
+  }
+
+  html body .b-watch_banner__arrow,
+  .b-watch_banner__arrow {
+    color: #c4afd4 !important;
+    opacity: 1 !important;
+    transition: transform 0.2s ease, color 0.2s ease !important;
+  }
+
+  html body .b-watch_banner:hover .b-watch_banner__arrow,
+  .b-watch_banner:hover .b-watch_banner__arrow {
+    color: #ffffff !important;
+    transform: translateX(5px) !important;
+  }
+
   /* --- User Dashboard Widget (.f-user, .my-list, .b-user_rate-history) --- */
   html body .f-user,
   .f-user {
