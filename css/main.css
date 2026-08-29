@@ -2072,8 +2072,8 @@
     min-width: 36px !important;
     max-width: 36px !important;
     position: absolute !important;
-    right: 10px !important;
-    top: 10px !important;
+    right: 0 !important;
+    top: -44px !important;
     padding: 0 !important;
     margin: 0 !important;
     border-radius: 50% !important;
@@ -6366,12 +6366,12 @@
   html body .mfp-close,
   html body button.mfp-close,
   .mfp-close {
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
-    top: 12px !important;
-    right: 12px !important;
-    font-size: 24px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    top: -44px !important;
+    right: 0 !important;
+    font-size: 22px !important;
   }
 }
 
