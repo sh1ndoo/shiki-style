@@ -2438,6 +2438,34 @@
     overflow: visible !important;
   }
 
+  /* --- Achievement & General Progress Bar (.progress .bar) --- */
+  html body .b-achievement .c-about .progress,
+  html body .b-achievement .about .progress,
+  html body .progress:has(.bar),
+  .b-achievement .c-about .progress,
+  .b-achievement .about .progress,
+  .progress:has(.bar) {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 3px !important;
+    overflow: hidden !important;
+    height: 4px !important;
+  }
+
+  html body .b-achievement .c-about .progress .bar,
+  html body .b-achievement .about .progress .bar,
+  html body .progress > .bar,
+  html body .progress .bar,
+  .b-achievement .c-about .progress .bar,
+  .b-achievement .about .progress .bar,
+  .progress > .bar,
+  .progress .bar {
+    background: #c4afd4 !important;
+    background: linear-gradient(90deg, #c4afd4 0%, #aa93bd 100%) !important;
+    border-radius: 3px !important;
+    box-shadow: 0 0 8px rgba(196, 175, 212, 0.4) !important;
+    height: 100% !important;
+  }
+
   html body .cc-franchises .b-badge,
   html body .cc-franchises .b-badge img,
   html body #profiles_show .achievements .cc-franchises .b-badge,
