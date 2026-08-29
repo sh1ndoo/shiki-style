@@ -3666,13 +3666,44 @@
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
   }
 
-  /* --- Scores Container & MAL Score Badge --- */
-  html body .scores,
-  .scores {
+  /* --- Scores Container & MAL Score Badge (Exclude .scores.block stats chart) --- */
+  html body .scores:not(.block),
+  html body .c-info-right .scores,
+  html body .c-about .scores,
+  .scores:not(.block),
+  .c-info-right .scores,
+  .c-about .scores {
     display: flex !important;
     align-items: center !important;
     flex-wrap: wrap !important;
     gap: 12px !important;
+  }
+
+  /* --- Scores Block (Distribution Charts: #scores, #rates_scores_stats) --- */
+  html body .scores.block,
+  html body .block.scores,
+  .scores.block,
+  .block.scores {
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
+  }
+
+  html body .scores.block > .subheadline,
+  .scores.block > .subheadline {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+
+  html body #scores.bar.horizontal,
+  html body #rates_scores_stats.bar.horizontal,
+  .scores.block > .bar.horizontal,
+  #scores.bar.horizontal,
+  #rates_scores_stats.bar.horizontal {
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
   }
 
   html body .b-mal_score,
@@ -5036,8 +5067,12 @@
   }
 
   /* Ratings & Scores Responsive Wrap */
-  html body .scores,
-  .scores {
+  html body .scores:not(.block),
+  html body .c-info-right .scores,
+  html body .c-about .scores,
+  .scores:not(.block),
+  .c-info-right .scores,
+  .c-about .scores {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 8px !important;
