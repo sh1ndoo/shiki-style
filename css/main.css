@@ -4968,13 +4968,34 @@
     color: #ffffff !important;
   }
 
-  html body .p-user_rates-index .list-lines .selectable:hover {
-    background-color: rgba(255, 255, 255, 0.06) !important;
+  /* --- User Rate Table Rows Hover (Lilac Glass) --- */
+  html body .p-user_rates-index .list-lines tr.user_rate,
+  html body tr.user_rate.selectable,
+  html body tr.user_rate,
+  .p-user_rates-index .list-lines tr.user_rate,
+  tr.user_rate.selectable,
+  tr.user_rate {
+    transition: background-color 150ms ease !important;
   }
 
-  html body .p-userlist_comparer .comparer table .selectable:hover {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    transform: scale(1.01) !important;
+  html body .p-user_rates-index .list-lines .selectable:hover,
+  html body .p-user_rates-index .list-lines tr.user_rate:hover,
+  html body tr.user_rate.selectable:hover,
+  html body tr.user_rate:hover,
+  html body .p-userlist_comparer .comparer table .selectable:hover,
+  .p-user_rates-index .list-lines .selectable:hover,
+  .p-user_rates-index .list-lines tr.user_rate:hover,
+  tr.user_rate.selectable:hover,
+  tr.user_rate:hover {
+    background-color: rgba(152, 132, 165, 0.22) !important;
+  }
+
+  html body .p-user_rates-index .list-lines .selectable:hover td,
+  html body .p-user_rates-index .list-lines tr.user_rate:hover td,
+  html body tr.user_rate.selectable:hover td,
+  html body tr.user_rate:hover td,
+  html body .p-userlist_comparer .comparer table .selectable:hover td {
+    background-color: transparent !important;
   }
 
   /* --- User Rates Summary Stats (.summary.lines, .stat-value) --- */
