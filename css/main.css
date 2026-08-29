@@ -536,7 +536,9 @@
     flex-direction: column !important;
   }
 
+  html body .search-mode,
   html body .search-results .search-mode,
+  .search-mode,
   .search-results .search-mode {
     color: #a1a1aa !important;
     background: transparent !important;
@@ -555,18 +557,57 @@
     text-shadow: none !important;
   }
 
+  html body .search-mode:before,
+  html body .search-results .search-mode:before,
+  .search-mode:before,
+  .search-results .search-mode:before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 4px !important;
+    min-width: 4px !important;
+    height: 16px !important;
+    border-radius: 2px !important;
+    margin: 0 10px 0 0 !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    transition: background-color 150ms ease, box-shadow 150ms ease !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .search-mode:hover,
   html body .search-results .search-mode:hover,
+  .search-mode:hover,
   .search-results .search-mode:hover {
     color: #ffffff !important;
     background-color: rgba(255, 255, 255, 0.08) !important;
   }
 
+  html body .search-mode:hover:before,
+  html body .search-results .search-mode:hover:before,
+  .search-mode:hover:before,
+  .search-results .search-mode:hover:before {
+    background-color: rgba(196, 175, 212, 0.5) !important;
+  }
+
+  html body .search-mode.active,
   html body .search-results .search-mode.active,
+  .search-mode.active,
   .search-results .search-mode.active {
     color: #ffffff !important;
     background-color: rgba(152, 132, 165, 0.35) !important;
     border-color: rgba(152, 132, 165, 0.5) !important;
     font-weight: 500 !important;
+  }
+
+  html body .search-mode.active:before,
+  html body .search-mode:focus:before,
+  html body .search-results .search-mode.active:before,
+  html body .search-results .search-mode:focus:before,
+  .search-mode.active:before,
+  .search-mode:focus:before,
+  .search-results .search-mode.active:before,
+  .search-results .search-mode:focus:before {
+    background-color: #c4afd4 !important;
+    box-shadow: 0 0 8px rgba(196, 175, 212, 0.6) !important;
   }
 
   /* Search result entries and links */
