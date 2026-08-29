@@ -1546,6 +1546,24 @@
     color: #f472b6 !important;
   }
 
+  /* --- Inline Code (.b-code_inline) --- */
+  html body code.b-code_inline,
+  html body .b-code_inline,
+  code.b-code_inline,
+  .b-code_inline {
+    background-color: rgba(152, 132, 165, 0.15) !important;
+    border: 1px solid rgba(196, 175, 212, 0.3) !important;
+    border-radius: 4px !important;
+    color: #e4d5f0 !important;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+    font-size: 12px !important;
+    padding: 1px 5px !important;
+    margin: 0 2px !important;
+    white-space: break-spaces !important;
+    word-break: break-word !important;
+    vertical-align: baseline !important;
+  }
+
   /* --- Remove Default Dashed Borders on Comments & Items --- */
   html body .b-comment,
   html body .b-comments .comments-hider,
