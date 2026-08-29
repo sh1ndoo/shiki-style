@@ -1606,8 +1606,10 @@
 
   /* --- Quotes (Transparent Background + Lilac Border) --- */
   html body .b-quote,
+  html body .b-quote-v2,
   html body blockquote,
   .b-quote,
+  .b-quote-v2,
   blockquote {
     background: transparent !important;
     background-color: transparent !important;
@@ -1616,6 +1618,16 @@
     border-color: #9884a5 !important;
     border-radius: 6px !important;
     color: #e4e4e9 !important;
+  }
+
+  html body .quoteable:before,
+  html body .b-quote .quoteable:before,
+  html body .b-quote-v2 .quoteable:before,
+  .quoteable:before,
+  .b-quote .quoteable:before,
+  .b-quote-v2 .quoteable:before {
+    color: #c4afd4 !important;
+    text-shadow: 0 0 8px rgba(196, 175, 212, 0.4) !important;
   }
 
   /* --- Topic & Anime Video Attachment Form (.topic-video .form) --- */
