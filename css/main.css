@@ -3369,6 +3369,33 @@
     color: #a1a1aa !important;
   }
 
+  /* Time icon (:before) in status line & general */
+  html body time:before,
+  html body time::before,
+  html body .b-status-line time:before,
+  html body .b-status-line .section.created_at time:before,
+  html body .b-status-line .section.changed_at time:before,
+  html body .section.created_at time:before,
+  html body .section.changed_at time:before,
+  time:before,
+  time::before,
+  .b-status-line time:before,
+  .b-status-line .section.created_at time:before,
+  .b-status-line .section.changed_at time:before,
+  .section.created_at time:before,
+  .section.changed_at time:before {
+    color: #c4afd4 !important;
+    opacity: 0.9 !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body time:hover:before,
+  html body .b-status-line time:hover:before,
+  time:hover:before {
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
   html body .b-status-line .comments,
   html body .b-status-line .collection-size,
   .b-status-line .comments,
