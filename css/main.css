@@ -305,7 +305,8 @@
     background-color: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: none !important;
+    border: none !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
   }
 
@@ -6009,6 +6010,12 @@
     border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
+  html body .l-top_menu-v2,
+  .l-top_menu-v2 {
+    border-bottom: none !important;
+    border: none !important;
+  }
+
   html body .l-top_menu-v2 .global-search,
   .l-top_menu-v2 .global-search {
     max-width: 240px !important;
@@ -6067,6 +6074,12 @@
     border-left: none !important;
     border-right: none !important;
     padding: 16px 10px !important;
+  }
+
+  html body .l-top_menu-v2,
+  .l-top_menu-v2 {
+    border-bottom: none !important;
+    border: none !important;
   }
 
   /* Prevent iOS Safari auto-zoom on input focus */
