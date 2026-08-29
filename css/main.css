@@ -4460,15 +4460,36 @@
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.25) inset !important;
   }
 
-  aside.buttons .editor-controls .b-tooltipped {
+  html body .editor-controls,
+  .editor-controls {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  html body .editor-controls > *,
+  html body .editor-controls .b-tooltipped,
+  html body aside.buttons .editor-controls .b-tooltipped,
+  .editor-controls > *,
+  .editor-controls .b-tooltipped {
+    padding: 4px 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 8px !important;
     background-color: rgba(255, 255, 255, 0.06) !important;
     color: #e4e4e9 !important;
     transition: all 120ms ease !important;
+    box-sizing: border-box !important;
   }
 
-  aside.buttons .editor-controls .b-tooltipped:hover {
+  html body .editor-controls > *:hover,
+  html body .editor-controls .b-tooltipped:hover,
+  html body aside.buttons .editor-controls .b-tooltipped:hover,
+  .editor-controls > *:hover,
+  .editor-controls .b-tooltipped:hover {
     color: #ffffff !important;
     border-color: #9884a5 !important;
     background-color: rgba(152, 132, 165, 0.2) !important;
