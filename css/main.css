@@ -5145,6 +5145,42 @@
     background-color: transparent !important;
   }
 
+  /* --- User Rates Inline Edit Input (.new-value input) --- */
+  html body .p-user_rates-index .list-lines tr td .new-value input,
+  html body .new-value input,
+  html body .new-value input.input,
+  .p-user_rates-index .list-lines tr td .new-value input,
+  .new-value input,
+  .new-value input.input {
+    width: 32px !important;
+    max-width: 100% !important;
+    height: 20px !important;
+    min-height: 20px !important;
+    line-height: 18px !important;
+    padding: 0 2px !important;
+    font-size: 11px !important;
+    border-radius: 4px !important;
+    box-sizing: border-box !important;
+    border: 1px solid rgba(152, 132, 165, 0.5) !important;
+    background-color: rgba(22, 22, 28, 0.95) !important;
+    box-shadow: none !important;
+    vertical-align: middle !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  html body .p-user_rates-index .list-lines tr td .new-value input:hover,
+  html body .p-user_rates-index .list-lines tr td .new-value input:focus,
+  html body .new-value input:hover,
+  html body .new-value input:focus,
+  .new-value input:hover,
+  .new-value input:focus {
+    border-color: #c4afd4 !important;
+    background-color: rgba(30, 28, 38, 0.98) !important;
+    box-shadow: 0 0 0 1px rgba(196, 175, 212, 0.5) !important;
+    outline: none !important;
+  }
+
   /* --- User Rates Summary Stats (.summary.lines, .stat-value) --- */
   html body .summary.lines,
   html body .summary.list,
