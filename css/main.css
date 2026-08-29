@@ -3362,36 +3362,77 @@
     color: #a1a1aa !important;
   }
 
+  /* Time text across status line, comments, topics, and general */
+  html body time,
+  html body .time,
+  html body .name-date .time,
+  html body .name-date time,
+  html body .b-comment .time,
+  html body .b-topic .time,
+  html body .b-dialog .time,
+  html body .b-message .time,
   html body .b-status-line time,
-  html body .b-status-line .section.created_at time,
-  html body .b-status-line .section.changed_at time,
+  html body .status-time time,
+  html body .section.created_at time,
+  html body .section.changed_at time,
+  time,
+  .time,
+  .name-date .time,
+  .b-comment .time,
   .b-status-line time {
     color: #a1a1aa !important;
+    transition: color 150ms ease !important;
   }
 
-  /* Time icon (:before) in status line & general */
+  html body time:hover,
+  html body .time:hover,
+  html body .name-date .time:hover,
+  html body .name-date time:hover,
+  time:hover,
+  .time:hover {
+    color: #e4e4e9 !important;
+  }
+
+  /* Time icons (:before) across status line, comments, topics, and general */
   html body time:before,
   html body time::before,
-  html body .b-status-line time:before,
-  html body .b-status-line .section.created_at time:before,
-  html body .b-status-line .section.changed_at time:before,
+  html body .time:before,
+  html body .time::before,
+  html body .section.created_at:before,
+  html body .section.changed_at:before,
   html body .section.created_at time:before,
   html body .section.changed_at time:before,
+  html body .b-status-line .section.created_at:before,
+  html body .b-status-line .section.changed_at:before,
+  html body .b-status-line .section.created_at time:before,
+  html body .b-status-line .section.changed_at time:before,
+  html body .b-status-line time:before,
+  html body .name-date .time:before,
   time:before,
   time::before,
-  .b-status-line time:before,
+  .time:before,
+  .time::before,
+  .section.created_at:before,
+  .section.changed_at:before,
+  .section.created_at time:before,
+  .section.changed_at time:before,
+  .b-status-line .section.created_at:before,
+  .b-status-line .section.changed_at:before,
   .b-status-line .section.created_at time:before,
   .b-status-line .section.changed_at time:before,
-  .section.created_at time:before,
-  .section.changed_at time:before {
+  .b-status-line time:before {
     color: #c4afd4 !important;
-    opacity: 0.9 !important;
+    opacity: 0.95 !important;
     transition: color 150ms ease !important;
   }
 
   html body time:hover:before,
+  html body .time:hover:before,
   html body .b-status-line time:hover:before,
-  time:hover:before {
+  html body .section.created_at:hover:before,
+  html body .section.changed_at:hover:before,
+  time:hover:before,
+  .time:hover:before {
     color: #ffffff !important;
     opacity: 1 !important;
   }
