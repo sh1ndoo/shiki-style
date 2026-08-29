@@ -2018,32 +2018,123 @@
     border-radius: 6px !important;
   }
 
-  html body .b-stats_bar.lifetime .bar .first,
-  .b-stats_bar.lifetime .bar .first {
-    background: #9884a5 !important;
-    background: linear-gradient(to right, #9884a5 0%, #7d688a 100%) !important;
-    border-radius: 6px !important;
+  /* --- Lifetime Stats Bar (.lifetime.b-stats_bar) --- */
+  html body .b-stats_bar.lifetime,
+  html body .p-profiles-show .lifetime,
+  .b-stats_bar.lifetime,
+  .p-profiles-show .lifetime {
+    margin-bottom: 24px !important;
   }
 
+  html body .lifetime .title,
+  .lifetime .title {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 8px !important;
+  }
+
+  html body .lifetime .title .label,
+  .lifetime .title .label {
+    color: #e4e4e9 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+  }
+
+  html body .lifetime .title .value,
+  .lifetime .title .value {
+    color: #c4afd4 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+    float: none !important;
+  }
+
+  html body .lifetime .title .value.dotted,
+  .lifetime .title .value.dotted {
+    border-bottom: 1px dashed rgba(196, 175, 212, 0.6) !important;
+    text-decoration: none !important;
+  }
+
+  html body .b-stats_bar.lifetime .bar,
   html body .p-profiles-show .lifetime .bar,
+  .b-stats_bar.lifetime .bar,
   .p-profiles-show .lifetime .bar {
-    overflow: visible !important;
+    height: 8px !important;
+    line-height: 8px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  html body .b-stats_bar.lifetime .bar .first,
+  .b-stats_bar.lifetime .bar .first {
+    background: linear-gradient(90deg, #c4afd4 0%, #aa93bd 100%) !important;
+    height: 100% !important;
+    border-radius: 4px 0 0 4px !important;
+    box-shadow: 0 0 10px rgba(196, 175, 212, 0.3) !important;
+  }
+
+  html body .b-stats_bar.lifetime .bar .second,
+  html body .b-stats_bar.lifetime .bar .third,
+  .b-stats_bar.lifetime .bar .second,
+  .b-stats_bar.lifetime .bar .third {
+    background: linear-gradient(90deg, #886c9e 0%, #6e5284 100%) !important;
+    height: 100% !important;
+    border-radius: 0 4px 4px 0 !important;
+  }
+
+  html body .p-profiles-show .lifetime .cuts,
+  .lifetime .cuts {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    pointer-events: none !important;
   }
 
   html body .p-profiles-show .lifetime .cuts .cut,
-  .p-profiles-show .lifetime .cuts .cut {
-    width: 10px !important;
-    height: 10px !important;
-    background-color: #9884a5 !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 50% !important;
+  .lifetime .cuts .cut {
+    width: 2px !important;
+    height: 100% !important;
+    background-color: rgba(18, 18, 22, 0.9) !important;
+    border: none !important;
+    border-radius: 0 !important;
     position: absolute !important;
-    top: -1px !important;
+    top: 0 !important;
+    z-index: 2 !important;
+  }
+
+  html body .lifetime .times,
+  .lifetime .times {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-top: 8px !important;
+  }
+
+  html body .p-profiles-show .lifetime .times .time,
+  .lifetime .times .time {
+    color: #71717a !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    width: auto !important;
+    flex: 1 !important;
+    text-align: center !important;
+  }
+
+  html body .p-profiles-show .lifetime .times .time.checked,
+  .lifetime .times .time.checked {
+    color: #e4e4e9 !important;
+    font-weight: 600 !important;
   }
 
   html body .p-profiles-show .lifetime .times .time.checked:before,
-  .p-profiles-show .lifetime .times .time.checked:before {
+  .lifetime .times .time.checked:before {
     color: #c4afd4 !important;
+    font-weight: bold !important;
+    margin-right: 4px !important;
   }
 
   html body .p-profiles-show .profile-content .activity .title,
