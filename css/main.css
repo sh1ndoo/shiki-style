@@ -3521,7 +3521,7 @@
   html body span.b-new_marker,
   p.b-new_marker,
   .b-new_marker {
-    display: inline-flex !important;
+    display: none !important;
     align-items: center !important;
     justify-content: center !important;
     background-color: rgba(152, 132, 165, 0.18) !important;
@@ -3537,15 +3537,44 @@
     text-shadow: none !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
     vertical-align: middle !important;
+    transition: opacity 0.5s ease, background-color 150ms ease !important;
   }
 
+  /* Only show when active and unread */
   html body .b-new_marker.active,
   html body p.b-new_marker.active,
   p.b-new_marker.active,
   .b-new_marker.active {
+    display: inline-flex !important;
     background-color: rgba(152, 132, 165, 0.25) !important;
     border-color: #c4afd4 !important;
     color: #ffffff !important;
+  }
+
+  /* Strictly hide when off or inactive */
+  html body .b-new_marker.off,
+  html body .b-new_marker:not(.active),
+  .b-new_marker.off,
+  .b-new_marker:not(.active) {
+    display: none !important;
+  }
+
+  /* Desktop hover on comment to show toggleable marker */
+  @media screen and (min-width: 1024px) {
+    html body .b-topic > .inner:hover aside.markers .b-new_marker.off,
+    html body .b-comment > .inner:hover aside.markers .b-new_marker.off,
+    html body .b-dialog > .inner:hover aside.markers .b-new_marker.off,
+    html body .b-message > .inner:hover aside.markers .b-new_marker.off {
+      display: inline-flex !important;
+      opacity: 0.35 !important;
+    }
+
+    html body .b-topic > .inner:hover aside.markers .b-new_marker.off:hover,
+    html body .b-comment > .inner:hover aside.markers .b-new_marker.off:hover,
+    html body .b-dialog > .inner:hover aside.markers .b-new_marker.off:hover,
+    html body .b-message > .inner:hover aside.markers .b-new_marker.off:hover {
+      opacity: 1 !important;
+    }
   }
 
   html body .b-new_marker:before,
