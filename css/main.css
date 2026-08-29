@@ -1423,6 +1423,129 @@
     border-bottom: 1px dashed #ef4444 !important;
   }
 
+  /* --- Code Blocks & Syntax Highlighting (.b-code-v2, pre.b-code-v2, .hljs) --- */
+  html body pre.b-code-v2,
+  html body .b-code-v2,
+  pre.b-code-v2,
+  .b-code-v2 {
+    background-color: rgba(18, 18, 22, 0.85) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    color: #e4e4e9 !important;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    padding: 34px 14px 14px 14px !important;
+    position: relative !important;
+    overflow-x: auto !important;
+    white-space: pre !important;
+    word-break: normal !important;
+    margin: 8px 0 !important;
+  }
+
+  html body pre.b-code-v2 code,
+  html body .b-code-v2 code,
+  pre.b-code-v2 code,
+  .b-code-v2 code {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    color: inherit !important;
+  }
+
+  /* Language badge in top-right */
+  html body pre.b-code-v2:before,
+  html body .b-code-v2:before,
+  pre.b-code-v2:before,
+  .b-code-v2:before {
+    background-color: rgba(152, 132, 165, 0.2) !important;
+    border: 1px solid rgba(196, 175, 212, 0.35) !important;
+    border-radius: 4px !important;
+    color: #c4afd4 !important;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    line-height: 18px !important;
+    padding: 1px 8px !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 8px !important;
+  }
+
+  /* macOS Window Dots in top-left */
+  html body pre.b-code-v2:after,
+  html body .b-code-v2:after,
+  pre.b-code-v2:after,
+  .b-code-v2:after {
+    content: '' !important;
+    position: absolute !important;
+    top: 13px !important;
+    left: 12px !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: #ff5f56 !important;
+    box-shadow: 14px 0 0 #ffbd2e, 28px 0 0 #27c93f !important;
+  }
+
+  /* Syntax Highlighting */
+  html body .b-code-v2 .hljs-keyword,
+  html body .b-code-v2 .hljs-literal,
+  html body .b-code-v2 .hljs-selector-tag,
+  .b-code-v2 .hljs-keyword,
+  .b-code-v2 .hljs-literal {
+    color: #c4afd4 !important;
+    font-weight: 600 !important;
+  }
+
+  html body .b-code-v2 .hljs-string,
+  html body .b-code-v2 .hljs-addition,
+  .b-code-v2 .hljs-string {
+    color: #a7f3d0 !important;
+  }
+
+  html body .b-code-v2 .hljs-number,
+  html body .b-code-v2 .hljs-selector-id,
+  .b-code-v2 .hljs-number {
+    color: #fde047 !important;
+  }
+
+  html body .b-code-v2 .hljs-function,
+  html body .b-code-v2 .hljs-title,
+  html body .b-code-v2 .hljs-type,
+  .b-code-v2 .hljs-title {
+    color: #93c5fd !important;
+  }
+
+  html body .b-code-v2 .hljs-comment,
+  html body .b-code-v2 .hljs-quote,
+  .b-code-v2 .hljs-comment {
+    color: #71717a !important;
+    font-style: italic !important;
+  }
+
+  html body .b-code-v2 .hljs-attribute,
+  html body .b-code-v2 .hljs-attr,
+  html body .b-code-v2 .hljs-variable,
+  .b-code-v2 .hljs-attribute {
+    color: #a5b4fc !important;
+  }
+
+  html body .b-code-v2 .hljs-selector-class,
+  html body .b-code-v2 .hljs-selector-pseudo,
+  html body .b-code-v2 .hljs-meta,
+  .b-code-v2 .hljs-meta {
+    color: #f472b6 !important;
+  }
+
   /* --- Remove Default Dashed Borders on Comments & Items --- */
   html body .b-comment,
   html body .b-comments .comments-hider,
