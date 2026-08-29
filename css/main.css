@@ -4796,16 +4796,72 @@
     font-weight: 400 !important;
   }
 
+  /* --- Block List & Filter Dropdown Items (.b-block_list li, li[data-field]) --- */
+  html body .b-block_list li,
+  html body li[data-field],
+  html body li[data-value],
+  .b-block_list li,
+  li[data-field],
+  li[data-value] {
+    color: #e4e4e9 !important;
+    border-radius: 6px !important;
+    padding: 3px 8px !important;
+    transition: background-color 150ms ease, color 150ms ease !important;
+  }
+
+  html body .b-block_list li a,
+  html body .b-block_list li span,
+  html body li[data-field] a,
+  html body li[data-field] span,
+  .b-block_list li a,
+  .b-block_list li span {
+    color: #e4e4e9 !important;
+  }
+
+  html body .b-block_list li input[type="checkbox"],
+  html body li[data-field] input[type="checkbox"],
+  .b-block_list li input[type="checkbox"],
+  li[data-field] input[type="checkbox"] {
+    accent-color: #c4afd4 !important;
+    cursor: pointer !important;
+  }
+
   html body .b-block_list li:hover,
-  html body .p-contests .match-day .match-link:hover {
-    background-color: rgba(255, 255, 255, 0.06) !important;
-    border-radius: 8px !important;
+  html body li[data-field]:hover,
+  html body li[data-value]:hover,
+  html body .p-contests .match-day .match-link:hover,
+  .b-block_list li:hover,
+  li[data-field]:hover,
+  li[data-value]:hover {
+    background-color: rgba(152, 132, 165, 0.28) !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+  }
+
+  html body .b-block_list li:hover a,
+  html body .b-block_list li:hover span,
+  html body li[data-field]:hover a,
+  html body li[data-field]:hover span,
+  .b-block_list li:hover a,
+  .b-block_list li:hover span {
+    color: #ffffff !important;
   }
 
   html body .b-block_list li.selected,
-  html body .p-contests .match-day .match-link.active {
-    background-color: rgba(152, 132, 165, 0.25) !important;
-    border-radius: 8px !important;
+  html body li[data-field].selected,
+  html body .p-contests .match-day .match-link.active,
+  .b-block_list li.selected,
+  li[data-field].selected {
+    background-color: rgba(152, 132, 165, 0.4) !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+  }
+
+  html body .b-block_list li.selected a,
+  html body .b-block_list li.selected span,
+  .b-block_list li.selected a,
+  .b-block_list li.selected span {
+    color: #ffffff !important;
   }
 
   html body .p-user_rates-index .list-lines .selectable:hover {
