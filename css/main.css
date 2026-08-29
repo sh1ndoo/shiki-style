@@ -2950,6 +2950,61 @@
     clip-path: inset(0 round 8px) !important;
   }
 
+  /* --- News Wall Topic Poster Aspect Ratio & Swiper Fix --- */
+  html body .b-news_wall-topic .poster,
+  .b-news_wall-topic .poster {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    position: relative !important;
+    margin-bottom: 10px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  html body .b-news_wall-topic .poster:before,
+  .b-news_wall-topic .poster:before {
+    content: '' !important;
+    display: block !important;
+    padding-top: 56.25% !important;
+    width: 100% !important;
+  }
+
+  html body .b-news_wall-topic .poster .b-shiki_swiper,
+  .b-news_wall-topic .poster .b-shiki_swiper {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+  }
+
+  html body .b-news_wall-topic .poster .b-image,
+  .b-news_wall-topic .poster .b-image {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+
+  html body .b-news_wall-topic .poster img,
+  html body .b-news_wall-topic .poster .b-shiki_swiper img,
+  .b-news_wall-topic .poster img,
+  .b-news_wall-topic .poster .b-shiki_swiper img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
   html body .b-menu_logo a,
   .b-menu_logo a {
     display: inline-block !important;
@@ -6170,6 +6225,56 @@
   }
 
   /* --- Topics, News & Comments on Mobile --- */
+  html body .b-news_wall-topic .poster,
+  .b-news_wall-topic .poster {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    position: relative !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+
+  html body .b-news_wall-topic .poster:before,
+  .b-news_wall-topic .poster:before {
+    content: '' !important;
+    display: block !important;
+    padding-top: 56.25% !important;
+    width: 100% !important;
+  }
+
+  html body .b-news_wall-topic .poster .b-shiki_swiper,
+  .b-news_wall-topic .poster .b-shiki_swiper {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+  }
+
+  html body .b-news_wall-topic .poster .b-image,
+  .b-news_wall-topic .poster .b-image {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+
+  html body .b-news_wall-topic .poster img,
+  .b-news_wall-topic .poster img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
   html body .status-line,
   html body .b-news_wall-topic .status-line,
   html body .b-topic .status-line,
@@ -6298,10 +6403,10 @@
   }
 
   /* --- Swiper Carousels & Sliders on Mobile --- */
-  html body .b-shiki_swiper,
-  html body .swiper-container,
-  .b-shiki_swiper,
-  .swiper-container {
+  html body .b-shiki_swiper:not(.poster *):not(.b-news_wall-topic *),
+  html body .swiper-container:not(.poster *):not(.b-news_wall-topic *),
+  .b-shiki_swiper:not(.poster *):not(.b-news_wall-topic *),
+  .swiper-container:not(.poster *):not(.b-news_wall-topic *) {
     overflow: hidden !important;
     width: 100% !important;
     position: relative !important;
