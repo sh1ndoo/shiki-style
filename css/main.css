@@ -4191,22 +4191,13 @@
     transform: scale(1.01) !important;
   }
 
-  /* --- Back to Top Button (macOS Floating Capsule) --- */
+  /* --- Hide Back to Top Button (.b-to-top) --- */
   html body .b-to-top,
   .b-to-top {
-    border-radius: 20px !important;
-    background-color: rgba(28, 28, 32, 0.85) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
-    transition: all 150ms ease !important;
-  }
-
-  html body .b-to-top:hover,
-  .b-to-top:hover {
-    background-color: rgba(152, 132, 165, 0.4) !important;
-    border-color: #9884a5 !important;
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
   }
 
   /* --- macOS Style Scrollbars --- */
