@@ -713,12 +713,13 @@
     border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 
-  /* Remove Border on .expanded-options */
+  /* Remove Border on .expanded-options & Add Margin-Top */
   html body .expanded-options,
   html body .b-add_to_list .expanded-options,
   html body .b-user_rate .expanded-options,
   .expanded-options,
   .b-add_to_list .expanded-options {
+    margin-top: 6px !important;
     border: none !important;
     border-color: transparent !important;
     box-shadow: none !important;
