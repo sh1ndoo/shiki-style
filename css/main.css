@@ -5028,8 +5028,17 @@
   }
 
   /* --- Tables & Lists --- */
-  html body .b-table tr.border {
-    border-color: rgba(255, 255, 255, 0.08) !important;
+  html body .b-table tr.border,
+  html body tr.border,
+  html body tr.border th,
+  html body .b-table tr.border th,
+  .b-table tr.border,
+  tr.border,
+  tr.border th {
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-color: transparent !important;
   }
 
   html body .b-table td,
