@@ -660,6 +660,65 @@
     background-color: rgba(152, 132, 165, 0.2) !important;
   }
 
+  /* --- Search Result Item Active & Hover (.b-db_entry-variant-list_item) --- */
+  html body .search-results .b-db_entry-variant-list_item,
+  html body .b-db_entry-variant-list_item,
+  .search-results .b-db_entry-variant-list_item,
+  .b-db_entry-variant-list_item {
+    transition: background 120ms ease, border-color 120ms ease !important;
+  }
+
+  html body .search-results .b-db_entry-variant-list_item:hover,
+  html body .l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:hover,
+  .search-results .b-db_entry-variant-list_item:hover {
+    background: rgba(152, 132, 165, 0.15) !important;
+  }
+
+  html body .search-results .b-db_entry-variant-list_item.active,
+  html body .search-results .b-db_entry-variant-list_item:focus,
+  html body .l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item.active,
+  html body .l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:focus,
+  .search-results .b-db_entry-variant-list_item.active,
+  .search-results .b-db_entry-variant-list_item:focus {
+    background: rgba(152, 132, 165, 0.25) !important;
+    border-top-color: rgba(152, 132, 165, 0.5) !important;
+  }
+
+  html body .b-db_entry-variant-list_item:before,
+  html body .search-results .b-db_entry-variant-list_item:before,
+  .b-db_entry-variant-list_item:before,
+  .search-results .b-db_entry-variant-list_item:before {
+    border-radius: 2px !important;
+  }
+
+  html body .b-db_entry-variant-list_item:hover:before,
+  html body .search-results .b-db_entry-variant-list_item:hover:before,
+  .b-db_entry-variant-list_item:hover:before,
+  .search-results .b-db_entry-variant-list_item:hover:before {
+    background: rgba(196, 175, 212, 0.5) !important;
+    background-color: rgba(196, 175, 212, 0.5) !important;
+  }
+
+  html body .b-db_entry-variant-list_item.active:before,
+  html body .b-db_entry-variant-list_item:focus:before,
+  html body .b-db_entry-variant-list_item:active:before,
+  html body .search-results .b-db_entry-variant-list_item.active:before,
+  html body .search-results .b-db_entry-variant-list_item:focus:before,
+  html body .search-results .b-db_entry-variant-list_item:active:before,
+  html body .l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item.active:before,
+  html body .l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:focus:before,
+  html body .l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:active:before,
+  .b-db_entry-variant-list_item.active:before,
+  .b-db_entry-variant-list_item:focus:before,
+  .b-db_entry-variant-list_item:active:before,
+  .search-results .b-db_entry-variant-list_item.active:before,
+  .search-results .b-db_entry-variant-list_item:focus:before,
+  .search-results .b-db_entry-variant-list_item:active:before {
+    background: #c4afd4 !important;
+    background-color: #c4afd4 !important;
+    box-shadow: 0 0 8px rgba(196, 175, 212, 0.6) !important;
+  }
+
   /* --- Dropdown Menus & Popups (macOS Rounded Glass Style) --- */
   html body .l-top_menu-v2 .submenu,
   html body .l-top_menu-v2 .menu-dropdown .submenu,
