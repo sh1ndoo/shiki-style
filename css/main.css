@@ -496,7 +496,20 @@
     border-radius: 12px !important;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
     overflow: hidden !important;
+    overflow-y: hidden !important;
+    max-height: none !important;
+    padding: 0 !important;
     color: #e4e4e9 !important;
+  }
+
+  html body .search-results .inner,
+  html body .l-top_menu-v2 .global-search .search-results .inner,
+  .search-results .inner,
+  .l-top_menu-v2 .global-search .search-results .inner {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
   }
 
   html body .l-top_menu-v2 .global-search .search-results::before,
@@ -654,12 +667,9 @@
   html body .dropdown-menu,
   html body .b-dialog,
   html body .b-dialog > .inner,
-  html body .search-results,
-  html body .l-top_menu-v2 .global-search .search-results,
   .l-top_menu-v2 .submenu,
   .l-top_menu-v2 .menu-dropdown .submenu,
-  .dropdown-menu,
-  .search-results {
+  .dropdown-menu {
     background: rgba(20, 20, 24, 0.7) !important;
     background-color: rgba(20, 20, 24, 0.7) !important;
     backdrop-filter: blur(24px) saturate(180%) !important;
