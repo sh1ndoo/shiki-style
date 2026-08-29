@@ -992,6 +992,186 @@
     width: 850px !important;
   }
 
+  /* ==========================================================================
+     CodeMirror Dark Glass Code Editor Theme
+     ========================================================================== */
+  html body .CodeMirror,
+  .CodeMirror {
+    background-color: #121216 !important;
+    color: #e4e4e9 !important;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Monaco, Consolas, monospace !important;
+    font-size: 13.5px !important;
+    line-height: 1.65 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  html body .CodeMirror-scroll,
+  .CodeMirror-scroll {
+    background: transparent !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(152, 132, 165, 0.6) transparent !important;
+  }
+
+  html body .CodeMirror-scroll::-webkit-scrollbar,
+  .CodeMirror-scroll::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  html body .CodeMirror-scroll::-webkit-scrollbar-thumb,
+  .CodeMirror-scroll::-webkit-scrollbar-thumb {
+    background: rgba(152, 132, 165, 0.6) !important;
+    border-radius: 6px !important;
+  }
+
+  html body .CodeMirror-gutters,
+  .CodeMirror-gutters {
+    background-color: #0d0d11 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    white-space: nowrap !important;
+  }
+
+  html body .CodeMirror-linenumber,
+  .CodeMirror-linenumber {
+    color: #52525b !important;
+    font-family: inherit !important;
+    font-size: 12px !important;
+    padding: 0 6px 0 4px !important;
+  }
+
+  html body .CodeMirror-guttermarker,
+  html body .CodeMirror-guttermarker-subtle,
+  .CodeMirror-guttermarker,
+  .CodeMirror-guttermarker-subtle {
+    color: #71717a !important;
+  }
+
+  html body .CodeMirror-cursor,
+  .CodeMirror-cursor {
+    border-left: 2px solid #c4afd4 !important;
+  }
+
+  html body .CodeMirror-secondarycursor,
+  .CodeMirror-secondarycursor {
+    border-left: 1.5px solid rgba(196, 175, 212, 0.5) !important;
+  }
+
+  html body .CodeMirror-selected,
+  html body .CodeMirror-focused .CodeMirror-selected,
+  html body .CodeMirror-line::selection,
+  html body .CodeMirror-line > span::selection,
+  html body .CodeMirror-line > span > span::selection,
+  .CodeMirror-selected,
+  .CodeMirror-focused .CodeMirror-selected {
+    background: rgba(152, 132, 165, 0.35) !important;
+  }
+
+  html body .CodeMirror-matchingbracket,
+  .CodeMirror-matchingbracket {
+    color: #ffffff !important;
+    background: rgba(196, 175, 212, 0.25) !important;
+    outline: 1px solid rgba(196, 175, 212, 0.6) !important;
+    border-radius: 2px !important;
+  }
+
+  html body .CodeMirror-nonmatchingbracket,
+  .CodeMirror-nonmatchingbracket {
+    color: #f87171 !important;
+    background: rgba(239, 68, 68, 0.2) !important;
+  }
+
+  /* CodeMirror Syntax Highlighting */
+  html body .CodeMirror .cm-keyword,
+  .CodeMirror .cm-keyword {
+    color: #f472b6 !important;
+    font-weight: 600 !important;
+  }
+
+  html body .CodeMirror .cm-def,
+  .CodeMirror .cm-def {
+    color: #c4afd4 !important;
+    font-weight: 600 !important;
+  }
+
+  html body .CodeMirror .cm-variable,
+  html body .CodeMirror .cm-variable-2,
+  html body .CodeMirror .cm-variable-3,
+  .CodeMirror .cm-variable,
+  .CodeMirror .cm-variable-2,
+  .CodeMirror .cm-variable-3 {
+    color: #e4e4e9 !important;
+  }
+
+  html body .CodeMirror .cm-callee,
+  html body .CodeMirror .cm-variable.cm-callee,
+  .CodeMirror .cm-callee,
+  .CodeMirror .cm-variable.cm-callee {
+    color: #67e8f9 !important;
+  }
+
+  html body .CodeMirror .cm-property,
+  .CodeMirror .cm-property {
+    color: #93c5fd !important;
+  }
+
+  html body .CodeMirror .cm-operator,
+  .CodeMirror .cm-operator {
+    color: #a1a1aa !important;
+  }
+
+  html body .CodeMirror .cm-atom,
+  html body .CodeMirror .cm-number,
+  .CodeMirror .cm-atom,
+  .CodeMirror .cm-number {
+    color: #fca5a5 !important;
+  }
+
+  html body .CodeMirror .cm-string,
+  html body .CodeMirror .cm-string-2,
+  .CodeMirror .cm-string,
+  .CodeMirror .cm-string-2 {
+    color: #86efac !important;
+  }
+
+  html body .CodeMirror .cm-comment,
+  .CodeMirror .cm-comment {
+    color: #71717a !important;
+    font-style: italic !important;
+  }
+
+  html body .CodeMirror .cm-qualifier,
+  .CodeMirror .cm-qualifier {
+    color: #fde047 !important;
+  }
+
+  html body .CodeMirror .cm-tag,
+  .CodeMirror .cm-tag {
+    color: #fb7185 !important;
+  }
+
+  html body .CodeMirror .cm-attribute,
+  .CodeMirror .cm-attribute {
+    color: #a78bfa !important;
+  }
+
+  html body .CodeMirror .cm-meta,
+  .CodeMirror .cm-meta {
+    color: #c4afd4 !important;
+  }
+
+  html body .CodeMirror .cm-builtin,
+  .CodeMirror .cm-builtin {
+    color: #38bdf8 !important;
+  }
+
+  html body .CodeMirror .cm-error,
+  .CodeMirror .cm-error {
+    color: #f87171 !important;
+    border-bottom: 1px dashed #ef4444 !important;
+  }
+
   /* --- Remove Default Dashed Borders on Comments & Items --- */
   html body .b-comment,
   html body .b-comments .comments-hider,
