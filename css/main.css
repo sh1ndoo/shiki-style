@@ -1208,6 +1208,118 @@
     color: #e4e4e9 !important;
   }
 
+  /* --- Topic & Anime Video Attachment Form (.topic-video .form) --- */
+  html body .topic-video .form,
+  html body .topic-video .remove-form,
+  html body .form:has(.topic_video_url),
+  html body .form:has(.video-url),
+  html body .p-topics-new .topic-video .form,
+  html body .p-topics-edit .topic-video .form,
+  html body .p-topics-create .topic-video .form,
+  html body .p-topics-update .topic-video .form,
+  html body .p-articles-new .topic-video .form,
+  html body .p-articles-edit .topic-video .form,
+  html body .p-articles-create .topic-video .form,
+  html body .p-articles-update .topic-video .form,
+  .topic-video .form,
+  .topic-video .remove-form {
+    background-color: rgba(22, 22, 28, 0.88) !important;
+    backdrop-filter: blur(20px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 12px !important;
+    padding: 14px 18px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
+    color: #e4e4e9 !important;
+  }
+
+  html body .topic-video .form label,
+  html body .form:has(.topic_video_url) label,
+  .topic-video .form label {
+    color: #e4e4e9 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    margin-bottom: 5px !important;
+  }
+
+  html body .topic-video .form label abbr,
+  html body .form:has(.topic_video_url) label abbr,
+  .topic-video .form label abbr {
+    color: #f87171 !important;
+    border: none !important;
+    text-decoration: none !important;
+  }
+
+  html body .topic-video .form .hint,
+  html body .form:has(.topic_video_url) .hint,
+  .topic-video .form .hint {
+    color: #a1a1aa !important;
+    font-size: 11.5px !important;
+    margin-top: 4px !important;
+    display: inline-block !important;
+  }
+
+  html body .topic-video .form input[type="url"],
+  html body .topic-video .form input[type="text"],
+  html body .topic-video .form select,
+  html body .form:has(.topic_video_url) input,
+  html body .form:has(.topic_video_url) select,
+  .topic-video .form input,
+  .topic-video .form select {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    padding: 7px 12px !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25) !important;
+    transition: all 150ms ease !important;
+  }
+
+  html body .topic-video .form select option,
+  html body .form:has(.topic_video_url) select option,
+  .topic-video .form select option {
+    background-color: #1a1a22 !important;
+    color: #ffffff !important;
+  }
+
+  html body .topic-video .form input:focus,
+  html body .topic-video .form select:focus,
+  html body .form:has(.topic_video_url) input:focus,
+  html body .form:has(.topic_video_url) select:focus,
+  .topic-video .form input:focus,
+  .topic-video .form select:focus {
+    border-color: #c4afd4 !important;
+    background-color: rgba(255, 255, 255, 0.11) !important;
+    box-shadow: 0 0 0 3px rgba(196, 175, 212, 0.25) !important;
+    outline: none !important;
+  }
+
+  html body .topic-video .form .b-button.attach,
+  html body .form:has(.topic_video_url) .b-button.attach,
+  .topic-video .form .b-button.attach {
+    background: rgba(152, 132, 165, 0.25) !important;
+    border: 1px solid rgba(196, 175, 212, 0.45) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    padding: 7px 18px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 150ms ease !important;
+  }
+
+  html body .topic-video .form .b-button.attach:hover,
+  html body .form:has(.topic_video_url) .b-button.attach:hover,
+  .topic-video .form .b-button.attach:hover {
+    background: rgba(152, 132, 165, 0.45) !important;
+    border-color: #c4afd4 !important;
+    box-shadow: 0 0 14px rgba(196, 175, 212, 0.35) !important;
+    color: #ffffff !important;
+  }
+
   /* --- Spoilers, Comments, Loaders (macOS Card Style) --- */
   html body .b-comments .comments-hider,
   html body .collapsed,
