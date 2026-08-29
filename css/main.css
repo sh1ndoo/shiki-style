@@ -5988,9 +5988,25 @@
   #profiles_show .l-page,
   .l-page {
     max-width: 100% !important;
-    border-radius: 12px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    border-radius: 0 !important;
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: calc(100vh - var(--top-menu-height, 46px)) !important;
+  }
+
+  html body .l-footer,
+  .l-footer {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background-color: rgba(20, 20, 23, 0.94) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
   html body .l-top_menu-v2 .global-search,
@@ -6022,14 +6038,35 @@
   #profiles_show .l-page,
   .l-page {
     border-radius: 0 !important;
+    border: none !important;
     border-left: none !important;
     border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
     margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     box-shadow: none !important;
     padding: 10px 8px !important;
     box-sizing: border-box !important;
+    min-height: calc(100vh - var(--top-menu-height, 46px)) !important;
+  }
+
+  html body .l-footer,
+  .l-footer {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background-color: rgba(20, 20, 23, 0.94) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    padding: 16px 10px !important;
   }
 
   /* Prevent iOS Safari auto-zoom on input focus */
