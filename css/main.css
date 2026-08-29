@@ -1479,7 +1479,7 @@
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
     font-size: 13px !important;
     line-height: 1.6 !important;
-    padding: 34px 14px 14px 14px !important;
+    padding: 30px 14px 12px 14px !important;
     position: relative !important;
     overflow-x: auto !important;
     white-space: pre !important;
@@ -1505,6 +1505,7 @@
   html body .b-code-v2:before,
   pre.b-code-v2:before,
   .b-code-v2:before {
+    content: attr(data-language) !important;
     background-color: rgba(152, 132, 165, 0.2) !important;
     border: 1px solid rgba(196, 175, 212, 0.35) !important;
     border-radius: 4px !important;
@@ -1521,20 +1522,29 @@
     top: 8px !important;
   }
 
-  /* macOS Window Dots in top-left */
+  /* Default "code" label when language is missing, empty, or unrecognised */
+  html body pre.b-code-v2:not([data-language]):before,
+  html body pre.b-code-v2[data-language=""]:before,
+  html body pre.b-code-v2[data-language="none"]:before,
+  html body .b-code-v2:not([data-language]):before,
+  html body .b-code-v2[data-language=""]:before,
+  html body .b-code-v2[data-language="none"]:before,
+  pre.b-code-v2:not([data-language]):before,
+  pre.b-code-v2[data-language=""]:before,
+  pre.b-code-v2[data-language="none"]:before,
+  .b-code-v2:not([data-language]):before,
+  .b-code-v2[data-language=""]:before,
+  .b-code-v2[data-language="none"]:before {
+    content: "code" !important;
+  }
+
+  /* Hide macOS Window Dots */
   html body pre.b-code-v2:after,
   html body .b-code-v2:after,
   pre.b-code-v2:after,
   .b-code-v2:after {
-    content: '' !important;
-    position: absolute !important;
-    top: 13px !important;
-    left: 12px !important;
-    width: 8px !important;
-    height: 8px !important;
-    border-radius: 50% !important;
-    background: #ff5f56 !important;
-    box-shadow: 14px 0 0 #ffbd2e, 28px 0 0 #27c93f !important;
+    display: none !important;
+    content: none !important;
   }
 
   /* Syntax Highlighting */
