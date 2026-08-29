@@ -3980,57 +3980,82 @@
     color: #ffffff !important;
   }
 
-  /* --- Topic / Comment Mobile Actions Trigger (.item-mobile) --- */
-  html body .b-topic .item-mobile,
-  html body .b-comment .item-mobile,
-  html body .b-message .item-mobile,
-  html body .b-dialog .item-mobile,
-  html body .item-mobile {
-    position: absolute !important;
-    right: 0 !important;
-    top: -5px !important;
-    width: 28px !important;
-    height: 28px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #a1a1aa !important;
-    background: rgba(255, 255, 255, 0.06) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    border-radius: 6px !important;
-    cursor: pointer !important;
-    z-index: 10 !important;
-    transition: all 150ms ease !important;
-  }
-
-  html body .item-mobile:hover {
-    color: #ffffff !important;
-    background: rgba(152, 132, 165, 0.25) !important;
-    border-color: rgba(152, 132, 165, 0.5) !important;
-  }
-
-  html body .item-mobile.selected {
-    color: #ffffff !important;
-    background: rgba(152, 132, 165, 0.35) !important;
-    border-color: #9884a5 !important;
-    box-shadow: 0 0 10px rgba(152, 132, 165, 0.3) !important;
-  }
-
-  html body .item-mobile:before {
-    font-size: 16px !important;
-    line-height: 1 !important;
-    color: inherit !important;
-    width: auto !important;
-  }
-
+  /* --- Hide .item-mobile on Desktop / PC (>= 1024px) --- */
   @media screen and (min-width: 1024px) {
-    html body .item-mobile {
+    html body .b-topic .item-mobile,
+    html body .b-comment .item-mobile,
+    html body .b-message .item-mobile,
+    html body .b-dialog .item-mobile,
+    html body .inner .item-mobile,
+    html body .item-mobile,
+    .b-topic .item-mobile,
+    .b-comment .item-mobile,
+    .b-message .item-mobile,
+    .b-dialog .item-mobile,
+    .inner .item-mobile,
+    .item-mobile {
       display: none !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      opacity: 0 !important;
     }
   }
 
-  /* Prevent aside.buttons & .item-ignore from colliding with .item-mobile */
+  /* --- Topic / Comment Mobile Actions Trigger (.item-mobile) Only on Mobile/Tablet (<= 1023px) --- */
   @media screen and (max-width: 1023px) {
+    html body .b-topic .item-mobile,
+    html body .b-comment .item-mobile,
+    html body .b-message .item-mobile,
+    html body .b-dialog .item-mobile,
+    html body .inner .item-mobile,
+    html body .item-mobile,
+    .b-topic .item-mobile,
+    .b-comment .item-mobile,
+    .b-message .item-mobile,
+    .b-dialog .item-mobile,
+    .inner .item-mobile,
+    .item-mobile {
+      position: absolute !important;
+      right: 0 !important;
+      top: -5px !important;
+      width: 28px !important;
+      height: 28px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #a1a1aa !important;
+      background: rgba(255, 255, 255, 0.06) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      border-radius: 6px !important;
+      cursor: pointer !important;
+      z-index: 10 !important;
+      transition: all 150ms ease !important;
+    }
+
+    html body .item-mobile:hover,
+    .item-mobile:hover {
+      color: #ffffff !important;
+      background: rgba(152, 132, 165, 0.25) !important;
+      border-color: rgba(152, 132, 165, 0.5) !important;
+    }
+
+    html body .item-mobile.selected,
+    .item-mobile.selected {
+      color: #ffffff !important;
+      background: rgba(152, 132, 165, 0.35) !important;
+      border-color: #9884a5 !important;
+      box-shadow: 0 0 10px rgba(152, 132, 165, 0.3) !important;
+    }
+
+    html body .item-mobile:before,
+    .item-mobile:before {
+      font-size: 16px !important;
+      line-height: 1 !important;
+      color: inherit !important;
+      width: auto !important;
+    }
+
+    /* Prevent aside.buttons & .item-ignore from colliding with .item-mobile */
     html body .b-topic > .inner > aside.buttons,
     html body .b-comment > .inner > aside.buttons,
     html body .b-message > .inner > aside.buttons,
