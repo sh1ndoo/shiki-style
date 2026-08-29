@@ -2249,10 +2249,22 @@
   .b-shiki_swiper img,
   .b-catalog_entry .cover .image-decor,
   .image-cutter,
-  .image-cutter img {
+  .image-cutter img,
+  html body .b-menu_logo a,
+  html body .b-menu_logo picture,
+  html body .b-menu_logo img,
+  .b-menu_logo a,
+  .b-menu_logo picture,
+  .b-menu_logo img {
     border-radius: 8px !important;
     overflow: hidden !important;
     clip-path: inset(0 round 8px) !important;
+  }
+
+  html body .b-menu_logo a,
+  .b-menu_logo a {
+    display: inline-block !important;
+    line-height: 0 !important;
   }
 
   /* Mobile slider arrows hidden on PC / Desktop */
