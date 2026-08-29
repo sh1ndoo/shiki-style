@@ -1421,6 +1421,51 @@
     color: #ffffff !important;
   }
 
+  /* --- Image Upload Dropzone (.b-dropzone) --- */
+  html body .b-dropzone,
+  .b-dropzone {
+    background-color: rgba(22, 22, 28, 0.65) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 2px dashed rgba(196, 175, 212, 0.35) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease !important;
+  }
+
+  html body .b-dropzone:hover,
+  html body .b-dropzone.dragover,
+  .b-dropzone:hover,
+  .b-dropzone.dragover {
+    background-color: rgba(152, 132, 165, 0.14) !important;
+    border-color: #c4afd4 !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 20px rgba(196, 175, 212, 0.25) !important;
+  }
+
+  html body .b-dropzone:before,
+  html body .b-dropzone:after,
+  .b-dropzone:before,
+  .b-dropzone:after {
+    color: #a1a1aa !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    transition: color 150ms ease, text-shadow 150ms ease !important;
+  }
+
+  html body .b-dropzone:hover:before,
+  html body .b-dropzone:hover:after,
+  .b-dropzone:hover:before,
+  .b-dropzone:hover:after {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(196, 175, 212, 0.4) !important;
+  }
+
+  html body .b-dropzone .thank-you,
+  .b-dropzone .thank-you {
+    color: #4ade80 !important;
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.35) !important;
+  }
+
   /* --- Spoilers, Comments, Loaders (macOS Card Style) --- */
   html body .b-comments .comments-hider,
   html body .collapsed,
