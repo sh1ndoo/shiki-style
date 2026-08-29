@@ -3250,6 +3250,81 @@
     color: rgba(255, 255, 255, 0.15) !important;
   }
 
+  /* --- Rating & Stats Bar Charts (#rates_scores_stats, .bar.simple) --- */
+  html body .bar.simple .bar.s0,
+  html body #rates_scores_stats .bar.s0,
+  .bar.simple .bar.s0 {
+    background-color: #c4afd4 !important;
+    border-radius: 3px !important;
+    transition: background-color 150ms ease !important;
+  }
+
+  html body .bar.simple .bar.s1,
+  html body #rates_scores_stats .bar.s1,
+  .bar.simple .bar.s1 {
+    background-color: #aa93bd !important;
+    border-radius: 3px !important;
+    transition: background-color 150ms ease !important;
+  }
+
+  html body .bar.simple .bar.s2,
+  html body #rates_scores_stats .bar.s2,
+  .bar.simple .bar.s2 {
+    background-color: #9078a3 !important;
+    border-radius: 3px !important;
+    transition: background-color 150ms ease !important;
+  }
+
+  html body .bar.simple .bar.s3,
+  html body #rates_scores_stats .bar.s3,
+  .bar.simple .bar.s3 {
+    background-color: #765f88 !important;
+    border-radius: 3px !important;
+    transition: background-color 150ms ease !important;
+  }
+
+  html body .bar.simple .bar.s0:hover,
+  html body #rates_scores_stats .bar.s0:hover,
+  .bar.simple .bar.s0:hover {
+    background-color: #d8c8e8 !important;
+    box-shadow: 0 0 10px rgba(196, 175, 212, 0.4) !important;
+  }
+
+  html body .bar.simple .bar.s1:hover,
+  html body #rates_scores_stats .bar.s1:hover,
+  .bar.simple .bar.s1:hover {
+    background-color: #c4afd4 !important;
+    box-shadow: 0 0 8px rgba(196, 175, 212, 0.3) !important;
+  }
+
+  html body .bar.simple .bar.s2:hover,
+  html body #rates_scores_stats .bar.s2:hover,
+  .bar.simple .bar.s2:hover {
+    background-color: #aa93bd !important;
+  }
+
+  html body .bar.simple .bar.s3:hover,
+  html body #rates_scores_stats .bar.s3:hover,
+  .bar.simple .bar.s3:hover {
+    background-color: #9078a3 !important;
+  }
+
+  html body .bar.horizontal .line .x_label,
+  html body .bar.vertical .line .x_label,
+  html body .bar.vertical .y_label,
+  .bar .x_label,
+  .bar .y_label {
+    color: #a1a1aa !important;
+  }
+
+  html body .bar.horizontal .line .bar-container .value,
+  html body .bar.vertical .line .bar-container .value,
+  .bar .bar-container .value {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  }
+
   /* --- Scores Container & MAL Score Badge --- */
   html body .scores,
   .scores {
