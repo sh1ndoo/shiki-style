@@ -4507,6 +4507,18 @@
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.25) inset !important;
   }
 
+  /* --- Shiki Editor Toolbar (.controls) --- */
+  html body .b-shiki_editor .controls,
+  html body .b-shiki_editor-v2 .controls,
+  html body .controls:has(.editor-controls),
+  html body .controls:has(.markers),
+  .b-shiki_editor .controls,
+  .controls:has(.editor-controls) {
+    height: auto !important;
+    min-height: 28px !important;
+    margin-bottom: 12px !important;
+  }
+
   html body .editor-controls,
   .editor-controls {
     display: inline-flex !important;
