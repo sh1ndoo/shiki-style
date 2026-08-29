@@ -2175,6 +2175,37 @@
     margin: 0 !important;
   }
 
+  /* --- Topic Source Link (.source) --- */
+  html body .b-topic > .inner footer .source,
+  html body .b-topic footer .source,
+  html body .b-topic .source,
+  html body .b-news .source,
+  html body .source,
+  .b-topic > .inner footer .source,
+  .b-topic footer .source,
+  .source {
+    margin-left: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    vertical-align: middle !important;
+  }
+
+  html body .source .b-link,
+  .source .b-link {
+    color: #c4afd4 !important;
+    transition: color 120ms ease !important;
+  }
+
+  html body .source .b-link:hover,
+  .source .b-link:hover {
+    color: #ffffff !important;
+  }
+
+  html body .source .b-link:before,
+  .source .b-link:before {
+    color: #a1a1aa !important;
+  }
+
   /* --- Remove Dashed Border in Sidebar Entries (.p-topics .l-menu) --- */
   html body.p-topics .l-menu .calendar .entry,
   html body.p-topics .l-menu .critiques .entry,
@@ -3522,6 +3553,108 @@
     color: #ffffff !important;
     border-color: #9884a5 !important;
     background-color: rgba(152, 132, 165, 0.2) !important;
+  }
+
+  /* --- Tablet / iPad Menu Toggler (.menu-toggler) --- */
+  html body .l-page .menu-toggler,
+  .l-page .menu-toggler {
+    z-index: 999 !important;
+  }
+
+  html body .l-page .menu-toggler .toggler,
+  .l-page .menu-toggler .toggler {
+    background: rgba(26, 26, 32, 0.88) !important;
+    background-color: rgba(26, 26, 32, 0.88) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), 0 0 12px rgba(152, 132, 165, 0.2) !important;
+    color: #ffffff !important;
+    transition: all 180ms ease !important;
+    overflow: hidden !important;
+    padding-bottom: 4px !important;
+    padding-top: 6px !important;
+  }
+
+  html body .l-page .menu-toggler:hover .toggler,
+  html body .l-page .menu-toggler .toggler:hover,
+  .l-page .menu-toggler .toggler:hover {
+    background: rgba(152, 132, 165, 0.25) !important;
+    background-color: rgba(152, 132, 165, 0.25) !important;
+    border-color: rgba(152, 132, 165, 0.6) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55), 0 0 16px rgba(152, 132, 165, 0.35) !important;
+    transform: translateX(-2px) !important;
+  }
+
+  html body .l-page .menu-toggler .toggler:before,
+  .l-page .menu-toggler .toggler:before {
+    color: #e4e4e9 !important;
+    font-size: 10.5px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+  }
+
+  html body .l-page .menu-toggler .toggler:after,
+  .l-page .menu-toggler .toggler:after {
+    color: #c4afd4 !important;
+    font-size: 18px !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body .l-page .menu-toggler:hover .toggler:after,
+  html body .l-page.menu-expanded .menu-toggler .toggler:after,
+  .l-page.menu-expanded .menu-toggler .toggler:after {
+    color: #ffffff !important;
+  }
+
+  /* --- Topic & Comment Main Controls (.main-controls) --- */
+  html body .main-controls > *,
+  html body .main-controls span,
+  html body .main-controls a,
+  html body .aside-expanded .main-controls span,
+  html body .aside-expanded .main-controls a,
+  html body aside.buttons .main-controls span,
+  html body aside.buttons .main-controls a,
+  .main-controls > *,
+  .main-controls span,
+  .main-controls a {
+    color: #a1a1aa !important;
+    transition: color 150ms ease, opacity 150ms ease !important;
+  }
+
+  html body .main-controls > *:before,
+  html body .main-controls > *:after,
+  html body .main-controls span:before,
+  html body .main-controls span:after,
+  html body .main-controls a:before,
+  html body .main-controls a:after,
+  .main-controls > *:before,
+  .main-controls > *:after {
+    color: inherit !important;
+  }
+
+  html body .main-controls > *:hover,
+  html body .main-controls span:hover,
+  html body .main-controls a:hover,
+  html body .aside-expanded .main-controls span:hover,
+  html body .aside-expanded .main-controls a:hover,
+  html body aside.buttons .main-controls span:hover,
+  html body aside.buttons .main-controls a:hover,
+  .main-controls > *:hover,
+  .main-controls span:hover,
+  .main-controls a:hover {
+    color: #ffffff !important;
+  }
+
+  html body .main-controls > *:active,
+  html body .main-controls span:active,
+  html body .main-controls a:active,
+  .main-controls > *:active,
+  .main-controls span:active,
+  .main-controls a:active {
+    color: #c4afd4 !important;
   }
 
   /* --- Tables & Lists --- */
