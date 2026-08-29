@@ -1353,6 +1353,24 @@
     color: #e4e4e9 !important;
   }
 
+  /* --- User Mentions (.b-mention) --- */
+  html body .b-mention s,
+  html body a.b-mention s,
+  .b-mention s,
+  a.b-mention s {
+    color: #c4afd4 !important;
+    text-decoration: none !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body .b-mention:hover s,
+  html body a.b-mention:hover s,
+  .b-mention:hover s,
+  a.b-mention:hover s {
+    color: #e4d5f0 !important;
+    text-decoration: none !important;
+  }
+
   /* --- Quotes (Transparent Background + Lilac Border) --- */
   html body .b-quote,
   html body blockquote,
