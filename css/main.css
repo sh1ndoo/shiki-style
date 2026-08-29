@@ -951,11 +951,26 @@
   html body .b-shiki_editor .body .editor textarea,
   html body input[type="text"],
   html body input[type="search"],
+  html body input[type="email"],
+  html body input[type="password"],
+  html body input[type="url"],
+  html body input[type="number"],
+  html body input[type="tel"],
+  html body input.string,
   html body textarea,
   html body select,
   .b-collection_search .field input,
   .b-shiki_editor .body .editor textarea,
-  input[type="text"], input[type="search"], textarea, select {
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="password"],
+  input[type="url"],
+  input[type="number"],
+  input[type="tel"],
+  input.string,
+  textarea,
+  select {
     background-color: rgba(255, 255, 255, 0.07) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-radius: 10px !important;
@@ -970,7 +985,14 @@
   html body .b-shiki_editor .body .editor textarea:focus,
   html body input[type="text"]:focus,
   html body input[type="search"]:focus,
+  html body input[type="email"]:focus,
+  html body input[type="password"]:focus,
+  html body input[type="url"]:focus,
+  html body input[type="number"]:focus,
+  html body input[type="tel"]:focus,
+  html body input.string:focus,
   html body textarea:focus,
+  html body select:focus,
   .b-collection_search .field input:focus,
   .b-shiki_editor .body .editor textarea:focus {
     background-color: rgba(255, 255, 255, 0.11) !important;
@@ -978,6 +1000,31 @@
     color: #ffffff !important;
     outline: none !important;
     box-shadow: 0 0 0 3px rgba(152, 132, 165, 0.3) !important;
+  }
+
+  /* --- Disabled Inputs & Controls (input:disabled, select:disabled, textarea:disabled) --- */
+  html body input:disabled,
+  html body input[disabled],
+  html body textarea:disabled,
+  html body textarea[disabled],
+  html body select:disabled,
+  html body select[disabled],
+  html body .b-input input[disabled],
+  html body .b-input input:disabled,
+  input:disabled,
+  input[disabled],
+  textarea:disabled,
+  textarea[disabled],
+  select:disabled,
+  select[disabled],
+  .b-input input[disabled] {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #8e8e93 !important;
+    -webkit-text-fill-color: #8e8e93 !important;
+    cursor: not-allowed !important;
+    opacity: 0.7 !important;
+    box-shadow: none !important;
   }
 
   html body .b-collection_search .field,
