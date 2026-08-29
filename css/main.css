@@ -5056,6 +5056,15 @@
     font-weight: 400 !important;
   }
 
+  /* --- List Bullet Dots (.b-list li:before) --- */
+  html body .b-list li:before,
+  html body .b-text_with_paragraphs .b-list li:before,
+  .b-list li:before {
+    background: #c4afd4 !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 6px rgba(196, 175, 212, 0.4) !important;
+  }
+
   /* --- Block List & Filter Dropdown Items (.b-block_list li, li[data-field]) --- */
   html body .b-block_list li,
   html body li[data-field],
