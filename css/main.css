@@ -226,6 +226,19 @@
   /* --- Subheadline Buttons (.subheadline-buttons) --- */
   html body .subheadline-buttons,
   .subheadline-buttons {
+    margin-top: 3px !important;
+    position: absolute !important;
+    right: 3px !important;
+    z-index: 2 !important;
+  }
+
+  /* List switchers exception in subheadline-buttons */
+  html body .subheadline-buttons:has(.b-list_switchers),
+  html body .subheadline-buttons:has(.switcher),
+  html body .p-user_rates-index .subheadline-buttons,
+  .subheadline-buttons:has(.b-list_switchers),
+  .subheadline-buttons:has(.switcher),
+  .p-user_rates-index .subheadline-buttons {
     margin-top: 11px !important;
     position: absolute !important;
     right: 10px !important;
