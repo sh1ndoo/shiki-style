@@ -223,6 +223,15 @@
     color: #ffffff !important;
   }
 
+  /* --- Subheadline Buttons (.subheadline-buttons) --- */
+  html body .subheadline-buttons,
+  .subheadline-buttons {
+    margin-top: 11px !important;
+    position: absolute !important;
+    right: 10px !important;
+    z-index: 2 !important;
+  }
+
   /* --- Links (Accent #c4afd4, No Glow) --- */
   html body a,
   html body a:link,
