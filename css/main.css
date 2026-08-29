@@ -3609,17 +3609,101 @@
     color: #ffffff !important;
   }
 
-  /* --- Topic & Comment Main Controls (.main-controls) --- */
+  /* --- Topic / Comment Mobile Actions Trigger (.item-mobile) --- */
+  html body .b-topic .item-mobile,
+  html body .b-comment .item-mobile,
+  html body .b-message .item-mobile,
+  html body .b-dialog .item-mobile,
+  html body .item-mobile {
+    position: absolute !important;
+    right: 0 !important;
+    top: -5px !important;
+    width: 28px !important;
+    height: 28px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #a1a1aa !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    transition: all 150ms ease !important;
+  }
+
+  html body .item-mobile:hover {
+    color: #ffffff !important;
+    background: rgba(152, 132, 165, 0.25) !important;
+    border-color: rgba(152, 132, 165, 0.5) !important;
+  }
+
+  html body .item-mobile.selected {
+    color: #ffffff !important;
+    background: rgba(152, 132, 165, 0.35) !important;
+    border-color: #9884a5 !important;
+    box-shadow: 0 0 10px rgba(152, 132, 165, 0.3) !important;
+  }
+
+  html body .item-mobile:before {
+    font-size: 16px !important;
+    line-height: 1 !important;
+    color: inherit !important;
+    width: auto !important;
+  }
+
+  @media screen and (min-width: 1024px) {
+    html body .item-mobile {
+      display: none !important;
+    }
+  }
+
+  /* Prevent aside.buttons & .item-ignore from colliding with .item-mobile */
+  @media screen and (max-width: 1023px) {
+    html body .b-topic > .inner > aside.buttons,
+    html body .b-comment > .inner > aside.buttons,
+    html body .b-message > .inner > aside.buttons,
+    html body .b-dialog > .inner > aside.buttons,
+    html body .b-topic.aside-expanded > .inner > aside.buttons,
+    html body .b-comment.aside-expanded > .inner > aside.buttons,
+    html body .b-message.aside-expanded > .inner > aside.buttons,
+    html body .b-dialog.aside-expanded > .inner > aside.buttons,
+    html body aside.buttons {
+      margin-right: 36px !important;
+    }
+  }
+
+  /* --- Topic & Comment Controls (.main-controls, .moderation-controls, .delete-controls) --- */
   html body .main-controls > *,
   html body .main-controls span,
   html body .main-controls a,
+  html body .moderation-controls > *,
+  html body .moderation-controls span,
+  html body .moderation-controls a,
+  html body .delete-controls > *,
+  html body .delete-controls span,
+  html body .delete-controls a,
   html body .aside-expanded .main-controls span,
   html body .aside-expanded .main-controls a,
+  html body .aside-expanded .moderation-controls span,
+  html body .aside-expanded .moderation-controls a,
+  html body .aside-expanded .delete-controls span,
+  html body .aside-expanded .delete-controls a,
   html body aside.buttons .main-controls span,
   html body aside.buttons .main-controls a,
+  html body aside.buttons .moderation-controls span,
+  html body aside.buttons .moderation-controls a,
+  html body aside.buttons .delete-controls span,
+  html body aside.buttons .delete-controls a,
   .main-controls > *,
   .main-controls span,
-  .main-controls a {
+  .main-controls a,
+  .moderation-controls > *,
+  .moderation-controls span,
+  .moderation-controls a,
+  .delete-controls > *,
+  .delete-controls span,
+  .delete-controls a {
     color: #a1a1aa !important;
     transition: color 150ms ease, opacity 150ms ease !important;
   }
@@ -3630,30 +3714,78 @@
   html body .main-controls span:after,
   html body .main-controls a:before,
   html body .main-controls a:after,
+  html body .moderation-controls > *:before,
+  html body .moderation-controls > *:after,
+  html body .moderation-controls span:before,
+  html body .moderation-controls span:after,
+  html body .moderation-controls a:before,
+  html body .moderation-controls a:after,
+  html body .delete-controls > *:before,
+  html body .delete-controls > *:after,
+  html body .delete-controls span:before,
+  html body .delete-controls span:after,
+  html body .delete-controls a:before,
+  html body .delete-controls a:after,
   .main-controls > *:before,
-  .main-controls > *:after {
+  .main-controls > *:after,
+  .moderation-controls > *:before,
+  .moderation-controls > *:after,
+  .delete-controls > *:before,
+  .delete-controls > *:after {
     color: inherit !important;
   }
 
   html body .main-controls > *:hover,
   html body .main-controls span:hover,
   html body .main-controls a:hover,
+  html body .moderation-controls > *:hover,
+  html body .moderation-controls span:hover,
+  html body .moderation-controls a:hover,
+  html body .delete-controls > *:hover,
+  html body .delete-controls span:hover,
+  html body .delete-controls a:hover,
   html body .aside-expanded .main-controls span:hover,
   html body .aside-expanded .main-controls a:hover,
+  html body .aside-expanded .moderation-controls span:hover,
+  html body .aside-expanded .moderation-controls a:hover,
+  html body .aside-expanded .delete-controls span:hover,
+  html body .aside-expanded .delete-controls a:hover,
   html body aside.buttons .main-controls span:hover,
   html body aside.buttons .main-controls a:hover,
+  html body aside.buttons .moderation-controls span:hover,
+  html body aside.buttons .moderation-controls a:hover,
+  html body aside.buttons .delete-controls span:hover,
+  html body aside.buttons .delete-controls a:hover,
   .main-controls > *:hover,
   .main-controls span:hover,
-  .main-controls a:hover {
+  .main-controls a:hover,
+  .moderation-controls > *:hover,
+  .moderation-controls span:hover,
+  .moderation-controls a:hover,
+  .delete-controls > *:hover,
+  .delete-controls span:hover,
+  .delete-controls a:hover {
     color: #ffffff !important;
   }
 
   html body .main-controls > *:active,
   html body .main-controls span:active,
   html body .main-controls a:active,
+  html body .moderation-controls > *:active,
+  html body .moderation-controls span:active,
+  html body .moderation-controls a:active,
+  html body .delete-controls > *:active,
+  html body .delete-controls span:active,
+  html body .delete-controls a:active,
   .main-controls > *:active,
   .main-controls span:active,
-  .main-controls a:active {
+  .main-controls a:active,
+  .moderation-controls > *:active,
+  .moderation-controls span:active,
+  .moderation-controls a:active,
+  .delete-controls > *:active,
+  .delete-controls span:active,
+  .delete-controls a:active {
     color: #c4afd4 !important;
   }
 
