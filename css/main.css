@@ -1979,9 +1979,7 @@
   }
 
   html body .b-stats_bar .bar,
-  html body .p-profiles-show .achievements .cc-achievements .b-achievement,
-  .b-stats_bar .bar,
-  .p-profiles-show .achievements .cc-achievements .b-achievement {
+  .b-stats_bar .bar {
     border-radius: 6px !important;
   }
 
@@ -2056,18 +2054,15 @@
     box-shadow: 0 0 0 2px rgba(152, 132, 165, 0.3) !important;
   }
 
-  /* --- Achievements, Authors, Franchises & Badges (Rounded Corners) --- */
-  html body .cc-achievements .b-achievement,
+  /* --- Achievements, Authors, Franchises & Badges (Rounded Corners on Images) --- */
   html body .cc-achievements .b-achievement .c-image,
   html body .cc-achievements .b-achievement .c-image .inner,
   html body .cc-achievements .b-achievement .c-image img,
   html body .cc-achievements .b-achievement .border,
-  html body .cc-authors .b-achievement,
   html body .cc-authors .b-achievement .c-image,
   html body .cc-authors .b-achievement .c-image .inner,
   html body .cc-authors .b-achievement .c-image img,
   html body .cc-authors .b-achievement .border,
-  html body .b-achievement.is-badge,
   html body .b-achievement.is-badge .c-image,
   html body .b-achievement.is-badge .c-image .inner,
   html body .b-achievement.is-badge .c-image img,
@@ -2078,6 +2073,27 @@
   .b-achievement .border {
     border-radius: 8px !important;
     overflow: hidden !important;
+  }
+
+  /* Prevent rounded corners or overflow: hidden from clipping achievement titles */
+  html body .b-achievement,
+  html body .cc-achievements .b-achievement,
+  html body .cc-authors .b-achievement,
+  .b-achievement {
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+
+  html body .b-achievement .c-about,
+  .b-achievement .c-about {
+    overflow: visible !important;
+  }
+
+  html body .b-achievement .c-about .title,
+  .b-achievement .c-about .title {
+    margin-top: 0 !important;
+    padding-left: 2px !important;
+    overflow: visible !important;
   }
 
   html body .cc-franchises .b-badge,
