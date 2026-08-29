@@ -2001,6 +2001,35 @@
     color: #ffffff !important;
   }
 
+  /* --- Profile Additionals (.c-additionals) --- */
+  html body .c-additionals b,
+  html body .p-profiles .profile-head .c-info .c-additionals b,
+  .c-additionals b,
+  .p-profiles .profile-head .c-info .c-additionals b {
+    color: #e4e4e9 !important;
+    font-weight: 600 !important;
+  }
+
+  html body .c-additionals div a,
+  html body .p-profiles .profile-head .c-info .c-additionals div a,
+  .c-additionals div a {
+    color: #c4afd4 !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body .c-additionals div a:hover,
+  html body .p-profiles .profile-head .c-info .c-additionals div a:hover,
+  .c-additionals div a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(196, 175, 212, 0.4) !important;
+  }
+
+  html body .c-additionals div:after,
+  html body .p-profiles .profile-head .c-info .c-additionals div:after,
+  .c-additionals div:after {
+    color: rgba(255, 255, 255, 0.3) !important;
+  }
+
   /* --- Stats Bars & Activity (Clean Flat Design) --- */
   html body .b-stats_bar,
   html body .b-stats_bar .stat_names,
