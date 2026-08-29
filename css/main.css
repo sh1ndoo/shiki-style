@@ -3111,14 +3111,14 @@
     margin: 0 !important;
   }
 
-  html body .b-anime_status_tag + .b-anime_status_tag,
+  html body .tags .b-anime_status_tag + .b-anime_status_tag,
   html body .b-news_wall-topic .status-line .tags .b-anime_status_tag:not(:last-child),
   html body .b-news_wall-topic .status-line .tags .b-anime_status_tag,
   html body .b-topic > .inner .prebody .b-anime_status_tag,
   html body .b-topic > .inner footer .b-anime_status_tag,
   html body .b-topic .prebody .b-anime_status_tag,
   html body .b-topic footer .b-anime_status_tag,
-  .b-anime_status_tag + .b-anime_status_tag,
+  .tags .b-anime_status_tag + .b-anime_status_tag,
   .b-news_wall-topic .status-line .tags .b-anime_status_tag:not(:last-child),
   .b-news_wall-topic .status-line .tags .b-anime_status_tag,
   .b-topic > .inner .prebody .b-anime_status_tag,
@@ -3258,6 +3258,7 @@
     border-radius: 4px !important;
     color: #ffffff !important;
     padding: 1px 6px !important;
+    margin: 0 2px !important;
     display: inline-flex !important;
     align-items: center !important;
     font-size: 11px !important;
@@ -3283,6 +3284,7 @@
     background-color: rgba(46, 160, 67, 0.15) !important;
     border: 1px solid rgba(46, 160, 67, 0.6) !important;
     color: #7ee787 !important;
+    margin: 0 2px !important;
   }
 
   /* Анонс / Брошено (Soft Red + Bright Border) */
@@ -3295,6 +3297,7 @@
     background-color: rgba(230, 57, 70, 0.15) !important;
     border: 1px solid rgba(230, 57, 70, 0.6) !important;
     color: #ff7b72 !important;
+    margin: 0 2px !important;
   }
 
   /* Онгоинг / Смотрю (Soft Blue + Bright Border) */
@@ -3307,7 +3310,7 @@
     background-color: rgba(30, 144, 255, 0.15) !important;
     border: 1px solid rgba(30, 144, 255, 0.6) !important;
     color: #79c0ff !important;
-    margin-left: 2px !important;
+    margin: 0 2px !important;
   }
 
   /* Эпизод / Серии (Soft Amber/Orange + Bright Border) */
