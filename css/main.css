@@ -2269,6 +2269,30 @@
     color: #a1a1aa !important;
   }
 
+  /* --- Show More / Hide More Buttons (.b-show_more) --- */
+  html body .b-show_more,
+  html body .b-show_more-more .hide-more,
+  .b-show_more,
+  .b-show_more-more .hide-more {
+    color: #c4afd4 !important;
+    transition: color 150ms ease, opacity 150ms ease !important;
+  }
+
+  html body .b-show_more:hover,
+  html body .b-show_more-more .hide-more:hover,
+  .b-show_more:hover,
+  .b-show_more-more .hide-more:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(196, 175, 212, 0.4) !important;
+  }
+
+  html body .b-show_more:active,
+  html body .b-show_more-more .hide-more:active,
+  .b-show_more:active,
+  .b-show_more-more .hide-more:active {
+    color: #d8c8e8 !important;
+  }
+
   /* --- Remove Dashed Border in Sidebar Entries (.p-topics .l-menu) --- */
   html body.p-topics .l-menu .calendar .entry,
   html body.p-topics .l-menu .critiques .entry,
