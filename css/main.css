@@ -219,7 +219,7 @@
   h2.subheadline.green.m10 {
     font-size: 14px !important;
     font-weight: 500 !important;
-    border-left: 3px solid #9884a5 !important;
+    border-left: none !important;
     color: #ffffff !important;
   }
 
