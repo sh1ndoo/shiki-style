@@ -2301,7 +2301,7 @@
   /* --- Toast Notifications (.toastify) macOS Dark Glass --- */
   html body .toastify,
   .toastify {
-    position: relative !important;
+    position: fixed !important;
     background: rgba(24, 24, 28, 0.9) !important;
     background-color: rgba(24, 24, 28, 0.9) !important;
     background-image: none !important;
@@ -2320,6 +2320,23 @@
     max-width: min(calc(100vw - 28px), 520px) !important;
     box-sizing: border-box !important;
     z-index: 99999 !important;
+  }
+
+  html body .toastify.toastify-top,
+  .toastify.toastify-top {
+    margin-top: 55px !important;
+  }
+
+  html body .toastify.toastify-right,
+  .toastify.toastify-right {
+    right: 20px !important;
+    left: auto !important;
+  }
+
+  html body .toastify.toastify-left,
+  .toastify.toastify-left {
+    left: 20px !important;
+    right: auto !important;
   }
 
   /* Status variants */
