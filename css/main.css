@@ -3045,7 +3045,6 @@
   .b-menu_logo img {
     border-radius: 8px !important;
     overflow: hidden !important;
-    clip-path: inset(0 round 8px) !important;
   }
 
   /* --- News Wall Topic Poster Aspect Ratio & Swiper Fix --- */
@@ -3164,7 +3163,6 @@
     max-width: none !important;
     border-radius: 8px !important;
     overflow: hidden !important;
-    clip-path: inset(0 round 8px) !important;
   }
 
   html body .avatar img,
@@ -4916,7 +4914,6 @@
     max-width: none !important;
     border-radius: 8px !important;
     overflow: hidden !important;
-    clip-path: inset(0 round 8px) !important;
   }
 
   html body.p-dashboards-show .v2 .fc-user-sections .tags,
@@ -6631,7 +6628,6 @@
   .b-catalog_entry .cover {
     display: block !important;
     overflow: visible !important;
-    clip-path: none !important;
     text-decoration: none !important;
   }
 
@@ -6639,7 +6635,6 @@
   .b-catalog_entry .cover .image-decor {
     border-radius: 8px !important;
     overflow: hidden !important;
-    clip-path: inset(0 round 8px) !important;
   }
 
   html body .b-catalog_entry .title,
