@@ -5528,17 +5528,107 @@
       width: auto !important;
     }
 
-    /* Prevent aside.buttons & .item-ignore from colliding with .item-mobile */
-    html body .b-topic > .inner > aside.buttons,
-    html body .b-comment > .inner > aside.buttons,
-    html body .b-message > .inner > aside.buttons,
-    html body .b-dialog > .inner > aside.buttons,
+    /* Отменяем сдвиг комментария/топика влево (-250px) при нажатии на кнопку действий */
+    html body .b-topic.aside-expanded > .inner,
+    html body .b-comment.aside-expanded > .inner,
+    html body .b-message.aside-expanded > .inner,
+    html body .b-dialog.aside-expanded > .inner,
+    html body .b-topic.aside-expanded > .b-comments,
+    html body .aside-expanded > .inner,
+    html body .aside-expanded > .b-comments,
+    .b-topic.aside-expanded > .inner,
+    .b-comment.aside-expanded > .inner,
+    .b-message.aside-expanded > .inner,
+    .b-dialog.aside-expanded > .inner {
+      margin-left: 0 !important;
+      position: relative !important;
+      overflow: visible !important;
+      overflow-x: visible !important;
+      overflow-y: visible !important;
+    }
+
+    /* Панель действий (.aside-expanded aside.buttons) аккуратным выпадающим меню под кнопкой */
     html body .b-topic.aside-expanded > .inner > aside.buttons,
     html body .b-comment.aside-expanded > .inner > aside.buttons,
     html body .b-message.aside-expanded > .inner > aside.buttons,
     html body .b-dialog.aside-expanded > .inner > aside.buttons,
-    html body aside.buttons {
-      margin-right: 8px !important;
+    html body .aside-expanded > .inner > aside.buttons,
+    html body .aside-expanded aside.buttons,
+    .b-topic.aside-expanded > .inner > aside.buttons,
+    .b-comment.aside-expanded > .inner > aside.buttons,
+    .b-message.aside-expanded > .inner > aside.buttons,
+    .b-dialog.aside-expanded > .inner > aside.buttons {
+      position: absolute !important;
+      top: 28px !important;
+      right: 0 !important;
+      left: auto !important;
+      float: none !important;
+      display: block !important;
+      width: auto !important;
+      min-width: 145px !important;
+      max-width: calc(100vw - 32px) !important;
+      margin: 0 !important;
+      margin-top: 0 !important;
+      margin-right: 0 !important;
+      padding: 6px !important;
+      background: rgba(22, 18, 28, 0.98) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      border: 1px solid rgba(152, 132, 165, 0.35) !important;
+      border-radius: 8px !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 12px rgba(152, 132, 165, 0.2) !important;
+      z-index: 100 !important;
+    }
+
+    /* Маркеры (оффтоп/новое) не перекрывают кнопку .item-mobile */
+    html body .aside-expanded aside.markers,
+    html body .b-comment.aside-expanded aside.markers,
+    html body .b-topic.aside-expanded aside.markers {
+      position: absolute !important;
+      top: 0 !important;
+      right: 35px !important;
+      padding-right: 0 !important;
+      z-index: 10 !important;
+    }
+
+    /* Пункты меню действий (иконка + текст) */
+    html body .aside-expanded aside.buttons .main-controls > *:not(.hidden),
+    html body .aside-expanded aside.buttons .main-controls span:not(.hidden),
+    html body .aside-expanded aside.buttons .main-controls a:not(.hidden),
+    html body .aside-expanded aside.buttons .moderation-controls > *:not(.hidden),
+    html body .aside-expanded aside.buttons .moderation-controls span:not(.hidden),
+    html body .aside-expanded aside.buttons .moderation-controls a:not(.hidden),
+    html body .aside-expanded aside.buttons .delete-controls > *:not(.hidden),
+    html body .aside-expanded aside.buttons .delete-controls span:not(.hidden),
+    html body .aside-expanded aside.buttons .delete-controls a:not(.hidden) {
+      display: flex !important;
+      align-items: center !important;
+      padding: 6px 10px !important;
+      margin: 2px 0 !important;
+      border-radius: 6px !important;
+      font-size: 13px !important;
+      line-height: 1.3 !important;
+      white-space: nowrap !important;
+      cursor: pointer !important;
+      gap: 8px !important;
+    }
+
+    html body .aside-expanded aside.buttons .main-controls > *:not(.hidden):hover,
+    html body .aside-expanded aside.buttons .main-controls span:not(.hidden):hover,
+    html body .aside-expanded aside.buttons .main-controls a:not(.hidden):hover,
+    html body .aside-expanded aside.buttons .moderation-controls > *:not(.hidden):hover,
+    html body .aside-expanded aside.buttons .moderation-controls span:not(.hidden):hover,
+    html body .aside-expanded aside.buttons .moderation-controls a:not(.hidden):hover,
+    html body .aside-expanded aside.buttons .delete-controls > *:not(.hidden):hover,
+    html body .aside-expanded aside.buttons .delete-controls span:not(.hidden):hover,
+    html body .aside-expanded aside.buttons .delete-controls a:not(.hidden):hover {
+      background: rgba(152, 132, 165, 0.2) !important;
+      color: #ffffff !important;
+    }
+
+    html body .aside-expanded aside.buttons .hidden,
+    html body aside.buttons .hidden {
+      display: none !important;
     }
   }
 
@@ -6172,50 +6262,6 @@
     max-width: 100% !important;
   }
 
-  /* --- Profiles on Mobile --- */
-  html body .profile-head,
-  .profile-head {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  html body .p-profiles .profile-head .c-brief,
-  .profile-head .c-brief {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  html body .p-profiles .profile-head .c-brief .avatar,
-  .profile-head .c-brief .avatar {
-    margin: 0 auto 10px auto !important;
-  }
-
-  html body .p-profiles .profile-head .c-brief .avatar .profile-actions,
-  .profile-head .c-brief .avatar .profile-actions {
-    justify-content: center !important;
-    gap: 8px !important;
-  }
-
-  html body .p-profiles .profile-head .c-brief .avatar .profile-actions a,
-  .profile-head .c-brief .avatar .profile-actions a {
-    min-width: 38px !important;
-    min-height: 38px !important;
-    padding: 6px 12px !important;
-    font-size: 13px !important;
-  }
-
-  html body .p-profiles .profile-head .c-history,
-  .profile-head .c-history {
-    width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding-bottom: 6px !important;
-  }
 
   html body .b-stats_bar,
   html body .b-stats_bar .bar,
@@ -6955,239 +7001,807 @@
 }
 
 /* ============================================================
-   MOBILE PROFILE ADAPTATIONS — SHIKI-STYLE
-   Applies only to mobile/tablet (max-width: 768px).
-   PC layout is untouched.
+   SHIKI-STYLE: COMPREHENSIVE MOBILE PROFILE ADAPTATION (<= 768px)
+   Strictly mobile-only. Desktop (> 1024px) is 100% UNTOUCHED.
    ============================================================ */
 
 @media screen and (max-width: 768px) {
 
-  /* ----------------------------------------------------------
-     1. PROFILE HEAD — переключаем в вертикальную колонку
-     ---------------------------------------------------------- */
+  /* --- 1. Global Mobile Reset & Anti-Overflow --- */
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+  }
 
-  /* Убираем горизонтальное переполнение на всём l-page */
-  html body .l-page {
+  html body .l-page,
+  html body #profiles_show .l-page,
+  .l-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 14px 12px 24px 12px !important;
+    box-sizing: border-box !important;
     overflow-x: hidden !important;
   }
 
-  /* Основной контейнер шапки профиля */
+  /* Universal headline safety */
+  html body .headline,
+  html body .midheadline,
+  html body .subheadline,
+  .headline,
+  .subheadline {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* --- 2. Profile Header (.profile-head): Correct Logical Order --- */
   html body .p-profiles .profile-head,
   html body .profile-head {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    gap: 0 !important;
     width: 100% !important;
-    box-sizing: border-box !important;
+    float: none !important;
+    clear: both !important;
+    gap: 16px !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
   }
 
-  /* c-brief: аватар + имя — строка */
+  /* 2.1 c-brief: Avatar + Name (FIRST in order) */
   html body .p-profiles .profile-head .c-brief,
   html body .profile-head .c-brief {
+    order: 1 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
     width: 100% !important;
     max-width: 100% !important;
     float: none !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
-    padding: 12px 0 10px 0 !important;
+    gap: 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
   }
 
-  /* Аватар: фиксированный размер */
   html body .p-profiles .profile-head .c-brief .avatar,
   html body .profile-head .c-brief .avatar {
     flex: 0 0 auto !important;
-    width: 72px !important;
-    min-width: 72px !important;
+    width: 76px !important;
+    height: 76px !important;
+    min-width: 76px !important;
+    min-height: 76px !important;
+    float: none !important;
     margin: 0 !important;
+    position: relative !important;
   }
 
   html body .p-profiles .profile-head .c-brief .avatar img,
   html body .profile-head .c-brief .avatar img {
-    width: 72px !important;
-    height: 72px !important;
+    width: 76px !important;
+    height: 76px !important;
+    border-radius: 16px !important;
     object-fit: cover !important;
-    border-radius: 12px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    display: block !important;
   }
 
-  /* Кнопки действий под аватаром */
-  html body .p-profiles .profile-head .c-brief .avatar .profile-actions {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-    gap: 4px !important;
-    margin-top: 6px !important;
-    padding: 3px !important;
+  html body .p-profiles .profile-head .c-brief .avatar .profile-actions,
+  html body .profile-head .c-brief .avatar .profile-actions {
+    display: none !important;
   }
 
-  html body .p-profiles .profile-head .c-brief .avatar .profile-actions a {
-    min-width: 30px !important;
-    min-height: 30px !important;
-    width: 30px !important;
-    height: 30px !important;
-    padding: 0 !important;
-    font-size: 12px !important;
-  }
-
-  /* Правая часть brief: заголовок */
   html body .p-profiles .profile-head .c-brief header,
   html body .profile-head .c-brief header {
     flex: 1 1 auto !important;
     min-width: 0 !important;
     text-align: left !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    margin: 0 !important;
   }
 
   html body .p-profiles .profile-head .c-brief header h1,
   html body .profile-head .c-brief header h1 {
-    font-size: 18px !important;
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 0 4px 0 !important;
     word-break: break-word !important;
     overflow-wrap: break-word !important;
-    margin: 0 0 4px 0 !important;
   }
 
-  html body .p-profiles .profile-head .c-brief header .notice,
   html body .p-profiles .profile-head .c-brief header .misc,
-  html body .p-profiles .profile-head .c-brief header .subnotice {
+  html body .p-profiles .profile-head .c-brief header .notice {
     font-size: 12px !important;
-    display: block !important;
-    margin: 2px 0 !important;
+    line-height: 1.5 !important;
+    color: #a1a1aa !important;
+    white-space: normal !important;
+    margin: 1px 0 !important;
   }
 
-  /* ----------------------------------------------------------
-     2. c-info: левая и правая колонки — в колонку
-     ---------------------------------------------------------- */
-
+  /* 2.2 c-info: Lists Stats + Additional Info (SECOND in order) */
   html body .p-profiles .profile-head .c-info,
   html body .profile-head .c-info {
-    width: 100% !important;
-    max-width: 100% !important;
-    float: none !important;
+    order: 2 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  html body .p-profiles .profile-head .c-info .c-info-left,
-  html body .p-profiles .profile-head .c-info .c-info-right,
-  html body .profile-head .c-info .c-info-left,
-  html body .profile-head .c-info .c-info-right {
     width: 100% !important;
     max-width: 100% !important;
     float: none !important;
-    margin: 0 0 10px 0 !important;
-    box-sizing: border-box !important;
+    clear: both !important;
+    overflow: visible !important;
+    gap: 14px !important;
+    margin: 0 !important;
   }
 
-  /* c-about */
-  html body .p-profiles .profile-head .c-about,
-  html body .profile-head .c-about {
-    width: 100% !important;
-    max-width: 100% !important;
-    float: none !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-  }
-
-  /* c-additionals */
-  html body .c-additionals,
-  html body .p-profiles .profile-head .c-info .c-additionals {
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  html body .c-additionals div,
-  html body .p-profiles .profile-head .c-info .c-additionals div {
-    flex-wrap: wrap !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-  }
-
-  /* ----------------------------------------------------------
-     3. c-history — горизонтальный скролл
-     ---------------------------------------------------------- */
-
-  html body .p-profiles .profile-head .c-history,
-  html body .profile-head .c-history {
-    width: 100% !important;
-    max-width: 100% !important;
-    float: none !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    box-sizing: border-box !important;
-    padding-bottom: 4px !important;
-  }
-
-  html body .p-profiles .profile-head .c-history::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  html body .p-profiles .profile-head .c-history.x3 {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    gap: 6px !important;
-  }
-
-  html body .p-profiles .profile-head .c-history.x3 > div {
-    flex: 0 0 auto !important;
-    min-width: 100px !important;
-  }
-
-  /* ----------------------------------------------------------
-     4. c-lists-info — wrap
-     ---------------------------------------------------------- */
-
-  html body .p-profiles .profile-head .c-lists-info,
-  html body .profile-head .c-lists-info,
+  html body .p-profiles .profile-head .c-info .c-lists-info,
+  html body .profile-head .c-info .c-lists-info,
   html body .c-lists-info {
     width: 100% !important;
     max-width: 100% !important;
     float: none !important;
     display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    box-sizing: border-box !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin: 0 !important;
   }
 
-  html body .c-lists-info .subheadline,
-  html body .p-profiles .profile-head .c-lists-info .subheadline {
+  html body .b-stats_bar.anime,
+  html body .b-stats_bar.manga,
+  html body .b-stats_bar {
     width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    float: none !important;
   }
-
-  /* ----------------------------------------------------------
-     5. .b-stats_bar: убираем жёсткий margin-left для ссылки
-     ---------------------------------------------------------- */
 
   html body .b-stats_bar a.title,
-  .b-stats_bar a.title {
+  html body .b-stats_bar .title {
     margin-left: 0 !important;
     display: inline-block !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin-bottom: 6px !important;
+    padding: 0 !important;
   }
 
-  html body .b-stats_bar .bar.horizontal,
-  html body #rates_scores_stats {
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+  html body .b-stats_bar .bar {
+    width: 100% !important;
+    height: 8px !important;
+    line-height: 8px !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin-bottom: 8px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    display: flex !important;
   }
 
-  html body .b-stats_bar .stat_names,
-  html body .b-stats_bar .stat_values,
-  html body .b-stats_bar .compatibility {
-    word-break: break-word !important;
+  html body .b-stats_bar .bar .first,
+  html body .b-stats_bar .bar .second,
+  html body .b-stats_bar .bar .third {
+    height: 100% !important;
+    font-size: 0 !important;
+  }
+
+  /* Modern Stat Badges / Pills */
+  html body .b-stats_bar .stat_names {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 5px 6px !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    color: #a1a1aa !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 2px 0 !important;
+  }
+
+  html body .b-stats_bar .stat_names .stat_name {
+    display: inline-flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    border-radius: 6px !important;
+    padding: 3px 7px !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .b-stats_bar .stat_names .stat_name:hover {
+    background: rgba(152, 132, 165, 0.2) !important;
+    border-color: rgba(152, 132, 165, 0.4) !important;
+  }
+
+  html body .b-stats_bar .stat_names .stat_name:after {
+    display: none !important;
+    content: none !important;
+  }
+
+  html body .b-stats_bar .stat_names .stat_name a {
+    color: #e4e4e9 !important;
+    font-weight: 450 !important;
+    text-decoration: none !important;
+  }
+
+  html body .b-stats_bar .stat_names .stat_name .size {
+    color: #c4afd4 !important;
+    font-weight: 600 !important;
+    margin-left: 4px !important;
+  }
+
+  html body .b-stats_bar .stat_names .stat_name .size:before,
+  html body .b-stats_bar .stat_names .stat_name .size:after {
+    content: "" !important;
+    display: none !important;
+  }
+
+  /* c-additionals */
+  html body .p-profiles .profile-head .c-info .c-additionals,
+  html body .c-additionals {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px 12px !important;
+    margin: 4px 0 0 0 !important;
+    font-size: 12px !important;
+    color: #a1a1aa !important;
+  }
+
+  html body .c-additionals div {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin: 0 !important;
     white-space: normal !important;
   }
 
-  /* ----------------------------------------------------------
-     6. .b-top_tabs — горизонтальный скролл
-     ---------------------------------------------------------- */
+  html body .c-additionals div:after {
+    display: none !important;
+    content: none !important;
+  }
 
+  html body .c-additionals b {
+    color: #e4e4e9 !important;
+    font-weight: 500 !important;
+  }
+
+  /* 2.3 c-history: Placed BELOW Profile & Stats (THIRD in order) */
+  html body .p-profiles .profile-head .c-history,
+  html body .profile-head .c-history {
+    order: 3 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    clear: both !important;
+    margin: 6px 0 0 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .c-history .subheadline {
+    width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+
+  html body .p-profiles .profile-head .c-history.x3 > div:nth-child(2) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    padding: 6px 10px !important;
+    margin: 0 !important;
+    transition: background 120ms ease !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry:hover {
+    background: rgba(255, 255, 255, 0.07) !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry a {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry .image-name {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 10px !important;
+    overflow: hidden !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry img {
+    width: 36px !important;
+    height: 50px !important;
+    min-width: 36px !important;
+    border-radius: 6px !important;
+    object-fit: cover !important;
+    float: none !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry .title {
+    font-size: 12.5px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry .misc {
+    font-size: 11px !important;
+    color: #a1a1aa !important;
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+    white-space: nowrap !important;
+  }
+
+  /* --- 3. Profile Content Column Stacking --- */
+  html body .p-profiles-show .profile-content,
+  html body .profile-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  html body .p-profiles-show .profile-content .cc-2.block,
+  html body .profile-content .cc-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    clear: both !important;
+  }
+
+  html body .p-profiles-show .profile-content .c-column.c-left,
+  html body .p-profiles-show.x1200 .profile-content .c-left {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 0 24px 0 !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .p-profiles-show .profile-content .c-column.c-right,
+  html body .p-profiles-show.x1200 .profile-content .c-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+  }
+
+  /* --- 4. Lifetime & Activity Graph --- */
+  html body .b-stats_bar.lifetime,
+  html body .p-profiles-show .lifetime {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 22px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .lifetime .title {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    flex-wrap: wrap !important;
+    gap: 4px 10px !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+
+  html body .lifetime .title .label {
+    order: 1 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #e4e4e9 !important;
+    white-space: nowrap !important;
+  }
+
+  html body .lifetime .title .value {
+    order: 2 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #c4afd4 !important;
+    float: none !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  html body .b-stats_bar.lifetime .bar,
+  html body .p-profiles-show .lifetime .bar {
+    width: 100% !important;
+    height: 8px !important;
+    border-radius: 4px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    margin: 8px 0 !important;
+  }
+
+  html body .lifetime .times {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+    gap: 4px !important;
+  }
+
+  html body .p-profiles-show .lifetime .times .time {
+    font-size: 10.5px !important;
+    color: #71717a !important;
+    flex: 1 1 0 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    padding: 0 !important;
+  }
+
+  html body .p-profiles-show .lifetime .times .time.checked {
+    color: #e4e4e9 !important;
+    font-weight: 600 !important;
+  }
+
+  /* Activity Graph: Show ONLY x26 compact graph on mobile, hide duplicate x34 */
+  html body .p-profiles-show .profile-content .activity,
+  html body .activity {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .p-profiles-show .profile-content .graph.x34 {
+    display: none !important;
+  }
+
+  html body .p-profiles-show .profile-content .graph.x26,
+  html body .activity .graph.x26 {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 4px 0 8px 0 !important;
+    align-items: flex-end !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .activity .graph::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* --- 5. Friends & Clubs --- */
+  html body .p-profiles-show .profile-content .c-right .cc-2a,
+  html body .cc-2a.m30 {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    clear: both !important;
+  }
+
+  html body .p-profiles-show.x1200 .profile-content .c-right .cc-2a > .c-column,
+  html body .cc-2a > .c-column {
+    flex: 1 1 0 !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    float: none !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .cc-friends,
+  html body .b-clubs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: 8px !important;
+  }
+
+  html body .cc-friends .b-user,
+  html body .b-clubs .b-club {
+    float: none !important;
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  html body .cc-friends .b-user img,
+  html body .b-clubs .b-club img {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  /* --- 6. Favourites: Smooth Horizontal Carousel of Full Posters --- */
+  html body .p-profiles-show .cc-favourites,
+  html body .cc-favourites {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 10px !important;
+    padding: 8px 2px 14px 2px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .cc-favourites::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  html body .p-profiles-show .cc-favourites .c-column,
+  html body .cc-favourites .b-catalog_entry {
+    flex: 0 0 80px !important;
+    width: 80px !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+    float: none !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .cover {
+    display: block !important;
+    width: 80px !important;
+    height: 114px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .cover .image-decor,
+  html body .cc-favourites .b-catalog_entry .cover .image-cutter,
+  html body .cc-favourites .b-catalog_entry .cover picture {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .cover img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+  }
+
+  /* --- 7. Achievements: Structured 2-Column Responsive Grid --- */
+  html body .p-profiles-show .achievements .cc-2,
+  html body .block.achievements .cc-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-2 > .c-column,
+  html body .block.achievements .cc-2 > .c-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    clear: both !important;
+  }
+
+  html body .p-profiles-show .achievements .header .title {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* 2-column grid for Genre and General achievements */
+  html body .p-profiles-show .achievements .cc-achievements {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-achievements .b-achievement {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-achievements .b-achievement .c-image {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-achievements .b-achievement .c-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Franchises: Wrap badges into multiple rows */
+  html body .p-profiles-show .achievements .cc-franchises {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-franchises .b-badge {
+    width: 46px !important;
+    height: 46px !important;
+    flex: 0 0 46px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+    float: none !important;
+    margin: 0 !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-franchises .b-badge img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Authors: 2-column grid */
+  html body .p-profiles-show .achievements .cc-authors {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-authors .b-achievement {
+    width: 100% !important;
+    margin: 0 !important;
+    float: none !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-authors .b-achievement .c-image {
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-authors .b-achievement .c-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* --- 8. About Me & Custom Profile Panels --- */
+  html body .p-profiles-show .about.block,
+  html body .about.block {
+    width: 100% !important;
+    margin-top: 24px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .about.block .use-tabs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  html body .about.block .use-tabs > [data-dynamic="switcher"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 16px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #e4e4e9 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 150ms ease !important;
+  }
+
+  html body .about.block .use-tabs > [data-dynamic="switcher"].active {
+    background: rgba(152, 132, 165, 0.35) !important;
+    border-color: #9884a5 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(152, 132, 165, 0.3) !important;
+  }
+
+  html body .about.block .CUSTOM_PANELS_CONTAINER {
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  html body .about.block .CUSTOM_PANEL {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 14px 16px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #e4e4e9 !important;
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* --- 9. Subheadline-buttons: Safe flow on mobile --- */
+  html body .subheadline-buttons,
+  .subheadline-buttons {
+    position: static !important;
+    margin-top: 4px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    right: auto !important;
+  }
+
+  /* --- 10. Top Navigation Tabs (.b-top_tabs) --- */
   html body .b-top_tabs,
   html body .profile-content .b-top_tabs {
     overflow-x: auto !important;
@@ -7211,265 +7825,73 @@
     font-size: 13px !important;
   }
 
-  /* ----------------------------------------------------------
-     7. .profile-content — полная ширина, без float
-     ---------------------------------------------------------- */
-
-  html body .p-profiles-show .profile-content,
-  html body .profile-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    float: none !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-  }
-
-  /* ----------------------------------------------------------
-     8. .subheadline-buttons — убираем absolute на мобиле
-     ---------------------------------------------------------- */
-
-  html body .subheadline-buttons,
-  .subheadline-buttons {
-    position: static !important;
-    margin-top: 4px !important;
+  /* --- 11. Footer: Clean centered layout on mobile --- */
+  html body .l-footer,
+  .l-footer {
     display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 4px !important;
-    right: auto !important;
-  }
-
-  html body .subheadline-buttons:has(.b-list_switchers),
-  html body .subheadline-buttons:has(.switcher),
-  html body .p-user_rates-index .subheadline-buttons {
-    position: static !important;
-    margin-top: 4px !important;
-    right: auto !important;
-  }
-
-  /* ----------------------------------------------------------
-     9. Достижения (cc-achievements) — адаптивная сетка
-     ---------------------------------------------------------- */
-
-  html body .cc-achievements {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  html body .cc-achievements .b-achievement {
-    flex: 0 0 auto !important;
-    max-width: calc(50% - 4px) !important;
-    box-sizing: border-box !important;
-  }
-
-  html body .cc-franchises {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    width: 100% !important;
-  }
-
-  html body .cc-franchises .b-badge {
-    flex: 0 0 auto !important;
-    width: 60px !important;
-    box-sizing: border-box !important;
-  }
-
-  html body .cc-franchises .b-badge img {
-    width: 60px !important;
-    height: auto !important;
-  }
-
-  /* ----------------------------------------------------------
-     10. Lifetime bar
-     ---------------------------------------------------------- */
-
-  html body .b-stats_bar.lifetime,
-  html body .p-profiles-show .lifetime {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow: visible !important;
-  }
-
-  html body .lifetime .title {
-    flex-wrap: wrap !important;
-    gap: 4px !important;
-  }
-
-  html body .lifetime .times {
-    flex-wrap: wrap !important;
-    gap: 4px !important;
-  }
-
-  html body .p-profiles-show .lifetime .times .time {
-    flex: 0 0 auto !important;
-    font-size: 10px !important;
-  }
-
-  /* ----------------------------------------------------------
-     11. Activity graph — горизонтальный скролл
-     ---------------------------------------------------------- */
-
-  html body .p-profiles-show .profile-content .activity,
-  html body .activity {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    box-sizing: border-box !important;
-  }
-
-  /* ----------------------------------------------------------
-     12. .my-list — полная ширина
-     ---------------------------------------------------------- */
-
-  html body .my-list,
-  html body .f-user .my-list {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 10px !important;
-  }
-
-  /* ----------------------------------------------------------
-     13. Таблицы — горизонтальный скролл
-     ---------------------------------------------------------- */
-
-  html body .b-table {
-    display: block !important;
-    width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    box-sizing: border-box !important;
-  }
-
-  /* ----------------------------------------------------------
-     14. Кнопки — удобные для касания
-     ---------------------------------------------------------- */
-
-  html body .p-profiles .b-button,
-  html body .profile-head .b-button,
-  html body .profile-content .b-button {
-    min-height: 38px !important;
-    padding: 8px 14px !important;
-    font-size: 13px !important;
-    display: inline-flex !important;
+    flex-direction: column !important;
     align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    padding: 16px 12px !important;
+    margin-top: 16px !important;
+  }
+
+  html body .l-footer:before,
+  .l-footer:before {
+    float: none !important;
+  }
+
+  html body .l-footer .links {
+    display: flex !important;
+    flex-wrap: wrap !important;
     justify-content: center !important;
-  }
-
-  /* ----------------------------------------------------------
-     15. Изображения — не вылезать за экран
-     ---------------------------------------------------------- */
-
-  html body .profile-content img,
-  html body .c-about img,
-  html body .b-text_with_paragraphs img {
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 8px !important;
-  }
-
-  /* ----------------------------------------------------------
-     16. Headline/subheadline — корректная ширина
-     ---------------------------------------------------------- */
-
-  html body .headline,
-  html body .midheadline,
-  html body .subheadline {
-    width: 100% !important;
-    box-sizing: border-box !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-  }
-
-  /* ----------------------------------------------------------
-     17. Редактор — полная ширина, без iOS-зума
-     ---------------------------------------------------------- */
-
-  html body .b-shiki_editor,
-  html body .b-shiki_editor-v2 {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  html body .b-shiki_editor .body .editor textarea,
-  html body .b-shiki_editor-v2 .body .editor textarea {
-    width: 100% !important;
-    min-height: 120px !important;
-    font-size: 16px !important;
-    box-sizing: border-box !important;
-  }
-
-  /* ----------------------------------------------------------
-     18. Комментарии — нормальный wrap
-     ---------------------------------------------------------- */
-
-  html body .b-comment > .inner,
-  html body .b-dialog > .inner,
-  html body .b-message > .inner {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
+    gap: 12px !important;
   }
 }
 
 /* ============================================================
-   МАЛЕНЬКИЕ ЭКРАНЫ (<= 480px) — дополнительная компактность
+   EXTRA COMPACT MOBILE SCREENS (<= 480px)
    ============================================================ */
-
 @media screen and (max-width: 480px) {
 
-  /* Аватар чуть меньше */
   html body .p-profiles .profile-head .c-brief .avatar,
   html body .profile-head .c-brief .avatar {
-    width: 60px !important;
-    min-width: 60px !important;
+    width: 68px !important;
+    height: 68px !important;
+    min-width: 68px !important;
+    min-height: 68px !important;
   }
 
   html body .p-profiles .profile-head .c-brief .avatar img,
   html body .profile-head .c-brief .avatar img {
-    width: 60px !important;
-    height: 60px !important;
+    width: 68px !important;
+    height: 68px !important;
   }
 
   html body .p-profiles .profile-head .c-brief header h1 {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
 
-  /* Достижения — одна колонка */
-  html body .cc-achievements .b-achievement {
-    max-width: 100% !important;
-    flex: 1 1 100% !important;
+  /* Compact favourites posters on very small screens */
+  html body .p-profiles-show .cc-favourites .c-column,
+  html body .cc-favourites .b-catalog_entry {
+    flex: 0 0 72px !important;
+    width: 72px !important;
+    min-width: 72px !important;
+    max-width: 72px !important;
   }
 
-  /* Бейджи франшиз — компактнее */
-  html body .cc-franchises .b-badge {
-    width: 50px !important;
+  html body .cc-favourites .b-catalog_entry .cover {
+    width: 72px !important;
+    height: 104px !important;
   }
 
-  html body .cc-franchises .b-badge img {
-    width: 50px !important;
-  }
-
-  /* Статистика — мельче текст */
-  html body .b-stats_bar .stat_names,
-  html body .b-stats_bar .stat_values {
-    font-size: 11px !important;
-  }
-
-  /* Вкладки — компактнее */
-  html body .b-top_tabs > *,
-  html body .b-top_tabs a {
-    padding: 7px 9px !important;
-    font-size: 12px !important;
+  /* Franchises badges: 40px */
+  html body .p-profiles-show .achievements .cc-franchises .b-badge {
+    width: 40px !important;
+    height: 40px !important;
+    flex: 0 0 40px !important;
   }
 }
+
