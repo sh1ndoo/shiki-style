@@ -4341,6 +4341,22 @@
     color: #e2e8f0 !important;
   }
 
+  /* Neutral Review Label (.label.neutral) */
+  html body .b-review-topic .review-info .label.neutral,
+  html body .b-review-topic .review-info .neutral:not(.opinion),
+  html body .b-review-topic .review-info div.neutral,
+  html body .b-review-topic .review-info span.neutral,
+  html body .review-info .label.neutral,
+  html body .review-info .neutral:not(.opinion),
+  html body .label.neutral,
+  .b-review-topic .review-info .label.neutral,
+  .b-review-topic .review-info .neutral:not(.opinion),
+  .review-info .label.neutral,
+  .review-info .neutral:not(.opinion),
+  .label.neutral {
+    color: #a1a1aa !important;
+  }
+
   /* --- Review Footer Voting (.b-footer_vote) --- */
   html body .b-footer_vote,
   .b-footer_vote {
