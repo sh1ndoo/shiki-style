@@ -6994,22 +6994,35 @@
     font-size: 22px !important;
   }
 
+  /* --- Completely Hide Navigation Arrows on Mobile --- */
   html body .mfp-arrow,
   html body button.mfp-arrow,
-  .mfp-arrow {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-  }
-
   html body .mfp-arrow-left,
-  .mfp-arrow-left {
-    left: 8px !important;
-  }
-
   html body .mfp-arrow-right,
-  .mfp-arrow-right {
-    right: 8px !important;
+  html body button.mfp-arrow-left,
+  html body button.mfp-arrow-right,
+  html body .mfp-container .mfp-arrow,
+  html body .mobile-slider-prev,
+  html body .mobile-slider-next,
+  html body .swiper-button-prev,
+  html body .swiper-button-next,
+  html body .b-shiki_swiper .swiper-button-prev,
+  html body .b-shiki_swiper .swiper-button-next,
+  .mfp-arrow,
+  button.mfp-arrow,
+  .mfp-arrow-left,
+  .mfp-arrow-right,
+  button.mfp-arrow-left,
+  button.mfp-arrow-right,
+  .mfp-container .mfp-arrow,
+  .mobile-slider-prev,
+  .mobile-slider-next,
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
   }
 }
 
