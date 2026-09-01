@@ -8299,15 +8299,10 @@
   }
 
   /* --- Topic & Comment Header Markers (Offtopic, New, Summary) on Mobile --- */
-  html body .b-comment > .inner aside.markers,
-  html body .b-topic > .inner aside.markers,
-  html body .b-message > .inner aside.markers,
-  html body .b-dialog > .inner aside.markers,
-  html body .b-comment aside.markers,
-  html body .b-topic aside.markers,
-  html body .b-message aside.markers,
-  html body .b-dialog aside.markers,
-  html body aside.markers:not(.controls *) {
+  html body .b-comment > .inner > aside.markers,
+  html body .b-topic > .inner > aside.markers,
+  html body .b-message > .inner > aside.markers,
+  html body .b-dialog > .inner > aside.markers {
     position: absolute !important;
     top: 10px !important;
     right: 36px !important;
@@ -8321,17 +8316,14 @@
     z-index: 5 !important;
   }
 
-  html body .b-comment aside.markers .b-offtopic_marker,
-  html body .b-comment aside.markers .b-new_marker,
-  html body .b-topic aside.markers .b-offtopic_marker,
-  html body .b-topic aside.markers .b-new_marker,
-  html body .b-message aside.markers .b-offtopic_marker,
-  html body .b-message aside.markers .b-new_marker,
-  html body .b-dialog aside.markers .b-offtopic_marker,
-  html body .b-dialog aside.markers .b-new_marker,
-  html body aside.markers:not(.controls *) .b-offtopic_marker,
-  html body aside.markers:not(.controls *) .b-new_marker,
-  html body aside.markers:not(.controls *) .b-summary_marker {
+  html body .b-comment > .inner > aside.markers .b-offtopic_marker,
+  html body .b-comment > .inner > aside.markers .b-new_marker,
+  html body .b-topic > .inner > aside.markers .b-offtopic_marker,
+  html body .b-topic > .inner > aside.markers .b-new_marker,
+  html body .b-message > .inner > aside.markers .b-offtopic_marker,
+  html body .b-message > .inner > aside.markers .b-new_marker,
+  html body .b-dialog > .inner > aside.markers .b-offtopic_marker,
+  html body .b-dialog > .inner > aside.markers .b-new_marker {
     position: relative !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -8344,17 +8336,14 @@
     vertical-align: middle !important;
   }
 
-  html body .b-comment aside.markers .b-offtopic_marker:before,
-  html body .b-comment aside.markers .b-new_marker:before,
-  html body .b-topic aside.markers .b-offtopic_marker:before,
-  html body .b-topic aside.markers .b-new_marker:before,
-  html body .b-message aside.markers .b-offtopic_marker:before,
-  html body .b-message aside.markers .b-new_marker:before,
-  html body .b-dialog aside.markers .b-offtopic_marker:before,
-  html body .b-dialog aside.markers .b-new_marker:before,
-  html body aside.markers:not(.controls *) .b-offtopic_marker:before,
-  html body aside.markers:not(.controls *) .b-new_marker:before,
-  html body aside.markers:not(.controls *) .b-summary_marker:before {
+  html body .b-comment > .inner > aside.markers .b-offtopic_marker:before,
+  html body .b-comment > .inner > aside.markers .b-new_marker:before,
+  html body .b-topic > .inner > aside.markers .b-offtopic_marker:before,
+  html body .b-topic > .inner > aside.markers .b-new_marker:before,
+  html body .b-message > .inner > aside.markers .b-offtopic_marker:before,
+  html body .b-message > .inner > aside.markers .b-new_marker:before,
+  html body .b-dialog > .inner > aside.markers .b-offtopic_marker:before,
+  html body .b-dialog > .inner > aside.markers .b-new_marker:before {
     position: static !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -8407,34 +8396,74 @@
     box-shadow: none !important;
   }
 
-  /* Editor Toolbar Markers */
+  /* --- Editor Toolbar Markers (Offtopic, Summary) on Mobile --- */
   html body .b-shiki_editor aside.markers,
   html body .b-shiki_editor-v2 aside.markers,
-  html body .controls aside.markers {
+  html body .controls aside.markers,
+  html body .editor-container aside.markers,
+  html body form aside.markers,
+  html body .b-form aside.markers {
     position: static !important;
     flex: 0 0 auto !important;
     margin: 0 0 0 auto !important;
     display: inline-flex !important;
     align-items: center !important;
-    height: 28px !important;
+    height: 32px !important;
     float: none !important;
     gap: 6px !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    z-index: 2 !important;
   }
 
+  html body .b-shiki_editor aside.markers .b-offtopic_marker,
+  html body .b-shiki_editor aside.markers .b-summary_marker,
+  html body .b-shiki_editor-v2 aside.markers .b-offtopic_marker,
+  html body .b-shiki_editor-v2 aside.markers .b-summary_marker,
   html body .controls aside.markers .b-offtopic_marker,
-  html body .controls aside.markers .b-summary_marker {
-    height: 28px !important;
+  html body .controls aside.markers .b-summary_marker,
+  html body .editor-container aside.markers .b-offtopic_marker,
+  html body .editor-container aside.markers .b-summary_marker,
+  html body form aside.markers .b-offtopic_marker,
+  html body form aside.markers .b-summary_marker {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 30px !important;
     width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    float: none !important;
+    vertical-align: middle !important;
   }
 
+  html body .b-shiki_editor aside.markers .b-offtopic_marker:before,
+  html body .b-shiki_editor aside.markers .b-summary_marker:before,
+  html body .b-shiki_editor-v2 aside.markers .b-offtopic_marker:before,
+  html body .b-shiki_editor-v2 aside.markers .b-summary_marker:before,
   html body .controls aside.markers .b-offtopic_marker:before,
-  html body .controls aside.markers .b-summary_marker:before {
-    height: 28px !important;
-    line-height: 28px !important;
+  html body .controls aside.markers .b-summary_marker:before,
+  html body .editor-container aside.markers .b-offtopic_marker:before,
+  html body .editor-container aside.markers .b-summary_marker:before,
+  html body form aside.markers .b-offtopic_marker:before,
+  html body form aside.markers .b-summary_marker:before {
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 30px !important;
+    line-height: 30px !important;
     padding: 0 8px !important;
     font-size: 11px !important;
+    font-weight: 600 !important;
     border-radius: 6px !important;
     min-width: 50px !important;
+    box-sizing: border-box !important;
+    content: attr(data-text) !important;
+    cursor: pointer !important;
+    transition: all 120ms ease !important;
   }
 
   /* --- Editor Footer Action Buttons on Mobile (Написать & Предпросмотр в одну горизонтальную линию) --- */
@@ -8461,18 +8490,15 @@
   html body .b-shiki_editor footer .btn-submit,
   html body .b-shiki_editor footer .b-button.preview,
   html body .b-shiki_editor footer .preview,
-  html body .b-shiki_editor footer .unpreview,
   html body .b-shiki_editor-v2 footer input[type=submit],
   html body .b-shiki_editor-v2 footer .btn-submit,
   html body .b-shiki_editor-v2 footer .b-button.preview,
   html body .b-shiki_editor-v2 footer .preview,
-  html body .b-shiki_editor-v2 footer .unpreview,
   html body footer input[type=submit].btn-submit,
   html body footer input[type=submit],
   html body footer .b-button.preview,
   html body footer .btn-submit,
-  html body footer .preview,
-  html body footer .unpreview {
+  html body footer .preview {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -8490,11 +8516,18 @@
     border-radius: 8px !important;
   }
 
+  /* unpreview and hide are strictly HIDDEN by default */
+  html body .b-shiki_editor footer .unpreview,
+  html body .b-shiki_editor-v2 footer .unpreview,
+  html body footer .unpreview,
   html body .b-shiki_editor footer .hide,
-  html body .b-shiki_editor footer .cancel,
   html body .b-shiki_editor-v2 footer .hide,
+  html body footer .hide {
+    display: none !important;
+  }
+
+  html body .b-shiki_editor footer .cancel,
   html body .b-shiki_editor-v2 footer .cancel,
-  html body footer .hide,
   html body footer .cancel {
     display: inline-flex !important;
     align-items: center !important;
@@ -8514,10 +8547,25 @@
     align-self: center !important;
   }
 
+  /* When editor is in preview mode, show unpreview and hide preview */
   html body .b-shiki_editor.previewed footer .unpreview,
   html body .b-shiki_editor-v2.previewed footer .unpreview,
   html body .previewed footer .unpreview {
     display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    min-height: 38px !important;
+    height: 38px !important;
+    line-height: 36px !important;
+    padding: 0 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    border-radius: 8px !important;
   }
 
   html body .b-shiki_editor.previewed footer .preview,
