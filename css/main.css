@@ -7070,18 +7070,30 @@
     line-height: 1.2 !important;
   }
 
-  /* --- Similar / Related / Franchise Anime on Mobile (Smaller cards, 3 per row) --- */
+  /* --- Similar / Related / Franchise Anime on Mobile (4 per row) --- */
   html body .cc-similar .cc,
   html body .cc-related .cc,
   html body .cc-franchise .cc,
   html body .c-similar .cc,
   html body .c-related .cc,
+  html body .cc.cc-similar,
+  html body .cc.cc-related,
+  html body .cc.cc-franchise,
+  html body .cc-similar:not(:has(.cc)),
+  html body .cc-related:not(:has(.cc)),
+  html body .cc-franchise:not(:has(.cc)),
   .cc-similar .cc,
   .cc-related .cc,
-  .cc-franchise .cc {
+  .cc-franchise .cc,
+  .cc.cc-similar,
+  .cc.cc-related,
+  .cc.cc-franchise,
+  .cc-similar:not(:has(.cc)),
+  .cc-related:not(:has(.cc)),
+  .cc-franchise:not(:has(.cc)) {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 10px 8px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px 6px !important;
     width: 100% !important;
     box-sizing: border-box !important;
     float: none !important;
@@ -7093,9 +7105,15 @@
   @media screen and (min-width: 540px) and (max-width: 1024px) {
     html body .cc-similar .cc,
     html body .cc-related .cc,
-    html body .cc-franchise .cc {
-      grid-template-columns: repeat(auto-fill, minmax(105px, 1fr)) !important;
-      gap: 12px 10px !important;
+    html body .cc-franchise .cc,
+    html body .cc.cc-similar,
+    html body .cc.cc-related,
+    html body .cc.cc-franchise,
+    html body .cc-similar,
+    html body .cc-related,
+    html body .cc-franchise {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
+      gap: 10px 8px !important;
     }
   }
 
@@ -7103,7 +7121,10 @@
   html body .cc-related .b-catalog_entry,
   html body .cc-franchise .b-catalog_entry,
   html body .c-similar .b-catalog_entry,
-  html body .c-related .b-catalog_entry {
+  html body .c-related .b-catalog_entry,
+  html body .cc.cc-similar .b-catalog_entry,
+  html body .cc.cc-related .b-catalog_entry,
+  html body .cc.cc-franchise .b-catalog_entry {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
@@ -7114,17 +7135,24 @@
 
   html body .cc-similar .b-catalog_entry .title,
   html body .cc-related .b-catalog_entry .title,
-  html body .cc-franchise .b-catalog_entry .title {
-    font-size: 11px !important;
-    line-height: 1.25 !important;
-    margin-top: 4px !important;
+  html body .cc-franchise .b-catalog_entry .title,
+  html body .cc.cc-similar .b-catalog_entry .title,
+  html body .cc.cc-related .b-catalog_entry .title,
+  html body .cc.cc-franchise .b-catalog_entry .title {
+    font-size: 10.5px !important;
+    line-height: 1.2 !important;
+    margin-top: 3px !important;
+    max-height: 2.5em !important;
   }
 
   html body .cc-similar .b-catalog_entry .title .name-ru,
   html body .cc-similar .b-catalog_entry .title .name-en,
   html body .cc-related .b-catalog_entry .title .name-ru,
-  html body .cc-related .b-catalog_entry .title .name-en {
-    font-size: 11px !important;
+  html body .cc-related .b-catalog_entry .title .name-en,
+  html body .cc.cc-similar .b-catalog_entry .title .name-ru,
+  html body .cc.cc-similar .b-catalog_entry .title .name-en {
+    font-size: 10.5px !important;
+    line-height: 1.2 !important;
   }
 
   /* --- Catalog Grid on Mobile (2 columns per row) --- */
