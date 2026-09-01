@@ -7431,6 +7431,7 @@
   html body .swiper-container .b-catalog_entry,
   html body .swiper-slide.b-catalog_entry,
   html body .swiper-slide .b-catalog_entry,
+  html body article.b-catalog_entry,
   .b-catalog_entry[class*="swiper"],
   .swiper-slide.b-catalog_entry {
     width: 120px !important;
@@ -7440,7 +7441,7 @@
     height: auto !important;
     max-height: none !important;
     margin-right: 8px !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 20px !important;
     padding-bottom: 6px !important;
     box-sizing: border-box !important;
   }
@@ -7772,6 +7773,7 @@
   html body .swiper-container .b-catalog_entry,
   html body .swiper-slide.b-catalog_entry,
   html body .swiper-slide .b-catalog_entry,
+  html body article.b-catalog_entry,
   .b-catalog_entry[class*="swiper"],
   .swiper-slide.b-catalog_entry {
     width: 110px !important;
@@ -7779,7 +7781,7 @@
     max-width: 110px !important;
     flex: 0 0 110px !important;
     margin-right: 6px !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 20px !important;
     height: auto !important;
     max-height: none !important;
     padding-bottom: 8px !important;
