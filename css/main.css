@@ -5698,12 +5698,60 @@
       overflow: visible !important;
     }
 
+    /* По умолчанию в меню виден только main-controls */
     html body .aside-expanded aside.buttons .main-controls,
+    html body aside.buttons .main-controls {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      min-width: max-content !important;
+      overflow: visible !important;
+    }
+
     html body .aside-expanded aside.buttons .moderation-controls,
     html body .aside-expanded aside.buttons .delete-controls,
-    html body aside.buttons .main-controls,
+    html body .aside-expanded aside.buttons .edit-controls,
     html body aside.buttons .moderation-controls,
-    html body aside.buttons .delete-controls {
+    html body aside.buttons .delete-controls,
+    html body aside.buttons .edit-controls {
+      display: none !important;
+    }
+
+    /* При нажатии "На модерацию" скрывается main-controls и открывается moderation-controls */
+    html body .aside-expanded aside.buttons.moderation-expanded .main-controls,
+    html body .aside-expanded.moderation-expanded aside.buttons .main-controls,
+    html body .aside-expanded .moderation-expanded .main-controls,
+    html body .moderation-expanded aside.buttons .main-controls,
+    html body .moderation-expanded .main-controls {
+      display: none !important;
+    }
+
+    html body .aside-expanded aside.buttons.moderation-expanded .moderation-controls,
+    html body .aside-expanded.moderation-expanded aside.buttons .moderation-controls,
+    html body .aside-expanded .moderation-expanded .moderation-controls,
+    html body .moderation-expanded aside.buttons .moderation-controls,
+    html body .moderation-expanded .moderation-controls {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      min-width: max-content !important;
+      overflow: visible !important;
+    }
+
+    /* При нажатии "Удалить" скрывается main-controls и открывается delete-controls */
+    html body .aside-expanded aside.buttons.delete-expanded .main-controls,
+    html body .aside-expanded.delete-expanded aside.buttons .main-controls,
+    html body .aside-expanded .delete-expanded .main-controls,
+    html body .delete-expanded aside.buttons .main-controls,
+    html body .delete-expanded .main-controls {
+      display: none !important;
+    }
+
+    html body .aside-expanded aside.buttons.delete-expanded .delete-controls,
+    html body .aside-expanded.delete-expanded aside.buttons .delete-controls,
+    html body .aside-expanded .delete-expanded .delete-controls,
+    html body .delete-expanded aside.buttons .delete-controls,
+    html body .delete-expanded .delete-controls {
       display: flex !important;
       flex-direction: column !important;
       width: 100% !important;
@@ -5790,7 +5838,14 @@
     }
 
     html body .aside-expanded aside.buttons .hidden,
-    html body aside.buttons .hidden {
+    html body aside.buttons .hidden,
+    html body .main-controls .hidden,
+    html body .moderation-controls .hidden,
+    html body .delete-controls .hidden,
+    html body .item-edit.hidden,
+    html body .item-delete.hidden,
+    html body .item-ban.hidden,
+    html body .hidden {
       display: none !important;
     }
   }
