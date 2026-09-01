@@ -6610,16 +6610,96 @@
     border-radius: 8px !important;
   }
 
-  /* --- Catalog Grid on Mobile (scoped to .cc-entries) --- */
-  html body .cc-entries,
-  .cc-entries {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
+  /* 2 Columns per row for News Wall on Mobile */
+  html body .p-dashboards-show .v2 .news_wall,
+  html body .p-tests-news .news_wall,
+  html body .news_wall,
+  html body .b-news_wall-topics,
+  .p-dashboards-show .v2 .news_wall,
+  .p-tests-news .news_wall,
+  .news_wall,
+  .b-news_wall-topics {
+    display: flex !important;
+    flex-wrap: wrap !important;
     gap: 10px !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .p-dashboards-show .v2 .news_wall > .b-news_wall-topic,
+  html body .p-tests-news .news_wall > .b-news_wall-topic,
+  html body .news_wall > .b-news_wall-topic,
+  html body .b-news_wall-topics > .b-news_wall-topic,
+  html body .b-news_wall-topic,
+  .p-dashboards-show .v2 .news_wall > .b-news_wall-topic,
+  .p-tests-news .news_wall > .b-news_wall-topic,
+  .news_wall > .b-news_wall-topic,
+  .b-news_wall-topic {
+    width: calc(50% - 5px) !important;
+    max-width: calc(50% - 5px) !important;
+    min-width: 0 !important;
+    margin: 0 0 14px 0 !important;
+    box-sizing: border-box !important;
+    float: none !important;
+  }
+
+  html body .b-news_wall-topic .title,
+  .b-news_wall-topic .title {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    -webkit-line-clamp: 2 !important;
+  }
+
+  /* --- Catalog Grid on Mobile (2 columns per row) --- */
+  html body .cc-entries,
+  html body .b-catalog_entries,
+  html body .c-animes,
+  html body .c-mangas,
+  html body .c-ranobe,
+  html body .c-people,
+  html body .c-characters,
+  html body .c-clubs,
+  html body .c-collections,
+  html body .c-videos,
+  html body .c-critiques,
+  html body .c-articles,
+  html body .cc-similar,
+  html body .cc-related,
+  html body .cc-franchise,
+  .cc-entries,
+  .b-catalog_entries,
+  .c-animes,
+  .c-mangas,
+  .c-ranobe,
+  .c-people,
+  .c-characters,
+  .c-clubs,
+  .c-collections,
+  .c-videos,
+  .c-critiques,
+  .c-articles {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   html body .cc-entries .b-catalog_entry,
-  .cc-entries .b-catalog_entry {
+  html body .b-catalog_entries .b-catalog_entry,
+  html body .c-animes .b-catalog_entry,
+  html body .c-mangas .b-catalog_entry,
+  html body .c-ranobe .b-catalog_entry,
+  html body .c-people .b-catalog_entry,
+  html body .c-characters .b-catalog_entry,
+  html body .c-clubs .b-catalog_entry,
+  html body .c-collections .b-catalog_entry,
+  html body .c-videos .b-catalog_entry,
+  html body .c-critiques .b-catalog_entry,
+  html body .c-articles .b-catalog_entry,
+  .cc-entries .b-catalog_entry,
+  .b-catalog_entries .b-catalog_entry {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
