@@ -7403,18 +7403,30 @@
     color: #ffffff !important;
   }
 
-  /* Studio Name & Misc (Clearly visible under title with adequate spacing) */
+  /* Studio Name & Misc (Clearly visible under title, left-aligned) */
   html body .b-catalog_entry .misc,
+  html body .b-catalog_entry .misc *,
   html body .b-catalog_entry .misc .studio,
   html body .b-catalog_entry .cover .misc,
+  html body .b-catalog_entry .cover .misc *,
   html body .b-catalog_entry .cover .misc .studio,
   html body [class*="swiper"] .b-catalog_entry .misc,
+  html body [class*="swiper"] .b-catalog_entry .misc *,
   html body [class*="swiper"] .b-catalog_entry .cover .misc,
+  html body [class*="swiper"] .b-catalog_entry .cover .misc *,
+  html body .b-catalog_entry[class*="swiper"] .misc,
+  html body .b-catalog_entry[class*="swiper"] .misc *,
   html body .swiper-slide .b-catalog_entry .misc,
+  html body .swiper-slide .b-catalog_entry .misc *,
   html body .swiper-slide .b-catalog_entry .cover .misc,
+  html body .swiper-slide .b-catalog_entry .cover .misc *,
+  html body .p-dashboards-show .b-catalog_entry .misc,
+  html body .p-dashboards-show .b-catalog_entry .misc *,
   .b-catalog_entry .misc,
+  .b-catalog_entry .misc *,
   .b-catalog_entry .misc .studio,
-  .b-catalog_entry .cover .misc {
+  .b-catalog_entry .cover .misc,
+  .b-catalog_entry .cover .misc * {
     font-size: 11px !important;
     line-height: 16px !important;
     height: 16px !important;
@@ -7428,21 +7440,10 @@
     white-space: nowrap !important;
     margin-top: 3px !important;
     margin-bottom: 6px !important;
-    text-align: center !important;
+    text-align: left !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-  }
-
-  html body .b-catalog_entry .title.left_aligned + .misc,
-  html body .b-catalog_entry .title.left_aligned ~ .misc,
-  html body .b-catalog_entry .cover:has(.left_aligned) .misc,
-  html body [class*="swiper"] .b-catalog_entry .misc,
-  html body [class*="swiper"] .b-catalog_entry .cover .misc,
-  html body .b-catalog_entry[class*="swiper"] .misc,
-  html body .swiper-slide .b-catalog_entry .misc,
-  html body .swiper-slide .b-catalog_entry .cover .misc {
-    text-align: left !important;
   }
 
   /* --- Swiper Carousels & Sliders on Mobile --- */
@@ -7871,8 +7872,10 @@
   }
 
   html body .b-catalog_entry .misc,
+  html body .b-catalog_entry .misc *,
   html body .b-catalog_entry .misc .studio,
-  html body .b-catalog_entry .cover .misc {
+  html body .b-catalog_entry .cover .misc,
+  html body .b-catalog_entry .cover .misc * {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -7882,6 +7885,7 @@
     line-height: 16px !important;
     margin-top: 3px !important;
     margin-bottom: 6px !important;
+    text-align: left !important;
   }
 
   html body [class*="swiper"] .b-catalog_entry .cover .image-decor,
