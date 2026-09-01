@@ -8237,67 +8237,143 @@
     transform: scale(0.94) !important;
   }
 
-  /* Aside markers (Offtopic, Summary) */
-  html body .b-shiki_editor aside.markers,
-  html body .b-shiki_editor-v2 aside.markers,
-  html body .controls aside.markers {
-    flex: 0 0 auto !important;
-    margin: 0 0 0 auto !important;
+  /* --- Topic & Comment Header Markers (Offtopic, New, Summary) on Mobile --- */
+  html body .b-comment > .inner aside.markers,
+  html body .b-topic > .inner aside.markers,
+  html body .b-message > .inner aside.markers,
+  html body .b-dialog > .inner aside.markers,
+  html body .b-comment aside.markers,
+  html body .b-topic aside.markers,
+  html body .b-message aside.markers,
+  html body .b-dialog aside.markers,
+  html body aside.markers:not(.controls *) {
+    position: absolute !important;
+    top: 10px !important;
+    right: 36px !important;
     display: inline-flex !important;
     align-items: center !important;
-    height: 32px !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    margin: 0 !important;
     float: none !important;
+    height: auto !important;
+    z-index: 5 !important;
   }
 
-  html body .b-offtopic_marker,
-  html body .b-summary_marker {
+  html body .b-comment aside.markers .b-offtopic_marker,
+  html body .b-comment aside.markers .b-new_marker,
+  html body .b-topic aside.markers .b-offtopic_marker,
+  html body .b-topic aside.markers .b-new_marker,
+  html body .b-message aside.markers .b-offtopic_marker,
+  html body .b-message aside.markers .b-new_marker,
+  html body .b-dialog aside.markers .b-offtopic_marker,
+  html body .b-dialog aside.markers .b-new_marker,
+  html body aside.markers:not(.controls *) .b-offtopic_marker,
+  html body aside.markers:not(.controls *) .b-new_marker,
+  html body aside.markers:not(.controls *) .b-summary_marker {
     position: relative !important;
     display: inline-flex !important;
     align-items: center !important;
-    height: 32px !important;
+    justify-content: center !important;
+    height: 18px !important;
     width: auto !important;
-    float: none !important;
+    min-width: 0 !important;
     margin: 0 !important;
+    float: none !important;
+    vertical-align: middle !important;
   }
 
-  html body .b-offtopic_marker:before,
-  html body .b-summary_marker:before {
+  html body .b-comment aside.markers .b-offtopic_marker:before,
+  html body .b-comment aside.markers .b-new_marker:before,
+  html body .b-topic aside.markers .b-offtopic_marker:before,
+  html body .b-topic aside.markers .b-new_marker:before,
+  html body .b-message aside.markers .b-offtopic_marker:before,
+  html body .b-message aside.markers .b-new_marker:before,
+  html body .b-dialog aside.markers .b-offtopic_marker:before,
+  html body .b-dialog aside.markers .b-new_marker:before,
+  html body aside.markers:not(.controls *) .b-offtopic_marker:before,
+  html body aside.markers:not(.controls *) .b-new_marker:before,
+  html body aside.markers:not(.controls *) .b-summary_marker:before {
     position: static !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    height: 32px !important;
-    padding: 0 10px !important;
-    font-size: 11.5px !important;
-    font-weight: 500 !important;
-    line-height: 1 !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    padding: 0 6px !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    text-transform: uppercase !important;
     width: auto !important;
-    min-width: 60px !important;
+    min-width: 0 !important;
     box-sizing: border-box !important;
     content: attr(data-text) !important;
-    border-radius: 8px !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 4px !important;
     cursor: pointer !important;
     transition: all 120ms ease !important;
+  }
+
+  /* Offtopic Marker States */
+  html body .b-offtopic_marker.active:before,
+  html body .b-offtopic_marker:not(.off):before {
+    color: #fca5a5 !important;
+    background: rgba(239, 68, 68, 0.2) !important;
+    border: 1px solid rgba(239, 68, 68, 0.5) !important;
+    box-shadow: 0 0 6px rgba(239, 68, 68, 0.2) !important;
   }
 
   html body .b-offtopic_marker.off:before {
     color: #a1a1aa !important;
     background: rgba(255, 255, 255, 0.05) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none !important;
   }
 
-  html body .b-offtopic_marker.active:not(.off):before,
-  html body .b-offtopic_marker:not(.off):before {
+  /* New Marker States */
+  html body .b-new_marker.active:before,
+  html body .b-new_marker:not(.off):before {
     color: #ffffff !important;
     background: rgba(152, 132, 165, 0.35) !important;
-    border-color: #9884a5 !important;
-    box-shadow: 0 0 10px rgba(152, 132, 165, 0.3) !important;
+    border: 1px solid rgba(196, 175, 212, 0.5) !important;
+    box-shadow: 0 0 6px rgba(152, 132, 165, 0.25) !important;
   }
 
-  html body .b-offtopic_marker:active:before,
-  html body .b-summary_marker:active:before {
-    transform: scale(0.94) !important;
+  html body .b-new_marker.off:before {
+    color: #a1a1aa !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none !important;
+  }
+
+  /* Editor Toolbar Markers */
+  html body .b-shiki_editor aside.markers,
+  html body .b-shiki_editor-v2 aside.markers,
+  html body .controls aside.markers {
+    position: static !important;
+    flex: 0 0 auto !important;
+    margin: 0 0 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 28px !important;
+    float: none !important;
+    gap: 6px !important;
+  }
+
+  html body .controls aside.markers .b-offtopic_marker,
+  html body .controls aside.markers .b-summary_marker {
+    height: 28px !important;
+    width: auto !important;
+  }
+
+  html body .controls aside.markers .b-offtopic_marker:before,
+  html body .controls aside.markers .b-summary_marker:before {
+    height: 28px !important;
+    line-height: 28px !important;
+    padding: 0 8px !important;
+    font-size: 11px !important;
+    border-radius: 6px !important;
+    min-width: 50px !important;
   }
 }
 
@@ -8356,17 +8432,18 @@
     min-height: 30px !important;
   }
 
-  html body .b-offtopic_marker,
-  html body .b-summary_marker {
-    height: 30px !important;
+  html body .controls aside.markers .b-offtopic_marker,
+  html body .controls aside.markers .b-summary_marker {
+    height: 26px !important;
   }
 
-  html body .b-offtopic_marker:before,
-  html body .b-summary_marker:before {
-    height: 30px !important;
-    font-size: 11px !important;
-    padding: 0 8px !important;
-    min-width: 54px !important;
+  html body .controls aside.markers .b-offtopic_marker:before,
+  html body .controls aside.markers .b-summary_marker:before {
+    height: 26px !important;
+    line-height: 26px !important;
+    font-size: 10.5px !important;
+    padding: 0 6px !important;
+    min-width: 44px !important;
   }
 }
 
