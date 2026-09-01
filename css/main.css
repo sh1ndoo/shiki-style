@@ -6128,6 +6128,51 @@
     outline: none !important;
   }
 
+  /* --- User Rates Inline Edit Form (.list-lines tr.edit-form) --- */
+  html body .p-user_rates-index .list-lines tr.edit-form form,
+  html body .p-user_rates-index .list-lines tr.edit-form td,
+  html body .list-lines tr.edit-form form,
+  html body .list-lines tr.edit-form td,
+  .p-user_rates-index .list-lines tr.edit-form form,
+  .list-lines tr.edit-form form {
+    background-color: rgba(26, 26, 34, 0.95) !important;
+    background: rgba(26, 26, 34, 0.95) !important;
+    border-top: 1px solid rgba(152, 132, 165, 0.25) !important;
+    border-bottom: 1px solid rgba(152, 132, 165, 0.25) !important;
+    border-left: none !important;
+    border-right: none !important;
+    color: #e4e4e9 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  html body .p-user_rates-index .list-lines tr.edit-form label,
+  html body .list-lines tr.edit-form label {
+    color: #c4afd4 !important;
+    font-size: 12px !important;
+  }
+
+  html body .p-user_rates-index .list-lines tr.edit-form input,
+  html body .p-user_rates-index .list-lines tr.edit-form textarea,
+  html body .p-user_rates-index .list-lines tr.edit-form select,
+  html body .list-lines tr.edit-form input,
+  html body .list-lines tr.edit-form textarea,
+  html body .list-lines tr.edit-form select {
+    background-color: rgba(18, 18, 22, 0.9) !important;
+    border: 1px solid rgba(152, 132, 165, 0.4) !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+  }
+
+  html body .p-user_rates-index .list-lines tr.edit-form input:focus,
+  html body .p-user_rates-index .list-lines tr.edit-form textarea:focus,
+  html body .p-user_rates-index .list-lines tr.edit-form select:focus,
+  html body .list-lines tr.edit-form input:focus,
+  html body .list-lines tr.edit-form textarea:focus,
+  html body .list-lines tr.edit-form select:focus {
+    border-color: #c4afd4 !important;
+    box-shadow: 0 0 0 2px rgba(196, 175, 212, 0.25) !important;
+  }
+
   /* --- User Rates Summary Stats (.summary.lines, .stat-value) --- */
   html body .summary.lines,
   html body .summary.list,
