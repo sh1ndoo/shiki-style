@@ -3825,7 +3825,7 @@
     border-radius: 4px !important;
     color: #ffffff !important;
     padding: 1px 6px !important;
-    margin: 0 2px !important;
+    margin: 0 1px !important;
     display: inline-flex !important;
     align-items: center !important;
     font-size: 11px !important;
@@ -3851,7 +3851,7 @@
     background-color: rgba(46, 160, 67, 0.15) !important;
     border: 1px solid rgba(46, 160, 67, 0.6) !important;
     color: #7ee787 !important;
-    margin: 0 2px !important;
+    margin: 0 1px !important;
   }
 
   /* Анонс / Брошено (Soft Red + Bright Border) */
@@ -3864,7 +3864,7 @@
     background-color: rgba(230, 57, 70, 0.15) !important;
     border: 1px solid rgba(230, 57, 70, 0.6) !important;
     color: #ff7b72 !important;
-    margin: 0 2px !important;
+    margin: 0 1px !important;
   }
 
   /* Онгоинг / Смотрю (Soft Blue + Bright Border) */
@@ -3877,7 +3877,7 @@
     background-color: rgba(30, 144, 255, 0.15) !important;
     border: 1px solid rgba(30, 144, 255, 0.6) !important;
     color: #79c0ff !important;
-    margin: 0 2px !important;
+    margin: 0 1px !important;
   }
 
   /* Эпизод / Серии (Soft Amber/Orange + Bright Border) */
@@ -3888,6 +3888,7 @@
     background-color: rgba(245, 158, 11, 0.15) !important;
     border: 1px solid rgba(245, 158, 11, 0.6) !important;
     color: #fbbf24 !important;
+    margin: 0 1px !important;
   }
 
   /* В планах (Soft Teal/Cyan + Bright Border) */
@@ -3897,6 +3898,7 @@
     background-color: rgba(6, 182, 212, 0.15) !important;
     border: 1px solid rgba(6, 182, 212, 0.6) !important;
     color: #67e8f9 !important;
+    margin: 0 1px !important;
   }
 
   /* Отложено / Приостановлено (Soft Yellow + Bright Border) */
@@ -3908,6 +3910,7 @@
     background-color: rgba(234, 179, 8, 0.15) !important;
     border: 1px solid rgba(234, 179, 8, 0.6) !important;
     color: #fde047 !important;
+    margin: 0 1px !important;
   }
 
   /* Студия / Жанры / Другие теги (Soft Lilac + Bright Border) */
@@ -3920,7 +3923,7 @@
     background-color: rgba(152, 132, 165, 0.15) !important;
     border: 1px solid rgba(152, 132, 165, 0.6) !important;
     color: #c4afd4 !important;
-    margin: 0 2px !important;
+    margin: 0 1px !important;
   }
 
   /* --- Section / Category Specific Tag Colors --- */
