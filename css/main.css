@@ -6870,12 +6870,12 @@
     margin-bottom: 20px !important;
   }
 
-  /* --- Screenshots Grid on Mobile & Tablets (Large Views) --- */
+  /* --- Screenshots Grid on Mobile & Tablets (2 per row like videos) --- */
   html body .c-screenshots .cc,
   .c-screenshots .cc {
     display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px 10px !important;
     width: 100% !important;
     box-sizing: border-box !important;
     float: none !important;
@@ -6884,11 +6884,11 @@
     margin-bottom: 20px !important;
   }
 
-  @media screen and (min-width: 481px) and (max-width: 1024px) {
+  @media screen and (min-width: 540px) and (max-width: 1024px) {
     html body .c-screenshots .cc,
     .c-screenshots .cc {
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 14px !important;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+      gap: 12px 10px !important;
     }
   }
 
@@ -6905,7 +6905,7 @@
     aspect-ratio: 16 / 9 !important;
     position: relative !important;
     overflow: hidden !important;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     border: 1px solid rgba(152, 132, 165, 0.25) !important;
     background: rgba(0, 0, 0, 0.5) !important;
     float: none !important;
@@ -6921,7 +6921,7 @@
     object-fit: cover !important;
     object-position: center !important;
     display: block !important;
-    border-radius: 9px !important;
+    border-radius: 7px !important;
   }
 
   /* --- Video Card Styling on Mobile & Tablets --- */
@@ -7019,6 +7019,57 @@
     text-overflow: ellipsis !important;
   }
 
+  /* --- Characters Grid on Mobile (4 per row) --- */
+  html body .cc-characters .cc,
+  html body .c-characters .cc,
+  .cc-characters .cc,
+  .c-characters .cc {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px 6px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  @media screen and (min-width: 540px) and (max-width: 1024px) {
+    html body .cc-characters .cc,
+    html body .c-characters .cc {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
+      gap: 10px 8px !important;
+    }
+  }
+
+  html body .cc-characters .b-catalog_entry,
+  html body .c-characters .b-catalog_entry,
+  html body .c-characters .c-character,
+  html body .cc-characters .c-character {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .cc-characters .b-catalog_entry .title,
+  html body .c-characters .b-catalog_entry .title {
+    font-size: 10.5px !important;
+    line-height: 1.2 !important;
+    margin-top: 3px !important;
+  }
+
+  html body .cc-characters .b-catalog_entry .title .name-ru,
+  html body .cc-characters .b-catalog_entry .title .name-en,
+  html body .c-characters .b-catalog_entry .title .name-ru,
+  html body .c-characters .b-catalog_entry .title .name-en {
+    font-size: 10.5px !important;
+    line-height: 1.2 !important;
+  }
+
   /* --- Similar / Related / Franchise Anime on Mobile (Smaller cards, 3 per row) --- */
   html body .cc-similar .cc,
   html body .cc-related .cc,
@@ -7076,9 +7127,7 @@
     font-size: 11px !important;
   }
 
-  /* --- Catalog & Characters Grid on Mobile (2 columns per row) --- */
-  html body .cc-characters .cc,
-  html body .c-characters .cc,
+  /* --- Catalog Grid on Mobile (2 columns per row) --- */
   html body .c-people .cc,
   html body .c-authors .cc,
   html body .cc-authors .cc,
@@ -7091,8 +7140,6 @@
   html body .c-collections:not(:has(.cc)),
   html body .c-critiques:not(:has(.cc)),
   html body .c-articles:not(:has(.cc)),
-  .cc-characters .cc,
-  .c-characters .cc,
   .c-people .cc,
   .cc-entries,
   .b-catalog_entries {
@@ -7109,12 +7156,9 @@
 
   html body .cc-entries .b-catalog_entry,
   html body .b-catalog_entries .b-catalog_entry,
-  html body .cc-characters .b-catalog_entry,
-  html body .c-characters .b-catalog_entry,
   html body .c-people .b-catalog_entry,
   html body .c-authors .b-catalog_entry,
   html body .c-column.b-catalog_entry,
-  html body .b-catalog_entry.c-character,
   html body .b-catalog_entry.c-person,
   html body .b-catalog_entry.c-anime,
   html body .b-catalog_entry.c-manga,
