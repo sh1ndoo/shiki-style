@@ -8204,7 +8204,7 @@
     display: inline-flex !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
-    gap: 4px !important;
+    gap: 0 !important;
     width: max-content !important;
     padding-right: 4px !important;
   }
@@ -8212,6 +8212,17 @@
   html body .editor-controls > *,
   html body .editor-controls .b-tooltipped,
   html body aside.buttons .editor-controls .b-tooltipped,
+  html body aside.buttons .editor-controls > *,
+  html body .editor-controls .editor-bold,
+  html body .editor-controls .editor-italic,
+  html body .editor-controls .editor-underline,
+  html body .editor-controls .editor-strike,
+  html body .editor-controls .editor-link,
+  html body .editor-controls .editor-image,
+  html body .editor-controls .editor-quote,
+  html body .editor-controls .editor-spoiler,
+  html body .editor-controls .editor-file,
+  html body .editor-controls .editor-smiley,
   .editor-controls > *,
   .editor-controls .b-tooltipped {
     flex: 0 0 32px !important;
@@ -8219,6 +8230,9 @@
     height: 32px !important;
     min-width: 32px !important;
     min-height: 32px !important;
+    margin: 0 0 0 5px !important;
+    margin-left: 5px !important;
+    margin-right: 0 !important;
     padding: 0 !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -8230,6 +8244,25 @@
     box-sizing: border-box !important;
     cursor: pointer !important;
     transition: all 120ms ease !important;
+  }
+
+  html body .editor-controls > *:first-child,
+  html body .editor-controls .b-tooltipped:first-child,
+  html body aside.buttons .editor-controls .b-tooltipped:first-child,
+  html body aside.buttons .editor-controls > *:first-child,
+  html body .editor-controls .editor-bold:first-child,
+  html body .editor-controls .editor-italic:first-child,
+  html body .editor-controls .editor-underline:first-child,
+  html body .editor-controls .editor-strike:first-child,
+  html body .editor-controls .editor-link:first-child,
+  html body .editor-controls .editor-image:first-child,
+  html body .editor-controls .editor-quote:first-child,
+  html body .editor-controls .editor-spoiler:first-child,
+  html body .editor-controls .editor-file:first-child,
+  html body .editor-controls .editor-smiley:first-child,
+  .editor-controls > *:first-child,
+  .editor-controls .b-tooltipped:first-child {
+    margin-left: 0 !important;
   }
 
   html body .editor-controls > *:hover,
