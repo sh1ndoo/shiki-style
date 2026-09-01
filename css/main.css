@@ -7270,21 +7270,36 @@
     display: block !important;
   }
 
-  /* Title clamping: exactly 1 line with ellipsis */
+  /* Title clamping: strictly 1 line with ellipsis (overrides .two_lined) */
   html body .b-catalog_entry .title,
+  html body .b-catalog_entry .cover .title,
+  html body .b-catalog_entry .title.two_lined,
+  html body .b-catalog_entry .cover .title.two_lined,
+  html body .b-catalog_entry .title.left_aligned,
+  html body .b-catalog_entry .cover .title.left_aligned,
+  html body [class*="swiper"] .b-catalog_entry .title,
+  html body [class*="swiper"] .b-catalog_entry .cover .title,
+  html body .swiper-slide .b-catalog_entry .title,
+  html body .swiper-slide .b-catalog_entry .cover .title,
+  .b-catalog_entry .cover .title.two_lined,
+  .b-catalog_entry .title.two_lined,
+  .b-catalog_entry .cover .title,
   .b-catalog_entry .title {
     display: block !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: horizontal !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     word-break: normal !important;
+    word-wrap: normal !important;
     margin-top: 6px !important;
     margin-bottom: 2px !important;
     width: 100% !important;
     max-width: 100% !important;
-    max-height: none !important;
-    height: auto !important;
-    line-height: 1.35 !important;
+    max-height: 20px !important;
+    height: 20px !important;
+    line-height: 20px !important;
     font-size: 12px !important;
     color: #e4e4e9 !important;
     text-align: center !important;
@@ -7292,38 +7307,48 @@
   }
 
   html body .b-catalog_entry .title.left_aligned,
-  .b-catalog_entry .title.left_aligned {
+  html body .b-catalog_entry .cover .title.left_aligned,
+  .b-catalog_entry .title.left_aligned,
+  .b-catalog_entry .cover .title.left_aligned {
     text-align: left !important;
   }
 
+  html body .b-catalog_entry .title *,
   html body .b-catalog_entry .title .name-ru,
-  .b-catalog_entry .title .name-ru {
-    display: block !important;
+  html body .b-catalog_entry .title .name-en,
+  html body .b-catalog_entry .cover .title .name-ru,
+  html body .b-catalog_entry .cover .title .name-en,
+  html body .b-catalog_entry .cover .title.two_lined .name-ru,
+  html body .b-catalog_entry .cover .title.two_lined .name-en,
+  .b-catalog_entry .title .name-ru,
+  .b-catalog_entry .title .name-en {
+    display: inline-block !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     word-break: normal !important;
+    word-wrap: normal !important;
+    max-width: 100% !important;
+    vertical-align: top !important;
+    line-height: 20px !important;
+    height: 20px !important;
+    max-height: 20px !important;
     font-size: 12px !important;
-    line-height: 1.35 !important;
-    max-height: none !important;
+  }
+
+  html body .b-catalog_entry .title .name-ru,
+  .b-catalog_entry .title .name-ru {
     color: #e4e4e9 !important;
   }
 
   html body .b-catalog_entry .title .name-en,
   .b-catalog_entry .title .name-en {
-    display: block !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    word-break: normal !important;
-    font-size: 11px !important;
-    line-height: 1.35 !important;
-    max-height: none !important;
     color: #a1a1aa !important;
   }
 
   /* When both Russian and English names are present in title, show Russian name and hide English duplicate */
-  html body .b-catalog_entry .title:has(.name-ru) .name-en {
+  html body .b-catalog_entry .title:has(.name-ru) .name-en,
+  html body .b-catalog_entry .cover .title:has(.name-ru) .name-en {
     display: none !important;
   }
 
@@ -7336,10 +7361,19 @@
   /* Studio Name & Misc (Clearly visible under title with adequate spacing) */
   html body .b-catalog_entry .misc,
   html body .b-catalog_entry .misc .studio,
+  html body .b-catalog_entry .cover .misc,
+  html body .b-catalog_entry .cover .misc .studio,
+  html body [class*="swiper"] .b-catalog_entry .misc,
+  html body [class*="swiper"] .b-catalog_entry .cover .misc,
+  html body .swiper-slide .b-catalog_entry .misc,
+  html body .swiper-slide .b-catalog_entry .cover .misc,
   .b-catalog_entry .misc,
-  .b-catalog_entry .misc .studio {
+  .b-catalog_entry .misc .studio,
+  .b-catalog_entry .cover .misc {
     font-size: 11px !important;
-    line-height: 1.3 !important;
+    line-height: 16px !important;
+    height: 16px !important;
+    max-height: 16px !important;
     color: #a1a1aa !important;
     display: block !important;
     visibility: visible !important;
@@ -7350,13 +7384,19 @@
     margin-top: 3px !important;
     margin-bottom: 6px !important;
     text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   html body .b-catalog_entry .title.left_aligned + .misc,
   html body .b-catalog_entry .title.left_aligned ~ .misc,
+  html body .b-catalog_entry .cover:has(.left_aligned) .misc,
   html body [class*="swiper"] .b-catalog_entry .misc,
+  html body [class*="swiper"] .b-catalog_entry .cover .misc,
   html body .b-catalog_entry[class*="swiper"] .misc,
-  html body .swiper-slide .b-catalog_entry .misc {
+  html body .swiper-slide .b-catalog_entry .misc,
+  html body .swiper-slide .b-catalog_entry .cover .misc {
     text-align: left !important;
   }
 
@@ -7739,6 +7779,10 @@
     max-width: 110px !important;
     flex: 0 0 110px !important;
     margin-right: 6px !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    padding-bottom: 8px !important;
   }
 
   html body [class*="swiper"] .b-catalog_entry .cover,
@@ -7747,6 +7791,50 @@
   .b-catalog_entry[class*="swiper"] .cover {
     width: 110px !important;
     max-width: 110px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  html body .b-catalog_entry .title,
+  html body .b-catalog_entry .cover .title,
+  html body .b-catalog_entry .title.two_lined,
+  html body .b-catalog_entry .cover .title.two_lined {
+    display: block !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    height: 20px !important;
+    max-height: 20px !important;
+    line-height: 20px !important;
+    margin-top: 5px !important;
+    margin-bottom: 2px !important;
+  }
+
+  html body .b-catalog_entry .title *,
+  html body .b-catalog_entry .title .name-ru,
+  html body .b-catalog_entry .title .name-en {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+    height: 20px !important;
+    max-height: 20px !important;
+    line-height: 20px !important;
+  }
+
+  html body .b-catalog_entry .misc,
+  html body .b-catalog_entry .misc .studio,
+  html body .b-catalog_entry .cover .misc {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 10.5px !important;
+    height: 16px !important;
+    max-height: 16px !important;
+    line-height: 16px !important;
+    margin-top: 3px !important;
+    margin-bottom: 6px !important;
   }
 
   html body [class*="swiper"] .b-catalog_entry .cover .image-decor,
