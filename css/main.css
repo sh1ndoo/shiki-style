@@ -7747,13 +7747,22 @@
     overflow: visible !important;
   }
 
-  html body .p-profiles-show .profile-content .graph.x34 {
+  /* On mobile: Hide 34-column graph and show ONLY 26-column graph */
+  html body .graph.x34,
+  html body .activity .graph.x34,
+  html body .p-profiles-show .graph.x34,
+  html body .p-profiles-show .profile-content .graph.x34,
+  .graph.x34,
+  .activity .graph.x34 {
     display: none !important;
   }
 
-  html body .p-profiles-show .profile-content .graph.x26,
+  html body .graph.x26,
   html body .activity .graph.x26,
-  html body .activity .graph {
+  html body .p-profiles-show .graph.x26,
+  html body .p-profiles-show .profile-content .graph.x26,
+  .graph.x26,
+  .activity .graph.x26 {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
