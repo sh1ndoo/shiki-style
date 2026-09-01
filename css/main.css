@@ -6800,12 +6800,10 @@
     clear: both !important;
   }
 
-  /* --- Videos & Screenshots Grid on Mobile & Tablets --- */
+  /* --- Videos Grid on Mobile & Tablets --- */
   html body .c-videos .cc,
-  html body .c-screenshots .cc,
   html body .cc-videos .cc,
-  .c-videos .cc,
-  .c-screenshots .cc {
+  .c-videos .cc {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px 10px !important;
@@ -6815,6 +6813,60 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
     margin-bottom: 20px !important;
+  }
+
+  /* --- Screenshots Grid on Mobile & Tablets (Large Views) --- */
+  html body .c-screenshots .cc,
+  .c-screenshots .cc {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    html body .c-screenshots .cc,
+    .c-screenshots .cc {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 14px !important;
+    }
+  }
+
+  html body .c-screenshots .cc .c-screenshot,
+  html body .c-screenshots .cc .b-screenshot,
+  html body .c-screenshot,
+  html body .b-screenshot,
+  .c-screenshots .cc .c-screenshot,
+  .c-screenshot {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(152, 132, 165, 0.25) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    float: none !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .c-screenshot img,
+  html body .b-screenshot img,
+  .c-screenshot img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    border-radius: 9px !important;
   }
 
   /* --- Video Card Styling on Mobile & Tablets --- */
@@ -6901,15 +6953,69 @@
     text-transform: uppercase !important;
   }
 
-  /* --- Catalog & Characters Grid on Mobile & Tablets --- */
+  /* --- Similar / Related / Franchise Anime on Mobile (Smaller cards, 3 per row) --- */
+  html body .cc-similar .cc,
+  html body .cc-related .cc,
+  html body .cc-franchise .cc,
+  html body .c-similar .cc,
+  html body .c-related .cc,
+  .cc-similar .cc,
+  .cc-related .cc,
+  .cc-franchise .cc {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  @media screen and (min-width: 540px) and (max-width: 1024px) {
+    html body .cc-similar .cc,
+    html body .cc-related .cc,
+    html body .cc-franchise .cc {
+      grid-template-columns: repeat(auto-fill, minmax(105px, 1fr)) !important;
+      gap: 12px 10px !important;
+    }
+  }
+
+  html body .cc-similar .b-catalog_entry,
+  html body .cc-related .b-catalog_entry,
+  html body .cc-franchise .b-catalog_entry,
+  html body .c-similar .b-catalog_entry,
+  html body .c-related .b-catalog_entry {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .cc-similar .b-catalog_entry .title,
+  html body .cc-related .b-catalog_entry .title,
+  html body .cc-franchise .b-catalog_entry .title {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    margin-top: 4px !important;
+  }
+
+  html body .cc-similar .b-catalog_entry .title .name-ru,
+  html body .cc-similar .b-catalog_entry .title .name-en,
+  html body .cc-related .b-catalog_entry .title .name-ru,
+  html body .cc-related .b-catalog_entry .title .name-en {
+    font-size: 11px !important;
+  }
+
+  /* --- Catalog & Characters Grid on Mobile (2 columns per row) --- */
   html body .cc-characters .cc,
   html body .c-characters .cc,
   html body .c-people .cc,
   html body .c-authors .cc,
   html body .cc-authors .cc,
-  html body .cc-similar .cc,
-  html body .cc-related .cc,
-  html body .cc-franchise .cc,
   html body .cc-entries,
   html body .b-catalog_entries,
   html body .c-animes:not(:has(.cc)),
@@ -6917,7 +7023,6 @@
   html body .c-ranobe:not(:has(.cc)),
   html body .c-clubs:not(:has(.cc)),
   html body .c-collections:not(:has(.cc)),
-  html body .c-videos:not(:has(.cc)),
   html body .c-critiques:not(:has(.cc)),
   html body .c-articles:not(:has(.cc)),
   .cc-characters .cc,
@@ -6933,6 +7038,7 @@
     float: none !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    margin-bottom: 20px !important;
   }
 
   html body .cc-entries .b-catalog_entry,
