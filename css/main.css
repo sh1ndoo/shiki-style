@@ -6813,7 +6813,7 @@
     box-sizing: border-box !important;
   }
 
-  /* --- Section Headers for Characters / Staff / Videos / Screenshots / Similar --- */
+  /* --- Section Headers for Characters / Staff / Videos / Screenshots --- */
   html body .cc-characters,
   html body .c-characters,
   html body .cc-authors,
@@ -6822,9 +6822,6 @@
   html body .c-roles,
   html body .c-videos,
   html body .c-screenshots,
-  html body .cc-similar,
-  html body .cc-related,
-  html body .cc-franchise,
   .cc-characters,
   .c-characters,
   .cc-authors,
@@ -7066,121 +7063,15 @@
     line-height: 1.2 !important;
   }
 
-  /* --- Similar / Related / Franchise Anime Horizontal Carousel on Mobile (4 per screen view, scrollable) --- */
-  html body .cc-similar .cc,
-  html body .cc-related .cc,
-  html body .cc-franchise .cc,
-  html body .c-similar .cc,
-  html body .c-related .cc,
-  html body .cc.cc-similar,
-  html body .cc.cc-related,
-  html body .cc.cc-franchise,
-  html body .cc-similar:not(:has(.cc)),
-  html body .cc-related:not(:has(.cc)),
-  html body .cc-franchise:not(:has(.cc)),
-  .cc-similar .cc,
-  .cc-related .cc,
-  .cc-franchise .cc,
-  .cc.cc-similar,
-  .cc.cc-related,
-  .cc.cc-franchise,
-  .cc-similar:not(:has(.cc)),
-  .cc-related:not(:has(.cc)),
-  .cc-franchise:not(:has(.cc)) {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    scroll-snap-type: x mandatory !important;
-    gap: 8px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    float: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: 20px !important;
-    padding-bottom: 4px !important;
-  }
-
-  html body .cc-similar .cc::-webkit-scrollbar,
-  html body .cc.cc-similar::-webkit-scrollbar,
-  html body .cc-related .cc::-webkit-scrollbar,
-  html body .cc.cc-related::-webkit-scrollbar,
-  html body .cc-franchise .cc::-webkit-scrollbar,
-  html body .cc.cc-franchise::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  html body .cc-similar .b-catalog_entry,
-  html body .cc-related .b-catalog_entry,
-  html body .cc-franchise .b-catalog_entry,
-  html body .c-similar .b-catalog_entry,
-  html body .c-related .b-catalog_entry,
-  html body .cc.cc-similar .b-catalog_entry,
-  html body .cc.cc-related .b-catalog_entry,
-  html body .cc.cc-franchise .b-catalog_entry,
-  .cc-similar .b-catalog_entry,
-  .cc.cc-similar .b-catalog_entry {
-    flex: 0 0 calc((100% - 24px) / 4) !important;
-    min-width: calc((100% - 24px) / 4) !important;
-    max-width: calc((100% - 24px) / 4) !important;
-    width: calc((100% - 24px) / 4) !important;
-    scroll-snap-align: start !important;
-    margin: 0 !important;
-    float: none !important;
-    box-sizing: border-box !important;
-  }
-
-  @media screen and (min-width: 540px) and (max-width: 1024px) {
-    html body .cc-similar .b-catalog_entry,
-    html body .cc-related .b-catalog_entry,
-    html body .cc-franchise .b-catalog_entry,
-    html body .c-similar .b-catalog_entry,
-    html body .c-related .b-catalog_entry,
-    html body .cc.cc-similar .b-catalog_entry,
-    html body .cc.cc-related .b-catalog_entry,
-    html body .cc.cc-franchise .b-catalog_entry {
-      flex: 0 0 calc((100% - 40px) / 6) !important;
-      min-width: calc((100% - 40px) / 6) !important;
-      max-width: calc((100% - 40px) / 6) !important;
-      width: calc((100% - 40px) / 6) !important;
-    }
-  }
-
-  html body .cc-similar .b-catalog_entry .title,
-  html body .cc-related .b-catalog_entry .title,
-  html body .cc-franchise .b-catalog_entry .title,
-  html body .cc.cc-similar .b-catalog_entry .title,
-  html body .cc.cc-related .b-catalog_entry .title,
-  html body .cc.cc-franchise .b-catalog_entry .title {
-    font-size: 10.5px !important;
-    line-height: 1.2 !important;
-    margin-top: 3px !important;
-    max-height: 2.5em !important;
-  }
-
-  html body .cc-similar .b-catalog_entry .title .name-ru,
-  html body .cc-similar .b-catalog_entry .title .name-en,
-  html body .cc-related .b-catalog_entry .title .name-ru,
-  html body .cc-related .b-catalog_entry .title .name-en,
-  html body .cc.cc-similar .b-catalog_entry .title .name-ru,
-  html body .cc.cc-similar .b-catalog_entry .title .name-en {
-    font-size: 10.5px !important;
-    line-height: 1.2 !important;
-  }
-
   /* --- Catalog Grid on Mobile (2 columns per row) --- */
   html body .c-people .cc,
   html body .c-authors .cc,
   html body .cc-authors .cc,
   html body .cc-entries,
   html body .b-catalog_entries,
-  html body .c-animes:not(:has(.cc)),
-  html body .c-mangas:not(:has(.cc)),
-  html body .c-ranobe:not(:has(.cc)),
+  html body .c-animes:not(:has(.cc)):not(.cc-similar):not(.cc-related):not(.cc-franchise),
+  html body .c-mangas:not(:has(.cc)):not(.cc-similar):not(.cc-related):not(.cc-franchise),
+  html body .c-ranobe:not(:has(.cc)):not(.cc-similar):not(.cc-related):not(.cc-franchise),
   html body .c-clubs:not(:has(.cc)),
   html body .c-collections:not(:has(.cc)),
   html body .c-critiques:not(:has(.cc)),
@@ -7199,33 +7090,151 @@
     margin-bottom: 20px !important;
   }
 
-  html body .cc-entries .b-catalog_entry,
-  html body .b-catalog_entries .b-catalog_entry,
-  html body .c-people .b-catalog_entry,
-  html body .c-authors .b-catalog_entry,
-  html body .c-column.b-catalog_entry,
-  html body .b-catalog_entry.c-person,
-  html body .b-catalog_entry.c-anime,
-  html body .b-catalog_entry.c-manga,
-  html body .c-animes .b-catalog_entry,
-  html body .c-mangas .b-catalog_entry,
-  html body .c-ranobe .b-catalog_entry,
-  html body .c-people .b-catalog_entry,
-  html body .c-clubs .b-catalog_entry,
-  html body .c-collections .b-catalog_entry,
-  html body .c-videos .b-catalog_entry,
-  html body .c-critiques .b-catalog_entry,
-  html body .c-articles .b-catalog_entry,
-  .cc-entries .b-catalog_entry,
-  .b-catalog_entries .b-catalog_entry,
-  .c-character,
-  .c-person {
+  html body .cc-entries > .b-catalog_entry,
+  html body .b-catalog_entries > .b-catalog_entry,
+  html body .c-people > .b-catalog_entry,
+  html body .c-authors > .b-catalog_entry,
+  html body .c-animes:not(.cc-similar):not(.cc-related):not(.cc-franchise) > .b-catalog_entry,
+  html body .c-mangas:not(.cc-similar):not(.cc-related):not(.cc-franchise) > .b-catalog_entry,
+  html body .c-ranobe:not(.cc-similar):not(.cc-related):not(.cc-franchise) > .b-catalog_entry,
+  html body .c-clubs > .b-catalog_entry,
+  html body .c-collections > .b-catalog_entry,
+  html body .c-critiques > .b-catalog_entry,
+  html body .c-articles > .b-catalog_entry,
+  .cc-entries > .b-catalog_entry,
+  .b-catalog_entries > .b-catalog_entry {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
     margin: 0 !important;
     float: none !important;
     box-sizing: border-box !important;
+  }
+
+  /* --- Similar / Related / Franchise Anime Horizontal Carousel on Mobile (4 per screen view, scrollable) --- */
+  html body .cc-similar,
+  html body .cc.cc-similar,
+  html body .cc-similar .cc,
+  html body .cc-related,
+  html body .cc.cc-related,
+  html body .cc-related .cc,
+  html body .cc-franchise,
+  html body .cc.cc-franchise,
+  html body .cc-franchise .cc,
+  html body .c-similar,
+  html body .c-similar .cc,
+  html body .c-related,
+  html body .c-related .cc,
+  .cc-similar,
+  .cc.cc-similar,
+  .cc-similar .cc,
+  .cc-related,
+  .cc.cc-related,
+  .cc-franchise,
+  .cc.cc-franchise {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    clear: both !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 4px !important;
+  }
+
+  html body .cc-similar::-webkit-scrollbar,
+  html body .cc.cc-similar::-webkit-scrollbar,
+  html body .cc-similar .cc::-webkit-scrollbar,
+  html body .cc-related::-webkit-scrollbar,
+  html body .cc.cc-related::-webkit-scrollbar,
+  html body .cc-franchise::-webkit-scrollbar,
+  html body .cc.cc-franchise::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  html body .cc-similar .b-catalog_entry,
+  html body .cc.cc-similar .b-catalog_entry,
+  html body .cc-similar .c-column,
+  html body .cc.cc-similar .c-column,
+  html body .cc-similar .cc .b-catalog_entry,
+  html body .cc-related .b-catalog_entry,
+  html body .cc.cc-related .b-catalog_entry,
+  html body .cc-related .c-column,
+  html body .cc.cc-related .c-column,
+  html body .cc-related .cc .b-catalog_entry,
+  html body .cc-franchise .b-catalog_entry,
+  html body .cc.cc-franchise .b-catalog_entry,
+  html body .cc-franchise .c-column,
+  html body .cc.cc-franchise .c-column,
+  html body .c-similar .b-catalog_entry,
+  html body .c-similar .cc .b-catalog_entry,
+  html body .c-related .b-catalog_entry,
+  html body .c-related .cc .b-catalog_entry,
+  .cc-similar .b-catalog_entry,
+  .cc.cc-similar .b-catalog_entry,
+  .cc-similar .c-column,
+  .cc.cc-similar .c-column {
+    display: block !important;
+    flex: 0 0 calc((100% - 24px) / 4) !important;
+    min-width: calc((100% - 24px) / 4) !important;
+    max-width: calc((100% - 24px) / 4) !important;
+    width: calc((100% - 24px) / 4) !important;
+    scroll-snap-align: start !important;
+    margin: 0 !important;
+    margin-right: 0 !important;
+    float: none !important;
+    clear: none !important;
+    box-sizing: border-box !important;
+  }
+
+  @media screen and (min-width: 540px) and (max-width: 1024px) {
+    html body .cc-similar .b-catalog_entry,
+    html body .cc.cc-similar .b-catalog_entry,
+    html body .cc-similar .c-column,
+    html body .cc.cc-similar .c-column,
+    html body .cc-related .b-catalog_entry,
+    html body .cc.cc-related .b-catalog_entry,
+    html body .cc-franchise .b-catalog_entry,
+    html body .cc.cc-franchise .b-catalog_entry {
+      flex: 0 0 calc((100% - 40px) / 6) !important;
+      min-width: calc((100% - 40px) / 6) !important;
+      max-width: calc((100% - 40px) / 6) !important;
+      width: calc((100% - 40px) / 6) !important;
+    }
+  }
+
+  html body .cc-similar .b-catalog_entry .title,
+  html body .cc.cc-similar .b-catalog_entry .title,
+  html body .cc-related .b-catalog_entry .title,
+  html body .cc-franchise .b-catalog_entry .title {
+    font-size: 10.5px !important;
+    line-height: 1.2 !important;
+    margin-top: 3px !important;
+    max-height: none !important;
+  }
+
+  html body .cc-similar .b-catalog_entry .title .name-ru,
+  html body .cc-similar .b-catalog_entry .title .name-en,
+  html body .cc.cc-similar .b-catalog_entry .title .name-ru,
+  html body .cc.cc-similar .b-catalog_entry .title .name-en,
+  html body .cc-related .b-catalog_entry .title .name-ru,
+  html body .cc-related .b-catalog_entry .title .name-en {
+    font-size: 10.5px !important;
+    line-height: 1.2 !important;
+    max-height: none !important;
   }
 
   /* Catalog entry card elements (cover, title, misc) */
