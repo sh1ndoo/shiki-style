@@ -8384,6 +8384,95 @@
     border-radius: 6px !important;
     min-width: 50px !important;
   }
+
+  /* --- Editor Footer Action Buttons on Mobile (Написать & Предпросмотр в одну горизонтальную линию) --- */
+  html body .b-shiki_editor footer,
+  html body .b-shiki_editor-v2 footer,
+  html body .b-comments footer,
+  html body .b-topic footer,
+  html body .b-dialog footer,
+  html body .b-message footer,
+  html body form footer:has(.btn-submit),
+  html body footer:has(.btn-submit),
+  html body footer:has(.preview) {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .b-shiki_editor footer input[type=submit],
+  html body .b-shiki_editor footer .btn-submit,
+  html body .b-shiki_editor footer .b-button.preview,
+  html body .b-shiki_editor footer .preview,
+  html body .b-shiki_editor footer .unpreview,
+  html body .b-shiki_editor-v2 footer input[type=submit],
+  html body .b-shiki_editor-v2 footer .btn-submit,
+  html body .b-shiki_editor-v2 footer .b-button.preview,
+  html body .b-shiki_editor-v2 footer .preview,
+  html body .b-shiki_editor-v2 footer .unpreview,
+  html body footer input[type=submit].btn-submit,
+  html body footer input[type=submit],
+  html body footer .b-button.preview,
+  html body footer .btn-submit,
+  html body footer .preview,
+  html body footer .unpreview {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    min-height: 38px !important;
+    height: 38px !important;
+    line-height: 36px !important;
+    padding: 0 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .b-shiki_editor footer .hide,
+  html body .b-shiki_editor footer .cancel,
+  html body .b-shiki_editor-v2 footer .hide,
+  html body .b-shiki_editor-v2 footer .cancel,
+  html body footer .hide,
+  html body footer .cancel {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 0 0 6px !important;
+    font-size: 12px !important;
+    color: #a1a1aa !important;
+    cursor: pointer !important;
+  }
+
+  html body .b-shiki_editor footer .about-bb_codes,
+  html body .b-shiki_editor-v2 footer .about-bb_codes,
+  html body footer .about-bb_codes {
+    margin-left: auto !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    align-self: center !important;
+  }
+
+  html body .b-shiki_editor.previewed footer .unpreview,
+  html body .b-shiki_editor-v2.previewed footer .unpreview,
+  html body .previewed footer .unpreview {
+    display: inline-flex !important;
+  }
+
+  html body .b-shiki_editor.previewed footer .preview,
+  html body .b-shiki_editor-v2.previewed footer .preview,
+  html body .previewed footer .preview {
+    display: none !important;
+  }
 }
 
 /* ============================================================
