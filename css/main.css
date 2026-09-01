@@ -7270,22 +7270,25 @@
     display: block !important;
   }
 
-  /* Full Title Display: complete title without truncation */
+  /* Title clamping: 2 lines with ellipsis, fully visible without vertical cutoff */
   html body .b-catalog_entry .title,
   .b-catalog_entry .title {
-    display: block !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     white-space: normal !important;
     word-break: break-word !important;
     margin-top: 6px !important;
     width: 100% !important;
     max-height: none !important;
-    height: auto !important;
     line-height: 1.35 !important;
     font-size: 12px !important;
     color: #e4e4e9 !important;
     text-align: center !important;
+    padding-bottom: 2px !important;
+    box-sizing: border-box !important;
   }
 
   html body .b-catalog_entry .title.left_aligned,
@@ -7295,30 +7298,34 @@
 
   html body .b-catalog_entry .title .name-ru,
   .b-catalog_entry .title .name-ru {
-    display: block !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     white-space: normal !important;
     word-break: break-word !important;
     font-size: 12px !important;
     line-height: 1.35 !important;
     max-height: none !important;
-    height: auto !important;
     color: #e4e4e9 !important;
+    padding-bottom: 2px !important;
   }
 
   html body .b-catalog_entry .title .name-en,
   .b-catalog_entry .title .name-en {
-    display: block !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     white-space: normal !important;
     word-break: break-word !important;
     font-size: 11px !important;
     line-height: 1.35 !important;
     max-height: none !important;
-    height: auto !important;
     color: #a1a1aa !important;
+    padding-bottom: 2px !important;
   }
 
   /* When both Russian and English names are present in title, show Russian name and hide English duplicate */
