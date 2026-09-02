@@ -2725,6 +2725,54 @@
     color: #ffffff !important;
   }
 
+  /* --- History & Rate Action Text (.action) on All Devices / Desktop & Mobile --- */
+  html body .p-profiles .profile-head .c-history .entry .misc .action,
+  html body .p-profiles .profile-head .c-history .entry .action,
+  html body .p-profiles .profile-head .c-history .action,
+  html body .c-history .entry .misc .action,
+  html body .c-history .entry .action,
+  html body .c-history .action,
+  html body .c-history .misc .action,
+  html body .b-user_rate-history .action,
+  html body .b-user_rate-history .content .action,
+  html body .b-user_rate .action,
+  html body .b-history_line .action,
+  html body .p-user_rates .action,
+  html body .p-user_rates-index .action,
+  html body .action,
+  html body div.action,
+  html body span.action,
+  .p-profiles .profile-head .c-history .entry .misc .action,
+  .p-profiles .profile-head .c-history .entry .action,
+  .p-profiles .profile-head .c-history .action,
+  .c-history .entry .misc .action,
+  .c-history .entry .action,
+  .c-history .action,
+  .c-history .misc .action,
+  .b-user_rate-history .action,
+  .b-user_rate-history .content .action,
+  .b-user_rate .action,
+  .b-history_line .action,
+  .p-user_rates .action,
+  .p-user_rates-index .action,
+  .action,
+  div.action,
+  span.action {
+    color: #ede6f2 !important;
+    text-shadow: none !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry:hover .misc .action,
+  html body .p-profiles .profile-head .c-history .entry:hover .action,
+  html body .c-history .entry:hover .misc .action,
+  html body .c-history .entry:hover .action,
+  .p-profiles .profile-head .c-history .entry:hover .misc .action,
+  .p-profiles .profile-head .c-history .entry:hover .action,
+  .c-history .entry:hover .misc .action,
+  .c-history .entry:hover .action {
+    color: #ffffff !important;
+  }
+
   /* --- Profile Additionals (.c-additionals) --- */
   html body .c-additionals b,
   html body .p-profiles .profile-head .c-info .c-additionals b,
