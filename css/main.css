@@ -4467,20 +4467,16 @@
     display: none !important;
     align-items: center !important;
     justify-content: center !important;
-    background-color: rgba(152, 132, 165, 0.18) !important;
-    border: 1px solid rgba(152, 132, 165, 0.65) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
     border-radius: 4px !important;
-    color: #ffffff !important;
-    padding: 1px 5px !important;
+    padding: 0 !important;
     margin: 0 !important;
-    font-size: 10px !important;
-    line-height: 14px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.3px !important;
     text-shadow: none !important;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: none !important;
     vertical-align: middle !important;
-    transition: opacity 0.5s ease, background-color 150ms ease !important;
+    transition: opacity 0.5s ease !important;
   }
 
   /* Only show when active and unread */
@@ -4489,9 +4485,9 @@
   p.b-new_marker.active,
   .b-new_marker.active {
     display: inline-flex !important;
-    background-color: rgba(152, 132, 165, 0.25) !important;
-    border-color: #c4afd4 !important;
-    color: #ffffff !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
   }
 
   /* Strictly hide when off or inactive */
@@ -4523,11 +4519,28 @@
   html body .b-new_marker:before,
   p.b-new_marker:before,
   .b-new_marker:before {
-    border: none !important;
-    background: transparent !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     content: attr(data-text) !important;
+    background-color: rgba(152, 132, 165, 0.25) !important;
+    border: 1px solid rgba(196, 175, 212, 0.5) !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    padding: 1px 6px !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    box-shadow: 0 0 6px rgba(152, 132, 165, 0.25) !important;
+    transition: all 120ms ease !important;
+  }
+
+  html body .b-new_marker.off:before {
+    color: #a1a1aa !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none !important;
   }
 
   html body .b-new_marker:after,
@@ -9044,6 +9057,10 @@
     width: auto !important;
     min-width: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
     float: none !important;
     vertical-align: middle !important;
   }
