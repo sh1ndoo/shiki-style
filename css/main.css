@@ -837,7 +837,7 @@
     background-color: rgba(152, 132, 165, 0.25) !important;
   }
 
-  /* --- User Rate / Add to List Component (Clean & Collapsible) --- */
+  /* --- User Rate / Add to List Component (Clean & Non-clipping) --- */
   html body .b-add_to_list,
   html body .b-user_rate,
   html body .b-add_to_list .trigger,
@@ -876,6 +876,91 @@
     background: rgba(152, 132, 165, 0.25) !important;
     border-color: #9884a5 !important;
     color: #ffffff !important;
+  }
+
+  html body .b-add_to_list .edit-trigger,
+  html body .b-add_to_list .add-trigger,
+  html body .b-user_rate .edit-trigger,
+  html body .b-user_rate .add-trigger,
+  .b-add_to_list .edit-trigger,
+  .b-add_to_list .add-trigger {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    float: none !important;
+  }
+
+  html body .b-add_to_list .edit-trigger .edit,
+  html body .b-user_rate .edit-trigger .edit,
+  .b-add_to_list .edit-trigger .edit {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 28px !important;
+    width: 28px !important;
+    min-width: 28px !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  html body .b-add_to_list .trigger .text,
+  html body .b-add_to_list .edit-trigger .text,
+  html body .b-add_to_list .add-trigger .text,
+  html body .b-user_rate .trigger .text,
+  html body .b-user_rate .edit-trigger .text,
+  html body .b-user_rate .add-trigger .text,
+  .b-add_to_list .trigger .text,
+  .b-add_to_list .edit-trigger .text,
+  .b-user_rate .trigger .text {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    padding: 0 8px !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+    font-size: 13px !important;
+    float: none !important;
+  }
+
+  html body .b-add_to_list .status-name,
+  html body .b-user_rate .status-name,
+  .b-add_to_list .status-name,
+  .b-user_rate .status-name {
+    display: inline-flex !important;
+    align-items: center !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+    max-width: none !important;
+    width: auto !important;
+    font-size: 13px !important;
+    line-height: normal !important;
+    color: inherit !important;
+  }
+
+  html body .b-add_to_list .status-name:before,
+  html body .b-user_rate .status-name:before,
+  .b-add_to_list .status-name:before,
+  .b-user_rate .status-name:before {
+    display: inline-block !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+    max-width: none !important;
+    line-height: normal !important;
+    font-size: 13px !important;
   }
 
   html body .b-add_to_list .trigger .trigger-arrow,
@@ -6633,7 +6718,9 @@
   html body .b-user_rate .trigger,
   .b-add_to_list .trigger {
     position: relative !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     height: 34px !important;
     min-height: 34px !important;
     max-height: 34px !important;
@@ -6644,16 +6731,51 @@
     overflow: hidden !important;
   }
 
+  html body .b-add_to_list .edit-trigger,
+  html body .b-add_to_list .add-trigger,
+  html body .b-user_rate .edit-trigger,
+  html body .b-user_rate .add-trigger,
+  .b-add_to_list .edit-trigger,
+  .b-add_to_list .add-trigger {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    float: none !important;
+  }
+
+  html body .b-add_to_list .edit-trigger .edit,
+  html body .b-user_rate .edit-trigger .edit,
+  .b-add_to_list .edit-trigger .edit {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 28px !important;
+    width: 28px !important;
+    min-width: 28px !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+  }
+
   html body .b-add_to_list .trigger .trigger-arrow,
   html body .b-user_rate .trigger .trigger-arrow,
   .b-add_to_list .trigger .trigger-arrow {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
     width: 32px !important;
-    height: 32px !important;
-    line-height: 32px !important;
+    min-width: 32px !important;
+    flex: 0 0 32px !important;
+    height: 100% !important;
+    line-height: normal !important;
     text-align: center !important;
     display: flex !important;
     align-items: center !important;
@@ -6664,19 +6786,57 @@
   }
 
   html body .b-add_to_list .trigger .text,
+  html body .b-add_to_list .edit-trigger .text,
+  html body .b-add_to_list .add-trigger .text,
   html body .b-user_rate .trigger .text,
-  .b-add_to_list .trigger .text {
+  html body .b-user_rate .edit-trigger .text,
+  html body .b-user_rate .add-trigger .text,
+  .b-add_to_list .trigger .text,
+  .b-add_to_list .edit-trigger .text,
+  .b-user_rate .trigger .text {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    height: 32px !important;
-    line-height: 32px !important;
-    padding: 0 10px !important;
-    margin-right: 32px !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    line-height: normal !important;
+    padding: 0 8px !important;
+    margin: 0 !important;
     white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    gap: 6px !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    font-size: 13px !important;
+    float: none !important;
+  }
+
+  html body .b-add_to_list .status-name,
+  html body .b-user_rate .status-name,
+  .b-add_to_list .status-name,
+  .b-user_rate .status-name {
+    display: inline-flex !important;
+    align-items: center !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+    max-width: none !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 13px !important;
+    line-height: normal !important;
+    color: inherit !important;
+  }
+
+  html body .b-add_to_list .status-name:before,
+  html body .b-user_rate .status-name:before,
+  .b-add_to_list .status-name:before,
+  .b-user_rate .status-name:before {
+    display: inline-block !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+    max-width: none !important;
+    line-height: normal !important;
     font-size: 13px !important;
   }
 
