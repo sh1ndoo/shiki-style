@@ -6041,7 +6041,7 @@
     html body .aside-expanded aside.buttons .delete-controls > *:not(.hidden),
     html body .aside-expanded aside.buttons .delete-controls span:not(.hidden),
     html body .aside-expanded aside.buttons .delete-controls a:not(.hidden) {
-      display: flex !important;
+      display: flex;
       align-items: center !important;
       width: 100% !important;
       min-width: max-content !important;
@@ -6057,6 +6057,10 @@
       cursor: pointer !important;
       gap: 8px !important;
       box-sizing: border-box !important;
+    }
+
+    html body .buttons .item-quote {
+        display: none !important;
     }
 
     html body .aside-expanded aside.buttons .main-controls > *:before,
@@ -6940,7 +6944,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0) !important;
     float: none !important;
     margin: 0 !important;
   }
@@ -6961,7 +6965,7 @@
     min-width: 0 !important;
     height: 100% !important;
     line-height: normal !important;
-    padding: 0 8px !important;
+    padding: 0 !important;
     margin: 0 !important;
     white-space: nowrap !important;
     overflow: visible !important;
