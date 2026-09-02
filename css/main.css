@@ -6381,6 +6381,22 @@
     min-width: 0 !important;
     margin: 0 8px !important;
   }
+
+  /* Hide New Marker Badge on tablets & mobile */
+  html body .b-new_marker,
+  html body p.b-new_marker,
+  html body div.b-new_marker,
+  html body span.b-new_marker,
+  p.b-new_marker,
+  .b-new_marker,
+  html body .b-new_marker:before,
+  html body .b-new_marker:after,
+  html body aside.markers .b-new_marker {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
 }
 
 /* ------------------------------------------------------------
@@ -9042,13 +9058,9 @@
   }
 
   html body .b-comment > .inner > aside.markers .b-offtopic_marker,
-  html body .b-comment > .inner > aside.markers .b-new_marker,
   html body .b-topic > .inner > aside.markers .b-offtopic_marker,
-  html body .b-topic > .inner > aside.markers .b-new_marker,
   html body .b-message > .inner > aside.markers .b-offtopic_marker,
-  html body .b-message > .inner > aside.markers .b-new_marker,
-  html body .b-dialog > .inner > aside.markers .b-offtopic_marker,
-  html body .b-dialog > .inner > aside.markers .b-new_marker {
+  html body .b-dialog > .inner > aside.markers .b-offtopic_marker {
     position: relative !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -9066,13 +9078,9 @@
   }
 
   html body .b-comment > .inner > aside.markers .b-offtopic_marker:before,
-  html body .b-comment > .inner > aside.markers .b-new_marker:before,
   html body .b-topic > .inner > aside.markers .b-offtopic_marker:before,
-  html body .b-topic > .inner > aside.markers .b-new_marker:before,
   html body .b-message > .inner > aside.markers .b-offtopic_marker:before,
-  html body .b-message > .inner > aside.markers .b-new_marker:before,
-  html body .b-dialog > .inner > aside.markers .b-offtopic_marker:before,
-  html body .b-dialog > .inner > aside.markers .b-new_marker:before {
+  html body .b-dialog > .inner > aside.markers .b-offtopic_marker:before {
     position: static !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -9109,20 +9117,20 @@
     box-shadow: none !important;
   }
 
-  /* New Marker States */
-  html body .b-new_marker.active:before,
-  html body .b-new_marker:not(.off):before {
-    color: #ffffff !important;
-    background: rgba(152, 132, 165, 0.35) !important;
-    border: 1px solid rgba(196, 175, 212, 0.5) !important;
-    box-shadow: 0 0 6px rgba(152, 132, 165, 0.25) !important;
-  }
-
-  html body .b-new_marker.off:before {
-    color: #a1a1aa !important;
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: none !important;
+  /* Completely Hide New Marker (.b-new_marker) on Mobile */
+  html body .b-new_marker,
+  html body p.b-new_marker,
+  html body div.b-new_marker,
+  html body span.b-new_marker,
+  p.b-new_marker,
+  .b-new_marker,
+  html body .b-new_marker:before,
+  html body .b-new_marker:after,
+  html body aside.markers .b-new_marker {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   /* --- Editor Toolbar Markers (Offtopic, Summary) on Mobile --- */
