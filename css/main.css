@@ -4521,16 +4521,20 @@
   }
 
   html body .b-new_marker:before,
-  html body .b-new_marker:after,
   p.b-new_marker:before,
-  p.b-new_marker:after,
-  .b-new_marker:before,
-  .b-new_marker:after {
+  .b-new_marker:before {
     border: none !important;
     background: transparent !important;
     color: #ffffff !important;
     box-shadow: none !important;
     content: attr(data-text) !important;
+  }
+
+  html body .b-new_marker:after,
+  p.b-new_marker:after,
+  .b-new_marker:after {
+    display: none !important;
+    content: none !important;
   }
 
 
