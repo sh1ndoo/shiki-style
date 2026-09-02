@@ -2214,7 +2214,7 @@
 
   html body .b-spoiler label,
   .b-spoiler label {
-    display: inline-flex !important;
+    display: inline-flex;
     align-items: center !important;
     padding: 2px 8px !important;
     background-color: rgba(152, 132, 165, 0.15) !important;
@@ -3968,7 +3968,6 @@
   html body .p-user_rates-index .b-options-floated,
   .b-options-floated.mylist,
   .p-user_rates-index .b-options-floated {
-    padding-right: 76px !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-wrap: wrap !important;
@@ -3986,7 +3985,6 @@
     html body .p-user_rates-index .b-options-floated,
     .b-options-floated.mylist,
     .p-user_rates-index .b-options-floated {
-      padding-right: 76px !important;
       margin-top: 10px !important;
     }
   }
@@ -4001,9 +3999,7 @@
     html body .p-user_rates-index .b-options-floated,
     .b-options-floated.mylist,
     .p-user_rates-index .b-options-floated {
-      padding-right: 76px !important;
-      margin-top: 8px !important;
-      width: 100% !important;
+      margin-top: 15px !important;
       gap: 6px 10px !important;
     }
   }
