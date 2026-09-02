@@ -185,15 +185,67 @@
     font-weight: 500 !important;
   }
 
+  /* --- Misc Links in Headlines (.misc-links) --- */
+  html body .headline .misc-links,
+  html body .subheadline .misc-links,
+  html body .midheadline .misc-links,
+  html body .misc-links,
+  .headline .misc-links,
+  .subheadline .misc-links,
+  .midheadline .misc-links,
+  .misc-links {
+    float: right !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    margin-left: auto !important;
+    padding: 0 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    line-height: normal !important;
+    vertical-align: middle !important;
+  }
+
+  html body .headline:has(.misc-links),
+  html body .subheadline:has(.misc-links),
+  html body .midheadline:has(.misc-links),
+  .headline:has(.misc-links),
+  .subheadline:has(.misc-links),
+  .midheadline:has(.misc-links) {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 6px 12px !important;
+  }
+
+  html body .misc-links a,
+  .misc-links a {
+    color: #c4afd4 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    padding: 0 !important;
+    display: inline-block !important;
+    transition: color 150ms ease !important;
+  }
+
+  html body .misc-links a:hover,
+  .misc-links a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+  }
+
   /* Reset padding on list navigation links & misc-links */
   html body a[href*="/list/anime"],
   html body a[href*="/list/manga"],
   html body a[href*="/list/ranobe"],
   html body a[href*="/list/"],
-  html body .misc-links a,
   html body .subheadline a[href*="/list/"],
   html body .headline a[href*="/list/"],
-  .misc-links a,
   .subheadline a[href*="/list/"],
   .headline a[href*="/list/"],
   a[href*="/list/anime"],
@@ -8594,6 +8646,35 @@
     flex-shrink: 0 !important;
     margin-left: auto !important;
     white-space: nowrap !important;
+  }
+
+  /* History / Activity Action Text (.action) */
+  html body .p-profiles .profile-head .c-history .entry .misc .action,
+  html body .p-profiles .profile-head .c-history .entry .action,
+  html body .c-history .entry .misc .action,
+  html body .c-history .entry .action,
+  html body .c-history .action,
+  html body .b-user_rate-history .action,
+  html body .b-user_rate .action,
+  html body .action,
+  .p-profiles .profile-head .c-history .entry .misc .action,
+  .p-profiles .profile-head .c-history .entry .action,
+  .c-history .entry .misc .action,
+  .c-history .entry .action,
+  .c-history .action,
+  .b-user_rate-history .action,
+  .b-user_rate .action,
+  .action {
+    color: #ede6f2 !important;
+  }
+
+  html body .p-profiles .profile-head .c-history .entry:hover .misc .action,
+  html body .p-profiles .profile-head .c-history .entry:hover .action,
+  html body .c-history .entry:hover .misc .action,
+  html body .c-history .entry:hover .action,
+  .p-profiles .profile-head .c-history .entry:hover .misc .action,
+  .c-history .entry:hover .action {
+    color: #ffffff !important;
   }
 
   /* --- 3. Profile Content Column Stacking --- */
