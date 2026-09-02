@@ -3202,9 +3202,29 @@
     display: none !important;
   }
   html body .b-db_entry-variant-list_item,
-  .b-db_entry-variant-list_item {
+  html body .b-db_entry-variant-list_item + .b-db_entry-variant-list_item,
+  html body .b-db_entry-variant-list_item:not(:first-child),
+  html body .b-db_entry-variant-list_item:first-child,
+  html body .cc > .b-db_entry-variant-list_item,
+  html body .cc > .b-db_entry-variant-list_item + .b-db_entry-variant-list_item,
+  html body .c-authors .b-db_entry-variant-list_item,
+  html body .c-people .b-db_entry-variant-list_item,
+  html body .c-characters .b-db_entry-variant-list_item,
+  html body .c-roles .b-db_entry-variant-list_item,
+  .b-db_entry-variant-list_item,
+  .b-db_entry-variant-list_item + .b-db_entry-variant-list_item {
     border-top: none !important;
     border: none !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  html body .b-db_entry-variant-list_item > .image,
+  html body .b-db_entry-variant-list_item > .info,
+  html body .b-db_entry-variant-list_item .image,
+  html body .b-db_entry-variant-list_item .info {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
   html body .b-db_entry-variant-list_item > .info .line .value > a,
