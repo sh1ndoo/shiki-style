@@ -5761,8 +5761,8 @@
     .inner .item-mobile,
     .item-mobile {
       position: absolute !important;
-      right: 0 !important;
-      top: -5px !important;
+      right: 8px !important;
+      top: 8px !important;
       width: 28px !important;
       height: 28px !important;
       display: inline-flex !important;
@@ -5774,11 +5774,36 @@
       border-radius: 6px !important;
       cursor: pointer !important;
       z-index: 10 !important;
+      margin: 0 !important;
+      transition: all 150ms ease !important;
+    }
+
+    html body .inner .item-quote-mobile,
+    html body .item-quote-mobile,
+    .inner .item-quote-mobile,
+    .item-quote-mobile {
+      position: absolute !important;
+      right: 42px !important;
+      top: 8px !important;
+      width: 28px !important;
+      height: 28px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #a1a1aa !important;
+      background: rgba(255, 255, 255, 0.06) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      border-radius: 6px !important;
+      cursor: pointer !important;
+      z-index: 10 !important;
+      margin: 0 !important;
       transition: all 150ms ease !important;
     }
 
     html body .item-mobile:hover,
-    .item-mobile:hover {
+    html body .item-quote-mobile:hover,
+    .item-mobile:hover,
+    .item-quote-mobile:hover {
       color: #ffffff !important;
       background: rgba(152, 132, 165, 0.25) !important;
       border-color: rgba(152, 132, 165, 0.5) !important;
@@ -5793,7 +5818,9 @@
     }
 
     html body .item-mobile:before,
-    .item-mobile:before {
+    html body .item-quote-mobile:before,
+    .item-mobile:before,
+    .item-quote-mobile:before {
       font-size: 16px !important;
       line-height: 1 !important;
       color: inherit !important;
@@ -9254,18 +9281,23 @@
   html body .b-comment > .inner > aside.markers,
   html body .b-topic > .inner > aside.markers,
   html body .b-message > .inner > aside.markers,
-  html body .b-dialog > .inner > aside.markers {
+  html body .b-dialog > .inner > aside.markers,
+  html body .inner > aside.markers {
     position: absolute !important;
-    top: 10px !important;
-    right: 36px !important;
+    top: 8px !important;
+    right: 42px !important;
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px !important;
     padding: 0 !important;
     margin: 0 !important;
     float: none !important;
-    height: auto !important;
+    height: 28px !important;
     z-index: 5 !important;
+  }
+
+  html body .inner:has(.item-quote-mobile) > aside.markers {
+    right: 76px !important;
   }
 
   html body .b-comment > .inner > aside.markers .b-offtopic_marker,
