@@ -3837,10 +3837,23 @@
     color: #d8c8e8 !important;
   }
 
-  /* --- Floated Options (Напрямую / Хронология / Франшиза) --- */
+  /* --- Floated Options (Напрямую / Хронология / Франшиза & mylist tabs) --- */
   html body .b-options-floated,
   .b-options-floated {
     margin-top: 16px !important;
+  }
+
+  /* List categories (mylist) exception to prevent overlap with .subheadline-buttons switchers */
+  html body .b-options-floated.mylist,
+  html body .p-user_rates-index .b-options-floated,
+  .b-options-floated.mylist,
+  .p-user_rates-index .b-options-floated {
+    padding-right: 76px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 4px 10px !important;
   }
 
   @media screen and (max-width: 1023px) {
@@ -3848,12 +3861,30 @@
     .b-options-floated {
       margin-top: 13px !important;
     }
+
+    html body .b-options-floated.mylist,
+    html body .p-user_rates-index .b-options-floated,
+    .b-options-floated.mylist,
+    .p-user_rates-index .b-options-floated {
+      padding-right: 76px !important;
+      margin-top: 10px !important;
+    }
   }
 
   @media screen and (max-width: 767px) {
     html body .b-options-floated.mobile-phone,
     .b-options-floated.mobile-phone {
       margin-top: 5px !important;
+    }
+
+    html body .b-options-floated.mylist,
+    html body .p-user_rates-index .b-options-floated,
+    .b-options-floated.mylist,
+    .p-user_rates-index .b-options-floated {
+      padding-right: 76px !important;
+      margin-top: 8px !important;
+      width: 100% !important;
+      gap: 6px 10px !important;
     }
   }
 
