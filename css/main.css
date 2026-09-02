@@ -5319,6 +5319,14 @@
     color: #ffffff !important;
   }
 
+  html body .p-dashboards-show .v2 .my-list .label .misc-links a:after {
+    color: #9da2a8;
+    content: '/';
+    display: inline-block;
+    font-weight: normal;
+    padding: 0 0 0 7px;
+  }
+
   /* Dashboard Create Topic Button Margins */
   html body.p-dashboards-show .v2 .create-topic,
   html body .p-dashboards-show .v2 .create-topic,
@@ -5862,7 +5870,7 @@
     .item-mobile {
       position: absolute !important;
       right: 8px !important;
-      top: 8px !important;
+      top: 0 !important;
       width: 28px !important;
       height: 28px !important;
       display: inline-flex !important;
@@ -5901,21 +5909,6 @@
       width: auto !important;
     }
 
-    /* Completely Hide .item-quote-mobile */
-    html body .item-quote-mobile,
-    html body .inner .item-quote-mobile,
-    .item-quote-mobile,
-    .inner .item-quote-mobile {
-      display: none !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-      opacity: 0 !important;
-      width: 0 !important;
-      height: 0 !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-
     /* Отменяем сдвиг комментария/топика влево (-250px) при нажатии на кнопку действий */
     html body .b-topic.aside-expanded > .inner,
     html body .b-comment.aside-expanded > .inner,
@@ -5947,8 +5940,8 @@
     .b-message.aside-expanded > .inner > aside.buttons,
     .b-dialog.aside-expanded > .inner > aside.buttons {
       position: absolute !important;
-      top: 28px !important;
-      right: 0 !important;
+      top: 35px !important;
+      right: 8px !important;
       left: auto !important;
       float: none !important;
       display: block !important;
@@ -5959,7 +5952,7 @@
       margin-top: 0 !important;
       margin-right: 0 !important;
       padding: 6px 8px !important;
-      background: rgba(22, 18, 28, 0.98) !important;
+      background: rgb(23 23 23 / 50%) !important;
       backdrop-filter: blur(16px) !important;
       -webkit-backdrop-filter: blur(16px) !important;
       border: 1px solid rgba(152, 132, 165, 0.35) !important;
@@ -7039,6 +7032,9 @@
     min-height: 0 !important;
     padding: 4px !important;
     margin: 10px 0 !important;
+  }
+  html body .b-reviews_navigation .navigation-node.is-empty:not(.is-active) .label:before {
+    color: inherit;
   }
 
   html body .navigation-node,
@@ -9148,7 +9144,12 @@
     width: 100% !important;
     margin-top: 10px !important;
   }
-
+  html body .b-db_entry-variant-list_item>.info .b-user_rate .b-add_to_list .trigger, html body .b-db_entry-variant-list_item>.info .b-user_rate .b-add_to_list .option {
+    font-size: 12px;
+    max-width: 220px;
+    padding: 0 4px;
+    border-left-width: 4px;
+  }
   html body .about.block .use-tabs > [data-dynamic="switcher"] {
     display: inline-flex !important;
     align-items: center !important;
@@ -9214,6 +9215,7 @@
     padding: 0 8px !important;
     border-radius: 6px !important;
     box-sizing: border-box !important;
+    margin-top: 2px !important;
   }
 
   html body .subheadline-buttons .create-topic:before {
@@ -9402,7 +9404,6 @@
   html body .b-dialog > .inner > aside.markers,
   html body .inner > aside.markers {
     position: absolute !important;
-    top: 8px !important;
     right: 42px !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -9410,7 +9411,6 @@
     padding: 0 !important;
     margin: 0 !important;
     float: none !important;
-    height: 28px !important;
     z-index: 5 !important;
   }
 
