@@ -25,3 +25,13 @@
 
 ### Вариант 2: Расширения Stylus / Stylish
 Скопируйте всё содержимое файла [`css/main.css`](css/main.css) в пользовательский стиль для домена `shikimori.one`.
+
+## Дополнительные стили
+
+### Вкладки в описании профиля (BBCode Tabs)
+Файл [`css/tabs.css`](css/tabs.css) содержит стили для интерактивных вкладок в описании профиля (поддерживает до 30 вкладок, эффекты `--ripple`, режимы `--vertical`, `--tabline`, `--centered`, `--stretched` и цветовые акценты).
+
+Подключение через `@import`:
+```css
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/tabs.css";
+```

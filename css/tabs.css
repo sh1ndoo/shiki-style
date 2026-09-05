@@ -1,0 +1,426 @@
+@media all {
+  /* ============================================================
+     SHIKI-STYLE: Custom Profile BBCode Tabs (.use-tabs)
+     Compatible with Shikimori data-dynamic="switcher" BBCode tabs
+     Accent Color: rgb(152, 132, 165) / #9884a5
+     Author: sh1ndoo (github.com/sh1ndoo/shiki-style)
+     ============================================================ */
+
+  /* --- CSS Variables & Defaults --- */
+  :root {
+    --is-theme-dark: 1;
+    --l-theme-default: 55%;
+    --c-tab-accent: #9884a5;
+    --c-tab-accent-light: #c4afd4;
+    --c-tab-border: rgba(255, 255, 255, 0.1);
+    --c-tab-bg: rgba(255, 255, 255, 0.04);
+    --c-tab-bg-hover: rgba(255, 255, 255, 0.08);
+    --c-tab-bg-active: rgba(152, 132, 165, 0.22);
+    --c-tab-text-inactive: #a1a1aa;
+    --c-tab-text-active: #ffffff;
+  }
+
+  /* --- Main Container (.use-tabs) --- */
+  .use-tabs {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    margin: 12px 0;
+    box-sizing: border-box;
+
+    --c-tab: 0 0%;
+    --c-border: var(--c-tab-border, rgba(255, 255, 255, 0.1));
+    --l-text-inactive: calc(var(--l-theme-default) + (1 + (var(--is-theme-dark) * -2)) * -9%);
+    --l-text-active: calc(var(--l-theme-default) + (1 + (var(--is-theme-dark) * -2)) * -37%);
+    --l-background: calc(var(--l-theme-default) + (1 + (var(--is-theme-dark) * -2)) * -33%);
+  }
+
+  /* Dark mode class explicitly specified */
+  .use-tabs.--dark {
+    --is-theme-dark: 1;
+  }
+
+  /* --- Tab Switcher Buttons ([data-dynamic]) --- */
+  .use-tabs > [data-dynamic] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    margin: 0;
+    border: 1px solid var(--c-border);
+    border-radius: 20px;
+    background: var(--c-tab-bg);
+    color: var(--c-tab-text-inactive);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    text-decoration: none !important;
+  }
+
+  .use-tabs > [data-dynamic]:hover {
+    background: var(--c-tab-bg-hover);
+    border-color: rgba(196, 175, 212, 0.35);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  .use-tabs > [data-dynamic]:active {
+    transform: translateY(0);
+    background: rgba(152, 132, 165, 0.15);
+  }
+
+  .use-tabs > [data-dynamic].active {
+    color: var(--c-tab-text-active);
+    background: var(--c-tab-bg-active);
+    border-color: var(--c-tab-accent);
+    box-shadow: 0 0 14px rgba(152, 132, 165, 0.3);
+    font-weight: 600;
+  }
+
+  /* --- Tab Panels Container & Content --- */
+  .use-tabs > div:not([data-dynamic]) {
+    flex: 1 0 100%;
+    min-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+  }
+
+  .use-tabs > div:not([data-dynamic]) > div,
+  .use-tabs > div > div {
+    display: none;
+    padding: 14px 16px;
+    color: #ede6f2;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--c-border);
+    border-radius: 12px;
+    box-sizing: border-box;
+    animation: shikiTabFadeIn 0.25s ease-out;
+  }
+
+  /* --- Pure CSS Tab Switching (Up to 30 Tabs) --- */
+  .use-tabs > .active:nth-child(1) ~ div:not([data-dynamic]) > div:nth-child(1),
+  .use-tabs > .active:nth-child(2) ~ div:not([data-dynamic]) > div:nth-child(2),
+  .use-tabs > .active:nth-child(3) ~ div:not([data-dynamic]) > div:nth-child(3),
+  .use-tabs > .active:nth-child(4) ~ div:not([data-dynamic]) > div:nth-child(4),
+  .use-tabs > .active:nth-child(5) ~ div:not([data-dynamic]) > div:nth-child(5),
+  .use-tabs > .active:nth-child(6) ~ div:not([data-dynamic]) > div:nth-child(6),
+  .use-tabs > .active:nth-child(7) ~ div:not([data-dynamic]) > div:nth-child(7),
+  .use-tabs > .active:nth-child(8) ~ div:not([data-dynamic]) > div:nth-child(8),
+  .use-tabs > .active:nth-child(9) ~ div:not([data-dynamic]) > div:nth-child(9),
+  .use-tabs > .active:nth-child(10) ~ div:not([data-dynamic]) > div:nth-child(10),
+  .use-tabs > .active:nth-child(11) ~ div:not([data-dynamic]) > div:nth-child(11),
+  .use-tabs > .active:nth-child(12) ~ div:not([data-dynamic]) > div:nth-child(12),
+  .use-tabs > .active:nth-child(13) ~ div:not([data-dynamic]) > div:nth-child(13),
+  .use-tabs > .active:nth-child(14) ~ div:not([data-dynamic]) > div:nth-child(14),
+  .use-tabs > .active:nth-child(15) ~ div:not([data-dynamic]) > div:nth-child(15),
+  .use-tabs > .active:nth-child(16) ~ div:not([data-dynamic]) > div:nth-child(16),
+  .use-tabs > .active:nth-child(17) ~ div:not([data-dynamic]) > div:nth-child(17),
+  .use-tabs > .active:nth-child(18) ~ div:not([data-dynamic]) > div:nth-child(18),
+  .use-tabs > .active:nth-child(19) ~ div:not([data-dynamic]) > div:nth-child(19),
+  .use-tabs > .active:nth-child(20) ~ div:not([data-dynamic]) > div:nth-child(20),
+  .use-tabs > .active:nth-child(21) ~ div:not([data-dynamic]) > div:nth-child(21),
+  .use-tabs > .active:nth-child(22) ~ div:not([data-dynamic]) > div:nth-child(22),
+  .use-tabs > .active:nth-child(23) ~ div:not([data-dynamic]) > div:nth-child(23),
+  .use-tabs > .active:nth-child(24) ~ div:not([data-dynamic]) > div:nth-child(24),
+  .use-tabs > .active:nth-child(25) ~ div:not([data-dynamic]) > div:nth-child(25),
+  .use-tabs > .active:nth-child(26) ~ div:not([data-dynamic]) > div:nth-child(26),
+  .use-tabs > .active:nth-child(27) ~ div:not([data-dynamic]) > div:nth-child(27),
+  .use-tabs > .active:nth-child(28) ~ div:not([data-dynamic]) > div:nth-child(28),
+  .use-tabs > .active:nth-child(29) ~ div:not([data-dynamic]) > div:nth-child(29),
+  .use-tabs > .active:nth-child(30) ~ div:not([data-dynamic]) > div:nth-child(30),
+  .use-tabs > .active:nth-child(1) ~ div > div:nth-child(1),
+  .use-tabs > .active:nth-child(2) ~ div > div:nth-child(2),
+  .use-tabs > .active:nth-child(3) ~ div > div:nth-child(3),
+  .use-tabs > .active:nth-child(4) ~ div > div:nth-child(4),
+  .use-tabs > .active:nth-child(5) ~ div > div:nth-child(5),
+  .use-tabs > .active:nth-child(6) ~ div > div:nth-child(6),
+  .use-tabs > .active:nth-child(7) ~ div > div:nth-child(7),
+  .use-tabs > .active:nth-child(8) ~ div > div:nth-child(8),
+  .use-tabs > .active:nth-child(9) ~ div > div:nth-child(9),
+  .use-tabs > .active:nth-child(10) ~ div > div:nth-child(10),
+  .use-tabs > .active:nth-child(11) ~ div > div:nth-child(11),
+  .use-tabs > .active:nth-child(12) ~ div > div:nth-child(12),
+  .use-tabs > .active:nth-child(13) ~ div > div:nth-child(13),
+  .use-tabs > .active:nth-child(14) ~ div > div:nth-child(14),
+  .use-tabs > .active:nth-child(15) ~ div > div:nth-child(15),
+  .use-tabs > .active:nth-child(16) ~ div > div:nth-child(16),
+  .use-tabs > .active:nth-child(17) ~ div > div:nth-child(17),
+  .use-tabs > .active:nth-child(18) ~ div > div:nth-child(18),
+  .use-tabs > .active:nth-child(19) ~ div > div:nth-child(19),
+  .use-tabs > .active:nth-child(20) ~ div > div:nth-child(20),
+  .use-tabs > .active:nth-child(21) ~ div > div:nth-child(21),
+  .use-tabs > .active:nth-child(22) ~ div > div:nth-child(22),
+  .use-tabs > .active:nth-child(23) ~ div > div:nth-child(23),
+  .use-tabs > .active:nth-child(24) ~ div > div:nth-child(24),
+  .use-tabs > .active:nth-child(25) ~ div > div:nth-child(25),
+  .use-tabs > .active:nth-child(26) ~ div > div:nth-child(26),
+  .use-tabs > .active:nth-child(27) ~ div > div:nth-child(27),
+  .use-tabs > .active:nth-child(28) ~ div > div:nth-child(28),
+  .use-tabs > .active:nth-child(29) ~ div > div:nth-child(29),
+  .use-tabs > .active:nth-child(30) ~ div > div:nth-child(30) {
+    display: block;
+  }
+
+  /* --- Color Modifiers --- */
+  .use-tabs > .active.--red,
+  .use-tabs > [data-dynamic].--red.active {
+    --c-tab: 350deg 100%;
+    border-color: #ff453a;
+    background: rgba(255, 69, 58, 0.22);
+    box-shadow: 0 0 14px rgba(255, 69, 58, 0.3);
+  }
+
+  .use-tabs > .active.--blue,
+  .use-tabs > [data-dynamic].--blue.active {
+    --c-tab: 215deg 100%;
+    border-color: #0a84ff;
+    background: rgba(10, 132, 255, 0.22);
+    box-shadow: 0 0 14px rgba(10, 132, 255, 0.3);
+  }
+
+  .use-tabs > .active.--green,
+  .use-tabs > [data-dynamic].--green.active {
+    --c-tab: 135deg 100%;
+    border-color: #30d158;
+    background: rgba(48, 209, 88, 0.22);
+    box-shadow: 0 0 14px rgba(48, 209, 88, 0.3);
+  }
+
+  .use-tabs > .active.--purple,
+  .use-tabs > .active.--violet,
+  .use-tabs > [data-dynamic].--purple.active,
+  .use-tabs > [data-dynamic].--violet.active {
+    --c-tab: 280deg 100%;
+    border-color: #bf5af2;
+    background: rgba(191, 90, 242, 0.22);
+    box-shadow: 0 0 14px rgba(191, 90, 242, 0.3);
+  }
+
+  .use-tabs > .active.--orange,
+  .use-tabs > [data-dynamic].--orange.active {
+    --c-tab: 35deg 100%;
+    border-color: #ff9f0a;
+    background: rgba(255, 159, 10, 0.22);
+    box-shadow: 0 0 14px rgba(255, 159, 10, 0.3);
+  }
+
+  .use-tabs > .active.--pink,
+  .use-tabs > [data-dynamic].--pink.active {
+    --c-tab: 340deg 100%;
+    border-color: #ff375f;
+    background: rgba(255, 55, 95, 0.22);
+    box-shadow: 0 0 14px rgba(255, 55, 95, 0.3);
+  }
+
+  /* --- Centered Variant (.--centered) --- */
+  .use-tabs.--centered {
+    justify-content: center;
+  }
+
+  /* --- Stretched Variant (.--stretched) --- */
+  .use-tabs.--stretched > [data-dynamic] {
+    flex: 1 1 0;
+    min-width: max-content;
+  }
+
+  /* --- Tabline Variant (.--tabline) --- */
+  .use-tabs.--tabline {
+    justify-content: flex-start;
+    gap: 0;
+    border-bottom: 1px solid var(--c-border);
+  }
+
+  .use-tabs.--tabline > div:not([data-dynamic]) {
+    margin-top: 0;
+    border-top: none;
+  }
+
+  .use-tabs.--tabline > div:not([data-dynamic]) > div,
+  .use-tabs.--tabline > div > div {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+  }
+
+  .use-tabs.--tabline > [data-dynamic] {
+    position: relative;
+    padding: 8px 16px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--c-tab-text-inactive);
+  }
+
+  .use-tabs.--tabline > [data-dynamic]:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    border-bottom-color: rgba(196, 175, 212, 0.3);
+    transform: none;
+  }
+
+  .use-tabs.--tabline > [data-dynamic].active {
+    background: rgba(152, 132, 165, 0.12);
+    color: #ffffff;
+    border-bottom: 2px solid var(--c-tab-accent);
+    box-shadow: none;
+  }
+
+  /* --- Vertical Layout (.--vertical) --- */
+  @media (min-width: 769px) {
+    .use-tabs.--vertical {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-auto-rows: minmax(0, max-content);
+      align-items: stretch;
+      gap: 0;
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      overflow: hidden;
+    }
+
+    .use-tabs.--vertical > div:not([data-dynamic]) {
+      grid-column: 2;
+      grid-row: 1 / 60;
+      margin: 0;
+      border-left: 1px solid var(--c-border);
+      background: rgba(18, 14, 24, 0.5);
+    }
+
+    .use-tabs.--vertical > div:not([data-dynamic]) > div,
+    .use-tabs.--vertical > div > div {
+      border: none;
+      border-radius: 0;
+      padding: 18px 22px;
+      background: transparent;
+    }
+
+    .use-tabs.--vertical > [data-dynamic] {
+      display: flex;
+      grid-column: 1;
+      padding: 10px 16px;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      background: transparent;
+      text-align: left;
+      justify-content: flex-start;
+      box-shadow: none;
+    }
+
+    .use-tabs.--vertical > [data-dynamic]:hover {
+      background: rgba(255, 255, 255, 0.06);
+      transform: none;
+    }
+
+    .use-tabs.--vertical > [data-dynamic].active {
+      background: rgba(152, 132, 165, 0.2);
+      color: #ffffff;
+      border-left: 3px solid var(--c-tab-accent);
+      box-shadow: inset 0 0 12px rgba(152, 132, 165, 0.2);
+    }
+
+    /* Vertical + Right (.--vertical.--right) */
+    .use-tabs.--vertical.--right {
+      grid-template-columns: 1fr 200px;
+    }
+
+    .use-tabs.--vertical.--right > div:not([data-dynamic]) {
+      grid-column: 1;
+      border-left: none;
+      border-right: 1px solid var(--c-border);
+    }
+
+    .use-tabs.--vertical.--right > [data-dynamic] {
+      grid-column: 2;
+      border-left: none;
+    }
+
+    .use-tabs.--vertical.--right > [data-dynamic].active {
+      border-left: none;
+      border-right: 3px solid var(--c-tab-accent);
+    }
+  }
+
+  /* --- Ripple & Tap Effects (.--ripple) --- */
+  .use-tabs.--ripple > [data-dynamic] {
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .use-tabs.--ripple > [data-dynamic]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    padding-top: 80%;
+    background: rgba(196, 175, 212, 0.3);
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0);
+    pointer-events: none;
+  }
+
+  .use-tabs.--ripple > [data-dynamic]:not(.active):hover::after {
+    animation: switch-focus--vertical 1.2s ease infinite;
+  }
+
+  .use-tabs.--ripple > [data-dynamic].active::after {
+    animation: switch-tap--vertical 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* --- Animations --- */
+  @keyframes shikiTabFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes switch-focus--vertical {
+    0% {
+      opacity: 0;
+      transform: translate3d(-50%, -50%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0.35;
+      transform: translate3d(-50%, -50%, 0) scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(-50%, -50%, 0) scale(1.6);
+    }
+  }
+
+  @keyframes switch-tap--vertical {
+    0% {
+      opacity: 0.6;
+      transform: translate3d(-50%, -50%, 0) scale(0.4);
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(-50%, -50%, 0) scale(2.2);
+    }
+  }
+}

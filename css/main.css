@@ -5565,7 +5565,6 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
   .b-user_rate-history img {
     border-radius: 8px !important;
     overflow: hidden !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
   }
 
   html body .b-user_rate-history .content,
@@ -8845,6 +8844,10 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
   .graph.x34,
   .activity .graph.x34 {
     display: none !important;
+  }
+
+  html body .bar.vertical {
+    border: none !important;
   }
 
   html body .graph.x26,
