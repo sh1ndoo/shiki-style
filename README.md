@@ -35,3 +35,12 @@
 ```css
 @import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/tabs.css";
 ```
+
+### Карусель изображений (BBCode Carousel v2.5.1)
+Файл [`css/carousel.css`](css/carousel.css) содержит стили для интерактивной карусели / слайдера изображений в профиле (поддерживает боковые стрелки, индикаторы слайдов, счётчик `data-counter`, режим постеров `data-posters` и тёмный фон `data-dark`).
+
+Подключение через `@import`:
+```css
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/carousel.css";
+```
+

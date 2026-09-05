@@ -1,0 +1,289 @@
+@media all {
+  /* ============================================================
+     SHIKI-STYLE: Custom Profile Image Carousel (.u-carousel2)
+     Compatible with Shikimori data-dynamic="tabs" BBCode Carousel v2.5.1
+     Accent Color: rgb(152, 132, 165) / #9884a5 / #c4afd4
+     Author: sh1ndoo (github.com/sh1ndoo/shiki-style)
+     ============================================================ */
+
+  .u-carousel2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 14px 0;
+    box-sizing: border-box;
+
+    --switch-width: 32px;
+    --switch-height: 4px;
+    --switch-margin: 10px;
+    --switch-gutter: 4px;
+    --switch-color: rgba(255, 255, 255, 0.25);
+    --switch-color-hover: rgba(196, 175, 212, 0.6);
+    --switch-color-active: #c4afd4;
+    --arrow-size: 36px;
+    --arrow-margin: 8px;
+    --arrow-r: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAD1BMVEUAAAD///////////////+PQt5oAAAABHRSTlMASX+TDXl3EgAAADhJREFUeNrt1aEVADEAwtA7yv4z13SBWF7Q+ZpvcAns28Aeib+F4igUCg72e3t7fih5PRLhtzu/C/aXBB/4U0PmAAAAAElFTkSuQmCC);
+    --arrow-l: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAD1BMVEUAAAD///////////////+PQt5oAAAABHRSTlMASX+TDXl3EgAAADlJREFUeNrt1bERADEQwsA/nv5r9ow7UOoTsTbmW7AE9m1gj0R6N7D/F/X29gAoFIqBIvwU+e0+tgPxhQQfXMBt+wAAAABJRU5ErkJggg==);
+    --bg-arrows: var(--arrow-l) left var(--arrow-margin) center / var(--arrow-size) no-repeat,
+                 var(--arrow-r) right var(--arrow-margin) center / var(--arrow-size) no-repeat;
+  }
+
+  /* --- Carousel Slides Container --- */
+  .u-carousel2 .u-carousel-inner {
+    position: relative;
+    display: grid;
+    grid-template: "slide" 1fr / auto;
+    flex: 1 0 100%;
+    order: -1;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(18, 14, 24, 0.6);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .u-carousel2 .u-carousel-inner [data-tab] {
+    display: block !important;
+    grid-area: slide;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .u-carousel2 .u-carousel-inner [data-tab]:first-child {
+    position: static;
+  }
+
+  /* --- Slide Switching Animation Logic --- */
+  .u-carousel2 .u-carousel-inner [data-tab] {
+    transform: translateX( calc(100% * var(--order, 0)) );
+  }
+
+  .u-carousel2 .u-carousel-inner [data-tab]:not(.hidden) {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .u-carousel2 .u-carousel-inner [data-tab]:not(.hidden) ~ .hidden,
+  .u-carousel2 [data-tab-switch].active:nth-last-child(2) ~ .u-carousel-inner [data-tab]:first-child,
+  .u-carousel2.carousel--reversed .u-carousel-inner [data-tab].hidden,
+  .u-carousel2.carousel--reversed [data-tab-switch].active:first-child ~ .u-carousel-inner [data-tab]:last-child {
+    --order: 1;
+  }
+
+  .u-carousel2 .u-carousel-inner [data-tab].hidden,
+  .u-carousel2 [data-tab-switch].active:first-child ~ .u-carousel-inner [data-tab]:last-child,
+  .u-carousel2.carousel--reversed .u-carousel-inner [data-tab]:not(.hidden) ~ .hidden,
+  .u-carousel2.carousel--reversed [data-tab-switch].active:nth-last-child(2) ~ .u-carousel-inner [data-tab]:first-child {
+    --order: -1;
+  }
+
+  /* --- Bottom Switcher Bars (Indicators) --- */
+  .u-carousel2 [data-tab-switch] {
+    --real-height: calc(var(--switch-height) + (var(--switch-margin) * 2));
+    width: var(--switch-width);
+    font-size: 0;
+    height: var(--real-height);
+    margin: calc(var(--real-height) * -1) 0 0 0;
+    background: var(--switch-color);
+    background-clip: padding-box;
+    border: var(--switch-gutter) solid transparent;
+    border-top-width: var(--switch-margin);
+    border-bottom-width: var(--switch-margin);
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.2s ease, transform 0.2s ease, width 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .u-carousel2 [data-tab-switch]:hover {
+    background-color: var(--switch-color-hover);
+  }
+
+  .u-carousel2 [data-tab-switch].active {
+    background-color: var(--switch-color-active);
+    width: calc(var(--switch-width) + 8px);
+    box-shadow: 0 0 10px rgba(196, 175, 212, 0.7);
+  }
+
+  /* --- Side Navigation Click Targets (Next / Prev) --- */
+  .u-carousel2 [data-tab-switch]::before,
+  .u-carousel2 [data-tab-switch]::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    width: clamp(36px, 15%, 72px);
+    z-index: 100;
+    cursor: pointer;
+    pointer-events: none;
+    visibility: visible;
+  }
+
+  .u-carousel2 [data-tab-switch]::before,
+  .u-carousel2.carousel--reversed [data-tab-switch]::after {
+    right: auto;
+    left: 0;
+  }
+
+  .u-carousel2 [data-tab-switch]::after,
+  .u-carousel2.carousel--reversed [data-tab-switch]::before {
+    right: 0;
+    left: auto;
+  }
+
+  .u-carousel2 [data-tab-switch]:not(.active):first-child::after,
+  .u-carousel2 [data-tab-switch].active + div::after,
+  .u-carousel2 [data-tab-switch]::before,
+  .u-carousel2 [data-tab-switch].active:first-child ~ div:nth-last-child(2)::before {
+    pointer-events: auto;
+  }
+
+  .u-carousel2 [data-tab-switch].active::before,
+  .u-carousel2 [data-tab-switch].active::after,
+  .u-carousel2 [data-tab-switch].active ~ div:not(:last-child)::before {
+    pointer-events: none;
+  }
+
+  /* --- Side Navigation Arrows Overlay --- */
+  .u-carousel2 .u-carousel-inner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg-arrows);
+    pointer-events: none !important;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .u-carousel2:hover .u-carousel-inner::after,
+  .u-carousel2 [data-tab-switch]:hover ~ .u-carousel-inner::after {
+    opacity: 0.85;
+  }
+
+  /* --- Navigation Visibility Options --- */
+  .u-carousel2[data-nav="arrows"] [data-tab-switch],
+  .u-carousel2[data-nav="tabs"] [data-tab-switch]::before,
+  .u-carousel2[data-nav="tabs"] [data-tab-switch]::after,
+  .u-carousel2[data-nav="tabs"] .u-carousel-inner::after {
+    visibility: hidden;
+  }
+
+  /* --- Dark Background Option ([data-dark]) --- */
+  .u-carousel2[data-dark] .u-carousel-inner {
+    background: #0d0a12;
+    border-radius: 12px;
+  }
+
+  .u-carousel2[data-dark] .u-carousel-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    backface-visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+
+  .u-carousel2[data-dark]:hover .u-carousel-inner::before {
+    opacity: 1;
+  }
+
+  /* --- Slide Counter Badge ([data-counter]) --- */
+  .u-carousel2[data-counter] {
+    counter-reset: carousel carousel-current;
+  }
+
+  .u-carousel2[data-counter] [data-tab-switch] {
+    counter-increment: carousel carousel-current;
+  }
+
+  .u-carousel2[data-counter] [data-tab-switch].active ~ [data-tab-switch] {
+    counter-increment: carousel carousel-current 0;
+  }
+
+  .u-carousel2[data-counter] [data-tab-switch].inactive {
+    counter-increment: none;
+  }
+
+  .u-carousel2[data-counter]::after {
+    content: counter(carousel-current) ' / ' counter(carousel);
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    padding: 3px 10px;
+    background: rgba(18, 14, 24, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    color: #ede6f2;
+    font-size: 11.5px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    backface-visibility: hidden;
+    pointer-events: none;
+    z-index: 102;
+    transition: opacity 0.25s ease;
+  }
+
+  .u-carousel2[data-counter="hover"]::after {
+    opacity: 0;
+  }
+
+  .u-carousel2[data-counter="hover"]:hover::after {
+    opacity: 1;
+  }
+
+  /* --- Posters Wall Support ([data-posters]) --- */
+  .u-carousel2[data-posters] .u-carousel-inner .c-column {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  /* --- Video Support --- */
+  .u-carousel2 .b-video.fixed:first-child:last-child .video-link img {
+    width: 100% !important;
+  }
+
+  /* --- Cover Background Mode ([data-background="cover"]) --- */
+  .u-carousel2[data-background="cover"] .u-carousel-inner div:not(:first-child) > .b-image,
+  .u-carousel2[data-background="cover"] .u-carousel-inner div:not(:first-child) > .b-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .u-carousel2[data-background="cover"] .u-carousel-inner div:not(:first-child) > .b-image img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center 15%;
+  }
+
+  /* --- Images Resets & Responsiveness --- */
+  .u-carousel2 .b-image {
+    margin: 0;
+  }
+
+  .u-carousel2 .u-carousel-inner img {
+    opacity: 1;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+}
