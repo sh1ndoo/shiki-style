@@ -5315,13 +5315,16 @@
     color: #ffffff !important;
   }
 
-  .p-dashboards-show .v2 .my-list .label .misc-links a:after {
-    color: #9da2a8;
-    content: '/';
-    display: inline-block;
-    font-weight: normal;
-    padding: 0 0 0 7px;
-  }
+html body.p-dashboards-show .my-list .misc-links a::after,
+html body .p-dashboards-show .my-list .misc-links a::after,
+html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
+.p-dashboards-show .v2 .my-list .label .misc-links a::after {
+  color: #9da2a8 !important;
+  content: '/' !important;
+  display: inline-block !important;
+  font-weight: normal !important;
+  padding: 0 0 0 7px !important;
+}
 
   /* Dashboard Create Topic Button Margins */
   html body.p-dashboards-show .v2 .create-topic,
