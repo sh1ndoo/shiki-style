@@ -29,8 +29,10 @@
     --color-accent-light: #c4afd4 !important;
     --color-accent-light-rgb: 196, 175, 212 !important;
 
-    /* Фоновое изображение страницы */
+    /* Фоновые изображения страницы */
     --bg-image: url(https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/flowers-bg.gif);
+    --bg-flowers: url(https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/flowers-bg.gif);
+    --bg-red: url(https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/red-style.gif);
 
     /* Surfaces & Backgrounds */
     --color-background: #121214 !important;

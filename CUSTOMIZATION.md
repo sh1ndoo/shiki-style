@@ -18,7 +18,14 @@
     /* ============================================================
        1. ФОНОВОЕ ИЗОБРАЖЕНИЕ
        ============================================================ */
-    /* Прямая ссылка на картинку (jpg, png, gif) или none */
+    /* Вариант А: Использовать готовые картинки из репозитория:
+       --bg-image: var(--bg-red) !important;       (красная тема red-style.gif)
+       --bg-image: var(--bg-flowers) !important;   (чёрно-белые цветы flowers-bg.gif)
+       
+       Вариант Б: Прямая ссылка на файл из репозитория (raw):
+       --bg-image: url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/red-style.gif") !important;
+       
+       Вариант В: Любая внешняя ссылка на картинку (jpg, png, gif) или none: */
     --bg-image: url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/flowers-bg.gif") !important;
 
     /* ============================================================
@@ -85,8 +92,10 @@
 
 @media all {
   :root, html, body, .p-profiles, .p-profiles-show, .l-page, #profiles_show {
-    /* 1. Своя фоновая картинка (вставьте прямую ссылку) */
-    --bg-image: url("https://raw.githubusercontent.com/israveri/israveri/main/assets/images/autumn_urban.gif") !important;
+    /* 1. Фоновая картинка (встроенная из репозитория или своя ссылка) */
+    --bg-image: var(--bg-red) !important;
+    /* Либо прямая ссылка:
+       --bg-image: url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/red-style.gif") !important; */
 
     /* 2. Главный красный акцент (кнопки, активные элементы, графики) */
     --color-primary: #e05353 !important;
