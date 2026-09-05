@@ -976,9 +976,9 @@
     justify-content: flex-start !important;
     flex: 1 1 auto !important;
     min-width: 0 !important;
-    height: 100% !important;
+    height: 100%;
     padding: 0 8px !important;
-    margin: 0 !important;
+    margin: 0;
     overflow: visible !important;
     white-space: nowrap !important;
     text-overflow: clip !important;
@@ -6907,8 +6907,8 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
     flex: 1 1 auto !important;
     min-width: 0 !important;
     width: auto !important;
-    height: 100%;
-    margin: 0;
+    height: 100% !important;
+    margin: 0 !important;
     padding: 0 !important;
     overflow: visible !important;
     float: none !important;
