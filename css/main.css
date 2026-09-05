@@ -29,6 +29,9 @@
     --color-accent-light: #c4afd4 !important;
     --color-accent-light-rgb: 196, 175, 212 !important;
 
+    /* Фоновое изображение страницы */
+    --bg-image: url(https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/flowers-bg.gif);
+
     /* Surfaces & Backgrounds */
     --color-background: #121214 !important;
     --color-surface: #1c1c1e !important;
@@ -50,7 +53,7 @@
   html body,
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-    background: url(https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/flowers-bg.gif) 0 0 / cover fixed !important;
+    background: var(--bg-image, url(https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/flowers-bg.gif)) 0 0 / cover fixed !important;
     background-attachment: fixed !important;
     color: var(--color-text) !important;
     -webkit-font-smoothing: antialiased !important;
@@ -2956,7 +2959,7 @@
 
   html body .b-stats_bar.lifetime .bar .first,
   .b-stats_bar.lifetime .bar .first {
-    background: linear-gradient(90deg, var(--color-accent-light) 0%, #aa93bd 100%) !important;
+    background: linear-gradient(90deg, var(--color-accent-light) 0%, var(--color-accent) 100%) !important;
     height: 100% !important;
     border-radius: 4px 0 0 4px !important;
     box-shadow: 0 0 10px rgba(var(--color-accent-light-rgb), 0.3) !important;
@@ -2966,9 +2969,40 @@
   html body .b-stats_bar.lifetime .bar .third,
   .b-stats_bar.lifetime .bar .second,
   .b-stats_bar.lifetime .bar .third {
-    background: linear-gradient(90deg, #886c9e 0%, #6e5284 100%) !important;
+    background: linear-gradient(90deg, var(--color-accent) 0%, rgba(var(--color-accent-rgb), 0.5) 100%) !important;
     height: 100% !important;
     border-radius: 0 4px 4px 0 !important;
+  }
+
+  /* --- Anime & Manga Stats Bar Colors (.b-stats_bar) --- */
+  html body .b-stats_bar.manga .bar .first,
+  html body .b-stats_bar.anime .bar .first,
+  html body .b-stats_bar .bar .first,
+  .b-stats_bar.manga .bar .first,
+  .b-stats_bar.anime .bar .first,
+  .b-stats_bar .bar .first {
+    background: var(--color-accent) !important;
+    background-color: var(--color-accent) !important;
+  }
+
+  html body .b-stats_bar.manga .bar .second,
+  html body .b-stats_bar.anime .bar .second,
+  html body .b-stats_bar .bar .second,
+  .b-stats_bar.manga .bar .second,
+  .b-stats_bar.anime .bar .second,
+  .b-stats_bar .bar .second {
+    background: var(--color-accent-light) !important;
+    background-color: var(--color-accent-light) !important;
+  }
+
+  html body .b-stats_bar.manga .bar .third,
+  html body .b-stats_bar.anime .bar .third,
+  html body .b-stats_bar .bar .third,
+  .b-stats_bar.manga .bar .third,
+  .b-stats_bar.anime .bar .third,
+  .b-stats_bar .bar .third {
+    background: rgba(var(--color-accent-rgb), 0.4) !important;
+    background-color: rgba(var(--color-accent-rgb), 0.4) !important;
   }
 
   html body .p-profiles-show .lifetime .cuts,
@@ -3130,7 +3164,7 @@
   .progress > .bar,
   .progress .bar {
     background: var(--color-accent-light) !important;
-    background: linear-gradient(90deg, var(--color-accent-light) 0%, #aa93bd 100%) !important;
+    background: linear-gradient(90deg, var(--color-accent-light) 0%, var(--color-accent) 100%) !important;
     border-radius: 3px !important;
     box-shadow: 0 0 8px rgba(var(--color-accent-light-rgb), 0.4) !important;
     height: 100% !important;
@@ -4021,7 +4055,7 @@
   html body .b-show_more-more .hide-more:active,
   .b-show_more:active,
   .b-show_more-more .hide-more:active {
-    color: #d8c8e8 !important;
+    color: var(--color-accent-light) !important;
   }
 
   /* --- Floated Options (Напрямую / Хронология / Франшиза & mylist tabs) --- */
@@ -4907,7 +4941,7 @@
   html body .bar.simple .bar.s1,
   html body #rates_scores_stats .bar.s1,
   .bar.simple .bar.s1 {
-    background-color: #aa93bd !important;
+    background-color: var(--color-accent) !important;
     border-radius: 3px !important;
     transition: background-color 150ms ease !important;
   }
@@ -4915,7 +4949,7 @@
   html body .bar.simple .bar.s2,
   html body #rates_scores_stats .bar.s2,
   .bar.simple .bar.s2 {
-    background-color: #9078a3 !important;
+    background-color: rgba(var(--color-accent-rgb), 0.7) !important;
     border-radius: 3px !important;
     transition: background-color 150ms ease !important;
   }
@@ -4923,7 +4957,7 @@
   html body .bar.simple .bar.s3,
   html body #rates_scores_stats .bar.s3,
   .bar.simple .bar.s3 {
-    background-color: #765f88 !important;
+    background-color: rgba(var(--color-accent-rgb), 0.45) !important;
     border-radius: 3px !important;
     transition: background-color 150ms ease !important;
   }
@@ -4931,27 +4965,27 @@
   html body .bar.simple .bar.s0:hover,
   html body #rates_scores_stats .bar.s0:hover,
   .bar.simple .bar.s0:hover {
-    background-color: #d8c8e8 !important;
-    box-shadow: 0 0 10px rgba(var(--color-accent-light-rgb), 0.4) !important;
+    background-color: var(--color-text-primary) !important;
+    box-shadow: 0 0 10px rgba(var(--color-accent-light-rgb), 0.5) !important;
   }
 
   html body .bar.simple .bar.s1:hover,
   html body #rates_scores_stats .bar.s1:hover,
   .bar.simple .bar.s1:hover {
     background-color: var(--color-accent-light) !important;
-    box-shadow: 0 0 8px rgba(var(--color-accent-light-rgb), 0.3) !important;
+    box-shadow: 0 0 8px rgba(var(--color-accent-light-rgb), 0.4) !important;
   }
 
   html body .bar.simple .bar.s2:hover,
   html body #rates_scores_stats .bar.s2:hover,
   .bar.simple .bar.s2:hover {
-    background-color: #aa93bd !important;
+    background-color: var(--color-accent) !important;
   }
 
   html body .bar.simple .bar.s3:hover,
   html body #rates_scores_stats .bar.s3:hover,
   .bar.simple .bar.s3:hover {
-    background-color: #9078a3 !important;
+    background-color: rgba(var(--color-accent-rgb), 0.7) !important;
   }
 
   html body .bar.horizontal .line .x_label,
