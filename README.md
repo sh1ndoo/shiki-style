@@ -44,3 +44,11 @@
 @import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/carousel.css";
 ```
 
+## Кастомизация палитры и фона
+
+Все ключевые цвета (акценты, ссылки, текст) и фоновое изображение настраиваются через переменные `:root` с обязательной обёрткой в `@media all`.
+
+Подробное руководство со всеми доступными переменными и готовым пресетом **«Красная тема»** (Ruby / Autumn Crimson) смотрите в файле:
+👉 **[CUSTOMIZATION.md](CUSTOMIZATION.md)**
+
+
