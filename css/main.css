@@ -6,7 +6,7 @@
      ============================================================ */
 
   /* --- Global CSS Variables Override (Neutral Dark macOS Style) --- */
-  :root, html, body, .l-page, #profiles_show {
+  :root, html, body, .p-profiles, .p-profiles-show, .l-page, #profiles_show {
     /* Text palette */
     --color-text: #e4e4e9 !important;
     --color-text-primary: #ffffff !important;
@@ -1764,7 +1764,7 @@
     background-color: rgba(var(--color-accent-rgb), 0.15) !important;
     border: 1px solid rgba(var(--color-accent-light-rgb), 0.3) !important;
     border-radius: 4px !important;
-    color: #e4d5f0 !important;
+    color: var(--color-text-soft) !important;
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
     font-size: 12px !important;
     padding: 1px 5px !important;
@@ -1877,7 +1877,7 @@
   html body a.b-mention:hover s,
   .b-mention:hover s,
   a.b-mention:hover s {
-    color: #e4d5f0 !important;
+    color: var(--color-text-soft) !important;
     text-decoration: none !important;
   }
 
@@ -4913,8 +4913,8 @@
 
   html body .b-rate .stars.hover,
   .b-rate .stars.hover {
-    color: #e4d5f0 !important;
-    text-shadow: 0 0 14px rgba(228, 213, 240, 0.6) !important;
+    color: var(--color-text-soft) !important;
+    text-shadow: 0 0 14px rgba(var(--color-accent-light-rgb), 0.6) !important;
   }
 
   html body .b-rate .stars.score.hovered,
