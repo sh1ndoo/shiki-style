@@ -81,32 +81,5 @@
   .bar.simple .bar.s3 {
     background-color: #71717a !important;
   }
-
-  /* --- Обесцвечивание постеров и аватаров (с эффектом проявления цвета при hover) --- */
-  html body .c-column .image,
-  html body .b-catalog_entry .cover,
-  html body .b-catalog_entry .image,
-  html body .avatar img,
-  html body .b-achievement .c-image img,
-  .c-column .image,
-  .b-catalog_entry .cover,
-  .b-catalog_entry .image,
-  .avatar img,
-  .b-achievement .c-image img {
-    filter: grayscale(100%);
-    transition: filter 0.3s ease, transform 0.3s ease !important;
-  }
-
-  html body .c-column .image:hover,
-  html body .b-catalog_entry .cover:hover,
-  html body .b-catalog_entry .image:hover,
-  html body .avatar img:hover,
-  html body .b-achievement .c-image img:hover,
-  .c-column .image:hover,
-  .b-catalog_entry .cover:hover,
-  .b-catalog_entry .image:hover,
-  .avatar img:hover,
-  .b-achievement .c-image img:hover {
-    filter: grayscale(0%);
-  }
 }
+

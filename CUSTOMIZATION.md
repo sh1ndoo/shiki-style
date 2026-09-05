@@ -179,17 +179,6 @@
     border: 1px solid rgba(255, 255, 255, 0.25) !important;
     color: #e4e4e7 !important;
   }
-
-  /* Опционально: обесцвечивание постеров и аватарок (цвет возвращается при наведении) */
-  html body .c-column .image, html body .b-catalog_entry .cover, html body .avatar img,
-  .c-column .image, .b-catalog_entry .cover, .avatar img {
-    filter: grayscale(100%);
-    transition: filter 0.3s ease !important;
-  }
-  html body .c-column .image:hover, html body .b-catalog_entry .cover:hover, html body .avatar img:hover,
-  .c-column .image:hover, .b-catalog_entry .cover:hover, .avatar img:hover {
-    filter: grayscale(0%);
-  }
 }
 ```
 
