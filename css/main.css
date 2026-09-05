@@ -1055,6 +1055,8 @@
     border-radius: 4px !important;
     color: #e4e4e9 !important;
     transition: all 120ms ease !important;
+    height: 32px;
+    margin-bottom: 5px;
   }
 
   html body .b-add_to_list .option:hover,
@@ -5321,7 +5323,7 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
 .p-dashboards-show .v2 .my-list .label .misc-links a::after {
   color: #9da2a8 !important;
   content: '/' !important;
-  display: inline-block !important;
+  display: inline-block;
   font-weight: normal !important;
   padding: 0 0 0 7px !important;
 }
@@ -6905,8 +6907,8 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
     flex: 1 1 auto !important;
     min-width: 0 !important;
     width: auto !important;
-    height: 100% !important;
-    margin: 0 !important;
+    height: 100%;
+    margin: 0;
     padding: 0 !important;
     overflow: visible !important;
     float: none !important;
