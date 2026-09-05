@@ -81,5 +81,21 @@
   .bar.simple .bar.s3 {
     background-color: #71717a !important;
   }
+
+  /* Гарантированное сохранение оригинальных цветов постеров и изображений */
+  html body .c-column .image,
+  html body .b-catalog_entry .cover,
+  html body .b-catalog_entry .image,
+  html body .avatar img,
+  html body .b-achievement .c-image img,
+  .c-column .image,
+  .b-catalog_entry .cover,
+  .b-catalog_entry .image,
+  .avatar img,
+  .b-achievement .c-image img {
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
 }
+
 
