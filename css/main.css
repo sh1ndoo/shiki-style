@@ -3125,6 +3125,19 @@
     overflow: hidden !important;
   }
 
+  /* Remove default gray border from achievements */
+  html body .b-achievement .c-image .inner a .border,
+  html body .b-achievement .c-image .inner .border,
+  html body .b-achievement .c-image .border,
+  html body .b-achievement .border,
+  .b-achievement .c-image .inner a .border,
+  .b-achievement .c-image .inner .border,
+  .b-achievement .c-image .border,
+  .b-achievement .border {
+    border: none !important;
+    display: none !important;
+  }
+
   /* Prevent rounded corners or overflow: hidden from clipping achievement titles */
   html body .b-achievement,
   html body .cc-achievements .b-achievement,

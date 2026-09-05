@@ -82,6 +82,20 @@
     background-color: #71717a !important;
   }
 
+  /* Тёмный контрастный текст для светлых полос статистики аниме/манги */
+  html body .b-stats_bar .bar .first,
+  html body .b-stats_bar .bar .second,
+  html body .bar .first,
+  html body .bar .second,
+  .b-stats_bar .bar .first,
+  .b-stats_bar .bar .second,
+  .bar .first,
+  .bar .second {
+    color: #121214 !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+  }
+
   /* Гарантированное сохранение оригинальных цветов постеров и изображений */
   html body .c-column .image,
   html body .b-catalog_entry .cover,

@@ -179,6 +179,15 @@
     border: 1px solid rgba(255, 255, 255, 0.25) !important;
     color: #e4e4e7 !important;
   }
+
+  /* Тёмный контрастный текст для белых полос статистики аниме/манги */
+  html body .b-stats_bar .bar .first,
+  html body .b-stats_bar .bar .second,
+  .bar .first, .bar .second {
+    color: #121214 !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+  }
 }
 ```
 
