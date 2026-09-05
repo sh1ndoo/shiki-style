@@ -44,6 +44,14 @@
 @import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/carousel.css";
 ```
 
+### Красная тема (Ruby / Autumn Crimson)
+Файл [`css/red.css`](css/red.css) переводит тему в рубиново-красную палитру с фоном `red-style.gif`.
+
+Подключение через `@import` сразу после основного стиля:
+```css
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/red.css";
+```
+
 ### Монохромная тема (Monochrome / Noir)
 Файл [`css/monochrome.css`](css/monochrome.css) переводит тему в строгий чёрно-белый стиль (серебристо-белые акценты, серые ссылки, монохромные статусы и шкалы).
 

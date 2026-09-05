@@ -1,0 +1,38 @@
+@media all {
+  /* ============================================================
+     SHIKI-STYLE: Red Theme (Ruby / Autumn Crimson)
+     Author: sh1ndoo (github.com/sh1ndoo/shiki-style)
+     ============================================================ */
+
+  :root, html, body, .p-profiles, .p-profiles-show, .l-page, #profiles_show {
+    /* 1. Фоновая картинка темы */
+    --bg-image: var(--bg-red, url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/red-style.gif")) !important;
+
+    /* 2. Главный красный акцент (кнопки, активные элементы, шкалы) */
+    --color-primary: #e05353 !important;
+    --color-accent: #e05353 !important;
+    --color-accent-rgb: 224, 83, 83 !important;
+
+    /* 3. Светлый коралловый оттенок (ссылки, подсветка при hover, светлые полосы) */
+    --color-accent-light: #fca5a5 !important;
+    --color-accent-light-rgb: 252, 165, 165 !important;
+    --color-link: #fca5a5 !important;
+    --color-link-hover: #ffffff !important;
+    --color-link-active: #ffffff !important;
+    --color-text-secondary: #fca5a5 !important;
+
+    /* 4. Заголовки, текст и системные элементы */
+    --headline-border-color: #e05353 !important;
+    --headline-color: #ffffff !important;
+    --link-color: #fca5a5 !important;
+    --link-hover-color: #ffffff !important;
+    --color-text-soft: #fceded !important;
+
+    /* 5. Карточки, поверхности и границы */
+    --color-background: #121214 !important;
+    --color-surface: #1c1c1e !important;
+    --color-surface-hover: #2c2c2e !important;
+    --color-border: rgba(255, 255, 255, 0.08) !important;
+    --color-border-hover: rgba(224, 83, 83, 0.35) !important;
+  }
+}

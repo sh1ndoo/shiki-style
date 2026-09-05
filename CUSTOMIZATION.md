@@ -85,8 +85,15 @@
 
 ## 2. Пресет «Красная тема» (Autumn Crimson / Ruby)
 
-Готовый код для переключения темы на рубиново-красный акцент со своей фоновой картинкой (подходит для вставки сразу под `@import`):
+Рубиново-красный акцент со стильным фоном `red-style.gif`.
 
+### Вариант 1: Быстрое подключение через `@import`
+```css
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/main.css";
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/red.css";
+```
+
+### Вариант 2: Вставка готового кода в поле стиля
 ```css
 @import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/main.css";
 
