@@ -151,7 +151,7 @@
 
   html body header.head a,
   html body .profile-head header.head a {
-    color: var(--color-accent-light) !important;
+    color: var(--color-link, var(--color-accent-light)) !important;
     text-shadow: none !important;
   }
 
@@ -313,7 +313,7 @@
     z-index: 2 !important;
   }
 
-  /* --- Links (Accent #c4afd4, No Glow) --- */
+  /* --- Links (Accent, No Glow) --- */
   html body a,
   html body a:link,
   html body a:visited,
@@ -342,7 +342,7 @@
   .b-stats_bar.anime a.title,
   .b-stats_bar.manga a.title,
   .l-footer a {
-    color: var(--color-accent-light) !important;
+    color: var(--color-link, var(--color-accent-light)) !important;
     text-decoration: none !important;
     text-shadow: none !important;
     font-weight: 400 !important;
