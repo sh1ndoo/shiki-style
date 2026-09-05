@@ -1,0 +1,112 @@
+@media all {
+  /* ============================================================
+     SHIKI-STYLE: Full Black & White / Monochrome (Noir) Theme
+     Author: sh1ndoo (github.com/sh1ndoo/shiki-style)
+     ============================================================ */
+
+  :root, html, body, .p-profiles, .p-profiles-show, .l-page, #profiles_show {
+    /* 1. Чёрно-белый фон из репозитория */
+    --bg-image: var(--bg-bw, url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/b&w-style.gif")) !important;
+
+    /* 2. Основной монохромный акцент (белый/платиновый) */
+    --color-primary: #ffffff !important;
+    --color-accent: #ffffff !important;
+    --color-accent-rgb: 255, 255, 255 !important;
+
+    /* 3. Вторичные серые тона (ссылки, рамки, подсветка) */
+    --color-accent-light: #d4d4d8 !important;
+    --color-accent-light-rgb: 212, 212, 216 !important;
+    --color-link: #d4d4d8 !important;
+    --color-link-hover: #ffffff !important;
+    --color-link-active: #ffffff !important;
+    --color-text-secondary: #a1a1aa !important;
+
+    /* 4. Текст и системные заголовки */
+    --color-text: #e4e4e7 !important;
+    --color-text-primary: #ffffff !important;
+    --color-text-hint: #8e8e93 !important;
+    --color-text-soft: #f4f4f5 !important;
+    --headline-border-color: #ffffff !important;
+    --headline-color: #ffffff !important;
+    --headline-background: #1c1c1e !important;
+    --link-color: #d4d4d8 !important;
+    --link-hover-color: #ffffff !important;
+
+    /* 5. Карточки, поверхности и границы */
+    --color-background: #09090b !important;
+    --color-surface: #141416 !important;
+    --color-surface-hover: #1f1f22 !important;
+    --color-border: rgba(255, 255, 255, 0.12) !important;
+    --color-border-hover: rgba(255, 255, 255, 0.28) !important;
+  }
+
+  /* --- Монохромные теги статусов аниме (онгоинг, брошено, в планах) --- */
+  html body .b-anime_status_tag,
+  html body .status-time .b-anime_status_tag,
+  html body .db-update .b-anime_status_tag,
+  .b-anime_status_tag {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #e4e4e7 !important;
+  }
+
+  html body .b-anime_status_tag:hover,
+  .b-anime_status_tag:hover {
+    background-color: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: #ffffff !important;
+  }
+
+  /* --- Монохромные шкалы распределения оценок --- */
+  html body .bar.simple .bar.s0,
+  html body #rates_scores_stats .bar.s0,
+  .bar.simple .bar.s0 {
+    background-color: #ffffff !important;
+  }
+
+  html body .bar.simple .bar.s1,
+  html body #rates_scores_stats .bar.s1,
+  .bar.simple .bar.s1 {
+    background-color: #d4d4d8 !important;
+  }
+
+  html body .bar.simple .bar.s2,
+  html body #rates_scores_stats .bar.s2,
+  .bar.simple .bar.s2 {
+    background-color: #a1a1aa !important;
+  }
+
+  html body .bar.simple .bar.s3,
+  html body #rates_scores_stats .bar.s3,
+  .bar.simple .bar.s3 {
+    background-color: #71717a !important;
+  }
+
+  /* --- Обесцвечивание постеров и аватаров (с эффектом проявления цвета при hover) --- */
+  html body .c-column .image,
+  html body .b-catalog_entry .cover,
+  html body .b-catalog_entry .image,
+  html body .avatar img,
+  html body .b-achievement .c-image img,
+  .c-column .image,
+  .b-catalog_entry .cover,
+  .b-catalog_entry .image,
+  .avatar img,
+  .b-achievement .c-image img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease !important;
+  }
+
+  html body .c-column .image:hover,
+  html body .b-catalog_entry .cover:hover,
+  html body .b-catalog_entry .image:hover,
+  html body .avatar img:hover,
+  html body .b-achievement .c-image img:hover,
+  .c-column .image:hover,
+  .b-catalog_entry .cover:hover,
+  .b-catalog_entry .image:hover,
+  .avatar img:hover,
+  .b-achievement .c-image img:hover {
+    filter: grayscale(0%);
+  }
+}
