@@ -1055,8 +1055,8 @@
     border-radius: 4px !important;
     color: #e4e4e9 !important;
     transition: all 120ms ease !important;
-    height: 32px;
-    margin-bottom: 5px;
+    height: 32px !important;
+    margin-bottom: 5px !important;
   }
 
   html body .b-add_to_list .option:hover,
