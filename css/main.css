@@ -5315,7 +5315,7 @@
     color: #ffffff !important;
   }
 
-  html body .p-dashboards-show .v2 .my-list .label .misc-links a:after {
+  .p-dashboards-show .v2 .my-list .label .misc-links a:after {
     color: #9da2a8;
     content: '/';
     display: inline-block;
