@@ -6,7 +6,7 @@
 
   :root, html, body, .p-profiles, .p-profiles-show, .l-page, #profiles_show {
     /* 1. Чёрно-белый фон из репозитория */
-    --bg-image: var(--bg-bw, url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/b&w-style.gif")) !important;
+    --bg-image: var(--bg-BW, var(--bg-bw, url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/b&w-style.gif"))) !important;
 
     /* 2. Основной монохромный акцент (белый/платиновый) */
     --color-primary: #ffffff !important;

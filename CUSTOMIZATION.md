@@ -20,7 +20,7 @@
        ============================================================ */
     /* Вариант А: Использовать готовые картинки из репозитория:
        --bg-image: var(--bg-red) !important;       (красная тема red-style.gif)
-       --bg-image: var(--bg-bw) !important;        (чёрно-белая тема b&w-style.gif)
+       --bg-image: var(--bg-BW) !important;        (чёрно-белая тема b&w-style.gif)
        --bg-image: var(--bg-retrowave) !important; (ретровейв retrowave.gif)
        
        Вариант Б: Прямая ссылка на файл из репозитория (raw):
@@ -143,7 +143,7 @@
 @media all {
   :root, html, body, .p-profiles, .p-profiles-show, .l-page, #profiles_show {
     /* 1. Чёрно-белый фон из репозитория (или прямая ссылка / none) */
-    --bg-image: var(--bg-bw) !important;
+    --bg-image: var(--bg-BW) !important;
     /* Либо прямая ссылка:
        --bg-image: url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/b&w-style.gif") !important; */
 
