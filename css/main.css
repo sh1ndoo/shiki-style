@@ -1642,7 +1642,7 @@
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
     font-size: 13px !important;
     line-height: 1.6 !important;
-    padding: 30px 14px 12px 14px !important;
+    padding: 12px 14px 12px 14px !important;
     position: relative !important;
     overflow-x: auto !important;
     white-space: pre !important;
@@ -2963,7 +2963,7 @@
 
   html body .b-stats_bar.lifetime .bar .first,
   .b-stats_bar.lifetime .bar .first {
-    background: linear-gradient(90deg, var(--color-accent-light) 0%, var(--color-accent) 100%) !important;
+    background: linear-gradient(90deg, var(--color-accent-light) 98%, var(--color-accent) 100%) !important;
     height: 100% !important;
     border-radius: 4px 0 0 4px !important;
     box-shadow: 0 0 10px rgba(var(--color-accent-light-rgb), 0.3) !important;
