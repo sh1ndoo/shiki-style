@@ -60,11 +60,17 @@
 @import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/monochrome.css";
 ```
 
+### Ретровейв тема (Retrowave / Synthwave Neon)
+Файл [`css/retrowave.css`](css/retrowave.css) включает яркую неоновую атмосферу 80-х (Neon Pink + Electric Cyan) с фоном `retrowave.gif`.
+
+Подключение через `@import` сразу после основного стиля:
+```css
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/retrowave.css";
+```
+
 ## Кастомизация палитры и фона
 
 Все ключевые цвета (акценты, ссылки, текст) и фоновое изображение настраиваются через переменные `:root` с обязательной обёрткой в `@media all`.
 
-Подробное руководство со всеми доступными переменными и готовыми пресетами (**«Красная тема»** и **«Чёрно-белая тема»**) смотрите в файле:
+Подробное руководство со всеми доступными переменными и готовыми пресетами (**«Красная тема»**, **«Чёрно-белая тема»** и **«Ретровейв»**) смотрите в файле:
 👉 **[CUSTOMIZATION.md](CUSTOMIZATION.md)**
-
-

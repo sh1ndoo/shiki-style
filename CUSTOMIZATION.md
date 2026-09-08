@@ -21,6 +21,7 @@
     /* Вариант А: Использовать готовые картинки из репозитория:
        --bg-image: var(--bg-red) !important;       (красная тема red-style.gif)
        --bg-image: var(--bg-bw) !important;        (чёрно-белая тема b&w-style.gif)
+       --bg-image: var(--bg-retrowave) !important; (ретровейв retrowave.gif)
        
        Вариант Б: Прямая ссылка на файл из репозитория (raw):
        --bg-image: url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/b&w-style.gif") !important;
@@ -193,10 +194,79 @@
 
 ---
 
-## 4. Сброс кеша стилей Shikimori
+## 4. Пресет «Ретровейв» (Retrowave / Synthwave Neon)
+
+Яркий ностальгический стиль 80-х в неоновых тонах (Neon Pink + Electric Cyan) с анимированным фоном `retrowave.gif`.
+
+### Вариант 1: Быстрое подключение через `@import`
+```css
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/main.css";
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/retrowave.css";
+```
+
+### Вариант 2: Вставка готового кода в поле стиля
+```css
+@import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/main.css";
+
+@media all {
+  :root, html, body, .p-profiles, .p-profiles-show, .l-page, #profiles_show {
+    /* 1. Фоновая картинка темы */
+    --bg-image: var(--bg-retrowave) !important;
+    /* Либо прямая ссылка:
+       --bg-image: url("https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/img/retrowave.gif") !important; */
+
+    /* 2. Главный неоновый акцент (Neon Magenta / Hot Pink) */
+    --color-primary: #ff2a85 !important;
+    --color-accent: #ff2a85 !important;
+    --color-accent-rgb: 255, 42, 133 !important;
+
+    /* 3. Вторичный неоновый оттенок (Electric Cyan / Neon Turquoise) */
+    --color-accent-light: #00f0ff !important;
+    --color-accent-light-rgb: 0, 240, 255 !important;
+    --color-link: #00f0ff !important;
+    --color-link-hover: #ffffff !important;
+    --color-link-active: #ff2a85 !important;
+    --color-text-secondary: #00f0ff !important;
+
+    /* 4. Заголовки, текст и системные элементы */
+    --headline-border-color: #ff2a85 !important;
+    --headline-color: #ffffff !important;
+    --headline-background: rgba(22, 10, 38, 0.85) !important;
+    --link-color: #00f0ff !important;
+    --link-hover-color: #ffffff !important;
+    --color-text: #e2e8f0 !important;
+    --color-text-primary: #ffffff !important;
+    --color-text-hint: #a78bfa !important;
+    --color-text-soft: #fdf2f8 !important;
+
+    /* 5. Карточки, поверхности и границы (глубокий синтвейв-градиент и неоновые рамки) */
+    --color-background: #0c0517 !important;
+    --color-surface: #160a26 !important;
+    --color-surface-hover: #261142 !important;
+    --color-border: rgba(255, 42, 133, 0.25) !important;
+    --color-border-hover: rgba(0, 240, 255, 0.5) !important;
+  }
+
+  /* Неоновый нео-ретро акцент для полос статистики и свечений */
+  html body .b-stats_bar.lifetime .bar .first,
+  .b-stats_bar.lifetime .bar .first {
+    box-shadow: 0 0 12px rgba(255, 42, 133, 0.6) !important;
+  }
+
+  html body .headline > .title,
+  html body .subheadline > .title {
+    text-shadow: 0 0 10px rgba(255, 42, 133, 0.45) !important;
+  }
+}
+```
+
+---
+
+## 5. Сброс кеша стилей Shikimori
 
 Shikimori кэширует подключённые через `@import` файлы на своём сервере. Если вы обновляете версию стиля из репозитория, выполните сброс кеша:
 1. Перейдите по ссылке: 👉 **[shikimori.one/tests/reset_styles_cache](https://shikimori.one/tests/reset_styles_cache)** (или `.me` / `.io`)
 2. Вставьте ссылку на `main.css` и нажмите **Submit**.
 3. Перезагрузите страницу профиля с очисткой кеша (`Ctrl + F5` на Windows / `Cmd + Shift + R` на Mac).
+
 
