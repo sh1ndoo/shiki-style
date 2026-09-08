@@ -56,7 +56,14 @@
     box-sizing: border-box;
   }
 
-  .u-carousel2 .u-carousel-inner [data-tab]:first-child {
+  /* --- Hide Shikimori Auto-Inserted <br> Tags --- */
+  .u-carousel2 > br,
+  .u-carousel2 .u-carousel-inner > br {
+    display: none !important;
+  }
+
+  .u-carousel2 .u-carousel-inner [data-tab]:first-child,
+  .u-carousel2 .u-carousel-inner [data-tab]:first-of-type {
     position: static;
   }
 

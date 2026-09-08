@@ -45,7 +45,8 @@
   }
 
   /* --- Tab Switcher Buttons ([data-dynamic]) --- */
-  .use-tabs > [data-dynamic] {
+  .use-tabs > [data-dynamic],
+  .use-tabs > [data-switcher] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -67,19 +68,22 @@
     text-decoration: none !important;
   }
 
-  .use-tabs > [data-dynamic]:hover {
+  .use-tabs > [data-dynamic]:hover,
+  .use-tabs > [data-switcher]:hover {
     background: var(--c-tab-bg-hover);
     border-color: rgba(var(--color-accent-light-rgb, 196, 175, 212), 0.35);
     color: #ffffff;
     transform: translateY(-1px);
   }
 
-  .use-tabs > [data-dynamic]:active {
+  .use-tabs > [data-dynamic]:active,
+  .use-tabs > [data-switcher]:active {
     transform: translateY(0);
     background: rgba(var(--color-accent-rgb, 152, 132, 165), 0.15);
   }
 
-  .use-tabs > [data-dynamic].active {
+  .use-tabs > [data-dynamic].active,
+  .use-tabs > [data-switcher].active {
     color: var(--c-tab-text-active);
     background: var(--c-tab-bg-active);
     border-color: var(--c-tab-accent);
@@ -87,8 +91,15 @@
     font-weight: 600;
   }
 
+  /* --- Hide Shikimori Auto-Inserted <br> Tags --- */
+  .use-tabs > br,
+  .use-tabs > div > br,
+  .use-tabs > div:not([data-dynamic]) > br {
+    display: none !important;
+  }
+
   /* --- Tab Panels Container & Content --- */
-  .use-tabs > div:not([data-dynamic]) {
+  .use-tabs > div:not([data-dynamic]):not([data-switcher]) {
     flex: 1 0 100%;
     min-width: 100%;
     width: 100%;
@@ -96,6 +107,7 @@
     margin-top: 8px;
   }
 
+  .use-tabs > div:not([data-dynamic]):not([data-switcher]) > div,
   .use-tabs > div:not([data-dynamic]) > div,
   .use-tabs > div > div {
     display: none;
@@ -108,68 +120,189 @@
     animation: shikiTabFadeIn 0.25s ease-out;
   }
 
-  /* --- Pure CSS Tab Switching (Up to 30 Tabs) --- */
+  /* --- Pure CSS Tab Switching (Up to 30 Tabs) ---
+     Supports :nth-of-type (handles <br> tags cleanly) & :nth-child */
+  .use-tabs > div:nth-of-type(1).active ~ div:not([data-dynamic]) > div:nth-of-type(1),
+  .use-tabs > div:nth-of-type(1).active ~ div > div:nth-of-type(1),
+  .use-tabs > .active:nth-of-type(1) ~ div:not([data-dynamic]) > div:nth-of-type(1),
+  .use-tabs > .active:nth-of-type(1) ~ div > div:nth-of-type(1),
   .use-tabs > .active:nth-child(1) ~ div:not([data-dynamic]) > div:nth-child(1),
-  .use-tabs > .active:nth-child(2) ~ div:not([data-dynamic]) > div:nth-child(2),
-  .use-tabs > .active:nth-child(3) ~ div:not([data-dynamic]) > div:nth-child(3),
-  .use-tabs > .active:nth-child(4) ~ div:not([data-dynamic]) > div:nth-child(4),
-  .use-tabs > .active:nth-child(5) ~ div:not([data-dynamic]) > div:nth-child(5),
-  .use-tabs > .active:nth-child(6) ~ div:not([data-dynamic]) > div:nth-child(6),
-  .use-tabs > .active:nth-child(7) ~ div:not([data-dynamic]) > div:nth-child(7),
-  .use-tabs > .active:nth-child(8) ~ div:not([data-dynamic]) > div:nth-child(8),
-  .use-tabs > .active:nth-child(9) ~ div:not([data-dynamic]) > div:nth-child(9),
-  .use-tabs > .active:nth-child(10) ~ div:not([data-dynamic]) > div:nth-child(10),
-  .use-tabs > .active:nth-child(11) ~ div:not([data-dynamic]) > div:nth-child(11),
-  .use-tabs > .active:nth-child(12) ~ div:not([data-dynamic]) > div:nth-child(12),
-  .use-tabs > .active:nth-child(13) ~ div:not([data-dynamic]) > div:nth-child(13),
-  .use-tabs > .active:nth-child(14) ~ div:not([data-dynamic]) > div:nth-child(14),
-  .use-tabs > .active:nth-child(15) ~ div:not([data-dynamic]) > div:nth-child(15),
-  .use-tabs > .active:nth-child(16) ~ div:not([data-dynamic]) > div:nth-child(16),
-  .use-tabs > .active:nth-child(17) ~ div:not([data-dynamic]) > div:nth-child(17),
-  .use-tabs > .active:nth-child(18) ~ div:not([data-dynamic]) > div:nth-child(18),
-  .use-tabs > .active:nth-child(19) ~ div:not([data-dynamic]) > div:nth-child(19),
-  .use-tabs > .active:nth-child(20) ~ div:not([data-dynamic]) > div:nth-child(20),
-  .use-tabs > .active:nth-child(21) ~ div:not([data-dynamic]) > div:nth-child(21),
-  .use-tabs > .active:nth-child(22) ~ div:not([data-dynamic]) > div:nth-child(22),
-  .use-tabs > .active:nth-child(23) ~ div:not([data-dynamic]) > div:nth-child(23),
-  .use-tabs > .active:nth-child(24) ~ div:not([data-dynamic]) > div:nth-child(24),
-  .use-tabs > .active:nth-child(25) ~ div:not([data-dynamic]) > div:nth-child(25),
-  .use-tabs > .active:nth-child(26) ~ div:not([data-dynamic]) > div:nth-child(26),
-  .use-tabs > .active:nth-child(27) ~ div:not([data-dynamic]) > div:nth-child(27),
-  .use-tabs > .active:nth-child(28) ~ div:not([data-dynamic]) > div:nth-child(28),
-  .use-tabs > .active:nth-child(29) ~ div:not([data-dynamic]) > div:nth-child(29),
-  .use-tabs > .active:nth-child(30) ~ div:not([data-dynamic]) > div:nth-child(30),
   .use-tabs > .active:nth-child(1) ~ div > div:nth-child(1),
+  .use-tabs > div:nth-of-type(2).active ~ div:not([data-dynamic]) > div:nth-of-type(2),
+  .use-tabs > div:nth-of-type(2).active ~ div > div:nth-of-type(2),
+  .use-tabs > .active:nth-of-type(2) ~ div:not([data-dynamic]) > div:nth-of-type(2),
+  .use-tabs > .active:nth-of-type(2) ~ div > div:nth-of-type(2),
+  .use-tabs > .active:nth-child(2) ~ div:not([data-dynamic]) > div:nth-child(2),
   .use-tabs > .active:nth-child(2) ~ div > div:nth-child(2),
+  .use-tabs > div:nth-of-type(3).active ~ div:not([data-dynamic]) > div:nth-of-type(3),
+  .use-tabs > div:nth-of-type(3).active ~ div > div:nth-of-type(3),
+  .use-tabs > .active:nth-of-type(3) ~ div:not([data-dynamic]) > div:nth-of-type(3),
+  .use-tabs > .active:nth-of-type(3) ~ div > div:nth-of-type(3),
+  .use-tabs > .active:nth-child(3) ~ div:not([data-dynamic]) > div:nth-child(3),
   .use-tabs > .active:nth-child(3) ~ div > div:nth-child(3),
+  .use-tabs > div:nth-of-type(4).active ~ div:not([data-dynamic]) > div:nth-of-type(4),
+  .use-tabs > div:nth-of-type(4).active ~ div > div:nth-of-type(4),
+  .use-tabs > .active:nth-of-type(4) ~ div:not([data-dynamic]) > div:nth-of-type(4),
+  .use-tabs > .active:nth-of-type(4) ~ div > div:nth-of-type(4),
+  .use-tabs > .active:nth-child(4) ~ div:not([data-dynamic]) > div:nth-child(4),
   .use-tabs > .active:nth-child(4) ~ div > div:nth-child(4),
+  .use-tabs > div:nth-of-type(5).active ~ div:not([data-dynamic]) > div:nth-of-type(5),
+  .use-tabs > div:nth-of-type(5).active ~ div > div:nth-of-type(5),
+  .use-tabs > .active:nth-of-type(5) ~ div:not([data-dynamic]) > div:nth-of-type(5),
+  .use-tabs > .active:nth-of-type(5) ~ div > div:nth-of-type(5),
+  .use-tabs > .active:nth-child(5) ~ div:not([data-dynamic]) > div:nth-child(5),
   .use-tabs > .active:nth-child(5) ~ div > div:nth-child(5),
+  .use-tabs > div:nth-of-type(6).active ~ div:not([data-dynamic]) > div:nth-of-type(6),
+  .use-tabs > div:nth-of-type(6).active ~ div > div:nth-of-type(6),
+  .use-tabs > .active:nth-of-type(6) ~ div:not([data-dynamic]) > div:nth-of-type(6),
+  .use-tabs > .active:nth-of-type(6) ~ div > div:nth-of-type(6),
+  .use-tabs > .active:nth-child(6) ~ div:not([data-dynamic]) > div:nth-child(6),
   .use-tabs > .active:nth-child(6) ~ div > div:nth-child(6),
+  .use-tabs > div:nth-of-type(7).active ~ div:not([data-dynamic]) > div:nth-of-type(7),
+  .use-tabs > div:nth-of-type(7).active ~ div > div:nth-of-type(7),
+  .use-tabs > .active:nth-of-type(7) ~ div:not([data-dynamic]) > div:nth-of-type(7),
+  .use-tabs > .active:nth-of-type(7) ~ div > div:nth-of-type(7),
+  .use-tabs > .active:nth-child(7) ~ div:not([data-dynamic]) > div:nth-child(7),
   .use-tabs > .active:nth-child(7) ~ div > div:nth-child(7),
+  .use-tabs > div:nth-of-type(8).active ~ div:not([data-dynamic]) > div:nth-of-type(8),
+  .use-tabs > div:nth-of-type(8).active ~ div > div:nth-of-type(8),
+  .use-tabs > .active:nth-of-type(8) ~ div:not([data-dynamic]) > div:nth-of-type(8),
+  .use-tabs > .active:nth-of-type(8) ~ div > div:nth-of-type(8),
+  .use-tabs > .active:nth-child(8) ~ div:not([data-dynamic]) > div:nth-child(8),
   .use-tabs > .active:nth-child(8) ~ div > div:nth-child(8),
+  .use-tabs > div:nth-of-type(9).active ~ div:not([data-dynamic]) > div:nth-of-type(9),
+  .use-tabs > div:nth-of-type(9).active ~ div > div:nth-of-type(9),
+  .use-tabs > .active:nth-of-type(9) ~ div:not([data-dynamic]) > div:nth-of-type(9),
+  .use-tabs > .active:nth-of-type(9) ~ div > div:nth-of-type(9),
+  .use-tabs > .active:nth-child(9) ~ div:not([data-dynamic]) > div:nth-child(9),
   .use-tabs > .active:nth-child(9) ~ div > div:nth-child(9),
+  .use-tabs > div:nth-of-type(10).active ~ div:not([data-dynamic]) > div:nth-of-type(10),
+  .use-tabs > div:nth-of-type(10).active ~ div > div:nth-of-type(10),
+  .use-tabs > .active:nth-of-type(10) ~ div:not([data-dynamic]) > div:nth-of-type(10),
+  .use-tabs > .active:nth-of-type(10) ~ div > div:nth-of-type(10),
+  .use-tabs > .active:nth-child(10) ~ div:not([data-dynamic]) > div:nth-child(10),
   .use-tabs > .active:nth-child(10) ~ div > div:nth-child(10),
+  .use-tabs > div:nth-of-type(11).active ~ div:not([data-dynamic]) > div:nth-of-type(11),
+  .use-tabs > div:nth-of-type(11).active ~ div > div:nth-of-type(11),
+  .use-tabs > .active:nth-of-type(11) ~ div:not([data-dynamic]) > div:nth-of-type(11),
+  .use-tabs > .active:nth-of-type(11) ~ div > div:nth-of-type(11),
+  .use-tabs > .active:nth-child(11) ~ div:not([data-dynamic]) > div:nth-child(11),
   .use-tabs > .active:nth-child(11) ~ div > div:nth-child(11),
+  .use-tabs > div:nth-of-type(12).active ~ div:not([data-dynamic]) > div:nth-of-type(12),
+  .use-tabs > div:nth-of-type(12).active ~ div > div:nth-of-type(12),
+  .use-tabs > .active:nth-of-type(12) ~ div:not([data-dynamic]) > div:nth-of-type(12),
+  .use-tabs > .active:nth-of-type(12) ~ div > div:nth-of-type(12),
+  .use-tabs > .active:nth-child(12) ~ div:not([data-dynamic]) > div:nth-child(12),
   .use-tabs > .active:nth-child(12) ~ div > div:nth-child(12),
+  .use-tabs > div:nth-of-type(13).active ~ div:not([data-dynamic]) > div:nth-of-type(13),
+  .use-tabs > div:nth-of-type(13).active ~ div > div:nth-of-type(13),
+  .use-tabs > .active:nth-of-type(13) ~ div:not([data-dynamic]) > div:nth-of-type(13),
+  .use-tabs > .active:nth-of-type(13) ~ div > div:nth-of-type(13),
+  .use-tabs > .active:nth-child(13) ~ div:not([data-dynamic]) > div:nth-child(13),
   .use-tabs > .active:nth-child(13) ~ div > div:nth-child(13),
+  .use-tabs > div:nth-of-type(14).active ~ div:not([data-dynamic]) > div:nth-of-type(14),
+  .use-tabs > div:nth-of-type(14).active ~ div > div:nth-of-type(14),
+  .use-tabs > .active:nth-of-type(14) ~ div:not([data-dynamic]) > div:nth-of-type(14),
+  .use-tabs > .active:nth-of-type(14) ~ div > div:nth-of-type(14),
+  .use-tabs > .active:nth-child(14) ~ div:not([data-dynamic]) > div:nth-child(14),
   .use-tabs > .active:nth-child(14) ~ div > div:nth-child(14),
+  .use-tabs > div:nth-of-type(15).active ~ div:not([data-dynamic]) > div:nth-of-type(15),
+  .use-tabs > div:nth-of-type(15).active ~ div > div:nth-of-type(15),
+  .use-tabs > .active:nth-of-type(15) ~ div:not([data-dynamic]) > div:nth-of-type(15),
+  .use-tabs > .active:nth-of-type(15) ~ div > div:nth-of-type(15),
+  .use-tabs > .active:nth-child(15) ~ div:not([data-dynamic]) > div:nth-child(15),
   .use-tabs > .active:nth-child(15) ~ div > div:nth-child(15),
+  .use-tabs > div:nth-of-type(16).active ~ div:not([data-dynamic]) > div:nth-of-type(16),
+  .use-tabs > div:nth-of-type(16).active ~ div > div:nth-of-type(16),
+  .use-tabs > .active:nth-of-type(16) ~ div:not([data-dynamic]) > div:nth-of-type(16),
+  .use-tabs > .active:nth-of-type(16) ~ div > div:nth-of-type(16),
+  .use-tabs > .active:nth-child(16) ~ div:not([data-dynamic]) > div:nth-child(16),
   .use-tabs > .active:nth-child(16) ~ div > div:nth-child(16),
+  .use-tabs > div:nth-of-type(17).active ~ div:not([data-dynamic]) > div:nth-of-type(17),
+  .use-tabs > div:nth-of-type(17).active ~ div > div:nth-of-type(17),
+  .use-tabs > .active:nth-of-type(17) ~ div:not([data-dynamic]) > div:nth-of-type(17),
+  .use-tabs > .active:nth-of-type(17) ~ div > div:nth-of-type(17),
+  .use-tabs > .active:nth-child(17) ~ div:not([data-dynamic]) > div:nth-child(17),
   .use-tabs > .active:nth-child(17) ~ div > div:nth-child(17),
+  .use-tabs > div:nth-of-type(18).active ~ div:not([data-dynamic]) > div:nth-of-type(18),
+  .use-tabs > div:nth-of-type(18).active ~ div > div:nth-of-type(18),
+  .use-tabs > .active:nth-of-type(18) ~ div:not([data-dynamic]) > div:nth-of-type(18),
+  .use-tabs > .active:nth-of-type(18) ~ div > div:nth-of-type(18),
+  .use-tabs > .active:nth-child(18) ~ div:not([data-dynamic]) > div:nth-child(18),
   .use-tabs > .active:nth-child(18) ~ div > div:nth-child(18),
+  .use-tabs > div:nth-of-type(19).active ~ div:not([data-dynamic]) > div:nth-of-type(19),
+  .use-tabs > div:nth-of-type(19).active ~ div > div:nth-of-type(19),
+  .use-tabs > .active:nth-of-type(19) ~ div:not([data-dynamic]) > div:nth-of-type(19),
+  .use-tabs > .active:nth-of-type(19) ~ div > div:nth-of-type(19),
+  .use-tabs > .active:nth-child(19) ~ div:not([data-dynamic]) > div:nth-child(19),
   .use-tabs > .active:nth-child(19) ~ div > div:nth-child(19),
+  .use-tabs > div:nth-of-type(20).active ~ div:not([data-dynamic]) > div:nth-of-type(20),
+  .use-tabs > div:nth-of-type(20).active ~ div > div:nth-of-type(20),
+  .use-tabs > .active:nth-of-type(20) ~ div:not([data-dynamic]) > div:nth-of-type(20),
+  .use-tabs > .active:nth-of-type(20) ~ div > div:nth-of-type(20),
+  .use-tabs > .active:nth-child(20) ~ div:not([data-dynamic]) > div:nth-child(20),
   .use-tabs > .active:nth-child(20) ~ div > div:nth-child(20),
+  .use-tabs > div:nth-of-type(21).active ~ div:not([data-dynamic]) > div:nth-of-type(21),
+  .use-tabs > div:nth-of-type(21).active ~ div > div:nth-of-type(21),
+  .use-tabs > .active:nth-of-type(21) ~ div:not([data-dynamic]) > div:nth-of-type(21),
+  .use-tabs > .active:nth-of-type(21) ~ div > div:nth-of-type(21),
+  .use-tabs > .active:nth-child(21) ~ div:not([data-dynamic]) > div:nth-child(21),
   .use-tabs > .active:nth-child(21) ~ div > div:nth-child(21),
+  .use-tabs > div:nth-of-type(22).active ~ div:not([data-dynamic]) > div:nth-of-type(22),
+  .use-tabs > div:nth-of-type(22).active ~ div > div:nth-of-type(22),
+  .use-tabs > .active:nth-of-type(22) ~ div:not([data-dynamic]) > div:nth-of-type(22),
+  .use-tabs > .active:nth-of-type(22) ~ div > div:nth-of-type(22),
+  .use-tabs > .active:nth-child(22) ~ div:not([data-dynamic]) > div:nth-child(22),
   .use-tabs > .active:nth-child(22) ~ div > div:nth-child(22),
+  .use-tabs > div:nth-of-type(23).active ~ div:not([data-dynamic]) > div:nth-of-type(23),
+  .use-tabs > div:nth-of-type(23).active ~ div > div:nth-of-type(23),
+  .use-tabs > .active:nth-of-type(23) ~ div:not([data-dynamic]) > div:nth-of-type(23),
+  .use-tabs > .active:nth-of-type(23) ~ div > div:nth-of-type(23),
+  .use-tabs > .active:nth-child(23) ~ div:not([data-dynamic]) > div:nth-child(23),
   .use-tabs > .active:nth-child(23) ~ div > div:nth-child(23),
+  .use-tabs > div:nth-of-type(24).active ~ div:not([data-dynamic]) > div:nth-of-type(24),
+  .use-tabs > div:nth-of-type(24).active ~ div > div:nth-of-type(24),
+  .use-tabs > .active:nth-of-type(24) ~ div:not([data-dynamic]) > div:nth-of-type(24),
+  .use-tabs > .active:nth-of-type(24) ~ div > div:nth-of-type(24),
+  .use-tabs > .active:nth-child(24) ~ div:not([data-dynamic]) > div:nth-child(24),
   .use-tabs > .active:nth-child(24) ~ div > div:nth-child(24),
+  .use-tabs > div:nth-of-type(25).active ~ div:not([data-dynamic]) > div:nth-of-type(25),
+  .use-tabs > div:nth-of-type(25).active ~ div > div:nth-of-type(25),
+  .use-tabs > .active:nth-of-type(25) ~ div:not([data-dynamic]) > div:nth-of-type(25),
+  .use-tabs > .active:nth-of-type(25) ~ div > div:nth-of-type(25),
+  .use-tabs > .active:nth-child(25) ~ div:not([data-dynamic]) > div:nth-child(25),
   .use-tabs > .active:nth-child(25) ~ div > div:nth-child(25),
+  .use-tabs > div:nth-of-type(26).active ~ div:not([data-dynamic]) > div:nth-of-type(26),
+  .use-tabs > div:nth-of-type(26).active ~ div > div:nth-of-type(26),
+  .use-tabs > .active:nth-of-type(26) ~ div:not([data-dynamic]) > div:nth-of-type(26),
+  .use-tabs > .active:nth-of-type(26) ~ div > div:nth-of-type(26),
+  .use-tabs > .active:nth-child(26) ~ div:not([data-dynamic]) > div:nth-child(26),
   .use-tabs > .active:nth-child(26) ~ div > div:nth-child(26),
+  .use-tabs > div:nth-of-type(27).active ~ div:not([data-dynamic]) > div:nth-of-type(27),
+  .use-tabs > div:nth-of-type(27).active ~ div > div:nth-of-type(27),
+  .use-tabs > .active:nth-of-type(27) ~ div:not([data-dynamic]) > div:nth-of-type(27),
+  .use-tabs > .active:nth-of-type(27) ~ div > div:nth-of-type(27),
+  .use-tabs > .active:nth-child(27) ~ div:not([data-dynamic]) > div:nth-child(27),
   .use-tabs > .active:nth-child(27) ~ div > div:nth-child(27),
+  .use-tabs > div:nth-of-type(28).active ~ div:not([data-dynamic]) > div:nth-of-type(28),
+  .use-tabs > div:nth-of-type(28).active ~ div > div:nth-of-type(28),
+  .use-tabs > .active:nth-of-type(28) ~ div:not([data-dynamic]) > div:nth-of-type(28),
+  .use-tabs > .active:nth-of-type(28) ~ div > div:nth-of-type(28),
+  .use-tabs > .active:nth-child(28) ~ div:not([data-dynamic]) > div:nth-child(28),
   .use-tabs > .active:nth-child(28) ~ div > div:nth-child(28),
+  .use-tabs > div:nth-of-type(29).active ~ div:not([data-dynamic]) > div:nth-of-type(29),
+  .use-tabs > div:nth-of-type(29).active ~ div > div:nth-of-type(29),
+  .use-tabs > .active:nth-of-type(29) ~ div:not([data-dynamic]) > div:nth-of-type(29),
+  .use-tabs > .active:nth-of-type(29) ~ div > div:nth-of-type(29),
+  .use-tabs > .active:nth-child(29) ~ div:not([data-dynamic]) > div:nth-child(29),
   .use-tabs > .active:nth-child(29) ~ div > div:nth-child(29),
+  .use-tabs > div:nth-of-type(30).active ~ div:not([data-dynamic]) > div:nth-of-type(30),
+  .use-tabs > div:nth-of-type(30).active ~ div > div:nth-of-type(30),
+  .use-tabs > .active:nth-of-type(30) ~ div:not([data-dynamic]) > div:nth-of-type(30),
+  .use-tabs > .active:nth-of-type(30) ~ div > div:nth-of-type(30),
+  .use-tabs > .active:nth-child(30) ~ div:not([data-dynamic]) > div:nth-child(30),
   .use-tabs > .active:nth-child(30) ~ div > div:nth-child(30) {
-    display: block;
+    display: block !important;
   }
 
   /* --- Color Modifiers --- */

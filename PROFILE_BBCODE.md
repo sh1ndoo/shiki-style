@@ -16,10 +16,10 @@
 
 ```bbcode
 [div=use-tabs --centered --ripple]
-[div=b-js-link active data-dynamic]🎨 О стиле[/div]
-[div=b-js-link data-dynamic]🌐 Соцсети[/div]
-[div=b-js-link data-dynamic]📑 Инструкция: Табы[/div]
-[div=b-js-link data-dynamic]🎠 Инструкция: Карусель[/div]
+[div=b-js-link to-process active data-dynamic=switcher data-switcher=profile_tabs]🎨 О стиле[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]🌐 Соцсети[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]📑 Инструкция: Табы[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]🎠 Инструкция: Карусель[/div]
 [div]
 
 [div]
@@ -119,9 +119,9 @@
 
 [b]2. Шаблон BBCode для копирования:[/b]
 [code][div=use-tabs --centered --ripple]
-[div=b-js-link active data-dynamic]Вкладка 1[/div]
-[div=b-js-link data-dynamic]Вкладка 2[/div]
-[div=b-js-link data-dynamic]Вкладка 3[/div]
+[div=b-js-link to-process active data-dynamic=switcher data-switcher=tabs]Вкладка 1[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=tabs]Вкладка 2[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=tabs]Вкладка 3[/div]
 [div]
 [div]Содержимое первой вкладки[/div]
 [div]Содержимое второй вкладки[/div]
@@ -131,7 +131,16 @@
 
 [hr]
 
-[b]3. Доступные модификаторы (добавляются в [color=#00f0ff]use-tabs[/color]):[/b]
+[b]3. Важные параметры кнопок переключения:[/b]
+[list]
+[*] [b]to-process data-dynamic=switcher[/b] — активирует встроенный обработчик кликов движка Shikimori.
+[*] [b]data-switcher=название[/b] — уникальное имя группы переключателей (например, [i]data-switcher=profile_tabs[/i]).
+[*] [b]active[/b] — класс активной по умолчанию вкладки (задаётся первому табу).
+[/list]
+
+[hr]
+
+[b]4. Доступные модификаторы (добавляются в [color=#00f0ff]use-tabs[/color]):[/b]
 [list]
 [*] [b]--centered[/b] — центрирует кнопки переключения по ширине страницы.
 [*] [b]--stretched[/b] — равномерно растягивает кнопки во всю ширину контейнера.
