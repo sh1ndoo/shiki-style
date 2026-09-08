@@ -20,9 +20,7 @@
 [div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]🌐 Соцсети[/div]
 [div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]📑 Инструкция: Табы[/div]
 [div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]🎠 Инструкция: Карусель[/div]
-[div]
-
-[div]
+[div][div]
 [center][size=16][b]✨ shiki-style — Современная тёмная тема[/b][/size]
 [i]Элегантный тёмный macOS-дизайн для профилей и списков Shikimori[/i][/center]
 
@@ -81,9 +79,7 @@
     --color-link: #00f0ff !important;
   }
 }[/code][/spoiler]
-[/div]
-
-[div]
+[/div][div]
 [center][size=16][b]🌐 Мои контакты и социальные сети[/b][/size]
 [i]Связь со мной, любимые тайтлы и профили на других платформах[/i][/center]
 
@@ -103,9 +99,7 @@
 [animes ids=5114,1575,6702,13601 cover_notice=studio columns=4]
 
 [center][size=11][i]Добавляйтесь в друзья или пишите в ЛС — всегда рад общению![/i][/size][/center]
-[/div]
-
-[div]
+[/div][div]
 [center][size=16][b]📑 Модуль табов (BBCode Tabs)[/b][/size]
 [i]Интерактивные переключаемые вкладки в профиле на чистом CSS[/i][/center]
 
@@ -122,11 +116,9 @@
 [div=b-js-link to-process active data-dynamic=switcher data-switcher=tabs]Вкладка 1[/div]
 [div=b-js-link to-process data-dynamic=switcher data-switcher=tabs]Вкладка 2[/div]
 [div=b-js-link to-process data-dynamic=switcher data-switcher=tabs]Вкладка 3[/div]
-[div]
-[div]Содержимое первой вкладки[/div]
+[div][div]Содержимое первой вкладки[/div]
 [div]Содержимое второй вкладки[/div]
-[div]Содержимое третьей вкладки[/div]
-[/div]
+[div]Содержимое третьей вкладки[/div][/div]
 [/div][/code]
 
 [hr]
@@ -149,9 +141,7 @@
 [*] [b]--vertical --right[/b] — вертикальное меню вкладок справа от контента.
 [*] [b]--ripple[/b] — анимация неоновой световой полоски под активной вкладкой.
 [/list]
-[/div]
-
-[div]
+[/div][div]
 [center][size=16][b]🎠 Модуль карусели (BBCode Carousel v2.5.1)[/b][/size]
 [i]Слайдер изображений с боковыми стрелками, точками и счётчиком[/i][/center]
 
@@ -185,8 +175,6 @@
 [*] [b]Нижние индикаторы[/b] — полоски внизу для мгновенного перехода к нужному слайду.
 [*] [b]hidden data-tab[/b] — всем слайдам, кроме первого, обязательно задаётся класс [color=#ff2a85]hidden[/color].
 [/list]
-[/div]
-
-[/div]
+[/div][/div]
 [/div]
 ```
