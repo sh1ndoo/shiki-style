@@ -124,14 +124,14 @@
 
 [hr]
 
-[b]5. Иконки в табах и кнопках (data-icon):[/b]
-Добавляйте векторные иконки к любым элементам с помощью атрибута [b]data-icon[/b]:
+[b]5. Иконки в табах и кнопках (Material Icons & Font Awesome):[/b]
+Добавляйте векторные иконки к любым элементам с помощью атрибутов [b]data-icon[/b], [b]data-fa[/b] или классов [b]fa-brands[/b] / [b]fa-solid[/b]:
 [list]
-[*] В кнопке переключения вкладок: [code][div data-tab-switch data-icon=palette]О моей теме[/div][/code]
-[*] В обычной кнопке: [code][div=b-button data-icon=account_circle]Профиль[/div][/code]
-[*] В кнопке поддержки: [code][div=b-button data-icon=monetization_on]Поддержать[/div][/code]
-[*] Иконка в заголовке или тексте: [code][div data-icon=star][/div] Текст[/code]
-[*] Каталог всех доступных иконок: [url=https://fonts.google.com/icons?icon.set=Material+Icons]Material Icons (material.io)[/url]
+[*] [b]Material Icons:[/b] [code][div data-tab-switch data-icon=palette]О моей теме[/div][/code] или [code][div=b-button data-icon=account_circle]Профиль[/div][/code]
+[*] [b]Font Awesome (Соцсети/Бренды):[/b] [code][div=fa-brands fa-github][/div][/code], [code][div data-fa=telegram][/div][/code], [code][div data-icon=discord][/div][/code]
+[*] [b]Font Awesome (Solid):[/b] [code][div=fa-solid fa-star][/div][/code] или [code][div data-fa=fire][/div][/code]
+[*] [b]В обычных кнопках:[/b] [code][div=b-button fa-brands fa-github]GitHub[/div][/code] или [code][div=b-button data-icon=monetization_on]Поддержать[/div][/code]
+[*] Каталоги иконок: [url=https://fonts.google.com/icons?icon.set=Material+Icons]Material Icons[/url] и [url=https://fontawesome.com/icons]Font Awesome 6[/url]
 [/list]
 [/div][div]
 [center][size=16][b][div data-icon=view_carousel][/div] Модуль карусели (BBCode Carousel v2.5.1)[/b][/size]
@@ -174,11 +174,11 @@
 [hr]
 
 [quote]
-[div data-icon=code][/div] [b]GitHub:[/b] [url=https://github.com/sh1ndoo/shiki-style]sh1ndoo/shiki-style[/url]
-[div data-icon=send][/div] [b]Telegram:[/b] [url=https://t.me/your_telegram]@your_telegram[/url]
-[div data-icon=forum][/div] [b]Discord:[/b] [color=#00f0ff]username#0000[/color]
-[div data-icon=sports_esports][/div] [b]Steam:[/b] [url=https://steamcommunity.com]Профиль Steam[/url]
-[div data-icon=chat][/div] [b]ВКонтакте:[/b] [url=https://vk.com]vk.com/id[/url]
+[div=fa-brands fa-github][/div] [b]GitHub:[/b] [url=https://github.com/sh1ndoo/shiki-style]sh1ndoo/shiki-style[/url]
+[div=fa-brands fa-telegram][/div] [b]Telegram:[/b] [url=https://t.me/your_telegram]@your_telegram[/url]
+[div=fa-brands fa-discord][/div] [b]Discord:[/b] [color=#00f0ff]username#0000[/color]
+[div=fa-brands fa-steam][/div] [b]Steam:[/b] [url=https://steamcommunity.com]Профиль Steam[/url]
+[div=fa-brands fa-vk][/div] [b]ВКонтакте:[/b] [url=https://vk.com]vk.com/id[/url]
 [/quote]
 
 [hr]
