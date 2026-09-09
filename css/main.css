@@ -2421,6 +2421,65 @@
     box-shadow: 0 2px 8px rgba(var(--color-accent-rgb), 0.4) !important;
   }
 
+  /* --- Material Icons & [data-icon] Global Support --- */
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2') format('woff2'),
+         url('https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNZ.ttf') format('truetype');
+  }
+
+  [data-icon] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  [data-icon]::before,
+  [data-icon]:before {
+    content: attr(data-icon);
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin-right: 6px;
+    vertical-align: -2px;
+  }
+
+  [data-icon]:empty::before,
+  [data-icon]:empty:before {
+    margin-right: 4px;
+  }
+
+  .b-button[data-icon],
+  html body .b-button[data-icon] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+  }
+
+  .b-button[data-icon]::before,
+  .b-button[data-icon]:before,
+  html body .b-button[data-icon]::before,
+  html body .b-button[data-icon]:before {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 2px;
+  }
+
   /* --- Lightbox Modal Close Button (.mfp-close) --- */
   html body .mfp-close,
   html body button.mfp-close,

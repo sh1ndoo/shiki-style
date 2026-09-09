@@ -3,7 +3,7 @@
 Скопируйте приведённый ниже код целиком и вставьте его в поле **«О себе»** в настройках профиля Shikimori.
 
 > [!NOTE]
-> Для корректной работы интерактивных вкладок и карусели в разделе **«Стиль»** должны быть подключены стили `main.css`, `tabs.css` и `carousel.css`:
+> Для корректной работы интерактивных вкладок, иконок и карусели в разделе **«Стиль»** должны быть подключены стили `main.css`, `tabs.css` и `carousel.css`:
 > ```css
 > @import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/main.css";
 > @import "https://raw.githubusercontent.com/sh1ndoo/shiki-style/main/css/tabs.css";
@@ -16,12 +16,12 @@
 
 ```bbcode
 [div=use-tabs --centered --ripple]
-[div=b-js-link to-process active data-dynamic=switcher data-switcher=profile_tabs]🎨 О стиле[/div]
-[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]📑 Инструкция: Табы[/div]
-[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]🎠 Инструкция: Карусель[/div]
-[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs]🌐 Соцсети[/div]
+[div=b-js-link to-process active data-dynamic=switcher data-switcher=profile_tabs data-icon=palette]О стиле[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs data-icon=tab]Инструкция: Табы[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs data-icon=view_carousel]Инструкция: Карусель[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=profile_tabs data-icon=public]Соцсети[/div]
 [div][div]
-[center][size=16][b]✨ shiki-style — Современная тёмная тема[/b][/size]
+[center][size=16][b][div data-icon=auto_awesome][/div] shiki-style — Современная тёмная тема[/b][/size]
 [i]Элегантный тёмный macOS-дизайн для профилей и списков Shikimori[/i][/center]
 
 [hr]
@@ -36,7 +36,7 @@
 
 [hr]
 
-[center][b]📷 Примеры оформления (Карусель скриншотов):[/b][/center]
+[center][b][div data-icon=collections][/div] Примеры оформления (Карусель скриншотов):[/b][/center]
 
 [div=u-carousel2 to-process data-dynamic=tabs data-counter]
 [div=b-js-link active data-tab-switch]Монохром[/div]
@@ -51,7 +51,7 @@
 
 [hr]
 
-[b]⚙️ Как установить тему на свой профиль:[/b]
+[b][div data-icon=settings][/div] Как установить тему на свой профиль:[/b]
 [list]
 [*] Откройте [b]Настройки[/b] профиля ➔ раздел [b]«Стиль»[/b].
 [*] Вставьте базовый стиль:
@@ -68,7 +68,7 @@
 [*] Нажмите кнопку [b]«Сохранить»[/b].
 [/list]
 
-[spoiler=🎨 Как изменить палитру вручную (переменные :root)][code=css]@media all {
+[spoiler=Как изменить палитру вручную (переменные :root)][code=css]@media all {
   :root, html, body, .p-profiles, .p-profiles-show, .l-page, #profiles_show {
     --bg-image: url("прямая_ссылка_на_фон.gif") !important;
     --color-primary: #ff2a85 !important;
@@ -80,7 +80,7 @@
   }
 }[/code][/spoiler]
 [/div][div]
-[center][size=16][b]📑 Модуль табов (BBCode Tabs)[/b][/size]
+[center][size=16][b][div data-icon=tab][/div] Модуль табов (BBCode Tabs)[/b][/size]
 [i]Интерактивные переключаемые вкладки в профиле на чистом CSS[/i][/center]
 
 [hr]
@@ -93,9 +93,9 @@
 
 [b]2. Шаблон BBCode для копирования:[/b]
 [code][div=use-tabs --centered --ripple]
-[div=b-js-link to-process active data-dynamic=switcher data-switcher=tabs]Вкладка 1[/div]
-[div=b-js-link to-process data-dynamic=switcher data-switcher=tabs]Вкладка 2[/div]
-[div=b-js-link to-process data-dynamic=switcher data-switcher=tabs]Вкладка 3[/div]
+[div=b-js-link to-process active data-dynamic=switcher data-switcher=tabs data-icon=palette]Вкладка 1[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=tabs data-icon=tab]Вкладка 2[/div]
+[div=b-js-link to-process data-dynamic=switcher data-switcher=tabs data-icon=public]Вкладка 3[/div]
 [div][div]Содержимое первой вкладки[/div]
 [div]Содержимое второй вкладки[/div]
 [div]Содержимое третьей вкладки[/div][/div]
@@ -121,8 +121,20 @@
 [*] [b]--vertical --right[/b] — вертикальное меню вкладок справа от контента.
 [*] [b]--ripple[/b] — анимация неоновой световой полоски под активной вкладкой.
 [/list]
+
+[hr]
+
+[b]5. Иконки в табах и кнопках (data-icon):[/b]
+Добавляйте векторные иконки к любым элементам с помощью атрибута [b]data-icon[/b]:
+[list]
+[*] В кнопке переключения вкладок: [code][div data-tab-switch data-icon=palette]О моей теме[/div][/code]
+[*] В обычной кнопке: [code][div=b-button data-icon=account_circle]Профиль[/div][/code]
+[*] В кнопке поддержки: [code][div=b-button data-icon=monetization_on]Поддержать[/div][/code]
+[*] Иконка в заголовке или тексте: [code][div data-icon=star][/div] Текст[/code]
+[*] Каталог всех доступных иконок: [url=https://fonts.google.com/icons?icon.set=Material+Icons]Material Icons (material.io)[/url]
+[/list]
 [/div][div]
-[center][size=16][b]🎠 Модуль карусели (BBCode Carousel v2.5.1)[/b][/size]
+[center][size=16][b][div data-icon=view_carousel][/div] Модуль карусели (BBCode Carousel v2.5.1)[/b][/size]
 [i]Слайдер изображений с боковыми стрелками, точками и счётчиком[/i][/center]
 
 [hr]
@@ -156,22 +168,22 @@
 [*] [b]hidden data-tab[/b] — всем слайдам, кроме первого, обязательно задаётся класс [color=#ff2a85]hidden[/color].
 [/list]
 [/div][div]
-[center][size=16][b]🌐 Мои контакты и социальные сети[/b][/size]
+[center][size=16][b][div data-icon=public][/div] Мои контакты и социальные сети[/b][/size]
 [i]Связь со мной, любимые тайтлы и профили на других платформах[/i][/center]
 
 [hr]
 
 [quote]
-[b]🐙 GitHub:[/b] [url=https://github.com/sh1ndoo/shiki-style]sh1ndoo/shiki-style[/url]
-[b]✈️ Telegram:[/b] [url=https://t.me/your_telegram]@your_telegram[/url]
-[b]👾 Discord:[/b] [color=#00f0ff]username#0000[/color]
-[b]🎮 Steam:[/b] [url=https://steamcommunity.com]Профиль Steam[/url]
-[b]💬 ВКонтакте:[/b] [url=https://vk.com]vk.com/id[/url]
+[div data-icon=code][/div] [b]GitHub:[/b] [url=https://github.com/sh1ndoo/shiki-style]sh1ndoo/shiki-style[/url]
+[div data-icon=send][/div] [b]Telegram:[/b] [url=https://t.me/your_telegram]@your_telegram[/url]
+[div data-icon=forum][/div] [b]Discord:[/b] [color=#00f0ff]username#0000[/color]
+[div data-icon=sports_esports][/div] [b]Steam:[/b] [url=https://steamcommunity.com]Профиль Steam[/url]
+[div data-icon=chat][/div] [b]ВКонтакте:[/b] [url=https://vk.com]vk.com/id[/url]
 [/quote]
 
 [hr]
 
-[center][b]⭐ Избранные тайтлы:[/b][/center]
+[center][b][div data-icon=star][/div] Избранные тайтлы:[/b][/center]
 [animes ids=5114,1575,6702,13601 cover_notice=studio columns=4]
 
 [center][size=11][i]Добавляйтесь в друзья или пишите в ЛС — всегда рад общению![/i][/size][/center]

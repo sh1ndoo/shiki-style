@@ -44,9 +44,60 @@
     --is-theme-dark: 1;
   }
 
+  /* --- Material Icons & [data-icon] Support --- */
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2') format('woff2'),
+         url('https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNZ.ttf') format('truetype');
+  }
+
+  [data-icon] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  [data-icon]::before,
+  [data-icon]:before {
+    content: attr(data-icon);
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin-right: 6px;
+    vertical-align: -2px;
+  }
+
+  [data-icon]:empty::before,
+  [data-icon]:empty:before {
+    margin-right: 4px;
+  }
+
+  .use-tabs > [data-icon]::before,
+  .use-tabs > [data-icon]:before {
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
   /* --- Tab Switcher Buttons ([data-dynamic]) --- */
   .use-tabs > [data-dynamic],
-  .use-tabs > [data-switcher] {
+  .use-tabs > [data-switcher],
+  .use-tabs > [data-tab-switch] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +120,8 @@
   }
 
   .use-tabs > [data-dynamic]:hover,
-  .use-tabs > [data-switcher]:hover {
+  .use-tabs > [data-switcher]:hover,
+  .use-tabs > [data-tab-switch]:hover {
     background: var(--c-tab-bg-hover);
     border-color: rgba(var(--color-accent-light-rgb, 196, 175, 212), 0.35);
     color: #ffffff;
@@ -77,13 +129,15 @@
   }
 
   .use-tabs > [data-dynamic]:active,
-  .use-tabs > [data-switcher]:active {
+  .use-tabs > [data-switcher]:active,
+  .use-tabs > [data-tab-switch]:active {
     transform: translateY(0);
     background: rgba(var(--color-accent-rgb, 152, 132, 165), 0.15);
   }
 
   .use-tabs > [data-dynamic].active,
-  .use-tabs > [data-switcher].active {
+  .use-tabs > [data-switcher].active,
+  .use-tabs > [data-tab-switch].active {
     color: var(--c-tab-text-active);
     background: var(--c-tab-bg-active);
     border-color: var(--c-tab-accent);
