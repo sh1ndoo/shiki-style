@@ -1796,6 +1796,10 @@
     background: rgba(255, 255, 255, 0.045) !important;
   }
 
+  html body .p-profiles-show .about .item-edit:before {
+    margin: 7px 5px 0 0 !important;
+    }
+
   html body .example .title,
   .example .title {
     color: var(--color-accent-light) !important;

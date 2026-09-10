@@ -695,7 +695,7 @@
       grid-row: 1 / 60;
       margin: 0;
       border-left: 1px solid var(--c-border);
-      background: rgba(18, 14, 24, 0.5);
+      background: rgba(22, 22, 22, 0.5);
     }
 
     .use-tabs.--vertical > div:not([data-dynamic]) > div,
