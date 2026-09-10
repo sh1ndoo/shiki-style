@@ -125,13 +125,13 @@
 [hr]
 
 [b]5. Иконки в табах и кнопках (Material Icons & Font Awesome):[/b]
-Добавляйте векторные иконки к любым элементам с помощью атрибутов [b]data-icon[/b], [b]data-fa[/b] или классов [b]fa-brands[/b] / [b]fa-solid[/b]:
+Добавляйте векторные иконки к любым элементам:
 [list]
-[*] [b]Material Icons:[/b] [code][div data-tab-switch data-icon=palette]О моей теме[/div][/code] или [code][div=b-button data-icon=account_circle]Профиль[/div][/code]
-[*] [b]Font Awesome (Соцсети/Бренды):[/b] [code][div=fa-brands fa-github][/div][/code], [code][div data-fa=telegram][/div][/code], [code][div data-icon=discord][/div][/code]
-[*] [b]Font Awesome (Solid):[/b] [code][div=fa-solid fa-star][/div][/code] или [code][div data-fa=fire][/div][/code]
-[*] [b]В обычных кнопках:[/b] [code][div=b-button fa-brands fa-github]GitHub[/div][/code] или [code][div=b-button data-icon=monetization_on]Поддержать[/div][/code]
-[*] Каталоги иконок: [url=https://fonts.google.com/icons?icon.set=Material+Icons]Material Icons[/url] и [url=https://fontawesome.com/icons]Font Awesome 6[/url]
+[*] [b]Material Icons:[/b] через атрибут [b]data-icon[/b] — например, [code][div data-tab-switch data-icon=palette]О моей теме[/div][/code] или [code][div=b-button data-icon=account_circle]Профиль[/div][/code]
+[*] [b]Font Awesome (Бренды/Соцсети):[/b] через стандартные классы [b]fa-brands[/b] — например, [code][div=fa-brands fa-github][/div] GitHub[/code], [code][div=fa-brands fa-telegram][/div] Telegram[/code], [code][div=fa-brands fa-discord][/div] Discord[/code], [code][div=fa-brands fa-steam][/div] Steam[/code], [code][div=fa-brands fa-vk][/div] ВКонтакте[/code]
+[*] [b]Font Awesome (Solid):[/b] через стандартные классы [b]fa-solid[/b] — например, [code][div=fa-solid fa-star][/div][/code], [code][div=fa-solid fa-fire][/div][/code], [code][div=fa-solid fa-heart][/div][/code]
+[*] [b]В обычных кнопках и табах:[/b] [code][div=b-button fa-brands fa-github]GitHub[/div][/code] или [code][div=b-button data-icon=monetization_on]Поддержать[/div][/code]
+[*] Каталоги иконок: [url=https://fonts.google.com/icons?icon.set=Material+Icons]Material Icons[/url] и [url=https://fontawesome.com/search?o=r&m=free]Font Awesome 6 (Free)[/url]
 [/list]
 [/div][div]
 [center][size=16][b][div data-icon=view_carousel][/div] Модуль карусели (BBCode Carousel v2.5.1)[/b][/size]
