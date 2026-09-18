@@ -54,6 +54,24 @@
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    padding-bottom: 44px !important;
+  }
+
+  /* --- Slide Captions Styling & Clearance --- */
+  .u-carousel2 .u-carousel-inner [data-tab] center,
+  .u-carousel2 .u-carousel-inner [data-tab] .caption,
+  .u-carousel2 .u-carousel-inner [data-tab] figcaption,
+  .u-carousel2 .u-carousel-inner [data-tab] p,
+  .u-carousel2 .u-carousel-inner [data-tab] .b-text_with_paragraphs {
+    margin: 10px auto 4px auto !important;
+    display: block !important;
+    color: var(--color-text-hint, rgba(237, 230, 242, 0.85)) !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.02em !important;
+    position: relative !important;
+    z-index: 5 !important;
+    pointer-events: auto !important;
   }
 
   /* --- Hide Shikimori Auto-Inserted <br> Tags --- */
@@ -93,11 +111,12 @@
 
   /* --- Bottom Switcher Bars (Indicators) --- */
   .u-carousel2 [data-tab-switch] {
+    box-sizing: border-box !important;
     --real-height: calc(var(--switch-height) + (var(--switch-margin) * 2));
     width: var(--switch-width);
     font-size: 0;
-    height: var(--real-height);
-    margin: calc(var(--real-height) * -1) 0 0 0;
+    height: var(--real-height) !important;
+    margin: calc(var(--real-height) * -1 - 10px) 0 10px 0 !important;
     background: var(--switch-color);
     background-clip: padding-box;
     border: var(--switch-gutter) solid transparent;

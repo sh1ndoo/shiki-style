@@ -4975,11 +4975,9 @@
 
   /* --- Stats Bars & Activity (Clean Flat Design) --- */
   html body .b-stats_bar,
-  html body .b-stats_bar .stat_names,
   html body .b-stats_bar .stat_values,
   html body .b-stats_bar .compatibility,
   html body .b-stats_bar .compatibility a,
-  .b-stats_bar .stat_names,
   .b-stats_bar .stat_values {
     color: var(--color-text-hint) !important;
     font-weight: 400 !important;
@@ -4988,6 +4986,232 @@
   html body .b-stats_bar .bar,
   .b-stats_bar .bar {
     border-radius: 6px !important;
+  }
+
+  /* Modern Stat Buttons / Pills (Left-Aligned macOS Dark Glass) */
+  html body .stat_names,
+  html body .b-stats_bar .stat_names,
+  .stat_names,
+  .b-stats_bar .stat_names {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 6px 8px !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    color: var(--color-text-hint, rgba(237, 230, 242, 0.7)) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 4px 0 !important;
+    margin: 8px 0 !important;
+  }
+
+  html body .stat_names .stat_name,
+  html body .b-stats_bar .stat_names .stat_name,
+  .stat_names .stat_name,
+  .b-stats_bar .stat_names .stat_name {
+    display: inline-flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+  }
+
+  html body .stat_names .stat_name:after,
+  html body .b-stats_bar .stat_names .stat_name:after,
+  .stat_names .stat_name:after,
+  .b-stats_bar .stat_names .stat_name:after {
+    display: none !important;
+    content: none !important;
+  }
+
+  html body .stat_names .stat_name:hover,
+  html body .b-stats_bar .stat_names .stat_name:hover,
+  .stat_names .stat_name:hover,
+  .b-stats_bar .stat_names .stat_name:hover {
+    transform: translateY(-1.5px) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  html body .stat_names .stat_name:active,
+  html body .b-stats_bar .stat_names .stat_name:active,
+  .stat_names .stat_name:active,
+  .b-stats_bar .stat_names .stat_name:active {
+    transform: translateY(0) scale(0.98) !important;
+  }
+
+  html body .stat_names .stat_name a,
+  html body .b-stats_bar .stat_names .stat_name a,
+  .stat_names .stat_name a,
+  .b-stats_bar .stat_names .stat_name a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    padding: 6px 11px !important;
+    color: var(--color-text, #ede6f2) !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.01em !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease !important;
+  }
+
+  html body .stat_names .stat_name a:before,
+  html body .b-stats_bar .stat_names .stat_name a:before,
+  .stat_names .stat_name a:before,
+  .b-stats_bar .stat_names .stat_name a:before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50% !important;
+    background-color: var(--status-color, rgba(255, 255, 255, 0.4)) !important;
+    box-shadow: 0 0 6px var(--status-color, rgba(255, 255, 255, 0.4)) !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .stat_names .stat_name .size,
+  html body .b-stats_bar .stat_names .stat_name .size,
+  .stat_names .stat_name .size,
+  .b-stats_bar .stat_names .stat_name .size {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    padding: 2px 7px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    margin-left: 2px !important;
+    transition: all 0.2s ease !important;
+  }
+
+  html body .stat_names .stat_name .size:before,
+  html body .stat_names .stat_name .size:after,
+  html body .b-stats_bar .stat_names .stat_name .size:before,
+  html body .b-stats_bar .stat_names .stat_name .size:after,
+  .stat_names .stat_name .size:before,
+  .stat_names .stat_name .size:after,
+  .b-stats_bar .stat_names .stat_name .size:before,
+  .b-stats_bar .stat_names .stat_name .size:after {
+    content: "" !important;
+    display: none !important;
+  }
+
+  /* Status-specific button coloring */
+  /* 1. Planned (В планах / Запланировано) - Soft Cyan/Teal */
+  html body .stat_names .stat_name[data-type="planned"],
+  .stat_names .stat_name[data-type="planned"] {
+    --status-color: #22d3ee;
+    background: rgba(6, 182, 212, 0.08) !important;
+    border-color: rgba(6, 182, 212, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type="planned"] .size,
+  .stat_names .stat_name[data-type="planned"] .size {
+    background: rgba(6, 182, 212, 0.22) !important;
+    color: #67e8f9 !important;
+  }
+  html body .stat_names .stat_name[data-type="planned"]:hover,
+  .stat_names .stat_name[data-type="planned"]:hover {
+    background: rgba(6, 182, 212, 0.18) !important;
+    border-color: rgba(6, 182, 212, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(6, 182, 212, 0.35) !important;
+  }
+
+  /* 2. Watching / Rewatching (Смотрю / Пересматриваю) - Soft Blue */
+  html body .stat_names .stat_name[data-type*="watching"],
+  .stat_names .stat_name[data-type*="watching"] {
+    --status-color: #60a5fa;
+    background: rgba(59, 130, 246, 0.08) !important;
+    border-color: rgba(59, 130, 246, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type*="watching"] .size,
+  .stat_names .stat_name[data-type*="watching"] .size {
+    background: rgba(59, 130, 246, 0.22) !important;
+    color: #93c5fd !important;
+  }
+  html body .stat_names .stat_name[data-type*="watching"]:hover,
+  .stat_names .stat_name[data-type*="watching"]:hover {
+    background: rgba(59, 130, 246, 0.18) !important;
+    border-color: rgba(59, 130, 246, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35) !important;
+  }
+
+  /* 3. Completed (Просмотрено / Прочитано) - Soft Green */
+  html body .stat_names .stat_name[data-type="completed"],
+  .stat_names .stat_name[data-type="completed"] {
+    --status-color: #4ade80;
+    background: rgba(34, 197, 94, 0.08) !important;
+    border-color: rgba(34, 197, 94, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type="completed"] .size,
+  .stat_names .stat_name[data-type="completed"] .size {
+    background: rgba(34, 197, 94, 0.22) !important;
+    color: #86efac !important;
+  }
+  html body .stat_names .stat_name[data-type="completed"]:hover,
+  .stat_names .stat_name[data-type="completed"]:hover {
+    background: rgba(34, 197, 94, 0.18) !important;
+    border-color: rgba(34, 197, 94, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35) !important;
+  }
+
+  /* 4. On Hold / Paused (Отложено) - Soft Yellow/Amber */
+  html body .stat_names .stat_name[data-type="on_hold"],
+  html body .stat_names .stat_name[data-type="paused"],
+  .stat_names .stat_name[data-type="on_hold"],
+  .stat_names .stat_name[data-type="paused"] {
+    --status-color: #facc15;
+    background: rgba(234, 179, 8, 0.08) !important;
+    border-color: rgba(234, 179, 8, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type="on_hold"] .size,
+  html body .stat_names .stat_name[data-type="paused"] .size,
+  .stat_names .stat_name[data-type="on_hold"] .size,
+  .stat_names .stat_name[data-type="paused"] .size {
+    background: rgba(234, 179, 8, 0.22) !important;
+    color: #fde047 !important;
+  }
+  html body .stat_names .stat_name[data-type="on_hold"]:hover,
+  html body .stat_names .stat_name[data-type="paused"]:hover,
+  .stat_names .stat_name[data-type="on_hold"]:hover,
+  .stat_names .stat_name[data-type="paused"]:hover {
+    background: rgba(234, 179, 8, 0.18) !important;
+    border-color: rgba(234, 179, 8, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(234, 179, 8, 0.35) !important;
+  }
+
+  /* 5. Dropped (Брошено) - Soft Red */
+  html body .stat_names .stat_name[data-type="dropped"],
+  .stat_names .stat_name[data-type="dropped"] {
+    --status-color: #f87171;
+    background: rgba(239, 68, 68, 0.08) !important;
+    border-color: rgba(239, 68, 68, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type="dropped"] .size,
+  .stat_names .stat_name[data-type="dropped"] .size {
+    background: rgba(239, 68, 68, 0.22) !important;
+    color: #fca5a5 !important;
+  }
+  html body .stat_names .stat_name[data-type="dropped"]:hover,
+  .stat_names .stat_name[data-type="dropped"]:hover {
+    background: rgba(239, 68, 68, 0.18) !important;
+    border-color: rgba(239, 68, 68, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.35) !important;
   }
 
   /* --- Lifetime Stats Bar (.lifetime.b-stats_bar) --- */
@@ -8812,9 +9036,7 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
     display: none !important;
   }
 
-  html body .b-stats_bar .stat_names,
   html body .l-footer,
-  .b-stats_bar .stat_names,
   .l-footer {
     text-align: center !important;
   }
@@ -10789,59 +11011,230 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
     font-size: 0 !important;
   }
 
-  /* Modern Stat Badges / Pills */
-  html body .b-stats_bar .stat_names {
+  /* Modern Stat Buttons / Pills (Left-Aligned macOS Dark Glass) */
+  html body .stat_names,
+  html body .b-stats_bar .stat_names,
+  .stat_names,
+  .b-stats_bar .stat_names {
     display: flex !important;
     flex-wrap: wrap !important;
+    justify-content: flex-start !important;
     align-items: center !important;
-    gap: 5px 6px !important;
+    gap: 6px 8px !important;
     font-size: 11px !important;
     line-height: 1.3 !important;
     text-align: left !important;
-    color: var(--color-text-hint) !important;
+    color: var(--color-text-hint, rgba(237, 230, 242, 0.7)) !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    padding: 2px 0 !important;
+    padding: 4px 0 !important;
+    margin: 8px 0 !important;
   }
 
-  html body .b-stats_bar .stat_names .stat_name {
+  html body .stat_names .stat_name,
+  html body .b-stats_bar .stat_names .stat_name,
+  .stat_names .stat_name,
+  .b-stats_bar .stat_names .stat_name {
     display: inline-flex !important;
     align-items: center !important;
     background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.09) !important;
-    border-radius: 6px !important;
-    padding: 3px 7px !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+    padding: 0 !important;
     margin: 0 !important;
     white-space: nowrap !important;
-    transition: all 120ms ease !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
   }
 
-  html body .b-stats_bar .stat_names .stat_name:hover {
-    background: rgba(var(--color-accent-rgb), 0.2) !important;
-    border-color: rgba(var(--color-accent-rgb), 0.4) !important;
-  }
-
-  html body .b-stats_bar .stat_names .stat_name:after {
+  html body .stat_names .stat_name:after,
+  html body .b-stats_bar .stat_names .stat_name:after,
+  .stat_names .stat_name:after,
+  .b-stats_bar .stat_names .stat_name:after {
     display: none !important;
     content: none !important;
   }
 
-  html body .b-stats_bar .stat_names .stat_name a {
-    color: var(--color-text) !important;
-    font-weight: 450 !important;
+  html body .stat_names .stat_name:hover,
+  html body .b-stats_bar .stat_names .stat_name:hover,
+  .stat_names .stat_name:hover,
+  .b-stats_bar .stat_names .stat_name:hover {
+    transform: translateY(-1.5px) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  html body .stat_names .stat_name:active,
+  html body .b-stats_bar .stat_names .stat_name:active,
+  .stat_names .stat_name:active,
+  .b-stats_bar .stat_names .stat_name:active {
+    transform: translateY(0) scale(0.98) !important;
+  }
+
+  html body .stat_names .stat_name a,
+  html body .b-stats_bar .stat_names .stat_name a,
+  .stat_names .stat_name a,
+  .b-stats_bar .stat_names .stat_name a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    padding: 6px 11px !important;
+    color: var(--color-text, #ede6f2) !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.01em !important;
     text-decoration: none !important;
+    transition: color 0.15s ease !important;
   }
 
-  html body .b-stats_bar .stat_names .stat_name .size {
-    color: var(--color-accent-light) !important;
+  html body .stat_names .stat_name a:before,
+  html body .b-stats_bar .stat_names .stat_name a:before,
+  .stat_names .stat_name a:before,
+  .b-stats_bar .stat_names .stat_name a:before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50% !important;
+    background-color: var(--status-color, rgba(255, 255, 255, 0.4)) !important;
+    box-shadow: 0 0 6px var(--status-color, rgba(255, 255, 255, 0.4)) !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .stat_names .stat_name .size,
+  html body .b-stats_bar .stat_names .stat_name .size,
+  .stat_names .stat_name .size,
+  .b-stats_bar .stat_names .stat_name .size {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
     font-weight: 600 !important;
-    margin-left: 4px !important;
+    line-height: 1.2 !important;
+    padding: 2px 7px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    margin-left: 2px !important;
+    transition: all 0.2s ease !important;
   }
 
+  html body .stat_names .stat_name .size:before,
+  html body .stat_names .stat_name .size:after,
   html body .b-stats_bar .stat_names .stat_name .size:before,
-  html body .b-stats_bar .stat_names .stat_name .size:after {
+  html body .b-stats_bar .stat_names .stat_name .size:after,
+  .stat_names .stat_name .size:before,
+  .stat_names .stat_name .size:after,
+  .b-stats_bar .stat_names .stat_name .size:before,
+  .b-stats_bar .stat_names .stat_name .size:after {
     content: "" !important;
     display: none !important;
+  }
+
+  /* Status-specific button coloring */
+  /* 1. Planned (В планах / Запланировано) - Soft Cyan/Teal */
+  html body .stat_names .stat_name[data-type="planned"],
+  .stat_names .stat_name[data-type="planned"] {
+    --status-color: #22d3ee;
+    background: rgba(6, 182, 212, 0.08) !important;
+    border-color: rgba(6, 182, 212, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type="planned"] .size,
+  .stat_names .stat_name[data-type="planned"] .size {
+    background: rgba(6, 182, 212, 0.22) !important;
+    color: #67e8f9 !important;
+  }
+  html body .stat_names .stat_name[data-type="planned"]:hover,
+  .stat_names .stat_name[data-type="planned"]:hover {
+    background: rgba(6, 182, 212, 0.18) !important;
+    border-color: rgba(6, 182, 212, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(6, 182, 212, 0.35) !important;
+  }
+
+  /* 2. Watching / Rewatching (Смотрю / Пересматриваю) - Soft Blue */
+  html body .stat_names .stat_name[data-type*="watching"],
+  .stat_names .stat_name[data-type*="watching"] {
+    --status-color: #60a5fa;
+    background: rgba(59, 130, 246, 0.08) !important;
+    border-color: rgba(59, 130, 246, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type*="watching"] .size,
+  .stat_names .stat_name[data-type*="watching"] .size {
+    background: rgba(59, 130, 246, 0.22) !important;
+    color: #93c5fd !important;
+  }
+  html body .stat_names .stat_name[data-type*="watching"]:hover,
+  .stat_names .stat_name[data-type*="watching"]:hover {
+    background: rgba(59, 130, 246, 0.18) !important;
+    border-color: rgba(59, 130, 246, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35) !important;
+  }
+
+  /* 3. Completed (Просмотрено / Прочитано) - Soft Green */
+  html body .stat_names .stat_name[data-type="completed"],
+  .stat_names .stat_name[data-type="completed"] {
+    --status-color: #4ade80;
+    background: rgba(34, 197, 94, 0.08) !important;
+    border-color: rgba(34, 197, 94, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type="completed"] .size,
+  .stat_names .stat_name[data-type="completed"] .size {
+    background: rgba(34, 197, 94, 0.22) !important;
+    color: #86efac !important;
+  }
+  html body .stat_names .stat_name[data-type="completed"]:hover,
+  .stat_names .stat_name[data-type="completed"]:hover {
+    background: rgba(34, 197, 94, 0.18) !important;
+    border-color: rgba(34, 197, 94, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35) !important;
+  }
+
+  /* 4. On Hold / Paused (Отложено) - Soft Yellow/Amber */
+  html body .stat_names .stat_name[data-type="on_hold"],
+  html body .stat_names .stat_name[data-type="paused"],
+  .stat_names .stat_name[data-type="on_hold"],
+  .stat_names .stat_name[data-type="paused"] {
+    --status-color: #facc15;
+    background: rgba(234, 179, 8, 0.08) !important;
+    border-color: rgba(234, 179, 8, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type="on_hold"] .size,
+  html body .stat_names .stat_name[data-type="paused"] .size,
+  .stat_names .stat_name[data-type="on_hold"] .size,
+  .stat_names .stat_name[data-type="paused"] .size {
+    background: rgba(234, 179, 8, 0.22) !important;
+    color: #fde047 !important;
+  }
+  html body .stat_names .stat_name[data-type="on_hold"]:hover,
+  html body .stat_names .stat_name[data-type="paused"]:hover,
+  .stat_names .stat_name[data-type="on_hold"]:hover,
+  .stat_names .stat_name[data-type="paused"]:hover {
+    background: rgba(234, 179, 8, 0.18) !important;
+    border-color: rgba(234, 179, 8, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(234, 179, 8, 0.35) !important;
+  }
+
+  /* 5. Dropped (Брошено) - Soft Red */
+  html body .stat_names .stat_name[data-type="dropped"],
+  .stat_names .stat_name[data-type="dropped"] {
+    --status-color: #f87171;
+    background: rgba(239, 68, 68, 0.08) !important;
+    border-color: rgba(239, 68, 68, 0.35) !important;
+  }
+  html body .stat_names .stat_name[data-type="dropped"] .size,
+  .stat_names .stat_name[data-type="dropped"] .size {
+    background: rgba(239, 68, 68, 0.22) !important;
+    color: #fca5a5 !important;
+  }
+  html body .stat_names .stat_name[data-type="dropped"]:hover,
+  .stat_names .stat_name[data-type="dropped"]:hover {
+    background: rgba(239, 68, 68, 0.18) !important;
+    border-color: rgba(239, 68, 68, 0.65) !important;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.35) !important;
   }
 
   /* c-additionals */
@@ -12023,6 +12416,41 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
     font-size: 10.5px !important;
     padding: 0 6px !important;
     min-width: 44px !important;
+  }
+
+  /* --- Profile Carousel (.u-carousel2) Caption & Indicator Clearance Safety Rules --- */
+  html body .u-carousel2 .u-carousel-inner [data-tab],
+  .u-carousel2 .u-carousel-inner [data-tab] {
+    padding-bottom: 44px !important;
+  }
+
+  html body .u-carousel2 .u-carousel-inner [data-tab] center,
+  html body .u-carousel2 .u-carousel-inner [data-tab] .caption,
+  html body .u-carousel2 .u-carousel-inner [data-tab] figcaption,
+  html body .u-carousel2 .u-carousel-inner [data-tab] p,
+  html body .u-carousel2 .u-carousel-inner [data-tab] .b-text_with_paragraphs,
+  .u-carousel2 .u-carousel-inner [data-tab] center,
+  .u-carousel2 .u-carousel-inner [data-tab] .caption,
+  .u-carousel2 .u-carousel-inner [data-tab] figcaption,
+  .u-carousel2 .u-carousel-inner [data-tab] p,
+  .u-carousel2 .u-carousel-inner [data-tab] .b-text_with_paragraphs {
+    margin: 10px auto 4px auto !important;
+    display: block !important;
+    color: var(--color-text-hint, rgba(237, 230, 242, 0.85)) !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.02em !important;
+    position: relative !important;
+    z-index: 5 !important;
+    pointer-events: auto !important;
+  }
+
+  html body .u-carousel2 [data-tab-switch],
+  .u-carousel2 [data-tab-switch] {
+    box-sizing: border-box !important;
+    height: calc(var(--switch-height, 4px) + (var(--switch-margin, 10px) * 2)) !important;
+    margin-top: calc((var(--switch-height, 4px) + (var(--switch-margin, 10px) * 2)) * -1 - 10px) !important;
+    margin-bottom: 10px !important;
   }
 }
 
