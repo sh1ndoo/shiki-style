@@ -1,0 +1,381 @@
+@media all {
+  /* ============================================================
+     SHIKI-STYLE: Large Favourites & Compact Achievements
+     Mod: Expands "Избранное" into a large poster showcase &
+          minimizes "Достижения" into subtle compact badges.
+     Author: sh1ndoo (github.com/sh1ndoo/shiki-style)
+     ============================================================ */
+
+  /* --- 1. Layout Priority: Move Favourites to Top, Achievements to Bottom --- */
+  html body .p-profiles-show .profile-content .c-column.c-right,
+  html body .p-profiles-show .profile-content .c-right,
+  .p-profiles-show .profile-content .c-right {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  html body .p-profiles-show .profile-content .c-right .block:has(.cc-favourites),
+  html body .p-profiles-show .profile-content .c-right .favourites-block,
+  html body .p-profiles-show .profile-content .c-right .favourites,
+  .p-profiles-show .profile-content .c-right .block:has(.cc-favourites) {
+    order: 1 !important;
+    margin-bottom: 24px !important;
+  }
+
+  html body .p-profiles-show .profile-content .c-right .block:has(.achievements),
+  html body .p-profiles-show .profile-content .c-right .block.achievements,
+  html body .p-profiles-show .profile-content .c-right .achievements,
+  .p-profiles-show .profile-content .c-right .block:has(.achievements),
+  .p-profiles-show .profile-content .c-right .block.achievements {
+    order: 10 !important;
+    margin-top: 10px !important;
+  }
+
+  /* --- 2. Large Favourites (Раздел «Избранное» — Крупный постерный подиум) --- */
+  html body .p-profiles-show .cc-favourites,
+  html body .cc-favourites,
+  .p-profiles-show .cc-favourites,
+  .cc-favourites {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr)) !important;
+    gap: 16px 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 10px 0 20px 0 !important;
+    overflow: visible !important;
+    flex-wrap: wrap !important;
+  }
+
+  html body .p-profiles-show .cc-favourites .c-column,
+  html body .cc-favourites .b-catalog_entry,
+  .p-profiles-show .cc-favourites .c-column,
+  .cc-favourites .b-catalog_entry {
+    flex: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    float: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .cover,
+  .cc-favourites .b-catalog_entry .cover {
+    display: block !important;
+    width: 100% !important;
+    aspect-ratio: 2 / 3 !important;
+    height: auto !important;
+    min-height: 180px !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+    background: rgba(18, 14, 24, 0.6) !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry:hover .cover,
+  html body .cc-favourites .b-catalog_entry .cover:hover,
+  .cc-favourites .b-catalog_entry:hover .cover,
+  .cc-favourites .b-catalog_entry .cover:hover {
+    transform: translateY(-5px) scale(1.03) !important;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65), 0 0 22px rgba(var(--color-accent-rgb, 196, 175, 212), 0.4) !important;
+    border-color: rgba(var(--color-accent-rgb, 196, 175, 212), 0.65) !important;
+    z-index: 5 !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .cover .image-decor,
+  html body .cc-favourites .b-catalog_entry .cover .image-cutter,
+  html body .cc-favourites .b-catalog_entry .cover picture,
+  .cc-favourites .b-catalog_entry .cover .image-decor,
+  .cc-favourites .b-catalog_entry .cover .image-cutter,
+  .cc-favourites .b-catalog_entry .cover picture {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .cover img,
+  .cc-favourites .b-catalog_entry .cover img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .title,
+  .cc-favourites .b-catalog_entry .title {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    margin-top: 7px !important;
+    line-height: 1.35 !important;
+    color: var(--color-text, #ede6f2) !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .title a,
+  .cc-favourites .b-catalog_entry .title a {
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .title a:hover,
+  .cc-favourites .b-catalog_entry .title a:hover {
+    color: var(--color-accent-light, #c4afd4) !important;
+  }
+
+  /* --- 3. Compact Achievements (Раздел «Достижения» — Компактные мини-бейджи) --- */
+  html body .p-profiles-show .achievements,
+  html body .p-profiles-show .block.achievements,
+  html body .block.achievements,
+  .p-profiles-show .achievements,
+  .block.achievements {
+    padding: 14px 16px !important;
+    margin-top: 10px !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .p-profiles-show .achievements .subheadline,
+  html body .block.achievements .subheadline,
+  .p-profiles-show .achievements .subheadline,
+  .block.achievements .subheadline {
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    color: var(--color-text-hint, rgba(237, 230, 242, 0.6)) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 4px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+
+  html body .p-profiles-show .achievements .header .title,
+  html body .block.achievements .header .title,
+  .p-profiles-show .achievements .header .title,
+  .block.achievements .header .title {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: var(--color-text-hint, rgba(237, 230, 242, 0.5)) !important;
+    margin-bottom: 5px !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-2,
+  html body .block.achievements .cc-2,
+  .p-profiles-show .achievements .cc-2,
+  .block.achievements .cc-2 {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 12px 20px !important;
+    width: 100% !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-2 > .c-column,
+  html body .block.achievements .cc-2 > .c-column,
+  .p-profiles-show .achievements .cc-2 > .c-column,
+  .block.achievements .cc-2 > .c-column {
+    flex: 1 1 200px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* 3.1 Mini Genre Achievements Badges */
+  html body .p-profiles-show .achievements .cc-achievements,
+  html body .block.achievements .cc-achievements,
+  .p-profiles-show .achievements .cc-achievements {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-achievements .b-achievement,
+  html body .block.achievements .cc-achievements .b-achievement,
+  .p-profiles-show .achievements .cc-achievements .b-achievement {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    flex: 0 0 44px !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+    overflow: hidden !important;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
+    cursor: pointer !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-achievements .b-achievement:hover,
+  html body .block.achievements .cc-achievements .b-achievement:hover,
+  .p-profiles-show .achievements .cc-achievements .b-achievement:hover {
+    transform: scale(1.12) !important;
+    border-color: rgba(var(--color-accent-rgb, 196, 175, 212), 0.6) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+    z-index: 10 !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-achievements .b-achievement .c-image,
+  html body .block.achievements .cc-achievements .b-achievement .c-image,
+  .p-profiles-show .achievements .cc-achievements .b-achievement .c-image {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    overflow: hidden !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-achievements .b-achievement .c-image img,
+  html body .block.achievements .cc-achievements .b-achievement .c-image img,
+  .p-profiles-show .achievements .cc-achievements .b-achievement .c-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-achievements .b-achievement .c-about,
+  html body .block.achievements .cc-achievements .b-achievement .c-about,
+  .p-profiles-show .achievements .cc-achievements .b-achievement .c-about {
+    display: none !important;
+  }
+
+  /* 3.2 Mini Franchises Badges */
+  html body .p-profiles-show .achievements .cc-franchises,
+  html body .block.achievements .cc-franchises,
+  .p-profiles-show .achievements .cc-franchises {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-franchises .b-badge,
+  html body .block.achievements .cc-franchises .b-badge,
+  .p-profiles-show .achievements .cc-franchises .b-badge {
+    width: 36px !important;
+    height: 36px !important;
+    flex: 0 0 36px !important;
+    border-radius: 6px !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+    cursor: pointer !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-franchises .b-badge:hover,
+  html body .block.achievements .cc-franchises .b-badge:hover,
+  .p-profiles-show .achievements .cc-franchises .b-badge:hover {
+    transform: scale(1.15) !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35) !important;
+    z-index: 10 !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-franchises .b-badge img,
+  html body .block.achievements .cc-franchises .b-badge img,
+  .p-profiles-show .achievements .cc-franchises .b-badge img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+  }
+
+  /* 3.3 Mini Authors Badges */
+  html body .p-profiles-show .achievements .cc-authors,
+  html body .block.achievements .cc-authors,
+  .p-profiles-show .achievements .cc-authors {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-authors .b-achievement,
+  html body .block.achievements .cc-authors .b-achievement,
+  .p-profiles-show .achievements .cc-authors .b-achievement {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    flex: 0 0 44px !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+    overflow: hidden !important;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
+    cursor: pointer !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-authors .b-achievement:hover,
+  html body .block.achievements .cc-authors .b-achievement:hover,
+  .p-profiles-show .achievements .cc-authors .b-achievement:hover {
+    transform: scale(1.12) !important;
+    border-color: rgba(var(--color-accent-rgb, 196, 175, 212), 0.6) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+    z-index: 10 !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-authors .b-achievement .c-image,
+  html body .block.achievements .cc-authors .b-achievement .c-image,
+  .p-profiles-show .achievements .cc-authors .b-achievement .c-image {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  html body .p-profiles-show .achievements .cc-authors .b-achievement .c-image img,
+  html body .block.achievements .cc-authors .b-achievement .c-image img,
+  .p-profiles-show .achievements .cc-authors .b-achievement .c-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/* --- Mobile / Tablet Responsive Adjustments --- */
+@media screen and (max-width: 768px) {
+  html body .p-profiles-show .cc-favourites,
+  html body .cc-favourites {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)) !important;
+    gap: 12px 10px !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .cover {
+    min-height: 150px !important;
+    border-radius: 10px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html body .p-profiles-show .cc-favourites,
+  html body .cc-favourites {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px 8px !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .cover {
+    min-height: 130px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .cc-favourites .b-catalog_entry .title {
+    font-size: 11px !important;
+  }
+}
