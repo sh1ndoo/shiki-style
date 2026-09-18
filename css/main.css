@@ -5699,14 +5699,28 @@
 
   html body .line-container .key,
   html body .line-container a,
-  html body .line-container .value,
   .line-container .key,
-  .line-container a,
-  .line-container .value {
+  .line-container a {
     display: inline-flex !important;
     align-items: center !important;
     line-height: normal !important;
     margin: 0 !important;
+  }
+
+  html body .line-container .value,
+  html body .b-entry-info .line .value,
+  html body .b-entry-info .value,
+  html body .c-about .line .value,
+  html body .c-about .value,
+  .line-container .value,
+  .b-entry-info .line .value {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 4px 6px !important;
+    line-height: normal !important;
+    margin: 0 !important;
+    max-width: 100% !important;
   }
 
   /* --- Chart & Profile Statistics Labels (.x_label, .y_label) --- */
@@ -5804,7 +5818,13 @@
     border-radius: 6px !important;
     padding: 3px 8px !important;
     margin: 2px !important;
-    display: inline-block !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    flex-shrink: 0 !important;
     transition: all 120ms ease !important;
     color: var(--color-text-primary) !important;
     text-decoration: none !important;
@@ -5824,15 +5844,39 @@
     border: 1px solid rgba(var(--color-accent-rgb), 0.45) !important;
     border-radius: 4px !important;
     padding: 1px 6px !important;
-    margin: 0 2px !important;
-    display: inline-block !important;
+    margin: 2px !important;
+    display: inline-flex !important;
+    align-items: center !important;
     font-size: 11px !important;
     line-height: 16px !important;
     font-weight: 500 !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    flex-shrink: 0 !important;
+    vertical-align: middle !important;
     transition: all 120ms ease !important;
     color: var(--color-text-primary) !important;
     text-decoration: none !important;
     text-shadow: none !important;
+  }
+
+  html body .b-tag *,
+  html body .b-tag span,
+  html body .b-tag .genre-ru,
+  html body .b-tag .genre-en,
+  html body .tag-link *,
+  html body .anime-tag *,
+  html body .tags a *,
+  .b-tag span,
+  .b-tag .genre-ru,
+  .b-tag .genre-en,
+  .tag-link span {
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
   }
 
   html body .b-tag:hover,
@@ -5870,7 +5914,10 @@
   .status-time {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    flex-wrap: wrap !important;
+    gap: 6px 8px !important;
+    height: auto !important;
+    max-height: none !important;
   }
 
   html body .status-line time,
@@ -6074,13 +6121,21 @@
 
   html body .status-line .tags,
   html body .b-news_wall-topic .status-line .tags,
+  html body .b-topic .status-line .tags,
+  html body .b-topic .tags,
+  html body .b-news .status-line .tags,
+  html body .b-news .tags,
   .status-line .tags,
-  .b-news_wall-topic .status-line .tags {
+  .b-news_wall-topic .status-line .tags,
+  .b-topic .status-line .tags {
     display: inline-flex !important;
     align-items: center !important;
     flex-wrap: wrap !important;
-    gap: 4px !important;
+    gap: 4px 6px !important;
     margin: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
   html body .tags .b-anime_status_tag + .b-anime_status_tag,
@@ -6257,13 +6312,25 @@
     border-radius: 4px !important;
     color: var(--color-text-primary) !important;
     padding: 1px 6px !important;
-    margin: 0 1px !important;
+    margin: 2px 1px !important;
     display: inline-flex !important;
     align-items: center !important;
     font-size: 11px !important;
     line-height: 16px !important;
     text-shadow: none !important;
     font-weight: 500 !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .b-anime_status_tag *,
+  html body .b-anime_status_tag span,
+  .b-anime_status_tag span {
+    white-space: nowrap !important;
+    word-break: normal !important;
   }
 
   html body .b-anime_status_tag.hidden,
@@ -7709,14 +7776,23 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
   html body .p-dashboards-show .db-update .tags,
   html body .db-update .tags,
   html body .tags,
+  html body .fc-tags,
+  html body .fc-user-sections .tags,
+  html body .f-sections .tags,
   .p-dashboards-show .v2 .db-update .tags,
   .db-update .tags,
-  .tags {
+  .tags,
+  .fc-tags,
+  .f-sections .tags {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 4px !important;
+    align-items: center !important;
+    gap: 4px 6px !important;
     margin: 0 !important;
     padding: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
   html body .db-update .tags .b-anime_status_tag,
@@ -7735,6 +7811,11 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
     line-height: 16px !important;
     text-shadow: none !important;
     font-weight: 400 !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    flex-shrink: 0 !important;
   }
 
   html body .db-update .tags .b-tag,
