@@ -12418,10 +12418,10 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
     min-width: 44px !important;
   }
 
-  /* --- Profile Carousel (.u-carousel2) Caption & Indicator Clearance Safety Rules --- */
+  /* --- Profile Carousel (.u-carousel2) Indicators Removed & Clean Layout Rules --- */
   html body .u-carousel2 .u-carousel-inner [data-tab],
   .u-carousel2 .u-carousel-inner [data-tab] {
-    padding-bottom: 44px !important;
+    padding-bottom: 0 !important;
   }
 
   html body .u-carousel2 .u-carousel-inner [data-tab] center,
@@ -12434,7 +12434,7 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
   .u-carousel2 .u-carousel-inner [data-tab] figcaption,
   .u-carousel2 .u-carousel-inner [data-tab] p,
   .u-carousel2 .u-carousel-inner [data-tab] .b-text_with_paragraphs {
-    margin: 10px auto 4px auto !important;
+    margin: 10px auto 12px auto !important;
     display: block !important;
     color: var(--color-text-hint, rgba(237, 230, 242, 0.85)) !important;
     font-size: 11.5px !important;
@@ -12447,10 +12447,40 @@ html body.p-dashboards-show .v2 .my-list .label .misc-links a::after,
 
   html body .u-carousel2 [data-tab-switch],
   .u-carousel2 [data-tab-switch] {
-    box-sizing: border-box !important;
-    height: calc(var(--switch-height, 4px) + (var(--switch-margin, 10px) * 2)) !important;
-    margin-top: calc((var(--switch-height, 4px) + (var(--switch-margin, 10px) * 2)) * -1 - 10px) !important;
-    margin-bottom: 10px !important;
+    display: block !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  html body .u-carousel2 [data-tab-switch]:hover,
+  html body .u-carousel2 [data-tab-switch].active,
+  .u-carousel2 [data-tab-switch]:hover,
+  .u-carousel2 [data-tab-switch].active {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  html body .u-carousel2 [data-tab-switch]::before,
+  html body .u-carousel2 [data-tab-switch]::after,
+  .u-carousel2 [data-tab-switch]::before,
+  .u-carousel2 [data-tab-switch]::after {
+    visibility: visible !important;
   }
 }
 

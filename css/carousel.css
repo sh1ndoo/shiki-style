@@ -54,7 +54,7 @@
     width: 100%;
     text-align: center;
     box-sizing: border-box;
-    padding-bottom: 44px !important;
+    padding-bottom: 0 !important;
   }
 
   /* --- Slide Captions Styling & Clearance --- */
@@ -63,7 +63,7 @@
   .u-carousel2 .u-carousel-inner [data-tab] figcaption,
   .u-carousel2 .u-carousel-inner [data-tab] p,
   .u-carousel2 .u-carousel-inner [data-tab] .b-text_with_paragraphs {
-    margin: 10px auto 4px auto !important;
+    margin: 10px auto 12px auto !important;
     display: block !important;
     color: var(--color-text-hint, rgba(237, 230, 242, 0.85)) !important;
     font-size: 11.5px !important;
@@ -109,34 +109,34 @@
     --order: -1;
   }
 
-  /* --- Bottom Switcher Bars (Indicators) --- */
+  /* --- Bottom Switcher Bars (Indicators completely removed) --- */
   .u-carousel2 [data-tab-switch] {
-    box-sizing: border-box !important;
-    --real-height: calc(var(--switch-height) + (var(--switch-margin) * 2));
-    width: var(--switch-width);
-    font-size: 0;
-    height: var(--real-height) !important;
-    margin: calc(var(--real-height) * -1 - 10px) 0 10px 0 !important;
-    background: var(--switch-color);
-    background-clip: padding-box;
-    border: var(--switch-gutter) solid transparent;
-    border-top-width: var(--switch-margin);
-    border-bottom-width: var(--switch-margin);
-    border-radius: 4px;
-    cursor: pointer;
-    z-index: 2;
-    transition: background-color 0.2s ease, transform 0.2s ease, width 0.2s ease;
+    display: block !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
     -webkit-tap-highlight-color: transparent;
   }
 
-  .u-carousel2 [data-tab-switch]:hover {
-    background-color: var(--switch-color-hover);
-  }
-
+  .u-carousel2 [data-tab-switch]:hover,
   .u-carousel2 [data-tab-switch].active {
-    background-color: var(--switch-color-active);
-    width: calc(var(--switch-width) + 8px);
-    box-shadow: 0 0 10px rgba(var(--color-accent-light-rgb, 196, 175, 212), 0.7);
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   /* --- Side Navigation Click Targets (Next / Prev) --- */
@@ -151,7 +151,7 @@
     z-index: 100;
     cursor: pointer;
     pointer-events: none;
-    visibility: visible;
+    visibility: visible !important;
   }
 
   .u-carousel2 [data-tab-switch]::before,
@@ -170,13 +170,13 @@
   .u-carousel2 [data-tab-switch].active + div::after,
   .u-carousel2 [data-tab-switch]::before,
   .u-carousel2 [data-tab-switch].active:first-child ~ div:nth-last-child(2)::before {
-    pointer-events: auto;
+    pointer-events: auto !important;
   }
 
   .u-carousel2 [data-tab-switch].active::before,
   .u-carousel2 [data-tab-switch].active::after,
   .u-carousel2 [data-tab-switch].active ~ div:not(:last-child)::before {
-    pointer-events: none;
+    pointer-events: none !important;
   }
 
   /* --- Side Navigation Arrows Overlay --- */
